@@ -14,7 +14,7 @@ After installing via HACS, add the frontend resource:
 1. Go to Settings → Dashboards
 2. Click ⋮ (three dots, top right) → Resources
 3. Click "+ Add Resource"
-4. URL: `/hacsfiles/shopping-list-manager/shopping_list_card.js`
+4. URL: `/local/community/shopping-list-manager/shopping_list_card.js`
 5. Resource type: JavaScript Module
 6. Click "Create"
 
@@ -33,3 +33,4 @@ list_id: groceries
 
 
 Use the ⚙️ cog button in the card to configure settings.
+
