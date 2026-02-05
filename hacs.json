@@ -3,5 +3,6 @@
   "content_in_root": false,
   "render_readme": true,
   "domains": ["shopping_list_manager"],
-  "homeassistant": "2024.1.0"
+  "country": "NZ",
+  "homeassistant": "2024.8.0"
 }
