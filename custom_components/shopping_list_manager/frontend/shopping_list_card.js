@@ -2196,7 +2196,7 @@ customElements.define('shopping-list-card', ShoppingListCard);
 window.customCards = window.customCards || [];
 window.customCards.push({
   type: 'shopping-list-card',
-  name: 'Shopping List',
+  name: 'Shopping List Card',
   description: 'A shopping list card with search, categories, and product images.',
   preview: false
 });
