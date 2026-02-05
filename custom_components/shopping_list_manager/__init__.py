@@ -16,12 +16,16 @@ _LOGGER = logging.getLogger(__name__)
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     """Set up the Shopping List Manager component."""
-    # Register frontend path for the card
+    # Register frontend path for the card (updated for HA 2023+)
     frontend_path = Path(__file__).parent / "frontend"
-    hass.http.register_static_path(
-        f"/hacsfiles/{DOMAIN}",
-        str(frontend_path),
-        cache_headers=False,
+    hass.http.async_register_static_paths(
+        [
+            {
+                "url_path": f"/hacsfiles/{DOMAIN}",
+                "path": str(frontend_path),
+                "cache_headers": False,
+            }
+        ]
     )
     _LOGGER.info(f"Registered frontend path: /hacsfiles/{DOMAIN}")
     
