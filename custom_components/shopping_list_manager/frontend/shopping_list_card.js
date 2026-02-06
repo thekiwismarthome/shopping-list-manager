@@ -1,8 +1,5 @@
 /**
  * Shopping List Manager - Custom Lovelace Card
- * 
- * Uses proper Home Assistant WebSocket API
- * Version: 2.1.0 - Fixed syntax errors
  */
 
 // Category definitions
@@ -112,15 +109,52 @@ class ShoppingListCard extends HTMLElement {
   }
 
   setConfig(config) {
-    this._config = { ...config };  // shallow-copy: HA 2026+ freezes the original
-    // Derive a unique settings key for THIS card instance so each card on
-    // the dashboard keeps its own independent settings in localStorage.
-    // Set `card_id` in YAML for an explicit stable label; otherwise title is used.
-    const id = (config.card_id || config.title || 'shopping_list').toString().trim().toLowerCase().replace(/[^a-z0-9_]/g, '_');
-    this._settingsKey = `shopping_list_settings_${id}`;
-    // Re-load settings now that we have the correct key
-    this._settings = this._loadSettings();
+    if (!config || typeof config !== 'object') {
+      throw new Error('Invalid configuration');
+    }
+  
+    // Normalize + freeze config shape here
+    this._config = {
+      title: config.title ?? 'Shopping List',
+      card_id: config.card_id,
+      products_per_row: config.products_per_row ?? 'auto',
+      layout: config.layout ?? 'grid',
+      haptics: config.haptics ?? 'medium',
+      hide_completed: !!config.hide_completed,
+      compact_headers: !!config.compact_headers
+    };
+  
+    // Derive a stable per-card storage key
+    const idSource =
+      this._config.card_id ||
+      this._config.title ||
+      'shopping_list';
+  
+    const id = idSource
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9_]/g, '_');
+  
+    const newSettingsKey = `shopping_list_settings_${id}`;
+  
+    // If the card_id / title changed, reload settings
+    if (this._settingsKey !== newSettingsKey) {
+      this._settingsKey = newSettingsKey;
+      this._settings = this._loadSettings();
+    }
+  
+    // First-time init
+    if (!this._settings) {
+      this._settings = this._loadSettings();
+    }
+  
+    // Trigger a re-render if already attached
+    if (this.isConnected) {
+      this._render?.();
+    }
   }
+
 
   /**
    * Load data using Home Assistant's connection.sendMessagePromise
@@ -1110,15 +1144,17 @@ class ShoppingListCard extends HTMLElement {
    * Fuzzy search - matches even with typos or partial matches
    */
   _fuzzyMatch(text, query) {
-    text = text.toLowerCase();
-    query = query.toLowerCase();
-    
+    if (!text || !query) return false;
+
+    text = String(text).toLowerCase();
+    query = String(query).toLowerCase();
+
     // Exact match or substring
     if (text.includes(query)) {
       return true;
     }
-    
-    // Fuzzy match - allows for missing characters
+
+    // Fuzzy match - characters in order
     let queryIndex = 0;
     for (let i = 0; i < text.length && queryIndex < query.length; i++) {
       if (text[i] === query[queryIndex]) {
@@ -1127,6 +1163,7 @@ class ShoppingListCard extends HTMLElement {
     }
     return queryIndex === query.length;
   }
+
 
   /**
    * Filter products by search and split into active/inactive
@@ -1138,7 +1175,8 @@ class ShoppingListCard extends HTMLElement {
     if (this._searchQuery) {
       const query = this._searchQuery.toLowerCase();
       products = products.filter(product =>
-        this._fuzzyMatch(product.name, query)
+        this._fuzzyMatch(product.name, query) ||
+        this._fuzzyMatch(product.category, query)
       );
     }
     
@@ -1185,6 +1223,8 @@ class ShoppingListCard extends HTMLElement {
    */
   _getInactiveProducts() {
     const filtered = this._getFilteredProducts();
+
+    // 🔑 When searching, show ALL inactive matches (including recently used)
     return filtered.filter(product => {
       const qty = this._activeList[product.key]?.qty || 0;
       return qty === 0;
@@ -1660,21 +1700,35 @@ class ShoppingListCard extends HTMLElement {
     }
     
     // Show inactive products in "Recently Used" section (unless hidden)
-    if (inactiveProducts.length > 0 && !this._searchQuery && !this._settings.hideCompleted) {
-      html += `
-        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--divider-color);">
-          <div style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">
-            Recently Used
+    if (inactiveProducts.length > 0 && !this._settings.hideCompleted) {
+      if (this._searchQuery) {
+        // During search: just show matches, no header
+        const containerClass =
+          this._settings.layout === 'list' ? 'product-list' : 'product-grid';
+
+        html += `
+          <div class="${containerClass}">
+            ${inactiveProducts.map(p => this._renderProductTile(p)).join('')}
           </div>
-          ${this._sortBy === 'category' ? 
-            this._renderProductsByCategory(inactiveProducts, true) : 
-            `<div class="${this._settings.layout === 'list' ? 'product-list' : 'product-grid'}">
-              ${inactiveProducts.map(product => this._renderProductTile(product)).join('')}
-            </div>`
-          }
-        </div>
-      `;
+        `;
+      } else {
+        // Normal Recently Used section
+        html += `
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--divider-color);">
+            <div style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 12px; text-transform: uppercase;">
+              Recently Used
+            </div>
+            ${this._sortBy === 'category'
+              ? this._renderProductsByCategory(inactiveProducts, true)
+              : `<div class="${this._settings.layout === 'list' ? 'product-list' : 'product-grid'}">
+                  ${inactiveProducts.map(p => this._renderProductTile(p)).join('')}
+                </div>`
+            }
+          </div>
+        `;
+      }
     }
+
     
     // Empty state
     if (activeProducts.length === 0 && inactiveProducts.length === 0) {
@@ -1940,257 +1994,14 @@ class ShoppingListCard extends HTMLElement {
     }
   }
 
-  // Temporarily disabled GUI editor - use YAML configuration
-  // static getConfigElement() {
-  //   return document.createElement('shopping-list-card-editor');
-  // }
 
-  static getStubConfig() {
-    return { title: 'Shopping List' };
-  }
-
+  
   getCardSize() {
     return 3;
   }
+
 }
 
-// ── GUI Config Editor ─────────────────────────────────────────
-// This is the standard HA card-editor pattern.  HA renders this
-// element inside its "configure card" panel automatically when the
-// card exposes a static getConfigElement() method.
-class ShoppingListCardEditor extends HTMLElement {
-  setConfig(config) {
-    console.log('[Editor] setConfig called, _rendered:', this._rendered, 'config:', config);
-    this._config = { ...(config || {}) };  // shallow-copy: HA 2026+ freezes the original
-    if (!this._rendered) {
-      console.log('[Editor] First render, calling _render()');
-      this._render();   // only render once, then STOP
-    } else {
-      console.log('[Editor] Already rendered, ignoring setConfig');
-    }
-    // After first render, ignore setConfig calls - the updateConfig closure
-    // already handles live updates by mutating this._config directly
-  }
-
-  set hass(hass) {
-    console.log('[Editor] hass setter called, _rendered:', this._rendered);
-    this._hass = hass;
-    if (!this._rendered) this._render();
-  }
-
-  _render() {
-    if (!this._config) return;  // nothing to render yet
-
-    // Attach shadow DOM once, reuse on subsequent renders
-    if (!this.shadowRoot) {
-      this.attachShadow({ mode: 'open' });
-    }
-
-    const title           = this._config.title            || '';
-    const productsPerRow  = String(this._config.products_per_row || '3');
-    const layout          = this._config.layout           || 'grid';
-    const haptics         = this._config.haptics          || 'medium';
-    const hideCompleted   = !!this._config.hide_completed;
-    const compactHeaders  = !!this._config.compact_headers;
-
-    this.shadowRoot.innerHTML = `
-      <style>
-        .row {
-          display: flex;
-          gap: 8px;
-          margin-bottom: 16px;
-          flex-wrap: wrap;
-        }
-        ha-text-field, ha-select {
-          display: block;
-          flex: 1;
-          min-width: 200px;
-        }
-        .toggle-row {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          padding: 12px 0;
-          gap: 12px;
-        }
-        .toggle-row + .toggle-row {
-          border-top: 1px solid var(--divider-color);
-        }
-        .toggle-text {
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-          min-width: 0;
-        }
-        .toggle-label {
-          font-size: 14px;
-          color: var(--primary-text-color);
-          font-weight: 400;
-        }
-        .toggle-hint {
-          font-size: 12px;
-          color: var(--secondary-text-color);
-          margin-top: 2px;
-        }
-        .section-divider {
-          border: none;
-          border-top: 1px solid var(--divider-color);
-          margin: 8px 0 16px 0;
-        }
-        .code-editor-link {
-          display: block;
-          margin-top: 16px;
-          padding: 12px 0 0 0;
-          border-top: 1px solid var(--divider-color);
-          font-size: 14px;
-          color: var(--primary-color);
-          cursor: pointer;
-          background: none;
-          border-left: none;
-          border-right: none;
-          border-bottom: none;
-          text-align: left;
-          width: 100%;
-        }
-        .code-editor-link:hover { text-decoration: underline; }
-        .yaml-block {
-          background: var(--card-background-color);
-          border: 1px solid var(--divider-color);
-          border-radius: 6px;
-          padding: 12px;
-          margin-top: 8px;
-          font-family: monospace;
-          font-size: 13px;
-          color: var(--primary-text-color);
-          white-space: pre;
-          overflow-x: auto;
-          max-height: 200px;
-          overflow-y: auto;
-        }
-      </style>
-
-      <!-- Title -->
-      <div class="row">
-        <ha-text-field id="ed-title" label="Title" placeholder="Shopping List"></ha-text-field>
-      </div>
-
-      <!-- Products Per Row -->
-      <div class="row">
-        <ha-select id="ed-perrow" label="Products Per Row">
-          <mwc-list-item value="auto">Auto</mwc-list-item>
-          <mwc-list-item value="2">2</mwc-list-item>
-          <mwc-list-item value="3">3</mwc-list-item>
-          <mwc-list-item value="4">4</mwc-list-item>
-          <mwc-list-item value="5">5</mwc-list-item>
-        </ha-select>
-
-        <!-- Layout -->
-        <ha-select id="ed-layout" label="Layout">
-          <mwc-list-item value="grid">Grid</mwc-list-item>
-          <mwc-list-item value="list">List</mwc-list-item>
-        </ha-select>
-      </div>
-
-      <!-- Haptic Feedback -->
-      <div class="row">
-        <ha-select id="ed-haptics" label="Haptic Feedback">
-          <mwc-list-item value="off">Off</mwc-list-item>
-          <mwc-list-item value="low">Low</mwc-list-item>
-          <mwc-list-item value="medium">Medium</mwc-list-item>
-          <mwc-list-item value="high">High</mwc-list-item>
-        </ha-select>
-      </div>
-
-      <hr class="section-divider">
-
-      <!-- Toggle: Hide completed items -->
-      <div class="toggle-row">
-        <div class="toggle-text">
-          <span class="toggle-label">Hide completed items</span>
-          <span class="toggle-hint">Hides the "Recently Used" section showing products not currently on the list.</span>
-        </div>
-        <ha-switch id="ed-hide-completed"></ha-switch>
-      </div>
-
-      <!-- Toggle: Compact headers -->
-      <div class="toggle-row">
-        <div class="toggle-text">
-          <span class="toggle-label">Compact headers</span>
-          <span class="toggle-hint">Show category names only (no emoji)</span>
-        </div>
-        <ha-switch id="ed-hide-headers"></ha-switch>
-      </div>
-
-      <!-- Show/hide YAML preview -->
-      <button class="code-editor-link" id="ed-code-toggle">
-        ${this._showCodeEditor ? 'Hide code editor' : 'Show code editor'}
-      </button>
-      ${this._showCodeEditor ? `<div class="yaml-block">${this._toYaml()}</div>` : ''}
-    `;
-
-    // ── Set values imperatively (reliable with shadow DOM + HA components) ──
-    const titleEl          = this.shadowRoot.querySelector('#ed-title');
-    const perrowEl         = this.shadowRoot.querySelector('#ed-perrow');
-    const layoutEl         = this.shadowRoot.querySelector('#ed-layout');
-    const hapticsEl        = this.shadowRoot.querySelector('#ed-haptics');
-    const hideCompletedEl  = this.shadowRoot.querySelector('#ed-hide-completed');
-    const hideHeadersEl    = this.shadowRoot.querySelector('#ed-hide-headers');
-
-    titleEl.value          = title;
-    perrowEl.value         = productsPerRow;
-    layoutEl.value         = layout;
-    hapticsEl.value        = haptics;
-    hideCompletedEl.checked = hideCompleted;
-    hideHeadersEl.checked  = compactHeaders;
-
-    // ── Single updateConfig closure — mirrors your working pattern ──
-    const updateConfig = () => {
-      console.log('[Editor] updateConfig called');
-      this._config = {
-        ...this._config,
-        title:                titleEl.value || 'Shopping List',
-        products_per_row:     perrowEl.value,
-        layout:               layoutEl.value,
-        haptics:              hapticsEl.value,
-        hide_completed:   hideCompletedEl.checked,
-        compact_headers:  hideHeadersEl.checked
-      };
-      console.log('[Editor] Dispatching config-changed:', this._config);
-      this.dispatchEvent(new CustomEvent('config-changed', {
-        detail: { config: this._config },
-        bubbles: true,
-        composed: true
-      }));
-    };
-
-    titleEl.addEventListener('input', updateConfig);
-    perrowEl.addEventListener('value-changed', updateConfig);
-    layoutEl.addEventListener('value-changed', updateConfig);
-    hapticsEl.addEventListener('value-changed', updateConfig);
-    hideCompletedEl.addEventListener('checked-changed', updateConfig);
-    hideHeadersEl.addEventListener('checked-changed', updateConfig);
-
-    this.shadowRoot.querySelector('#ed-code-toggle').addEventListener('click', () => {
-      this._showCodeEditor = !this._showCodeEditor;
-      this._render();
-    });
-
-    this._rendered = true;
-  }
-
-  _toYaml() {
-    const lines = ['type: custom:shopping-list-card'];
-    if (this._config.title)                lines.push('title: ' + this._config.title);
-    if (this._config.products_per_row)     lines.push('products_per_row: ' + this._config.products_per_row);
-    if (this._config.layout)               lines.push('layout: ' + this._config.layout);
-    if (this._config.haptics)          lines.push('haptics: ' + this._config.haptics);
-    if (this._config.hide_completed)   lines.push('hide_completed: true');
-    if (this._config.compact_headers)  lines.push('compact_headers: true');
-    return lines.join('\n');
-  }
-}
-
-customElements.define('shopping-list-card-editor', ShoppingListCardEditor);
 customElements.define('shopping-list-card', ShoppingListCard);
 
 window.customCards = window.customCards || [];
