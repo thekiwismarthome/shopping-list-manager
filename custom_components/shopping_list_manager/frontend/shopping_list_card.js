@@ -112,15 +112,52 @@ class ShoppingListCard extends HTMLElement {
   }
 
   setConfig(config) {
-    this._config = { ...config };  // shallow-copy: HA 2026+ freezes the original
-    // Derive a unique settings key for THIS card instance so each card on
-    // the dashboard keeps its own independent settings in localStorage.
-    // Set `card_id` in YAML for an explicit stable label; otherwise title is used.
-    const id = (config.card_id || config.title || 'shopping_list').toString().trim().toLowerCase().replace(/[^a-z0-9_]/g, '_');
-    this._settingsKey = `shopping_list_settings_${id}`;
-    // Re-load settings now that we have the correct key
-    this._settings = this._loadSettings();
+    if (!config || typeof config !== 'object') {
+      throw new Error('Invalid configuration');
+    }
+  
+    // Normalize + freeze config shape here
+    this._config = {
+      title: config.title ?? 'Shopping List',
+      card_id: config.card_id,
+      products_per_row: config.products_per_row ?? 'auto',
+      layout: config.layout ?? 'grid',
+      haptics: config.haptics ?? 'medium',
+      hide_completed: !!config.hide_completed,
+      compact_headers: !!config.compact_headers
+    };
+  
+    // Derive a stable per-card storage key
+    const idSource =
+      this._config.card_id ||
+      this._config.title ||
+      'shopping_list';
+  
+    const id = idSource
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9_]/g, '_');
+  
+    const newSettingsKey = `shopping_list_settings_${id}`;
+  
+    // If the card_id / title changed, reload settings
+    if (this._settingsKey !== newSettingsKey) {
+      this._settingsKey = newSettingsKey;
+      this._settings = this._loadSettings();
+    }
+  
+    // First-time init
+    if (!this._settings) {
+      this._settings = this._loadSettings();
+    }
+  
+    // Trigger a re-render if already attached
+    if (this.isConnected) {
+      this._render?.();
+    }
   }
+
 
   /**
    * Load data using Home Assistant's connection.sendMessagePromise
@@ -1941,17 +1978,26 @@ class ShoppingListCard extends HTMLElement {
   }
 
   // Temporarily disabled GUI editor - use YAML configuration
-  // static getConfigElement() {
-  //   return document.createElement('shopping-list-card-editor');
-  // }
-
-  static getStubConfig() {
-    return { title: 'Shopping List' };
+  static getConfigElement() {
+    return document.createElement('shopping-list-card-editor');
   }
-
+  
+  static getStubConfig() {
+    return {
+      type: 'custom:shopping-list-card',
+      title: 'Shopping List',
+      products_per_row: 'auto',
+      layout: 'grid',
+      haptics: 'medium',
+      hide_completed: false,
+      compact_headers: false
+    };
+  }
+  
   getCardSize() {
     return 3;
   }
+
 }
 
 // ── GUI Config Editor ─────────────────────────────────────────
