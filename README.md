@@ -28,3 +28,6 @@ custom_components/shopping_list_manager
 /config/custom_components/
 
 3. Restart Home Assistant.
+
+## 3. Shopping List Card to go with this Integration
+[![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=thekiwismarthome&repository=shopping-list-manager-card&category=plugin)
