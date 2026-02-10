@@ -16,6 +16,8 @@ from .websocket_api import (
     websocket_get_products,
     websocket_get_active,
     websocket_delete_product,
+    ws_get_catalogues,
+    ws_get_lists,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -37,8 +39,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     ha_websocket.async_register_command(hass, websocket_get_products)
     ha_websocket.async_register_command(hass, websocket_get_active)
     ha_websocket.async_register_command(hass, websocket_delete_product)
+    ha_websocket.async_register_command(hass, ws_get_catalogues)
+    ha_websocket.async_register_command(hass, ws_get_lists)
     
-    _LOGGER.info("Shopping List Manager setup complete - registered 5 WebSocket commands")
+    _LOGGER.info("Shopping List Manager setup complete - registered 7 WebSocket commands")
     
     return True
 

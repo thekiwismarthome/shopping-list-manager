@@ -5,6 +5,8 @@ from typing import Dict, Optional, List
 
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import storage
+from homeassistant.helpers.storage import Store
+
 
 from .const import (
     DOMAIN,
@@ -58,7 +60,21 @@ class ShoppingListManager:
         self._store_active["groceries"] = storage.Store(
             hass, STORAGE_VERSION, STORAGE_KEY_ACTIVE    # "shopping_list_manager.active_list"
         )
-    
+        # --- Catalogue + list metadata (NEW, additive) ---
+        self._store_catalogues = Store(
+            hass,
+            STORAGE_VERSION,
+            f"{DOMAIN}.catalogues",
+        )
+        self._catalogues: Dict[str, dict] = {}
+
+        self._store_lists = Store(
+            hass,
+            STORAGE_VERSION,
+            f"{DOMAIN}.lists",
+        )
+        self._lists: Dict[str, dict] = {}
+
     def _lock_for(self, list_id: str) -> asyncio.Lock:
         """Get or create lock for a list."""
         if list_id not in self._locks:
@@ -68,10 +84,20 @@ class ShoppingListManager:
     def _store_products_for(self, list_id: str) -> storage.Store:
         """Get or create products Store for a list."""
         if list_id not in self._store_products:
-            # Non-groceries lists use namespaced keys
-            key = f"{DOMAIN}.{list_id}.products"
-            self._store_products[list_id] = storage.Store(self.hass, STORAGE_VERSION, key)
+            catalogue_id = self._lists.get(list_id, {}).get("catalogue", list_id)
+            catalogue = self._catalogues.get(catalogue_id)
+
+            key = (
+                catalogue["products_store"]
+                if catalogue
+                else f"{DOMAIN}.{list_id}.products"
+            )
+
+            self._store_products[list_id] = storage.Store(
+                self.hass, STORAGE_VERSION, key
+            )
         return self._store_products[list_id]
+
     
     def _store_active_for(self, list_id: str) -> storage.Store:
         """Get or create active Store for a list."""
@@ -82,6 +108,17 @@ class ShoppingListManager:
     
     async def _ensure_loaded(self, list_id: str) -> None:
         """Lazily load a list from storage if not yet in memory."""
+        await self._ensure_catalogues_loaded()
+        await self._ensure_lists_loaded()
+        
+        # Register list if it does not exist yet
+        if list_id not in self._lists:
+            self._lists[list_id] = {
+                "catalogue": list_id
+            }
+            await self._store_lists.async_save(self._lists)
+
+
         if list_id in self._products:
             return  # already loaded
         
@@ -103,6 +140,38 @@ class ShoppingListManager:
             list_id, len(self._products[list_id]), len(self._active_list[list_id])
         )
     
+    async def _ensure_catalogues_loaded(self) -> None:
+        data = await self._store_catalogues.async_load()
+        if isinstance(data, dict):
+            self._catalogues = data
+            return
+
+        # Bootstrap from existing behavior (no changes)
+        self._catalogues = {
+            "groceries": {
+                "name": "Groceries",
+                "icon": "🛒",
+                "products_store": f"{DOMAIN}.products",
+            }
+        }
+
+        await self._store_catalogues.async_save(self._catalogues)
+
+    async def _ensure_lists_loaded(self) -> None:
+        data = await self._store_lists.async_load()
+        if isinstance(data, dict):
+            self._lists = data
+            return
+
+        # Default: list_id == catalogue_id (current behavior)
+        self._lists = {
+            "groceries": {
+                "catalogue": "groceries",
+            }
+        }
+
+        await self._store_lists.async_save(self._lists)
+
     async def async_load(self) -> None:
         """Pre-load the default groceries list for backward compat."""
         async with self._lock_for("groceries"):
@@ -265,6 +334,15 @@ class ShoppingListManager:
             _LOGGER.debug("List '%s': deleted product: %s", list_id, key)
             self._fire_update_event()
     
+    def get_catalogues(self) -> Dict[str, dict]:
+        return self._catalogues
+
+    async def async_get_lists(self) -> Dict[str, dict]:
+        await self._ensure_catalogues_loaded()
+        await self._ensure_lists_loaded()
+        return self._lists
+
+
     async def async_get_products(self, list_id: str) -> Dict[str, dict]:
         """
         Get all products in a list's catalog.

@@ -6,6 +6,7 @@ DOMAIN = "shopping_list_manager"
 STORAGE_VERSION = 1
 STORAGE_KEY_PRODUCTS = f"{DOMAIN}.products"
 STORAGE_KEY_ACTIVE = f"{DOMAIN}.active_list"
+LISTS_STORE_KEY = "shopping_list_manager.lists"
 
 # Events
 EVENT_SHOPPING_LIST_UPDATED = f"{DOMAIN}_updated"

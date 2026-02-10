@@ -75,6 +75,48 @@ async def websocket_add_product(
 
 
 @websocket_api.websocket_command({
+    vol.Required("type"): "shopping_list_manager/get_catalogues",
+})
+@websocket_api.async_response
+async def ws_get_catalogues(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: dict,
+) -> None:
+    """Return catalogue metadata (read-only)."""
+    manager = hass.data[DOMAIN]["manager"]
+    
+    try:
+        catalogues = manager.get_catalogues()
+        connection.send_result(msg["id"], catalogues)
+    except Exception as err:
+        _LOGGER.error("Error getting catalogues: %s", err)
+        connection.send_error(msg["id"], "get_catalogues_failed", str(err))
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): "shopping_list_manager/get_lists",
+})
+@websocket_api.async_response
+async def ws_get_lists(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: dict,
+) -> None:
+    """Return list → catalogue mapping (read-only)."""
+    manager = hass.data[DOMAIN]["manager"]
+    
+    try:
+        # Ensure lists are loaded
+        await manager._ensure_lists_loaded()
+        lists = manager._lists
+        connection.send_result(msg["id"], lists)
+    except Exception as err:
+        _LOGGER.error("Error getting lists: %s", err)
+        connection.send_error(msg["id"], "get_lists_failed", str(err))
+
+
+@websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/set_qty",
     vol.Optional("list_id", default="groceries"): str,
     vol.Required("key"): str,
