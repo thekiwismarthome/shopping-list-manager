@@ -6,6 +6,8 @@ import logging
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.components import websocket_api as ha_websocket
+from .websocket_api import websocket_create_list
+
 
 from .const import DOMAIN
 from .manager import ShoppingListManager
@@ -34,6 +36,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.data[DOMAIN]["manager"] = manager
     
     # Register WebSocket commands using Home Assistant's websocket_api
+    ha_websocket.async_register_command(hass, websocket_create_list)
     ha_websocket.async_register_command(hass, websocket_add_product)
     ha_websocket.async_register_command(hass, websocket_set_qty)
     ha_websocket.async_register_command(hass, websocket_get_products)
