@@ -10,6 +10,33 @@ from .models import InvariantError
 
 _LOGGER = logging.getLogger(__name__)
 
+@websocket_api.websocket_command({
+    vol.Required("type"): "shopping_list_manager/create_list",
+    vol.Required("list_id"): str,
+    vol.Required("catalogue"): str,
+    vol.Optional("visibility", default="shared"): vol.In(["shared", "private"]),
+})
+@websocket_api.async_response
+async def websocket_create_list(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: dict,
+) -> None:
+    manager = hass.data[DOMAIN]["manager"]
+
+    try:
+        await manager.async_create_list(
+            list_id=msg["list_id"],
+            catalogue=msg["catalogue"],
+            owner=connection.user.id,
+            visibility=msg.get("visibility", "shared"),
+        )
+
+        connection.send_result(msg["id"], {"success": True})
+
+    except Exception as err:
+        connection.send_error(msg["id"], "create_list_failed", str(err))
+
 
 @websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/add_product",
@@ -56,15 +83,7 @@ async def websocket_add_product(
     """
     manager = hass.data[DOMAIN]["manager"]
     list_id = msg.get("list_id", "groceries")
-    lists = manager.get_visible_lists(connection.user)
-    if list_id not in lists:
-        connection.send_error(
-            msg["id"],
-            "not_authorized",
-            f"You do not have access to list '{list_id}'"
-        )
-        return
-
+    
     try:
         product = await manager.async_add_product(
             list_id=list_id,
@@ -117,7 +136,7 @@ async def ws_get_lists(
     try:
         # Ensure lists are loaded
         await manager._ensure_lists_loaded()
-        lists = manager.get_visible_lists(connection.user)
+        lists = manager._lists
         connection.send_result(msg["id"], lists)
     except Exception as err:
         _LOGGER.error("Error getting lists: %s", err)
@@ -167,14 +186,6 @@ async def websocket_set_qty(
     """
     manager = hass.data[DOMAIN]["manager"]
     list_id = msg.get("list_id", "groceries")
-    lists = manager.get_visible_lists(connection.user)
-    if list_id not in lists:
-        connection.send_error(
-            msg["id"],
-            "not_authorized",
-            f"You do not have access to list '{list_id}'"
-        )
-        return
     
     try:
         await manager.async_set_qty(
@@ -228,14 +239,6 @@ async def websocket_get_products(
     """
     manager = hass.data[DOMAIN]["manager"]
     list_id = msg.get("list_id", "groceries")
-    lists = manager.get_visible_lists(connection.user)
-    if list_id not in lists:
-        connection.send_error(
-            msg["id"],
-            "not_authorized",
-            f"You do not have access to list '{list_id}'"
-        )
-        return
     
     try:
         products = await manager.async_get_products(list_id=list_id)
@@ -274,14 +277,6 @@ async def websocket_get_active(
     """
     manager = hass.data[DOMAIN]["manager"]
     list_id = msg.get("list_id", "groceries")
-    lists = manager.get_visible_lists(connection.user)
-    if list_id not in lists:
-        connection.send_error(
-            msg["id"],
-            "not_authorized",
-            f"You do not have access to list '{list_id}'"
-        )
-        return
     
     try:
         active = await manager.async_get_active(list_id=list_id)
@@ -320,14 +315,6 @@ async def websocket_delete_product(
     """
     manager = hass.data[DOMAIN]["manager"]
     list_id = msg.get("list_id", "groceries")
-    lists = manager.get_visible_lists(connection.user)
-    if list_id not in lists:
-        connection.send_error(
-            msg["id"],
-            "not_authorized",
-            f"You do not have access to list '{list_id}'"
-        )
-        return
     
     try:
         await manager.async_delete_product(list_id=list_id, key=msg["key"])
