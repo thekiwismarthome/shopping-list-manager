@@ -160,13 +160,34 @@ class ShoppingListManager:
     async def _ensure_lists_loaded(self) -> None:
         data = await self._store_lists.async_load()
         if isinstance(data, dict):
+            import time
+
+            # Migration: ensure new metadata fields exist
+            for list_id, meta in data.items():
+                if "owner" not in meta:
+                    meta["owner"] = "system"
+                if "visibility" not in meta:
+                    meta["visibility"] = "shared"
+                if "created_at" not in meta:
+                    meta["created_at"] = time.time()
+                if "updated_at" not in meta:
+                    meta["updated_at"] = time.time()
+
             self._lists = data
+            await self._store_lists.async_save(self._lists)
             return
 
+
         # Default: list_id == catalogue_id (current behavior)
+        import time
+
         self._lists = {
             "groceries": {
                 "catalogue": "groceries",
+                "owner": "system",
+                "visibility": "shared",
+                "created_at": time.time(),
+                "updated_at": time.time(),
             }
         }
 
@@ -336,6 +357,17 @@ class ShoppingListManager:
     
     def get_catalogues(self) -> Dict[str, dict]:
         return self._catalogues
+    
+    def get_visible_lists(self, user):
+        if user.is_admin:
+            return self._lists
+
+        return {
+            lid: meta
+            for lid, meta in self._lists.items()
+            if meta.get("visibility") == "shared"
+            or meta.get("owner") == user.id
+        }
 
     async def async_get_lists(self) -> Dict[str, dict]:
         await self._ensure_catalogues_loaded()
