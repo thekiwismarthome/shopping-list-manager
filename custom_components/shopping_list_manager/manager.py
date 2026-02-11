@@ -160,34 +160,13 @@ class ShoppingListManager:
     async def _ensure_lists_loaded(self) -> None:
         data = await self._store_lists.async_load()
         if isinstance(data, dict):
-            import time
-
-            # Migration: ensure new metadata fields exist
-            for list_id, meta in data.items():
-                if "owner" not in meta:
-                    meta["owner"] = "system"
-                if "visibility" not in meta:
-                    meta["visibility"] = "shared"
-                if "created_at" not in meta:
-                    meta["created_at"] = time.time()
-                if "updated_at" not in meta:
-                    meta["updated_at"] = time.time()
-
             self._lists = data
-            await self._store_lists.async_save(self._lists)
             return
 
-
         # Default: list_id == catalogue_id (current behavior)
-        import time
-
         self._lists = {
             "groceries": {
                 "catalogue": "groceries",
-                "owner": "system",
-                "visibility": "shared",
-                "created_at": time.time(),
-                "updated_at": time.time(),
             }
         }
 
@@ -228,6 +207,34 @@ class ShoppingListManager:
     # PUBLIC API - All operations enforce invariants
     # ========================================================================
     
+    import time
+
+    async def async_create_list(
+        self,
+        list_id: str,
+        catalogue: str,
+        owner: str,
+        visibility: str = "shared",
+    ):
+        await self._ensure_catalogues_loaded()
+        await self._ensure_lists_loaded()
+
+        if list_id in self._lists:
+            raise ValueError(f"List '{list_id}' already exists")
+
+        if catalogue not in self._catalogues:
+            raise ValueError(f"Catalogue '{catalogue}' does not exist")
+
+        self._lists[list_id] = {
+            "catalogue": catalogue,
+            "owner": owner,
+            "visibility": visibility,
+            "created_at": time.time(),
+            "updated_at": time.time(),
+        }
+
+        await self._store_lists.async_save(self._lists)
+
     async def async_add_product(
         self,
         list_id: str,
@@ -357,17 +364,6 @@ class ShoppingListManager:
     
     def get_catalogues(self) -> Dict[str, dict]:
         return self._catalogues
-    
-    def get_visible_lists(self, user):
-        if user.is_admin:
-            return self._lists
-
-        return {
-            lid: meta
-            for lid, meta in self._lists.items()
-            if meta.get("visibility") == "shared"
-            or meta.get("owner") == user.id
-        }
 
     async def async_get_lists(self) -> Dict[str, dict]:
         await self._ensure_catalogues_loaded()
