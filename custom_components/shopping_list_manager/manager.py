@@ -207,6 +207,34 @@ class ShoppingListManager:
     # PUBLIC API - All operations enforce invariants
     # ========================================================================
     
+    import time
+
+    async def async_create_list(
+        self,
+        list_id: str,
+        catalogue: str,
+        owner: str,
+        visibility: str = "shared",
+    ):
+        await self._ensure_catalogues_loaded()
+        await self._ensure_lists_loaded()
+
+        if list_id in self._lists:
+            raise ValueError(f"List '{list_id}' already exists")
+
+        if catalogue not in self._catalogues:
+            raise ValueError(f"Catalogue '{catalogue}' does not exist")
+
+        self._lists[list_id] = {
+            "catalogue": catalogue,
+            "owner": owner,
+            "visibility": visibility,
+            "created_at": time.time(),
+            "updated_at": time.time(),
+        }
+
+        await self._store_lists.async_save(self._lists)
+
     async def async_add_product(
         self,
         list_id: str,

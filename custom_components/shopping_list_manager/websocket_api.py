@@ -10,6 +10,33 @@ from .models import InvariantError
 
 _LOGGER = logging.getLogger(__name__)
 
+@websocket_api.websocket_command({
+    vol.Required("type"): "shopping_list_manager/create_list",
+    vol.Required("list_id"): str,
+    vol.Required("catalogue"): str,
+    vol.Optional("visibility", default="shared"): vol.In(["shared", "private"]),
+})
+@websocket_api.async_response
+async def websocket_create_list(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: dict,
+) -> None:
+    manager = hass.data[DOMAIN]["manager"]
+
+    try:
+        await manager.async_create_list(
+            list_id=msg["list_id"],
+            catalogue=msg["catalogue"],
+            owner=connection.user.id,
+            visibility=msg.get("visibility", "shared"),
+        )
+
+        connection.send_result(msg["id"], {"success": True})
+
+    except Exception as err:
+        connection.send_error(msg["id"], "create_list_failed", str(err))
+
 
 @websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/add_product",
