@@ -69,7 +69,7 @@ IMAGE_MAX_SIZE_KB = 15
 METRIC_UNITS = {
     "weight": ["kg", "g"],
     "volume": ["L", "mL"],
-    "count": ["units", "pack", "loaf", "dozen"]
+    "count": ["units", "pack", "loaf", "dozen", 'ea", "pkt", "tray", "bottle", "can", "bunch", "pottle", "roll", "sachet", "tub", "bar"]
 }
 
 # Default quantities for common products (NZ-focused, can be country-specific later)
@@ -77,13 +77,36 @@ DEFAULT_QUANTITIES = {
     "milk": {"quantity": 2, "unit": "L"},
     "bread": {"quantity": 1, "unit": "loaf"},
     "butter": {"quantity": 500, "unit": "g"},
-    "eggs": {"quantity": 12, "unit": "units"},
-    "cheese": {"quantity": 1, "unit": "kg"},
+    "eggs": {"quantity": 12, "unit": "ea"},
+    "cheese": {"quantity": 500, "unit": "g"},
     "yogurt": {"quantity": 1, "unit": "kg"},
-    "flour": {"quantity": 1, "unit": "kg"},
-    "sugar": {"quantity": 1, "unit": "kg"},
+    "flour": {"quantity": 1.5, "unit": "kg"},
+    "sugar": {"quantity": 1.5, "unit": "kg"},
     "rice": {"quantity": 1, "unit": "kg"},
-    "pasta": {"quantity": 500, "unit": "g"}
+    "pasta": {"quantity": 500, "unit": "g"},
+    "chicken breast": {"quantity": 1, "unit": "kg"},
+    "beef mince": {"quantity": 500, "unit": "g"},
+    "sausages": {"quantity": 500, "unit": "g"},
+    "bacon": {"quantity": 500, "unit": "g"},
+    "apples": {"quantity": 1, "unit": "kg"},
+    "bananas": {"quantity": 1, "unit": "kg"},
+    "potatoes": {"quantity": 2, "unit": "kg"},
+    "onions": {"quantity": 1, "unit": "kg"},
+    "carrots": {"quantity": 1, "unit": "kg"},
+    "tomatoes": {"quantity": 500, "unit": "g"},
+    "lettuce": {"quantity": 1, "unit": "ea"},
+    "capsicum": {"quantity": 1, "unit": "ea"},
+    "broccoli": {"quantity": 1, "unit": "ea"},
+    "cereal": {"quantity": 1, "unit": "pack"},
+    "baked beans": {"quantity": 1, "unit": "can"},
+    "tuna": {"quantity": 1, "unit": "can"},
+    "olive oil": {"quantity": 1, "unit": "L"},
+    "coffee": {"quantity": 200, "unit": "g"},
+    "tea bags": {"quantity": 100, "unit": "ea"},
+    "toilet paper": {"quantity": 12, "unit": "roll"},
+    "paper towels": {"quantity": 2, "unit": "roll"},
+    "dishwashing liquid": {"quantity": 500, "unit": "mL"},
+    "laundry powder": {"quantity": 2, "unit": "kg"}
 }
 
 # Paths
