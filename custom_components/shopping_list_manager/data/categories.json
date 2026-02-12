@@ -1,0 +1,110 @@
+{
+    "version": "1.0.0",
+    "region": "NZ",
+    "categories": [
+    {
+        "id": "produce",
+        "name": "Fruit & Veg",
+        "icon": "mdi:fruit-cherries",
+        "color": "#4CAF50",
+        "sort_order": 1,
+        "system": true
+    },
+    {
+        "id": "dairy",
+        "name": "Dairy & Eggs",
+        "icon": "mdi:cheese",
+        "color": "#FFC107",
+        "sort_order": 2,
+        "system": true
+    },
+    {
+        "id": "meat",
+        "name": "Meat & Seafood",
+        "icon": "mdi:food-steak",
+        "color": "#F44336",
+        "sort_order": 3,
+        "system": true
+    },
+    {
+        "id": "bakery",
+        "name": "Bakery",
+        "icon": "mdi:bread-slice",
+        "color": "#FF9800",
+        "sort_order": 4,
+        "system": true
+    },
+    {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "icon": "mdi:snowflake",
+        "color": "#2196F3",
+        "sort_order": 5,
+        "system": true
+    },
+    {
+        "id": "pantry",
+        "name": "Pantry",
+        "icon": "mdi:package-variant",
+        "color": "#795548",
+        "sort_order": 6,
+        "system": true
+    },
+    {
+        "id": "beverages",
+        "name": "Drinks",
+        "icon": "mdi:cup",
+        "color": "#00BCD4",
+        "sort_order": 7,
+        "system": true
+    },
+    {
+        "id": "snacks",
+        "name": "Snacks & Biscuits",
+        "icon": "mdi:food-apple",
+        "color": "#E91E63",
+        "sort_order": 8,
+        "system": true
+    },
+    {
+        "id": "household",
+        "name": "Household",
+        "icon": "mdi:spray-bottle",
+        "color": "#9C27B0",
+        "sort_order": 9,
+        "system": true
+    },
+    {
+        "id": "health",
+        "name": "Health & Beauty",
+        "icon": "mdi:heart-pulse",
+        "color": "#E91E63",
+        "sort_order": 10,
+        "system": true
+    },
+    {
+        "id": "pet",
+        "name": "Pet Supplies",
+        "icon": "mdi:paw",
+        "color": "#FF5722",
+        "sort_order": 11,
+        "system": true
+    },
+    {
+        "id": "baby",
+        "name": "Baby",
+        "icon": "mdi:baby-face",
+        "color": "#FFEB3B",
+        "sort_order": 12,
+        "system": true
+    },
+    {
+        "id": "other",
+        "name": "Other",
+        "icon": "mdi:dots-horizontal",
+        "color": "#9E9E9E",
+        "sort_order": 99,
+        "system": true
+    }
+    ]
+}
