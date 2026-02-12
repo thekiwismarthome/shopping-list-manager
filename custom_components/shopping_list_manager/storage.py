@@ -87,10 +87,16 @@ class ShoppingListStorage:
             _LOGGER.debug("Loaded %d categories", len(self._categories))
         else:
             # Initialize with default categories from JSON file
-            default_categories = load_categories(self._component_path)
+            # Use HA's country code if available
+            country_code = getattr(self.hass.config, 'country', None)
+            default_categories = load_categories(self._component_path, country_code)
             self._categories = [Category(**cat) for cat in default_categories]
             await self._save_categories()
-            _LOGGER.info("Initialized %d default categories", len(self._categories))
+            _LOGGER.info(
+                "Initialized %d default categories for country: %s", 
+                len(self._categories),
+                country_code or "default"
+            )
     
     # Lists methods
     async def _save_lists(self) -> None:
