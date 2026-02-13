@@ -155,12 +155,9 @@ async def _async_register_websocket_handlers(
 
 async def _async_register_frontend(hass: HomeAssistant) -> None:
     """Register frontend resources."""
-    # Register the custom card
-    hass.http.register_static_path(
-        f"/hacsfiles/{DOMAIN}",
-        hass.config.path(f"custom_components/{DOMAIN}/www"),
-        True,
-    )
+    # Since frontend is a separate HACS module, we don't need to register it here
+    # The frontend card registers itself independently
+    _LOGGER.debug("Frontend resources skipped (separate HACS module)")
     
     _LOGGER.debug("Frontend resources registered")
 
