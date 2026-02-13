@@ -90,23 +90,23 @@ class ShoppingListStorage:
             _LOGGER.debug("Loaded %d categories", len(self._categories))
         else:
             # Initialize with default categories from JSON file
-            country_code = getattr(self.hass.config, 'country', None)
-            default_categories = load_categories(self._component_path, country_code)
+            default_categories = load_categories(self._component_path, self._country)  # Use self._country
             self._categories = [Category(**cat) for cat in default_categories]
             await self._save_categories()
             _LOGGER.info(
                 "Initialized %d default categories for country: %s", 
                 len(self._categories),
-                country_code or "default"
+                self._country  # Use self._country
             )
         
-        # NEW: Load product catalog if products are empty
+        # Load product catalog if products are empty
         if not self._products:
-            country_code = getattr(self.hass.config, 'country', None)
-            catalog_products = load_product_catalog(self._component_path, country_code)
+            _LOGGER.info("Loading product catalog for country: %s", self._country)
+            catalog_products = load_product_catalog(self._component_path, self._country)  # Use self._country
             
             if catalog_products:
                 _LOGGER.info("Importing %d products from catalog", len(catalog_products))
+                # ... rest of import code ...
                 for prod_data in catalog_products:
                     try:
                         # Create Product from catalog data
