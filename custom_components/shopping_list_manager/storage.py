@@ -123,7 +123,14 @@ class ShoppingListStorage:
                             brands=prod_data.get("brands", []),
                             image_url=prod_data.get("image_url", ""),
                             custom=False,
-                            source="catalog"
+                            source="catalog",
+                            tags=prod_data.get("tags", []),
+                            collections=prod_data.get("collections", []),
+                            taxonomy=prod_data.get("taxonomy", {}),
+                            allergens=prod_data.get("allergens", []),
+                            substitution_group=prod_data.get("substitution_group", ""),
+                            priority_level=prod_data.get("priority_level", 0),
+                            image_hint=prod_data.get("image_hint", "")
                         )
                         self._products[product.id] = product
                     except Exception as err:
