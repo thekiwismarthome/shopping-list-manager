@@ -1,9 +1,9 @@
 {
   "version": "2.1.0",
-  "region": "NZ",
-  "currency": "NZD",
+  "region": "GB",
+  "currency": "GBP",
   "last_updated": "2026-02-13",
-  "description": "Advanced NZ grocery catalog with structured taxonomy, allergens, substitution groups, and automation-ready metadata",
+  "description": "Clean UK grocery catalog based on cleaned NZ dataset (no synthetic variants)",
   "products": [
     {
       "id": "prod_milk_trim",
@@ -20,10 +20,11 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 3.99,
+      "price": 3.76,
       "brands": [
-        "Anchor",
-        "Pams",
+        "Co-op",
+        "Iceland",
+        "Marks & Spencer",
         "Meadow Fresh"
       ],
       "barcode": "9400547000019",
@@ -57,10 +58,11 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 4.29,
+      "price": 4.03,
       "brands": [
-        "Anchor",
-        "Pams",
+        "Waitrose",
+        "Sainsbury's",
+        "Aldi UK",
         "Meadow Fresh"
       ],
       "barcode": "9400547000026",
@@ -92,11 +94,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 6.58,
       "brands": [
-        "Anchor",
-        "Mainland",
-        "Westgold"
+        "Waitrose",
+        "Westgold",
+        "Iceland",
+        "ASDA"
       ],
       "image_hint": "butter",
       "tags": [],
@@ -124,11 +127,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 7.49,
-      "brands": [
-        "Anchor",
-        "Mainland"
-      ],
+      "price": 6.82,
+      "brands": [],
       "image_hint": "butter",
       "tags": [],
       "collections": [],
@@ -157,12 +157,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 9.99,
-      "brands": [
-        "Mainland",
-        "Anchor",
-        "Pams"
-      ],
+      "price": 9.09,
+      "brands": [],
       "image_hint": "cheese_tasty",
       "tags": [],
       "collections": [],
@@ -189,11 +185,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 9.49,
-      "brands": [
-        "Mainland",
-        "Anchor"
-      ],
+      "price": 8.92,
+      "brands": [],
       "image_hint": "cheese_edam",
       "tags": [],
       "collections": [],
@@ -220,11 +213,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 9.49,
-      "brands": [
-        "Mainland",
-        "Anchor"
-      ],
+      "price": 8.63,
+      "brands": [],
       "image_hint": "cheese_colby",
       "tags": [],
       "collections": [],
@@ -252,12 +242,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 6.99,
-      "brands": [
-        "Mainland",
-        "Anchor",
-        "Pams"
-      ],
+      "price": 6.4,
+      "brands": [],
       "image_hint": "cheese_grated",
       "tags": [],
       "collections": [],
@@ -273,7 +259,7 @@
     },
     {
       "id": "prod_yogurt_plain",
-      "name": "Yogurt - Plain",
+      "name": "Yoghurt - Plain",
       "category_id": "dairy",
       "aliases": [
         "natural yogurt",
@@ -281,15 +267,18 @@
         "yogurt",
         "yogurt   plain",
         "yogurt - plains",
-        "yogurt plain"
+        "yogurt plain",
+        "yoghurt"
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.28,
       "brands": [
-        "Anchor",
-        "Meadow Fresh",
-        "Cyclone"
+        "Tesco",
+        "Co-op",
+        "Cyclone",
+        "Sainsbury's",
+        "Meadow Fresh"
       ],
       "image_hint": "yogurt_plain",
       "tags": [],
@@ -308,22 +297,25 @@
     },
     {
       "id": "prod_yogurt_greek",
-      "name": "Yogurt - Greek",
+      "name": "Yoghurt - Greek",
       "category_id": "dairy",
       "aliases": [
         "greek yogurt",
         "yogurt",
         "yogurt   greek",
         "yogurt - greeks",
-        "yogurt greek"
+        "yogurt greek",
+        "yoghurt"
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 7.99,
+      "price": 7.86,
       "brands": [
+        "Chobani",
         "Farmers Union",
-        "Anchor",
-        "Chobani"
+        "Co-op",
+        "Aldi UK",
+        "Sainsbury's"
       ],
       "image_hint": "yogurt_greek",
       "tags": [],
@@ -353,11 +345,14 @@
       ],
       "default_unit": "ea",
       "default_quantity": 12,
-      "price": 9.99,
+      "price": 10.2,
       "brands": [
-        "Woodland",
+        "Tesco",
+        "Lidl UK",
         "Frenz",
-        "Farmer Brown"
+        "Woodland",
+        "Farmer Brown",
+        "Marks & Spencer"
       ],
       "image_hint": "eggs_free_range",
       "tags": [],
@@ -388,9 +383,11 @@
       ],
       "default_unit": "ea",
       "default_quantity": 12,
-      "price": 6.49,
+      "price": 6.05,
       "brands": [
-        "Pams",
+        "Lidl UK",
+        "Marks & Spencer",
+        "ASDA",
         "Value"
       ],
       "image_hint": "eggs",
@@ -422,9 +419,11 @@
       ],
       "default_unit": "mL",
       "default_quantity": 300,
-      "price": 4.99,
+      "price": 4.76,
       "brands": [
-        "Anchor",
+        "Sainsbury's",
+        "Lidl UK",
+        "Aldi UK",
         "Meadow Fresh"
       ],
       "image_hint": "cream",
@@ -450,9 +449,11 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 4.49,
+      "price": 4.36,
       "brands": [
-        "Anchor",
+        "Co-op",
+        "Marks & Spencer",
+        "Morrisons",
         "Meadow Fresh"
       ],
       "image_hint": "sour_cream",
@@ -481,7 +482,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.65,
       "image_hint": "apples_gala",
       "tags": [],
       "collections": [
@@ -511,7 +512,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.06,
       "image_hint": "apples_granny_smith",
       "tags": [],
       "collections": [
@@ -588,7 +589,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.41,
       "image_hint": "mandarins",
       "tags": [],
       "collections": [],
@@ -616,7 +617,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 7.12,
       "image_hint": "kiwifruit_green",
       "tags": [],
       "collections": [],
@@ -644,7 +645,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 8.23,
       "image_hint": "kiwifruit_gold",
       "tags": [],
       "collections": [],
@@ -669,7 +670,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 5.99,
+      "price": 6.17,
       "image_hint": "strawberries",
       "tags": [],
       "collections": [],
@@ -694,7 +695,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 125,
-      "price": 6.99,
+      "price": 7.07,
       "image_hint": "blueberries",
       "tags": [],
       "collections": [],
@@ -722,7 +723,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 7.99,
+      "price": 7.34,
       "image_hint": "grapes_green",
       "tags": [],
       "collections": [],
@@ -749,7 +750,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 7.99,
+      "price": 8.11,
       "image_hint": "grapes_red",
       "tags": [],
       "collections": [],
@@ -774,7 +775,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 3,
-      "price": 2.99,
+      "price": 3.02,
       "image_hint": "avocado",
       "tags": [],
       "collections": [],
@@ -799,7 +800,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 6.78,
       "image_hint": "tomatoes",
       "tags": [],
       "collections": [],
@@ -824,7 +825,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 4.99,
+      "price": 4.51,
       "image_hint": "tomatoes_cherry",
       "tags": [],
       "collections": [],
@@ -848,7 +849,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 3.02,
       "image_hint": "cucumber",
       "tags": [],
       "collections": [],
@@ -875,7 +876,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.07,
       "image_hint": "lettuce_iceberg",
       "tags": [],
       "collections": [],
@@ -903,7 +904,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 3.68,
       "image_hint": "lettuce_cos",
       "tags": [],
       "collections": [],
@@ -931,7 +932,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 2.49,
+      "price": 2.33,
       "image_hint": "capsicum_red",
       "tags": [],
       "collections": [],
@@ -959,7 +960,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 1.99,
+      "price": 1.95,
       "image_hint": "capsicum_green",
       "tags": [],
       "collections": [],
@@ -984,7 +985,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 3.6,
       "image_hint": "broccoli",
       "tags": [],
       "collections": [],
@@ -1009,7 +1010,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.98,
       "image_hint": "cauliflower",
       "tags": [],
       "collections": [],
@@ -1033,7 +1034,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 2.91,
       "image_hint": "carrots",
       "tags": [],
       "collections": [],
@@ -1059,7 +1060,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 4.99,
+      "price": 4.89,
       "image_hint": "potatoes",
       "tags": [],
       "collections": [],
@@ -1075,17 +1076,18 @@
     },
     {
       "id": "prod_kumara",
-      "name": "Kumara",
+      "name": "Sweet Potato",
       "category_id": "produce",
       "aliases": [
         "kumara",
         "kumaras",
         "kumera",
+        "sweet potato",
         "sweet potato"
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.9,
       "image_hint": "kumara",
       "tags": [],
       "collections": [],
@@ -1112,7 +1114,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 3.89,
       "image_hint": "onions_brown",
       "tags": [],
       "collections": [],
@@ -1139,7 +1141,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.86,
       "image_hint": "onions_red",
       "tags": [],
       "collections": [],
@@ -1164,7 +1166,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 1.99,
+      "price": 1.89,
       "image_hint": "garlic",
       "tags": [],
       "collections": [],
@@ -1189,7 +1191,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 100,
-      "price": 2.99,
+      "price": 3.01,
       "image_hint": "ginger",
       "tags": [],
       "collections": [],
@@ -1216,7 +1218,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 4.99,
+      "price": 4.65,
       "image_hint": "mushrooms_button",
       "tags": [],
       "collections": [],
@@ -1241,7 +1243,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 1.99,
+      "price": 2.05,
       "image_hint": "courgette",
       "tags": [],
       "collections": [],
@@ -1267,7 +1269,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.12,
       "image_hint": "pumpkin",
       "tags": [],
       "collections": [],
@@ -1292,7 +1294,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 120,
-      "price": 3.99,
+      "price": 3.71,
       "image_hint": "spinach",
       "tags": [],
       "collections": [],
@@ -1317,10 +1319,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 16.99,
+      "price": 15.64,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Lidl UK",
+        "ASDA",
+        "Aldi UK"
       ],
       "image_hint": "chicken_breast",
       "tags": [],
@@ -1346,10 +1351,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 14.38,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Iceland",
+        "Lidl UK",
+        "Waitrose"
       ],
       "image_hint": "chicken_thigh",
       "tags": [],
@@ -1375,10 +1383,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 11.99,
+      "price": 12.14,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Iceland",
+        "Sainsbury's",
+        "Marks & Spencer"
       ],
       "image_hint": "chicken_drumsticks",
       "tags": [],
@@ -1404,10 +1415,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 13.99,
+      "price": 12.93,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Co-op",
+        "Lidl UK",
+        "Morrisons"
       ],
       "image_hint": "chicken_whole",
       "tags": [],
@@ -1434,9 +1448,11 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 15.99,
+      "price": 14.66,
       "brands": [
-        "Hellers",
+        "Morrisons",
+        "Tesco",
+        "ASDA",
         "Angus"
       ],
       "image_hint": "beef_mince",
@@ -1464,10 +1480,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 29.99,
+      "price": 27.19,
       "brands": [
+        "Iceland",
         "Angus",
-        "Premium"
+        "Premium",
+        "Waitrose",
+        "Sainsbury's"
       ],
       "image_hint": "beef_steak",
       "tags": [],
@@ -1495,9 +1514,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 24.99,
+      "price": 24.98,
       "brands": [
+        "Iceland",
+        "Tesco",
         "Coastal Spring",
+        "ASDA",
         "Silver Fern Farms"
       ],
       "image_hint": "lamb_chops",
@@ -1524,9 +1546,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 19.99,
+      "price": 19.33,
       "brands": [
+        "Tesco",
         "Coastal Spring",
+        "Co-op",
+        "Waitrose",
         "Silver Fern Farms"
       ],
       "image_hint": "lamb_leg",
@@ -1553,7 +1578,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 17.99,
+      "price": 16.57,
       "image_hint": "pork_chops",
       "tags": [],
       "collections": [],
@@ -1579,9 +1604,11 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 7.99,
+      "price": 7.26,
       "brands": [
-        "Hellers",
+        "Tesco",
+        "Lidl UK",
+        "Waitrose",
         "Beehive",
         "Freedom Farms"
       ],
@@ -1610,10 +1637,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 11.99,
+      "price": 11.04,
       "brands": [
-        "Hellers",
-        "Farmers Union"
+        "Co-op",
+        "Sainsbury's",
+        "Farmers Union",
+        "Waitrose"
       ],
       "image_hint": "sausages",
       "tags": [],
@@ -1641,10 +1670,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 100,
-      "price": 5.99,
+      "price": 6.17,
       "brands": [
-        "Hellers",
-        "Continental"
+        "Waitrose",
+        "Sainsbury's",
+        "Continental",
+        "Aldi UK"
       ],
       "image_hint": "salami",
       "tags": [],
@@ -1671,10 +1702,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 7.99,
+      "price": 7.61,
       "brands": [
-        "Hellers",
-        "Beehive"
+        "Beehive",
+        "Co-op",
+        "ASDA",
+        "Aldi UK"
       ],
       "image_hint": "ham",
       "tags": [],
@@ -1705,10 +1738,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 39.99,
+      "price": 40.34,
       "brands": [
-        "Regal",
-        "Sealord"
+        "Waitrose",
+        "Sainsbury's",
+        "Tesco",
+        "Regal"
       ],
       "image_hint": "salmon_fresh",
       "tags": [],
@@ -1735,10 +1770,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 19.99,
+      "price": 19.66,
       "brands": [
-        "Sealord",
-        "Sanford"
+        "Sainsbury's",
+        "Iceland",
+        "Sanford",
+        "Marks & Spencer"
       ],
       "image_hint": "fish_hoki",
       "tags": [],
@@ -1767,10 +1804,8 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 29.99,
-      "brands": [
-        "Sealord"
-      ],
+      "price": 27.19,
+      "brands": [],
       "image_hint": "prawns",
       "tags": [],
       "collections": [],
@@ -1797,9 +1832,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 13.89,
       "brands": [
-        "Sanford"
+        "Co-op",
+        "Lidl UK",
+        "Sanford",
+        "Marks & Spencer"
       ],
       "image_hint": "mussels",
       "tags": [],
@@ -1828,11 +1866,13 @@
       ],
       "default_unit": "loaf",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 3.06,
       "brands": [
-        "Tip Top",
+        "Iceland",
         "Freyas",
-        "Vogels"
+        "Lidl UK",
+        "Vogels",
+        "Sainsbury's"
       ],
       "image_hint": "bread_white",
       "tags": [],
@@ -1861,9 +1901,11 @@
       ],
       "default_unit": "loaf",
       "default_quantity": 1,
-      "price": 3.49,
+      "price": 3.52,
       "brands": [
-        "Tip Top",
+        "Sainsbury's",
+        "Iceland",
+        "Lidl UK",
         "Vogels"
       ],
       "image_hint": "bread_wholemeal",
@@ -1895,8 +1937,11 @@
       ],
       "default_unit": "loaf",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.04,
       "brands": [
+        "Co-op",
+        "Marks & Spencer",
+        "Waitrose",
         "Vogels"
       ],
       "image_hint": "bread_vogels",
@@ -1924,10 +1969,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.06,
       "brands": [
-        "Tip Top",
-        "Bakery"
+        "Sainsbury's",
+        "Iceland",
+        "Bakery",
+        "Marks & Spencer"
       ],
       "image_hint": "bread_rolls",
       "tags": [],
@@ -1953,10 +2000,8 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
-      "brands": [
-        "Tip Top"
-      ],
+      "price": 4.69,
+      "brands": [],
       "image_hint": "bagels",
       "tags": [],
       "collections": [],
@@ -1981,10 +2026,8 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.49,
-      "brands": [
-        "Tip Top"
-      ],
+      "price": 4.63,
+      "brands": [],
       "image_hint": "english_muffins",
       "tags": [],
       "collections": [],
@@ -2010,10 +2053,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.0,
       "brands": [
+        "Iceland",
+        "Co-op",
         "Mission",
-        "Farrah's"
+        "Farrah's",
+        "Morrisons"
       ],
       "image_hint": "wraps",
       "tags": [],
@@ -2039,8 +2085,11 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.0,
       "brands": [
+        "Lidl UK",
+        "Sainsbury's",
+        "Tesco",
         "Farrah's"
       ],
       "image_hint": "pita_bread",
@@ -2067,9 +2116,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.98,
       "brands": [
-        "Bakery"
+        "Co-op",
+        "Sainsbury's",
+        "Bakery",
+        "Lidl UK"
       ],
       "image_hint": "croissants",
       "tags": [],
@@ -2095,11 +2147,8 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "price": 4.96,
+      "brands": [],
       "image_hint": "frozen_peas",
       "tags": [],
       "collections": [],
@@ -2125,11 +2174,8 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.49,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "price": 5.36,
+      "brands": [],
       "image_hint": "frozen_mixed_veg",
       "tags": [],
       "collections": [],
@@ -2155,10 +2201,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.12,
       "brands": [
         "McCain",
-        "Watties"
+        "Sainsbury's",
+        "Co-op",
+        "Waitrose"
       ],
       "image_hint": "frozen_chips",
       "tags": [],
@@ -2186,10 +2234,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 7.99,
+      "price": 7.64,
       "brands": [
-        "Tip Top",
-        "Much Moore"
+        "Much Moore",
+        "Lidl UK",
+        "Co-op",
+        "Aldi UK"
       ],
       "image_hint": "ice_cream_vanilla",
       "tags": [],
@@ -2217,10 +2267,8 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 8.99,
-      "brands": [
-        "Tip Top"
-      ],
+      "price": 8.87,
+      "brands": [],
       "image_hint": "ice_cream_hokey_pokey",
       "tags": [],
       "collections": [],
@@ -2245,10 +2293,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 6.57,
       "brands": [
+        "McCain",
+        "Iceland",
+        "Tesco",
         "Dr Oetker",
-        "McCain"
+        "Morrisons"
       ],
       "image_hint": "frozen_pizza",
       "tags": [],
@@ -2274,10 +2325,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 7.99,
+      "price": 7.7,
       "brands": [
-        "Birds Eye",
-        "Sealord"
+        "Co-op",
+        "Lidl UK",
+        "Aldi UK",
+        "Birds Eye"
       ],
       "image_hint": "fish_fingers",
       "tags": [],
@@ -2305,10 +2358,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 6.66,
       "brands": [
-        "Pams",
-        "Value"
+        "Waitrose",
+        "Marks & Spencer",
+        "Value",
+        "Aldi UK"
       ],
       "image_hint": "frozen_berries",
       "tags": [],
@@ -2337,10 +2392,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.15,
       "brands": [
-        "Sunrice",
-        "Pams"
+        "Waitrose",
+        "Lidl UK",
+        "Tesco",
+        "Sunrice"
       ],
       "image_hint": "rice_white",
       "tags": [
@@ -2373,10 +2430,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.43,
       "brands": [
+        "Tilda",
         "Sunrice",
-        "Tilda"
+        "Aldi UK",
+        "Sainsbury's",
+        "Morrisons"
       ],
       "image_hint": "rice_basmati",
       "tags": [
@@ -2409,11 +2469,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 2.99,
+      "price": 2.95,
       "brands": [
+        "Tesco",
         "Barilla",
-        "Pams",
-        "San Remo"
+        "San Remo",
+        "Aldi UK",
+        "Morrisons"
       ],
       "image_hint": "pasta_spaghetti",
       "tags": [],
@@ -2441,10 +2503,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 2.99,
+      "price": 2.7,
       "brands": [
+        "Tesco",
+        "Co-op",
+        "Lidl UK",
         "Barilla",
-        "Pams",
         "San Remo"
       ],
       "image_hint": "pasta_penne",
@@ -2472,11 +2536,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 3.99,
+      "price": 4.04,
       "brands": [
-        "Dolmio",
-        "Watties",
-        "Barilla"
+        "Tesco",
+        "Iceland",
+        "Co-op",
+        "Barilla",
+        "Dolmio"
       ],
       "image_hint": "pasta_sauce",
       "tags": [],
@@ -2505,9 +2571,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 3.49,
+      "price": 3.24,
       "brands": [
+        "Tesco",
         "Champion",
+        "Lidl UK",
+        "Marks & Spencer",
         "Edmonds"
       ],
       "image_hint": "flour_plain",
@@ -2536,9 +2605,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 3.49,
+      "price": 3.17,
       "brands": [
         "Champion",
+        "Lidl UK",
+        "Marks & Spencer",
+        "Morrisons",
         "Edmonds"
       ],
       "image_hint": "flour_self_raising",
@@ -2568,9 +2640,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 3.99,
+      "price": 3.79,
       "brands": [
-        "Chelsea"
+        "Lidl UK",
+        "Chelsea",
+        "Iceland",
+        "Aldi UK"
       ],
       "image_hint": "sugar_white",
       "tags": [],
@@ -2599,9 +2674,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.49,
+      "price": 4.21,
       "brands": [
-        "Chelsea"
+        "Sainsbury's",
+        "Chelsea",
+        "Marks & Spencer",
+        "Lidl UK"
       ],
       "image_hint": "sugar_brown",
       "tags": [],
@@ -2628,10 +2706,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 12.99,
+      "price": 11.98,
       "brands": [
+        "Iceland",
+        "Marks & Spencer",
         "Olivado",
-        "Pams"
+        "Aldi UK"
       ],
       "image_hint": "oil_olive",
       "tags": [],
@@ -2658,9 +2738,11 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 6.37,
       "brands": [
-        "Pams",
+        "Lidl UK",
+        "Sainsbury's",
+        "Iceland",
         "Olivani"
       ],
       "image_hint": "oil_vegetable",
@@ -2690,11 +2772,8 @@
       ],
       "default_unit": "can",
       "default_quantity": 4,
-      "price": 1.99,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "price": 1.84,
+      "brands": [],
       "image_hint": "tomatoes_canned",
       "tags": [],
       "collections": [],
@@ -2719,9 +2798,11 @@
       ],
       "default_unit": "can",
       "default_quantity": 1,
-      "price": 2.49,
+      "price": 2.39,
       "brands": [
-        "Watties",
+        "Waitrose",
+        "Iceland",
+        "ASDA",
         "Heinz"
       ],
       "image_hint": "baked_beans",
@@ -2751,10 +2832,12 @@
       ],
       "default_unit": "can",
       "default_quantity": 3,
-      "price": 2.99,
+      "price": 2.98,
       "brands": [
-        "Sealord",
-        "John West"
+        "Waitrose",
+        "John West",
+        "ASDA",
+        "Aldi UK"
       ],
       "image_hint": "tuna",
       "tags": [],
@@ -2780,10 +2863,12 @@
       ],
       "default_unit": "can",
       "default_quantity": 2,
-      "price": 2.99,
+      "price": 2.76,
       "brands": [
-        "Ayam",
-        "Pams"
+        "Tesco",
+        "Morrisons",
+        "Marks & Spencer",
+        "Ayam"
       ],
       "image_hint": "coconut_cream",
       "tags": [],
@@ -2810,11 +2895,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 380,
-      "price": 5.99,
+      "price": 5.41,
       "brands": [
-        "Pic's",
+        "Kraft",
+        "Tesco",
         "ETA",
-        "Kraft"
+        "Lidl UK",
+        "Sainsbury's",
+        "Pic's"
       ],
       "image_hint": "peanut_butter",
       "tags": [],
@@ -2842,10 +2930,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 340,
-      "price": 4.99,
+      "price": 5.13,
       "brands": [
+        "Lidl UK",
+        "Anathoth",
         "Barker's",
-        "Anathoth"
+        "Sainsbury's",
+        "Marks & Spencer"
       ],
       "image_hint": "jam_strawberry",
       "tags": [],
@@ -2872,10 +2963,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 8.99,
+      "price": 8.53,
       "brands": [
+        "Tesco",
         "Airborne",
-        "Manuka Health"
+        "Co-op",
+        "Manuka Health",
+        "Marks & Spencer"
       ],
       "image_hint": "honey",
       "tags": [],
@@ -2901,10 +2995,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 5.99,
-      "brands": [
-        "Sanitarium"
-      ],
+      "price": 5.42,
+      "brands": [],
       "image_hint": "marmite",
       "tags": [],
       "collections": [],
@@ -2929,9 +3021,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 220,
-      "price": 5.49,
+      "price": 4.95,
       "brands": [
-        "Bega"
+        "Lidl UK",
+        "Marks & Spencer",
+        "Bega",
+        "Aldi UK"
       ],
       "image_hint": "vegemite",
       "tags": [],
@@ -2957,10 +3052,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 250,
-      "price": 4.99,
+      "price": 5.0,
       "brands": [
         "Kikkoman",
-        "Pams"
+        "Marks & Spencer",
+        "ASDA",
+        "Iceland"
       ],
       "image_hint": "soy_sauce",
       "tags": [],
@@ -2989,9 +3086,11 @@
       ],
       "default_unit": "mL",
       "default_quantity": 560,
-      "price": 4.99,
+      "price": 4.83,
       "brands": [
-        "Watties",
+        "Co-op",
+        "Iceland",
+        "Waitrose",
         "Heinz"
       ],
       "image_hint": "tomato_sauce",
@@ -3020,10 +3119,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 4.99,
+      "price": 4.62,
       "brands": [
-        "Watties",
-        "Masterfoods"
+        "Masterfoods",
+        "Tesco",
+        "Morrisons",
+        "Marks & Spencer"
       ],
       "image_hint": "bbq_sauce",
       "tags": [],
@@ -3051,10 +3152,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 440,
-      "price": 5.99,
+      "price": 5.92,
       "brands": [
         "Best Foods",
-        "Pams"
+        "Iceland",
+        "ASDA",
+        "Morrisons"
       ],
       "image_hint": "mayonnaise",
       "tags": [],
@@ -3081,10 +3184,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 3.99,
+      "price": 4.08,
       "brands": [
-        "Masterfoods",
-        "French's"
+        "Iceland",
+        "Co-op",
+        "French's",
+        "Waitrose",
+        "Masterfoods"
       ],
       "image_hint": "mustard",
       "tags": [],
@@ -3111,8 +3217,11 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 1.99,
+      "price": 1.9,
       "brands": [
+        "Co-op",
+        "Iceland",
+        "Marks & Spencer",
         "Cerebos"
       ],
       "image_hint": "salt",
@@ -3139,9 +3248,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 50,
-      "price": 3.99,
+      "price": 3.69,
       "brands": [
-        "Masterfoods"
+        "Masterfoods",
+        "Marks & Spencer",
+        "ASDA",
+        "Aldi UK"
       ],
       "image_hint": "pepper",
       "tags": [],
@@ -3170,10 +3282,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 3.01,
       "brands": [
+        "Tesco",
+        "Continental",
         "Maggi",
-        "Continental"
+        "Waitrose",
+        "Aldi UK"
       ],
       "image_hint": "stock_cubes",
       "tags": [],
@@ -3201,10 +3316,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 2.75,
       "brands": [
+        "Continental",
         "Maggi",
-        "Continental"
+        "Co-op",
+        "ASDA",
+        "Waitrose"
       ],
       "image_hint": "stock_cubes",
       "tags": [],
@@ -3231,11 +3349,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 12.99,
+      "price": 12.89,
       "brands": [
-        "Nescafe",
+        "Iceland",
+        "Robert Harris",
+        "Co-op",
         "Gregg's",
-        "Robert Harris"
+        "Nescafe",
+        "Morrisons"
       ],
       "image_hint": "coffee_instant",
       "tags": [],
@@ -3261,11 +3382,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 8.99,
+      "price": 9.16,
       "brands": [
-        "Vittoria",
         "Robert Harris",
-        "L'affare"
+        "Iceland",
+        "L'affare",
+        "Aldi UK",
+        "Vittoria",
+        "Marks & Spencer"
       ],
       "image_hint": "coffee_ground",
       "tags": [],
@@ -3294,11 +3418,14 @@
       ],
       "default_unit": "ea",
       "default_quantity": 100,
-      "price": 6.99,
+      "price": 6.7,
       "brands": [
         "Bell",
-        "Dilmah",
-        "Twinings"
+        "ASDA",
+        "Waitrose",
+        "Aldi UK",
+        "Twinings",
+        "Dilmah"
       ],
       "image_hint": "tea_black",
       "tags": [],
@@ -3326,10 +3453,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 40,
-      "price": 5.99,
+      "price": 5.42,
       "brands": [
-        "Dilmah",
-        "Twinings"
+        "Tesco",
+        "Co-op",
+        "Marks & Spencer",
+        "Twinings",
+        "Dilmah"
       ],
       "image_hint": "tea_green",
       "tags": [],
@@ -3356,10 +3486,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 6.99,
+      "price": 7.33,
       "brands": [
         "Just Juice",
-        "Charlies"
+        "Waitrose",
+        "Aldi UK",
+        "Charlies",
+        "Marks & Spencer"
       ],
       "image_hint": "juice_orange",
       "tags": [],
@@ -3387,10 +3520,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 6.99,
+      "price": 6.87,
       "brands": [
         "Just Juice",
-        "Charlies"
+        "Lidl UK",
+        "Waitrose",
+        "Charlies",
+        "Sainsbury's"
       ],
       "image_hint": "juice_apple",
       "tags": [],
@@ -3419,9 +3555,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2.25,
-      "price": 4.99,
+      "price": 5.13,
       "brands": [
-        "Coca-Cola"
+        "Waitrose",
+        "Sainsbury's",
+        "Coca-Cola",
+        "Aldi UK"
       ],
       "image_hint": "coke",
       "tags": [],
@@ -3448,9 +3587,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2.25,
-      "price": 4.99,
+      "price": 5.0,
       "brands": [
+        "Lidl UK",
         "Schweppes",
+        "Aldi UK",
+        "Marks & Spencer",
         "Sprite"
       ],
       "image_hint": "lemonade",
@@ -3480,10 +3622,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1.5,
-      "price": 2.49,
+      "price": 2.37,
       "brands": [
         "Pump",
-        "Evian"
+        "Iceland",
+        "Aldi UK",
+        "Evian",
+        "Marks & Spencer"
       ],
       "image_hint": "water_still",
       "tags": [],
@@ -3512,10 +3657,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1.5,
-      "price": 2.99,
+      "price": 3.04,
       "brands": [
+        "Co-op",
         "Schweppes",
-        "San Pellegrino"
+        "San Pellegrino",
+        "Waitrose",
+        "Marks & Spencer"
       ],
       "image_hint": "water_sparkling",
       "tags": [],
@@ -3542,11 +3690,14 @@
       ],
       "default_unit": "can",
       "default_quantity": 12,
-      "price": 24.99,
+      "price": 24.24,
       "brands": [
-        "Steinlager",
+        "Lidl UK",
         "DB Export",
-        "Speights"
+        "Steinlager",
+        "Speights",
+        "Marks & Spencer",
+        "Morrisons"
       ],
       "image_hint": "beer",
       "tags": [],
@@ -3574,10 +3725,13 @@
       ],
       "default_unit": "bottle",
       "default_quantity": 1,
-      "price": 15.99,
+      "price": 15.0,
       "brands": [
-        "Oyster Bay",
-        "Villa Maria"
+        "ASDA",
+        "Villa Maria",
+        "Aldi UK",
+        "Morrisons",
+        "Oyster Bay"
       ],
       "image_hint": "wine_red",
       "tags": [],
@@ -3606,11 +3760,14 @@
       ],
       "default_unit": "bottle",
       "default_quantity": 1,
-      "price": 15.99,
+      "price": 15.53,
       "brands": [
-        "Oyster Bay",
+        "Tesco",
+        "Iceland",
+        "Cloudy Bay",
+        "Co-op",
         "Villa Maria",
-        "Cloudy Bay"
+        "Oyster Bay"
       ],
       "image_hint": "wine_white",
       "tags": [],
@@ -3636,10 +3793,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 6.76,
       "brands": [
+        "Waitrose",
+        "Co-op",
         "Kelloggs",
-        "Pams"
+        "Morrisons"
       ],
       "image_hint": "cereal_cornflakes",
       "tags": [
@@ -3669,10 +3828,8 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 7.99,
-      "brands": [
-        "Sanitarium"
-      ],
+      "price": 8.37,
+      "brands": [],
       "image_hint": "cereal_weet_bix",
       "tags": [],
       "collections": [],
@@ -3697,10 +3854,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 8.72,
       "brands": [
+        "Iceland",
+        "ASDA",
         "Hubbards",
-        "Pams"
+        "Marks & Spencer"
       ],
       "image_hint": "cereal_muesli",
       "tags": [],
@@ -3727,10 +3886,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.88,
       "brands": [
+        "Waitrose",
+        "Lidl UK",
         "Harraways",
-        "Pams"
+        "ASDA"
       ],
       "image_hint": "oats_rolled",
       "tags": [],
@@ -3759,10 +3920,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 150,
-      "price": 3.99,
+      "price": 3.73,
       "brands": [
+        "Tesco",
+        "ASDA",
         "Bluebird",
-        "Eta"
+        "Eta",
+        "Sainsbury's"
       ],
       "image_hint": "chips_salt",
       "tags": [],
@@ -3790,10 +3954,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 150,
-      "price": 3.99,
+      "price": 3.96,
       "brands": [
+        "Lidl UK",
+        "Waitrose",
         "Bluebird",
-        "Eta"
+        "Eta",
+        "Aldi UK"
       ],
       "image_hint": "chips_chicken",
       "tags": [],
@@ -3820,10 +3987,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 3.72,
       "brands": [
-        "Griffin's",
-        "Arnott's"
+        "Arnott's",
+        "ASDA",
+        "Sainsbury's",
+        "Morrisons",
+        "Griffin's"
       ],
       "image_hint": "crackers",
       "tags": [],
@@ -3852,10 +4022,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.97,
       "brands": [
-        "Griffin's",
-        "Cookie Time"
+        "Cookie Time",
+        "Sainsbury's",
+        "Marks & Spencer",
+        "Morrisons",
+        "Griffin's"
       ],
       "image_hint": "cookies_chocolate_chip",
       "tags": [],
@@ -3881,9 +4054,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.49,
+      "price": 5.53,
       "brands": [
-        "Arnott's"
+        "Co-op",
+        "ASDA",
+        "Arnott's",
+        "Aldi UK"
       ],
       "image_hint": "tim_tams",
       "tags": [],
@@ -3912,10 +4088,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 5.99,
-      "brands": [
-        "Whittaker's"
-      ],
+      "price": 6.24,
+      "brands": [],
       "image_hint": "chocolate_whittakers",
       "tags": [],
       "collections": [],
@@ -3942,9 +4116,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 4.99,
+      "price": 5.02,
       "brands": [
-        "Cadbury"
+        "Cadbury",
+        "Tesco",
+        "ASDA",
+        "Iceland"
       ],
       "image_hint": "chocolate_cadbury",
       "tags": [],
@@ -3970,10 +4147,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.72,
       "brands": [
+        "Waitrose",
+        "Nice & Natural",
         "Uncle Tobys",
-        "Nice & Natural"
+        "Sainsbury's",
+        "Marks & Spencer"
       ],
       "image_hint": "muesli_bars",
       "tags": [],
@@ -4001,10 +4181,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.82,
       "brands": [
+        "Co-op",
+        "Proper",
         "Eta",
-        "Proper"
+        "Sainsbury's",
+        "Marks & Spencer"
       ],
       "image_hint": "popcorn",
       "tags": [
@@ -4034,10 +4217,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 6.99,
+      "price": 7.2,
       "brands": [
         "Eta",
-        "Pams"
+        "ASDA",
+        "Aldi UK",
+        "Marks & Spencer"
       ],
       "image_hint": "nuts_mixed",
       "tags": [],
@@ -4064,10 +4249,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 12,
-      "price": 12.99,
+      "price": 12.76,
       "brands": [
         "Sorbent",
-        "Purex"
+        "Waitrose",
+        "Purex",
+        "Aldi UK",
+        "Morrisons"
       ],
       "image_hint": "toilet_paper",
       "tags": [],
@@ -4093,10 +4281,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 4,
-      "price": 8.99,
+      "price": 8.32,
       "brands": [
+        "Iceland",
+        "Lidl UK",
+        "Sorbent",
         "Handee",
-        "Sorbent"
+        "Marks & Spencer"
       ],
       "image_hint": "paper_towels",
       "tags": [],
@@ -4123,10 +4314,13 @@
       ],
       "default_unit": "box",
       "default_quantity": 4,
-      "price": 7.99,
+      "price": 7.75,
       "brands": [
+        "Tesco",
+        "Sorbent",
         "Kleenex",
-        "Sorbent"
+        "Aldi UK",
+        "Morrisons"
       ],
       "image_hint": "tissues",
       "tags": [],
@@ -4153,10 +4347,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 4.99,
+      "price": 4.58,
       "brands": [
+        "Iceland",
+        "Tesco",
         "Sunlight",
-        "Morning Fresh"
+        "Morning Fresh",
+        "Morrisons"
       ],
       "image_hint": "dishwashing_liquid",
       "tags": [],
@@ -4182,10 +4379,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 14.18,
       "brands": [
-        "Finish",
-        "Earthwise"
+        "Earthwise",
+        "Iceland",
+        "Co-op",
+        "ASDA",
+        "Finish"
       ],
       "image_hint": "dishwasher_tablets",
       "tags": [],
@@ -4211,11 +4411,14 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 16.99,
+      "price": 17.0,
       "brands": [
         "Persil",
+        "Earthwise",
+        "Co-op",
+        "Lidl UK",
         "OMO",
-        "Earthwise"
+        "Marks & Spencer"
       ],
       "image_hint": "laundry_powder",
       "tags": [],
@@ -4241,11 +4444,14 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 14.17,
       "brands": [
         "Persil",
+        "Earthwise",
+        "Waitrose",
         "OMO",
-        "Earthwise"
+        "Sainsbury's",
+        "Marks & Spencer"
       ],
       "image_hint": "laundry_liquid",
       "tags": [],
@@ -4272,10 +4478,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 9.99,
+      "price": 10.3,
       "brands": [
+        "Earthwise",
+        "Tesco",
         "Comfort",
-        "Earthwise"
+        "Waitrose",
+        "Marks & Spencer"
       ],
       "image_hint": "fabric_softener",
       "tags": [],
@@ -4302,10 +4511,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 6.83,
       "brands": [
+        "Jif",
         "Spray n Wipe",
-        "Jif"
+        "ASDA",
+        "Sainsbury's",
+        "Morrisons"
       ],
       "image_hint": "spray_cleaner",
       "tags": [],
@@ -4331,10 +4543,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.47,
       "brands": [
-        "Janola",
-        "Domestos"
+        "Co-op",
+        "Domestos",
+        "Lidl UK",
+        "Sainsbury's",
+        "Janola"
       ],
       "image_hint": "bleach",
       "tags": [],
@@ -4361,10 +4576,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 8.61,
       "brands": [
+        "Tesco",
         "Glad",
-        "Ecostore"
+        "Ecostore",
+        "Marks & Spencer",
+        "Morrisons"
       ],
       "image_hint": "bin_bags",
       "tags": [],
@@ -4391,10 +4609,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.69,
       "brands": [
-        "Glad",
-        "Multix"
+        "Co-op",
+        "Lidl UK",
+        "Multix",
+        "Waitrose",
+        "Glad"
       ],
       "image_hint": "cling_film",
       "tags": [],
@@ -4421,10 +4642,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 6.6,
       "brands": [
+        "Co-op",
+        "ASDA",
+        "Multix",
         "Alfoil",
-        "Multix"
+        "Morrisons"
       ],
       "image_hint": "aluminium_foil",
       "tags": [],
@@ -4450,10 +4674,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.17,
       "brands": [
-        "Multix",
-        "Alfoil"
+        "Tesco",
+        "Co-op",
+        "Alfoil",
+        "Waitrose",
+        "Multix"
       ],
       "image_hint": "baking_paper",
       "tags": [],
@@ -4479,11 +4706,14 @@
       ],
       "default_unit": "mL",
       "default_quantity": 400,
-      "price": 8.99,
+      "price": 8.18,
       "brands": [
-        "Pantene",
         "Head & Shoulders",
-        "Garnier"
+        "Tesco",
+        "Iceland",
+        "Sainsbury's",
+        "Garnier",
+        "Pantene"
       ],
       "image_hint": "shampoo",
       "tags": [],
@@ -4511,11 +4741,14 @@
       ],
       "default_unit": "mL",
       "default_quantity": 400,
-      "price": 8.99,
+      "price": 8.72,
       "brands": [
-        "Pantene",
         "Head & Shoulders",
-        "Garnier"
+        "Lidl UK",
+        "Aldi UK",
+        "Garnier",
+        "Pantene",
+        "Morrisons"
       ],
       "image_hint": "conditioner",
       "tags": [],
@@ -4541,10 +4774,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 7.99,
+      "price": 7.87,
       "brands": [
+        "Iceland",
         "Dove",
+        "Lidl UK",
         "Palmolive",
+        "Marks & Spencer",
         "Nivea"
       ],
       "image_hint": "body_wash",
@@ -4572,9 +4808,12 @@
       ],
       "default_unit": "bar",
       "default_quantity": 4,
-      "price": 4.99,
+      "price": 5.2,
       "brands": [
+        "Tesco",
         "Dove",
+        "Lidl UK",
+        "Aldi UK",
         "Palmolive"
       ],
       "image_hint": "soap_bar",
@@ -4601,10 +4840,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 110,
-      "price": 5.99,
+      "price": 5.9,
       "brands": [
+        "Iceland",
+        "Co-op",
+        "Sensodyne",
         "Colgate",
-        "Sensodyne"
+        "Marks & Spencer"
       ],
       "image_hint": "toothpaste",
       "tags": [],
@@ -4630,10 +4872,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 6.99,
+      "price": 7.09,
       "brands": [
+        "Oral-B",
+        "Waitrose",
+        "Sainsbury's",
         "Colgate",
-        "Oral-B"
+        "Marks & Spencer"
       ],
       "image_hint": "toothbrush",
       "tags": [],
@@ -4659,11 +4904,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 50,
-      "price": 7.99,
+      "price": 7.78,
       "brands": [
-        "Rexona",
         "Dove",
-        "Lynx"
+        "Rexona",
+        "Co-op",
+        "Lynx",
+        "Waitrose",
+        "Aldi UK"
       ],
       "image_hint": "deodorant",
       "tags": [],
@@ -4690,10 +4938,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 19.99,
+      "price": 19.6,
       "brands": [
+        "Lidl UK",
+        "Waitrose",
+        "Schick",
         "Gillette",
-        "Schick"
+        "Sainsbury's"
       ],
       "image_hint": "razor_blades",
       "tags": [],
@@ -4719,10 +4970,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 200,
-      "price": 6.99,
+      "price": 7.27,
       "brands": [
+        "Iceland",
+        "ASDA",
         "Gillette",
-        "Nivea"
+        "Nivea",
+        "Morrisons"
       ],
       "image_hint": "shaving_cream",
       "tags": [],
@@ -4749,10 +5003,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 200,
-      "price": 14.99,
+      "price": 14.3,
       "brands": [
+        "Cancer Society",
+        "ASDA",
         "Neutrogena",
-        "Cancer Society"
+        "Aldi UK",
+        "Marks & Spencer"
       ],
       "image_hint": "sunscreen",
       "tags": [],
@@ -4779,10 +5036,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 9.37,
       "brands": [
-        "Panadol",
-        "Pams"
+        "Sainsbury's",
+        "Marks & Spencer",
+        "Aldi UK",
+        "Panadol"
       ],
       "image_hint": "paracetamol",
       "tags": [],
@@ -4809,10 +5068,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 9.99,
+      "price": 9.6,
       "brands": [
         "Nurofen",
-        "Pams"
+        "Lidl UK",
+        "ASDA",
+        "Waitrose"
       ],
       "image_hint": "ibuprofen",
       "tags": [],
@@ -4840,9 +5101,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.88,
       "brands": [
+        "Iceland",
+        "Co-op",
         "Band-Aid",
+        "Aldi UK",
         "Elastoplast"
       ],
       "image_hint": "bandaids",
@@ -4869,10 +5133,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 12.99,
+      "price": 13.15,
       "brands": [
-        "Healtheries",
-        "Blackmores"
+        "Tesco",
+        "Blackmores",
+        "ASDA",
+        "Sainsbury's",
+        "Healtheries"
       ],
       "image_hint": "vitamins_c",
       "tags": [],
@@ -4899,10 +5166,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 29.99,
+      "price": 30.46,
       "brands": [
+        "Co-op",
+        "Lidl UK",
         "Huggies",
-        "Pams"
+        "Aldi UK"
       ],
       "image_hint": "nappies",
       "tags": [],
@@ -4928,10 +5197,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.83,
       "brands": [
+        "Co-op",
+        "Sainsbury's",
         "Huggies",
-        "Pams"
+        "Marks & Spencer"
       ],
       "image_hint": "baby_wipes",
       "tags": [],
@@ -4957,9 +5228,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 900,
-      "price": 29.99,
+      "price": 29.61,
       "brands": [
+        "Tesco",
+        "Aldi UK",
         "Karicare",
+        "Sainsbury's",
         "Aptamil"
       ],
       "image_hint": "baby_formula",
@@ -4989,10 +5263,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 3,
-      "price": 24.99,
+      "price": 25.7,
       "brands": [
+        "Pedigree",
+        "Tesco",
         "Eukanuba",
-        "Pedigree"
+        "Sainsbury's",
+        "Morrisons"
       ],
       "image_hint": "dog_food_dry",
       "tags": [],
@@ -5020,10 +5297,13 @@
       ],
       "default_unit": "can",
       "default_quantity": 12,
-      "price": 19.99,
+      "price": 19.37,
       "brands": [
         "Pedigree",
-        "Champ"
+        "Tesco",
+        "Waitrose",
+        "Champ",
+        "Marks & Spencer"
       ],
       "image_hint": "dog_food_wet",
       "tags": [],
@@ -5051,8 +5331,11 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 19.99,
+      "price": 20.12,
       "brands": [
+        "Iceland",
+        "ASDA",
+        "Waitrose",
         "Whiskas",
         "Fancy Feast"
       ],
@@ -5082,8 +5365,11 @@
       ],
       "default_unit": "can",
       "default_quantity": 12,
-      "price": 14.99,
+      "price": 13.95,
       "brands": [
+        "Iceland",
+        "Co-op",
+        "ASDA",
         "Whiskas",
         "Fancy Feast"
       ],
@@ -5111,10 +5397,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 5,
-      "price": 12.99,
+      "price": 13.53,
       "brands": [
         "Catlove",
-        "Paws"
+        "Waitrose",
+        "Aldi UK",
+        "Paws",
+        "Morrisons"
       ],
       "image_hint": "cat_litter",
       "tags": [],
@@ -5129,5 +5418,6 @@
       "substitution_group": null,
       "priority_level": 1
     }
-  ]
+  ],
+  "country": "United Kingdom"
 }

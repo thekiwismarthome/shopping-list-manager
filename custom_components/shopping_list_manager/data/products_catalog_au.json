@@ -1,9 +1,9 @@
 {
-  "version": "2.1.0",
-  "region": "NZ",
-  "currency": "NZD",
+  "version": "2.2.0",
+  "region": "AU",
+  "currency": "AUD",
   "last_updated": "2026-02-13",
-  "description": "Advanced NZ grocery catalog with structured taxonomy, allergens, substitution groups, and automation-ready metadata",
+  "description": "Clean Australian grocery catalog based on cleaned NZ dataset",
   "products": [
     {
       "id": "prod_milk_trim",
@@ -22,8 +22,8 @@
       "default_quantity": 2,
       "price": 3.99,
       "brands": [
-        "Anchor",
-        "Pams",
+        "Woolworths",
+        "Coles",
         "Meadow Fresh"
       ],
       "barcode": "9400547000019",
@@ -59,8 +59,8 @@
       "default_quantity": 2,
       "price": 4.29,
       "brands": [
-        "Anchor",
-        "Pams",
+        "Woolworths",
+        "Coles",
         "Meadow Fresh"
       ],
       "barcode": "9400547000026",
@@ -94,9 +94,9 @@
       "default_quantity": 500,
       "price": 6.99,
       "brands": [
-        "Anchor",
-        "Mainland",
-        "Westgold"
+        "Woolworths",
+        "Westgold",
+        "Coles"
       ],
       "image_hint": "butter",
       "tags": [],
@@ -125,10 +125,7 @@
       "default_unit": "g",
       "default_quantity": 500,
       "price": 7.49,
-      "brands": [
-        "Anchor",
-        "Mainland"
-      ],
+      "brands": [],
       "image_hint": "butter",
       "tags": [],
       "collections": [],
@@ -158,11 +155,7 @@
       "default_unit": "g",
       "default_quantity": 500,
       "price": 9.99,
-      "brands": [
-        "Mainland",
-        "Anchor",
-        "Pams"
-      ],
+      "brands": [],
       "image_hint": "cheese_tasty",
       "tags": [],
       "collections": [],
@@ -190,10 +183,7 @@
       "default_unit": "g",
       "default_quantity": 500,
       "price": 9.49,
-      "brands": [
-        "Mainland",
-        "Anchor"
-      ],
+      "brands": [],
       "image_hint": "cheese_edam",
       "tags": [],
       "collections": [],
@@ -221,10 +211,7 @@
       "default_unit": "g",
       "default_quantity": 500,
       "price": 9.49,
-      "brands": [
-        "Mainland",
-        "Anchor"
-      ],
+      "brands": [],
       "image_hint": "cheese_colby",
       "tags": [],
       "collections": [],
@@ -253,11 +240,7 @@
       "default_unit": "g",
       "default_quantity": 250,
       "price": 6.99,
-      "brands": [
-        "Mainland",
-        "Anchor",
-        "Pams"
-      ],
+      "brands": [],
       "image_hint": "cheese_grated",
       "tags": [],
       "collections": [],
@@ -287,9 +270,10 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
-        "Anchor",
-        "Meadow Fresh",
-        "Cyclone"
+        "Woolworths",
+        "Cyclone",
+        "Coles",
+        "Meadow Fresh"
       ],
       "image_hint": "yogurt_plain",
       "tags": [],
@@ -321,9 +305,10 @@
       "default_quantity": 500,
       "price": 7.99,
       "brands": [
+        "Chobani",
         "Farmers Union",
-        "Anchor",
-        "Chobani"
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "yogurt_greek",
       "tags": [],
@@ -355,9 +340,11 @@
       "default_quantity": 12,
       "price": 9.99,
       "brands": [
-        "Woodland",
+        "Coles",
         "Frenz",
-        "Farmer Brown"
+        "Woodland",
+        "Farmer Brown",
+        "Woolworths"
       ],
       "image_hint": "eggs_free_range",
       "tags": [],
@@ -390,8 +377,9 @@
       "default_quantity": 12,
       "price": 6.49,
       "brands": [
-        "Pams",
-        "Value"
+        "Woolworths",
+        "Value",
+        "Coles"
       ],
       "image_hint": "eggs",
       "tags": [],
@@ -424,7 +412,8 @@
       "default_quantity": 300,
       "price": 4.99,
       "brands": [
-        "Anchor",
+        "Woolworths",
+        "Coles",
         "Meadow Fresh"
       ],
       "image_hint": "cream",
@@ -452,7 +441,8 @@
       "default_quantity": 250,
       "price": 4.49,
       "brands": [
-        "Anchor",
+        "Woolworths",
+        "Coles",
         "Meadow Fresh"
       ],
       "image_hint": "sour_cream",
@@ -1075,12 +1065,13 @@
     },
     {
       "id": "prod_kumara",
-      "name": "Kumara",
+      "name": "Sweet Potato",
       "category_id": "produce",
       "aliases": [
         "kumara",
         "kumaras",
         "kumera",
+        "sweet potato",
         "sweet potato"
       ],
       "default_unit": "kg",
@@ -1320,7 +1311,9 @@
       "price": 16.99,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "chicken_breast",
       "tags": [],
@@ -1349,7 +1342,9 @@
       "price": 14.99,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "chicken_thigh",
       "tags": [],
@@ -1378,7 +1373,9 @@
       "price": 11.99,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "chicken_drumsticks",
       "tags": [],
@@ -1407,7 +1404,9 @@
       "price": 13.99,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "chicken_whole",
       "tags": [],
@@ -1436,8 +1435,9 @@
       "default_quantity": 1,
       "price": 15.99,
       "brands": [
-        "Hellers",
-        "Angus"
+        "Woolworths",
+        "Angus",
+        "Coles"
       ],
       "image_hint": "beef_mince",
       "tags": [],
@@ -1466,8 +1466,10 @@
       "default_quantity": 0.5,
       "price": 29.99,
       "brands": [
+        "Woolworths",
+        "Premium",
         "Angus",
-        "Premium"
+        "Coles"
       ],
       "image_hint": "beef_steak",
       "tags": [],
@@ -1497,8 +1499,10 @@
       "default_quantity": 1,
       "price": 24.99,
       "brands": [
-        "Coastal Spring",
-        "Silver Fern Farms"
+        "Woolworths",
+        "Coles",
+        "Silver Fern Farms",
+        "Coastal Spring"
       ],
       "image_hint": "lamb_chops",
       "tags": [],
@@ -1526,8 +1530,10 @@
       "default_quantity": 2,
       "price": 19.99,
       "brands": [
-        "Coastal Spring",
-        "Silver Fern Farms"
+        "Woolworths",
+        "Coles",
+        "Silver Fern Farms",
+        "Coastal Spring"
       ],
       "image_hint": "lamb_leg",
       "tags": [],
@@ -1581,9 +1587,10 @@
       "default_quantity": 250,
       "price": 7.99,
       "brands": [
-        "Hellers",
         "Beehive",
-        "Freedom Farms"
+        "Coles",
+        "Freedom Farms",
+        "Woolworths"
       ],
       "image_hint": "bacon",
       "tags": [],
@@ -1612,8 +1619,9 @@
       "default_quantity": 1,
       "price": 11.99,
       "brands": [
-        "Hellers",
-        "Farmers Union"
+        "Woolworths",
+        "Farmers Union",
+        "Coles"
       ],
       "image_hint": "sausages",
       "tags": [],
@@ -1643,8 +1651,9 @@
       "default_quantity": 100,
       "price": 5.99,
       "brands": [
-        "Hellers",
-        "Continental"
+        "Woolworths",
+        "Continental",
+        "Coles"
       ],
       "image_hint": "salami",
       "tags": [],
@@ -1673,8 +1682,9 @@
       "default_quantity": 250,
       "price": 7.99,
       "brands": [
-        "Hellers",
-        "Beehive"
+        "Beehive",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "ham",
       "tags": [],
@@ -1707,8 +1717,9 @@
       "default_quantity": 0.5,
       "price": 39.99,
       "brands": [
+        "Woolworths",
         "Regal",
-        "Sealord"
+        "Coles"
       ],
       "image_hint": "salmon_fresh",
       "tags": [],
@@ -1737,8 +1748,9 @@
       "default_quantity": 0.5,
       "price": 19.99,
       "brands": [
-        "Sealord",
-        "Sanford"
+        "Woolworths",
+        "Sanford",
+        "Coles"
       ],
       "image_hint": "fish_hoki",
       "tags": [],
@@ -1768,9 +1780,7 @@
       "default_unit": "kg",
       "default_quantity": 0.5,
       "price": 29.99,
-      "brands": [
-        "Sealord"
-      ],
+      "brands": [],
       "image_hint": "prawns",
       "tags": [],
       "collections": [],
@@ -1799,7 +1809,9 @@
       "default_quantity": 1,
       "price": 14.99,
       "brands": [
-        "Sanford"
+        "Woolworths",
+        "Sanford",
+        "Coles"
       ],
       "image_hint": "mussels",
       "tags": [],
@@ -1830,7 +1842,8 @@
       "default_quantity": 1,
       "price": 2.99,
       "brands": [
-        "Tip Top",
+        "Woolworths",
+        "Coles",
         "Freyas",
         "Vogels"
       ],
@@ -1863,7 +1876,8 @@
       "default_quantity": 1,
       "price": 3.49,
       "brands": [
-        "Tip Top",
+        "Woolworths",
+        "Coles",
         "Vogels"
       ],
       "image_hint": "bread_wholemeal",
@@ -1897,6 +1911,8 @@
       "default_quantity": 1,
       "price": 4.99,
       "brands": [
+        "Woolworths",
+        "Coles",
         "Vogels"
       ],
       "image_hint": "bread_vogels",
@@ -1926,8 +1942,9 @@
       "default_quantity": 1,
       "price": 3.99,
       "brands": [
-        "Tip Top",
-        "Bakery"
+        "Woolworths",
+        "Bakery",
+        "Coles"
       ],
       "image_hint": "bread_rolls",
       "tags": [],
@@ -1954,9 +1971,7 @@
       "default_unit": "pack",
       "default_quantity": 1,
       "price": 4.99,
-      "brands": [
-        "Tip Top"
-      ],
+      "brands": [],
       "image_hint": "bagels",
       "tags": [],
       "collections": [],
@@ -1982,9 +1997,7 @@
       "default_unit": "pack",
       "default_quantity": 1,
       "price": 4.49,
-      "brands": [
-        "Tip Top"
-      ],
+      "brands": [],
       "image_hint": "english_muffins",
       "tags": [],
       "collections": [],
@@ -2012,8 +2025,10 @@
       "default_quantity": 1,
       "price": 4.99,
       "brands": [
+        "Woolworths",
         "Mission",
-        "Farrah's"
+        "Farrah's",
+        "Coles"
       ],
       "image_hint": "wraps",
       "tags": [],
@@ -2041,7 +2056,9 @@
       "default_quantity": 1,
       "price": 3.99,
       "brands": [
-        "Farrah's"
+        "Woolworths",
+        "Farrah's",
+        "Coles"
       ],
       "image_hint": "pita_bread",
       "tags": [],
@@ -2069,7 +2086,9 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
-        "Bakery"
+        "Woolworths",
+        "Bakery",
+        "Coles"
       ],
       "image_hint": "croissants",
       "tags": [],
@@ -2096,10 +2115,7 @@
       "default_unit": "kg",
       "default_quantity": 1,
       "price": 4.99,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "brands": [],
       "image_hint": "frozen_peas",
       "tags": [],
       "collections": [],
@@ -2126,10 +2142,7 @@
       "default_unit": "kg",
       "default_quantity": 1,
       "price": 5.49,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "brands": [],
       "image_hint": "frozen_mixed_veg",
       "tags": [],
       "collections": [],
@@ -2158,7 +2171,8 @@
       "price": 5.99,
       "brands": [
         "McCain",
-        "Watties"
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "frozen_chips",
       "tags": [],
@@ -2188,8 +2202,9 @@
       "default_quantity": 2,
       "price": 7.99,
       "brands": [
-        "Tip Top",
-        "Much Moore"
+        "Much Moore",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "ice_cream_vanilla",
       "tags": [],
@@ -2218,9 +2233,7 @@
       "default_unit": "L",
       "default_quantity": 2,
       "price": 8.99,
-      "brands": [
-        "Tip Top"
-      ],
+      "brands": [],
       "image_hint": "ice_cream_hokey_pokey",
       "tags": [],
       "collections": [],
@@ -2248,6 +2261,8 @@
       "price": 6.99,
       "brands": [
         "Dr Oetker",
+        "Woolworths",
+        "Coles",
         "McCain"
       ],
       "image_hint": "frozen_pizza",
@@ -2276,8 +2291,9 @@
       "default_quantity": 1,
       "price": 7.99,
       "brands": [
-        "Birds Eye",
-        "Sealord"
+        "Woolworths",
+        "Coles",
+        "Birds Eye"
       ],
       "image_hint": "fish_fingers",
       "tags": [],
@@ -2307,8 +2323,9 @@
       "default_quantity": 500,
       "price": 6.99,
       "brands": [
-        "Pams",
-        "Value"
+        "Woolworths",
+        "Value",
+        "Coles"
       ],
       "image_hint": "frozen_berries",
       "tags": [],
@@ -2339,8 +2356,9 @@
       "default_quantity": 1,
       "price": 3.99,
       "brands": [
+        "Woolworths",
         "Sunrice",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "rice_white",
       "tags": [
@@ -2375,8 +2393,10 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
+        "Woolworths",
+        "Tilda",
         "Sunrice",
-        "Tilda"
+        "Coles"
       ],
       "image_hint": "rice_basmati",
       "tags": [
@@ -2411,9 +2431,10 @@
       "default_quantity": 500,
       "price": 2.99,
       "brands": [
+        "San Remo",
         "Barilla",
-        "Pams",
-        "San Remo"
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "pasta_spaghetti",
       "tags": [],
@@ -2443,9 +2464,10 @@
       "default_quantity": 500,
       "price": 2.99,
       "brands": [
+        "San Remo",
         "Barilla",
-        "Pams",
-        "San Remo"
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "pasta_penne",
       "tags": [],
@@ -2474,9 +2496,10 @@
       "default_quantity": 500,
       "price": 3.99,
       "brands": [
+        "Woolworths",
+        "Barilla",
         "Dolmio",
-        "Watties",
-        "Barilla"
+        "Coles"
       ],
       "image_hint": "pasta_sauce",
       "tags": [],
@@ -2507,7 +2530,9 @@
       "default_quantity": 1.5,
       "price": 3.49,
       "brands": [
+        "Woolworths",
         "Champion",
+        "Coles",
         "Edmonds"
       ],
       "image_hint": "flour_plain",
@@ -2538,7 +2563,9 @@
       "default_quantity": 1.5,
       "price": 3.49,
       "brands": [
+        "Woolworths",
         "Champion",
+        "Coles",
         "Edmonds"
       ],
       "image_hint": "flour_self_raising",
@@ -2570,7 +2597,9 @@
       "default_quantity": 1.5,
       "price": 3.99,
       "brands": [
-        "Chelsea"
+        "Woolworths",
+        "Chelsea",
+        "Coles"
       ],
       "image_hint": "sugar_white",
       "tags": [],
@@ -2601,7 +2630,9 @@
       "default_quantity": 1,
       "price": 4.49,
       "brands": [
-        "Chelsea"
+        "Woolworths",
+        "Chelsea",
+        "Coles"
       ],
       "image_hint": "sugar_brown",
       "tags": [],
@@ -2630,8 +2661,9 @@
       "default_quantity": 1,
       "price": 12.99,
       "brands": [
+        "Woolworths",
         "Olivado",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "oil_olive",
       "tags": [],
@@ -2660,7 +2692,8 @@
       "default_quantity": 1,
       "price": 6.99,
       "brands": [
-        "Pams",
+        "Woolworths",
+        "Coles",
         "Olivani"
       ],
       "image_hint": "oil_vegetable",
@@ -2691,10 +2724,7 @@
       "default_unit": "can",
       "default_quantity": 4,
       "price": 1.99,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "brands": [],
       "image_hint": "tomatoes_canned",
       "tags": [],
       "collections": [],
@@ -2721,7 +2751,8 @@
       "default_quantity": 1,
       "price": 2.49,
       "brands": [
-        "Watties",
+        "Woolworths",
+        "Coles",
         "Heinz"
       ],
       "image_hint": "baked_beans",
@@ -2753,8 +2784,9 @@
       "default_quantity": 3,
       "price": 2.99,
       "brands": [
-        "Sealord",
-        "John West"
+        "Woolworths",
+        "John West",
+        "Coles"
       ],
       "image_hint": "tuna",
       "tags": [],
@@ -2782,8 +2814,9 @@
       "default_quantity": 2,
       "price": 2.99,
       "brands": [
-        "Ayam",
-        "Pams"
+        "Woolworths",
+        "Coles",
+        "Ayam"
       ],
       "image_hint": "coconut_cream",
       "tags": [],
@@ -2812,9 +2845,11 @@
       "default_quantity": 380,
       "price": 5.99,
       "brands": [
-        "Pic's",
+        "Kraft",
         "ETA",
-        "Kraft"
+        "Coles",
+        "Woolworths",
+        "Pic's"
       ],
       "image_hint": "peanut_butter",
       "tags": [],
@@ -2844,8 +2879,10 @@
       "default_quantity": 340,
       "price": 4.99,
       "brands": [
+        "Woolworths",
+        "Anathoth",
         "Barker's",
-        "Anathoth"
+        "Coles"
       ],
       "image_hint": "jam_strawberry",
       "tags": [],
@@ -2875,7 +2912,9 @@
       "price": 8.99,
       "brands": [
         "Airborne",
-        "Manuka Health"
+        "Manuka Health",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "honey",
       "tags": [],
@@ -2902,9 +2941,7 @@
       "default_unit": "g",
       "default_quantity": 250,
       "price": 5.99,
-      "brands": [
-        "Sanitarium"
-      ],
+      "brands": [],
       "image_hint": "marmite",
       "tags": [],
       "collections": [],
@@ -2931,7 +2968,9 @@
       "default_quantity": 220,
       "price": 5.49,
       "brands": [
-        "Bega"
+        "Woolworths",
+        "Bega",
+        "Coles"
       ],
       "image_hint": "vegemite",
       "tags": [],
@@ -2959,8 +2998,9 @@
       "default_quantity": 250,
       "price": 4.99,
       "brands": [
+        "Woolworths",
         "Kikkoman",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "soy_sauce",
       "tags": [],
@@ -2991,7 +3031,8 @@
       "default_quantity": 560,
       "price": 4.99,
       "brands": [
-        "Watties",
+        "Woolworths",
+        "Coles",
         "Heinz"
       ],
       "image_hint": "tomato_sauce",
@@ -3022,8 +3063,9 @@
       "default_quantity": 500,
       "price": 4.99,
       "brands": [
-        "Watties",
-        "Masterfoods"
+        "Woolworths",
+        "Masterfoods",
+        "Coles"
       ],
       "image_hint": "bbq_sauce",
       "tags": [],
@@ -3053,8 +3095,9 @@
       "default_quantity": 440,
       "price": 5.99,
       "brands": [
+        "Woolworths",
         "Best Foods",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "mayonnaise",
       "tags": [],
@@ -3083,7 +3126,9 @@
       "default_quantity": 250,
       "price": 3.99,
       "brands": [
+        "Woolworths",
         "Masterfoods",
+        "Coles",
         "French's"
       ],
       "image_hint": "mustard",
@@ -3113,7 +3158,9 @@
       "default_quantity": 1,
       "price": 1.99,
       "brands": [
-        "Cerebos"
+        "Woolworths",
+        "Cerebos",
+        "Coles"
       ],
       "image_hint": "salt",
       "tags": [],
@@ -3141,7 +3188,9 @@
       "default_quantity": 50,
       "price": 3.99,
       "brands": [
-        "Masterfoods"
+        "Woolworths",
+        "Masterfoods",
+        "Coles"
       ],
       "image_hint": "pepper",
       "tags": [],
@@ -3172,8 +3221,10 @@
       "default_quantity": 1,
       "price": 2.99,
       "brands": [
+        "Woolworths",
+        "Continental",
         "Maggi",
-        "Continental"
+        "Coles"
       ],
       "image_hint": "stock_cubes",
       "tags": [],
@@ -3203,8 +3254,10 @@
       "default_quantity": 1,
       "price": 2.99,
       "brands": [
+        "Woolworths",
+        "Continental",
         "Maggi",
-        "Continental"
+        "Coles"
       ],
       "image_hint": "stock_cubes",
       "tags": [],
@@ -3233,9 +3286,11 @@
       "default_quantity": 200,
       "price": 12.99,
       "brands": [
-        "Nescafe",
+        "Robert Harris",
         "Gregg's",
-        "Robert Harris"
+        "Nescafe",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "coffee_instant",
       "tags": [],
@@ -3263,9 +3318,11 @@
       "default_quantity": 200,
       "price": 8.99,
       "brands": [
-        "Vittoria",
         "Robert Harris",
-        "L'affare"
+        "L'affare",
+        "Coles",
+        "Woolworths",
+        "Vittoria"
       ],
       "image_hint": "coffee_ground",
       "tags": [],
@@ -3297,8 +3354,10 @@
       "price": 6.99,
       "brands": [
         "Bell",
-        "Dilmah",
-        "Twinings"
+        "Coles",
+        "Woolworths",
+        "Twinings",
+        "Dilmah"
       ],
       "image_hint": "tea_black",
       "tags": [],
@@ -3328,8 +3387,10 @@
       "default_quantity": 40,
       "price": 5.99,
       "brands": [
-        "Dilmah",
-        "Twinings"
+        "Woolworths",
+        "Coles",
+        "Twinings",
+        "Dilmah"
       ],
       "image_hint": "tea_green",
       "tags": [],
@@ -3359,7 +3420,9 @@
       "price": 6.99,
       "brands": [
         "Just Juice",
-        "Charlies"
+        "Charlies",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "juice_orange",
       "tags": [],
@@ -3390,7 +3453,9 @@
       "price": 6.99,
       "brands": [
         "Just Juice",
-        "Charlies"
+        "Charlies",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "juice_apple",
       "tags": [],
@@ -3421,7 +3486,9 @@
       "default_quantity": 2.25,
       "price": 4.99,
       "brands": [
-        "Coca-Cola"
+        "Woolworths",
+        "Coca-Cola",
+        "Coles"
       ],
       "image_hint": "coke",
       "tags": [],
@@ -3450,8 +3517,10 @@
       "default_quantity": 2.25,
       "price": 4.99,
       "brands": [
+        "Woolworths",
         "Schweppes",
-        "Sprite"
+        "Sprite",
+        "Coles"
       ],
       "image_hint": "lemonade",
       "tags": [],
@@ -3482,8 +3551,10 @@
       "default_quantity": 1.5,
       "price": 2.49,
       "brands": [
+        "Woolworths",
         "Pump",
-        "Evian"
+        "Evian",
+        "Coles"
       ],
       "image_hint": "water_still",
       "tags": [],
@@ -3514,8 +3585,10 @@
       "default_quantity": 1.5,
       "price": 2.99,
       "brands": [
+        "Woolworths",
         "Schweppes",
-        "San Pellegrino"
+        "San Pellegrino",
+        "Coles"
       ],
       "image_hint": "water_sparkling",
       "tags": [],
@@ -3544,9 +3617,11 @@
       "default_quantity": 12,
       "price": 24.99,
       "brands": [
-        "Steinlager",
+        "Coles",
         "DB Export",
-        "Speights"
+        "Steinlager",
+        "Speights",
+        "Woolworths"
       ],
       "image_hint": "beer",
       "tags": [],
@@ -3576,8 +3651,10 @@
       "default_quantity": 1,
       "price": 15.99,
       "brands": [
-        "Oyster Bay",
-        "Villa Maria"
+        "Woolworths",
+        "Villa Maria",
+        "Coles",
+        "Oyster Bay"
       ],
       "image_hint": "wine_red",
       "tags": [],
@@ -3608,9 +3685,11 @@
       "default_quantity": 1,
       "price": 15.99,
       "brands": [
-        "Oyster Bay",
+        "Cloudy Bay",
+        "Coles",
         "Villa Maria",
-        "Cloudy Bay"
+        "Woolworths",
+        "Oyster Bay"
       ],
       "image_hint": "wine_white",
       "tags": [],
@@ -3638,8 +3717,9 @@
       "default_quantity": 500,
       "price": 6.99,
       "brands": [
+        "Woolworths",
         "Kelloggs",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "cereal_cornflakes",
       "tags": [
@@ -3670,9 +3750,7 @@
       "default_unit": "pack",
       "default_quantity": 1,
       "price": 7.99,
-      "brands": [
-        "Sanitarium"
-      ],
+      "brands": [],
       "image_hint": "cereal_weet_bix",
       "tags": [],
       "collections": [],
@@ -3699,8 +3777,9 @@
       "default_quantity": 1,
       "price": 8.99,
       "brands": [
+        "Woolworths",
         "Hubbards",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "cereal_muesli",
       "tags": [],
@@ -3729,8 +3808,9 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
+        "Woolworths",
         "Harraways",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "oats_rolled",
       "tags": [],
@@ -3761,6 +3841,8 @@
       "default_quantity": 150,
       "price": 3.99,
       "brands": [
+        "Woolworths",
+        "Coles",
         "Bluebird",
         "Eta"
       ],
@@ -3792,6 +3874,8 @@
       "default_quantity": 150,
       "price": 3.99,
       "brands": [
+        "Woolworths",
+        "Coles",
         "Bluebird",
         "Eta"
       ],
@@ -3822,8 +3906,10 @@
       "default_quantity": 1,
       "price": 3.99,
       "brands": [
-        "Griffin's",
-        "Arnott's"
+        "Woolworths",
+        "Arnott's",
+        "Coles",
+        "Griffin's"
       ],
       "image_hint": "crackers",
       "tags": [],
@@ -3854,8 +3940,10 @@
       "default_quantity": 1,
       "price": 4.99,
       "brands": [
-        "Griffin's",
-        "Cookie Time"
+        "Cookie Time",
+        "Woolworths",
+        "Coles",
+        "Griffin's"
       ],
       "image_hint": "cookies_chocolate_chip",
       "tags": [],
@@ -3883,7 +3971,9 @@
       "default_quantity": 1,
       "price": 5.49,
       "brands": [
-        "Arnott's"
+        "Woolworths",
+        "Arnott's",
+        "Coles"
       ],
       "image_hint": "tim_tams",
       "tags": [],
@@ -3913,9 +4003,7 @@
       "default_unit": "g",
       "default_quantity": 250,
       "price": 5.99,
-      "brands": [
-        "Whittaker's"
-      ],
+      "brands": [],
       "image_hint": "chocolate_whittakers",
       "tags": [],
       "collections": [],
@@ -3944,7 +4032,9 @@
       "default_quantity": 200,
       "price": 4.99,
       "brands": [
-        "Cadbury"
+        "Woolworths",
+        "Cadbury",
+        "Coles"
       ],
       "image_hint": "chocolate_cadbury",
       "tags": [],
@@ -3972,8 +4062,10 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
+        "Woolworths",
+        "Nice & Natural",
         "Uncle Tobys",
-        "Nice & Natural"
+        "Coles"
       ],
       "image_hint": "muesli_bars",
       "tags": [],
@@ -4003,8 +4095,10 @@
       "default_quantity": 1,
       "price": 4.99,
       "brands": [
+        "Woolworths",
+        "Proper",
         "Eta",
-        "Proper"
+        "Coles"
       ],
       "image_hint": "popcorn",
       "tags": [
@@ -4036,8 +4130,9 @@
       "default_quantity": 200,
       "price": 6.99,
       "brands": [
+        "Woolworths",
         "Eta",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "nuts_mixed",
       "tags": [],
@@ -4066,8 +4161,10 @@
       "default_quantity": 12,
       "price": 12.99,
       "brands": [
+        "Woolworths",
+        "Purex",
         "Sorbent",
-        "Purex"
+        "Coles"
       ],
       "image_hint": "toilet_paper",
       "tags": [],
@@ -4095,8 +4192,10 @@
       "default_quantity": 4,
       "price": 8.99,
       "brands": [
+        "Woolworths",
         "Handee",
-        "Sorbent"
+        "Sorbent",
+        "Coles"
       ],
       "image_hint": "paper_towels",
       "tags": [],
@@ -4125,8 +4224,10 @@
       "default_quantity": 4,
       "price": 7.99,
       "brands": [
+        "Woolworths",
         "Kleenex",
-        "Sorbent"
+        "Sorbent",
+        "Coles"
       ],
       "image_hint": "tissues",
       "tags": [],
@@ -4155,8 +4256,10 @@
       "default_quantity": 500,
       "price": 4.99,
       "brands": [
+        "Woolworths",
         "Sunlight",
-        "Morning Fresh"
+        "Morning Fresh",
+        "Coles"
       ],
       "image_hint": "dishwashing_liquid",
       "tags": [],
@@ -4184,8 +4287,10 @@
       "default_quantity": 1,
       "price": 14.99,
       "brands": [
-        "Finish",
-        "Earthwise"
+        "Woolworths",
+        "Earthwise",
+        "Coles",
+        "Finish"
       ],
       "image_hint": "dishwasher_tablets",
       "tags": [],
@@ -4214,8 +4319,10 @@
       "price": 16.99,
       "brands": [
         "Persil",
+        "Earthwise",
+        "Coles",
         "OMO",
-        "Earthwise"
+        "Woolworths"
       ],
       "image_hint": "laundry_powder",
       "tags": [],
@@ -4244,8 +4351,10 @@
       "price": 14.99,
       "brands": [
         "Persil",
+        "Earthwise",
+        "Coles",
         "OMO",
-        "Earthwise"
+        "Woolworths"
       ],
       "image_hint": "laundry_liquid",
       "tags": [],
@@ -4275,7 +4384,9 @@
       "price": 9.99,
       "brands": [
         "Comfort",
-        "Earthwise"
+        "Earthwise",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "fabric_softener",
       "tags": [],
@@ -4304,8 +4415,10 @@
       "default_quantity": 500,
       "price": 6.99,
       "brands": [
-        "Spray n Wipe",
-        "Jif"
+        "Woolworths",
+        "Coles",
+        "Jif",
+        "Spray n Wipe"
       ],
       "image_hint": "spray_cleaner",
       "tags": [],
@@ -4333,8 +4446,10 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
-        "Janola",
-        "Domestos"
+        "Woolworths",
+        "Domestos",
+        "Coles",
+        "Janola"
       ],
       "image_hint": "bleach",
       "tags": [],
@@ -4363,8 +4478,10 @@
       "default_quantity": 1,
       "price": 8.99,
       "brands": [
+        "Woolworths",
         "Glad",
-        "Ecostore"
+        "Ecostore",
+        "Coles"
       ],
       "image_hint": "bin_bags",
       "tags": [],
@@ -4393,7 +4510,9 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
+        "Woolworths",
         "Glad",
+        "Coles",
         "Multix"
       ],
       "image_hint": "cling_film",
@@ -4423,8 +4542,10 @@
       "default_quantity": 1,
       "price": 6.99,
       "brands": [
-        "Alfoil",
-        "Multix"
+        "Woolworths",
+        "Multix",
+        "Coles",
+        "Alfoil"
       ],
       "image_hint": "aluminium_foil",
       "tags": [],
@@ -4452,8 +4573,10 @@
       "default_quantity": 1,
       "price": 4.99,
       "brands": [
-        "Multix",
-        "Alfoil"
+        "Woolworths",
+        "Alfoil",
+        "Coles",
+        "Multix"
       ],
       "image_hint": "baking_paper",
       "tags": [],
@@ -4481,9 +4604,11 @@
       "default_quantity": 400,
       "price": 8.99,
       "brands": [
-        "Pantene",
         "Head & Shoulders",
-        "Garnier"
+        "Coles",
+        "Woolworths",
+        "Garnier",
+        "Pantene"
       ],
       "image_hint": "shampoo",
       "tags": [],
@@ -4513,9 +4638,11 @@
       "default_quantity": 400,
       "price": 8.99,
       "brands": [
-        "Pantene",
         "Head & Shoulders",
-        "Garnier"
+        "Coles",
+        "Woolworths",
+        "Garnier",
+        "Pantene"
       ],
       "image_hint": "conditioner",
       "tags": [],
@@ -4544,7 +4671,9 @@
       "price": 7.99,
       "brands": [
         "Dove",
+        "Coles",
         "Palmolive",
+        "Woolworths",
         "Nivea"
       ],
       "image_hint": "body_wash",
@@ -4574,7 +4703,9 @@
       "default_quantity": 4,
       "price": 4.99,
       "brands": [
+        "Woolworths",
         "Dove",
+        "Coles",
         "Palmolive"
       ],
       "image_hint": "soap_bar",
@@ -4603,6 +4734,8 @@
       "default_quantity": 110,
       "price": 5.99,
       "brands": [
+        "Woolworths",
+        "Coles",
         "Colgate",
         "Sensodyne"
       ],
@@ -4632,7 +4765,9 @@
       "default_quantity": 2,
       "price": 6.99,
       "brands": [
+        "Woolworths",
         "Colgate",
+        "Coles",
         "Oral-B"
       ],
       "image_hint": "toothbrush",
@@ -4661,9 +4796,11 @@
       "default_quantity": 50,
       "price": 7.99,
       "brands": [
-        "Rexona",
         "Dove",
-        "Lynx"
+        "Rexona",
+        "Lynx",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "deodorant",
       "tags": [],
@@ -4692,8 +4829,10 @@
       "default_quantity": 1,
       "price": 19.99,
       "brands": [
-        "Gillette",
-        "Schick"
+        "Woolworths",
+        "Coles",
+        "Schick",
+        "Gillette"
       ],
       "image_hint": "razor_blades",
       "tags": [],
@@ -4721,8 +4860,10 @@
       "default_quantity": 200,
       "price": 6.99,
       "brands": [
-        "Gillette",
-        "Nivea"
+        "Woolworths",
+        "Coles",
+        "Nivea",
+        "Gillette"
       ],
       "image_hint": "shaving_cream",
       "tags": [],
@@ -4751,6 +4892,8 @@
       "default_quantity": 200,
       "price": 14.99,
       "brands": [
+        "Woolworths",
+        "Coles",
         "Neutrogena",
         "Cancer Society"
       ],
@@ -4781,8 +4924,9 @@
       "default_quantity": 1,
       "price": 8.99,
       "brands": [
-        "Panadol",
-        "Pams"
+        "Woolworths",
+        "Coles",
+        "Panadol"
       ],
       "image_hint": "paracetamol",
       "tags": [],
@@ -4812,7 +4956,8 @@
       "price": 9.99,
       "brands": [
         "Nurofen",
-        "Pams"
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "ibuprofen",
       "tags": [],
@@ -4843,7 +4988,9 @@
       "price": 5.99,
       "brands": [
         "Band-Aid",
-        "Elastoplast"
+        "Elastoplast",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "bandaids",
       "tags": [],
@@ -4871,7 +5018,9 @@
       "default_quantity": 1,
       "price": 12.99,
       "brands": [
+        "Woolworths",
         "Healtheries",
+        "Coles",
         "Blackmores"
       ],
       "image_hint": "vitamins_c",
@@ -4901,8 +5050,9 @@
       "default_quantity": 1,
       "price": 29.99,
       "brands": [
+        "Woolworths",
         "Huggies",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "nappies",
       "tags": [],
@@ -4930,8 +5080,9 @@
       "default_quantity": 1,
       "price": 5.99,
       "brands": [
+        "Woolworths",
         "Huggies",
-        "Pams"
+        "Coles"
       ],
       "image_hint": "baby_wipes",
       "tags": [],
@@ -4959,8 +5110,10 @@
       "default_quantity": 900,
       "price": 29.99,
       "brands": [
-        "Karicare",
-        "Aptamil"
+        "Woolworths",
+        "Coles",
+        "Aptamil",
+        "Karicare"
       ],
       "image_hint": "baby_formula",
       "tags": [],
@@ -4991,8 +5144,10 @@
       "default_quantity": 3,
       "price": 24.99,
       "brands": [
+        "Pedigree",
+        "Coles",
         "Eukanuba",
-        "Pedigree"
+        "Woolworths"
       ],
       "image_hint": "dog_food_dry",
       "tags": [],
@@ -5023,7 +5178,9 @@
       "price": 19.99,
       "brands": [
         "Pedigree",
-        "Champ"
+        "Champ",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "dog_food_wet",
       "tags": [],
@@ -5053,8 +5210,10 @@
       "default_quantity": 2,
       "price": 19.99,
       "brands": [
+        "Woolworths",
         "Whiskas",
-        "Fancy Feast"
+        "Fancy Feast",
+        "Coles"
       ],
       "image_hint": "cat_food_dry",
       "tags": [],
@@ -5084,8 +5243,10 @@
       "default_quantity": 12,
       "price": 14.99,
       "brands": [
+        "Woolworths",
         "Whiskas",
-        "Fancy Feast"
+        "Fancy Feast",
+        "Coles"
       ],
       "image_hint": "cat_food_wet",
       "tags": [],
@@ -5114,7 +5275,9 @@
       "price": 12.99,
       "brands": [
         "Catlove",
-        "Paws"
+        "Paws",
+        "Coles",
+        "Woolworths"
       ],
       "image_hint": "cat_litter",
       "tags": [],
@@ -5129,5 +5292,6 @@
       "substitution_group": null,
       "priority_level": 1
     }
-  ]
+  ],
+  "country": "Australia"
 }

@@ -1,9 +1,9 @@
 {
   "version": "2.1.0",
-  "region": "NZ",
-  "currency": "NZD",
+  "region": "CA",
+  "currency": "CAD",
   "last_updated": "2026-02-13",
-  "description": "Advanced NZ grocery catalog with structured taxonomy, allergens, substitution groups, and automation-ready metadata",
+  "description": "Clean Canadian grocery catalog based on cleaned NZ dataset (no synthetic variants)",
   "products": [
     {
       "id": "prod_milk_trim",
@@ -20,10 +20,11 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 3.99,
+      "price": 4.21,
       "brands": [
-        "Anchor",
-        "Pams",
+        "Real Canadian Superstore",
+        "FreshCo",
+        "Sobeys",
         "Meadow Fresh"
       ],
       "barcode": "9400547000019",
@@ -57,10 +58,11 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 4.29,
+      "price": 4.82,
       "brands": [
-        "Anchor",
-        "Pams",
+        "Costco Canada",
+        "Metro",
+        "Loblaws",
         "Meadow Fresh"
       ],
       "barcode": "9400547000026",
@@ -92,11 +94,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 7.72,
       "brands": [
-        "Anchor",
-        "Mainland",
-        "Westgold"
+        "Food Basics",
+        "Westgold",
+        "Sobeys",
+        "Loblaws"
       ],
       "image_hint": "butter",
       "tags": [],
@@ -124,11 +127,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 7.49,
-      "brands": [
-        "Anchor",
-        "Mainland"
-      ],
+      "price": 8.59,
+      "brands": [],
       "image_hint": "butter",
       "tags": [],
       "collections": [],
@@ -157,12 +157,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 9.99,
-      "brands": [
-        "Mainland",
-        "Anchor",
-        "Pams"
-      ],
+      "price": 9.86,
+      "brands": [],
       "image_hint": "cheese_tasty",
       "tags": [],
       "collections": [],
@@ -189,11 +185,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 9.49,
-      "brands": [
-        "Mainland",
-        "Anchor"
-      ],
+      "price": 10.43,
+      "brands": [],
       "image_hint": "cheese_edam",
       "tags": [],
       "collections": [],
@@ -220,11 +213,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 9.49,
-      "brands": [
-        "Mainland",
-        "Anchor"
-      ],
+      "price": 10.6,
+      "brands": [],
       "image_hint": "cheese_colby",
       "tags": [],
       "collections": [],
@@ -252,12 +242,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 6.99,
-      "brands": [
-        "Mainland",
-        "Anchor",
-        "Pams"
-      ],
+      "price": 6.97,
+      "brands": [],
       "image_hint": "cheese_grated",
       "tags": [],
       "collections": [],
@@ -285,11 +271,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.8,
       "brands": [
-        "Anchor",
-        "Meadow Fresh",
-        "Cyclone"
+        "Metro",
+        "Cyclone",
+        "FreshCo",
+        "Sobeys",
+        "Meadow Fresh"
       ],
       "image_hint": "yogurt_plain",
       "tags": [],
@@ -319,11 +307,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 7.99,
+      "price": 7.98,
       "brands": [
+        "Chobani",
+        "Costco Canada",
         "Farmers Union",
-        "Anchor",
-        "Chobani"
+        "Food Basics",
+        "Longo's"
       ],
       "image_hint": "yogurt_greek",
       "tags": [],
@@ -353,10 +343,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 12,
-      "price": 9.99,
+      "price": 10.09,
       "brands": [
-        "Woodland",
+        "Loblaws",
         "Frenz",
+        "FreshCo",
+        "No Frills",
+        "Woodland",
         "Farmer Brown"
       ],
       "image_hint": "eggs_free_range",
@@ -388,9 +381,11 @@
       ],
       "default_unit": "ea",
       "default_quantity": 12,
-      "price": 6.49,
+      "price": 6.89,
       "brands": [
-        "Pams",
+        "Food Basics",
+        "Metro",
+        "Sobeys",
         "Value"
       ],
       "image_hint": "eggs",
@@ -422,9 +417,11 @@
       ],
       "default_unit": "mL",
       "default_quantity": 300,
-      "price": 4.99,
+      "price": 5.63,
       "brands": [
-        "Anchor",
+        "Real Canadian Superstore",
+        "Longo's",
+        "Loblaws",
         "Meadow Fresh"
       ],
       "image_hint": "cream",
@@ -450,9 +447,11 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 4.49,
+      "price": 4.99,
       "brands": [
-        "Anchor",
+        "Longo's",
+        "Sobeys",
+        "Loblaws",
         "Meadow Fresh"
       ],
       "image_hint": "sour_cream",
@@ -481,7 +480,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.58,
       "image_hint": "apples_gala",
       "tags": [],
       "collections": [
@@ -511,7 +510,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.85,
       "image_hint": "apples_granny_smith",
       "tags": [],
       "collections": [
@@ -537,7 +536,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.04,
       "image_hint": "bananas",
       "tags": [],
       "collections": [
@@ -563,7 +562,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.49,
+      "price": 5.15,
       "image_hint": "oranges",
       "tags": [],
       "collections": [],
@@ -588,7 +587,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.53,
       "image_hint": "mandarins",
       "tags": [],
       "collections": [],
@@ -616,7 +615,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 7.84,
       "image_hint": "kiwifruit_green",
       "tags": [],
       "collections": [],
@@ -644,7 +643,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 9.25,
       "image_hint": "kiwifruit_gold",
       "tags": [],
       "collections": [],
@@ -669,7 +668,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 5.99,
+      "price": 6.03,
       "image_hint": "strawberries",
       "tags": [],
       "collections": [],
@@ -694,7 +693,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 125,
-      "price": 6.99,
+      "price": 7.22,
       "image_hint": "blueberries",
       "tags": [],
       "collections": [],
@@ -722,7 +721,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 7.99,
+      "price": 7.75,
       "image_hint": "grapes_green",
       "tags": [],
       "collections": [],
@@ -749,7 +748,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 7.99,
+      "price": 7.96,
       "image_hint": "grapes_red",
       "tags": [],
       "collections": [],
@@ -774,7 +773,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 3,
-      "price": 2.99,
+      "price": 2.9,
       "image_hint": "avocado",
       "tags": [],
       "collections": [],
@@ -799,7 +798,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 7.18,
       "image_hint": "tomatoes",
       "tags": [],
       "collections": [],
@@ -824,7 +823,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 4.99,
+      "price": 5.22,
       "image_hint": "tomatoes_cherry",
       "tags": [],
       "collections": [],
@@ -848,7 +847,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 3.01,
       "image_hint": "cucumber",
       "tags": [],
       "collections": [],
@@ -875,7 +874,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.46,
       "image_hint": "lettuce_iceberg",
       "tags": [],
       "collections": [],
@@ -903,7 +902,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.48,
       "image_hint": "lettuce_cos",
       "tags": [],
       "collections": [],
@@ -931,7 +930,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 2.49,
+      "price": 2.6,
       "image_hint": "capsicum_red",
       "tags": [],
       "collections": [],
@@ -959,7 +958,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 1.99,
+      "price": 2.15,
       "image_hint": "capsicum_green",
       "tags": [],
       "collections": [],
@@ -984,7 +983,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 3.85,
       "image_hint": "broccoli",
       "tags": [],
       "collections": [],
@@ -1009,7 +1008,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.88,
       "image_hint": "cauliflower",
       "tags": [],
       "collections": [],
@@ -1033,7 +1032,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 3.42,
       "image_hint": "carrots",
       "tags": [],
       "collections": [],
@@ -1059,7 +1058,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 4.99,
+      "price": 5.26,
       "image_hint": "potatoes",
       "tags": [],
       "collections": [],
@@ -1075,17 +1074,18 @@
     },
     {
       "id": "prod_kumara",
-      "name": "Kumara",
+      "name": "Sweet Potato",
       "category_id": "produce",
       "aliases": [
         "kumara",
         "kumaras",
         "kumera",
+        "sweet potato",
         "sweet potato"
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.9,
       "image_hint": "kumara",
       "tags": [],
       "collections": [],
@@ -1112,7 +1112,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.5,
       "image_hint": "onions_brown",
       "tags": [],
       "collections": [],
@@ -1139,7 +1139,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.11,
       "image_hint": "onions_red",
       "tags": [],
       "collections": [],
@@ -1164,7 +1164,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 1.99,
+      "price": 1.91,
       "image_hint": "garlic",
       "tags": [],
       "collections": [],
@@ -1189,7 +1189,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 100,
-      "price": 2.99,
+      "price": 3.06,
       "image_hint": "ginger",
       "tags": [],
       "collections": [],
@@ -1216,7 +1216,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 4.99,
+      "price": 4.81,
       "image_hint": "mushrooms_button",
       "tags": [],
       "collections": [],
@@ -1241,7 +1241,7 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 1.99,
+      "price": 2.17,
       "image_hint": "courgette",
       "tags": [],
       "collections": [],
@@ -1267,7 +1267,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.04,
       "image_hint": "pumpkin",
       "tags": [],
       "collections": [],
@@ -1292,7 +1292,7 @@
       ],
       "default_unit": "g",
       "default_quantity": 120,
-      "price": 3.99,
+      "price": 4.56,
       "image_hint": "spinach",
       "tags": [],
       "collections": [],
@@ -1317,10 +1317,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 16.99,
+      "price": 17.47,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "FreshCo",
+        "Walmart Canada",
+        "Real Canadian Superstore"
       ],
       "image_hint": "chicken_breast",
       "tags": [],
@@ -1346,10 +1349,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 16.94,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Metro",
+        "Loblaws",
+        "FreshCo"
       ],
       "image_hint": "chicken_thigh",
       "tags": [],
@@ -1375,10 +1381,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 11.99,
+      "price": 12.76,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Inghams",
+        "Food Basics",
+        "No Frills",
+        "Walmart Canada"
       ],
       "image_hint": "chicken_drumsticks",
       "tags": [],
@@ -1404,10 +1413,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 13.99,
+      "price": 15.43,
       "brands": [
         "Tegel",
-        "Inghams"
+        "Costco Canada",
+        "Inghams",
+        "Real Canadian Superstore",
+        "Sobeys"
       ],
       "image_hint": "chicken_whole",
       "tags": [],
@@ -1434,10 +1446,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 15.99,
+      "price": 16.52,
       "brands": [
-        "Hellers",
-        "Angus"
+        "No Frills",
+        "FreshCo",
+        "Angus",
+        "Loblaws"
       ],
       "image_hint": "beef_mince",
       "tags": [],
@@ -1464,10 +1478,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 29.99,
+      "price": 33.81,
       "brands": [
         "Angus",
-        "Premium"
+        "Premium",
+        "FreshCo",
+        "Longo's",
+        "Sobeys"
       ],
       "image_hint": "beef_steak",
       "tags": [],
@@ -1495,9 +1512,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 24.99,
+      "price": 28.07,
       "brands": [
+        "Metro",
+        "Loblaws",
         "Coastal Spring",
+        "Food Basics",
         "Silver Fern Farms"
       ],
       "image_hint": "lamb_chops",
@@ -1524,10 +1544,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 19.99,
+      "price": 20.57,
       "brands": [
         "Coastal Spring",
-        "Silver Fern Farms"
+        "Food Basics",
+        "No Frills",
+        "Silver Fern Farms",
+        "Sobeys"
       ],
       "image_hint": "lamb_leg",
       "tags": [],
@@ -1553,7 +1576,7 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 17.99,
+      "price": 18.46,
       "image_hint": "pork_chops",
       "tags": [],
       "collections": [],
@@ -1579,10 +1602,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 7.99,
+      "price": 8.81,
       "brands": [
-        "Hellers",
+        "Food Basics",
+        "Longo's",
         "Beehive",
+        "Sobeys",
         "Freedom Farms"
       ],
       "image_hint": "bacon",
@@ -1610,10 +1635,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 11.99,
+      "price": 13.53,
       "brands": [
-        "Hellers",
-        "Farmers Union"
+        "Food Basics",
+        "Farmers Union",
+        "Longo's",
+        "Loblaws"
       ],
       "image_hint": "sausages",
       "tags": [],
@@ -1641,9 +1668,11 @@
       ],
       "default_unit": "g",
       "default_quantity": 100,
-      "price": 5.99,
+      "price": 6.68,
       "brands": [
-        "Hellers",
+        "No Frills",
+        "Costco Canada",
+        "Longo's",
         "Continental"
       ],
       "image_hint": "salami",
@@ -1671,10 +1700,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 7.99,
+      "price": 8.59,
       "brands": [
-        "Hellers",
-        "Beehive"
+        "Beehive",
+        "Real Canadian Superstore",
+        "Metro",
+        "Loblaws"
       ],
       "image_hint": "ham",
       "tags": [],
@@ -1705,10 +1736,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 39.99,
+      "price": 41.13,
       "brands": [
+        "Real Canadian Superstore",
         "Regal",
-        "Sealord"
+        "Loblaws",
+        "FreshCo"
       ],
       "image_hint": "salmon_fresh",
       "tags": [],
@@ -1735,10 +1768,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 19.99,
+      "price": 20.75,
       "brands": [
-        "Sealord",
-        "Sanford"
+        "Food Basics",
+        "Sanford",
+        "Sobeys",
+        "FreshCo"
       ],
       "image_hint": "fish_hoki",
       "tags": [],
@@ -1767,10 +1802,8 @@
       ],
       "default_unit": "kg",
       "default_quantity": 0.5,
-      "price": 29.99,
-      "brands": [
-        "Sealord"
-      ],
+      "price": 33.89,
+      "brands": [],
       "image_hint": "prawns",
       "tags": [],
       "collections": [],
@@ -1797,9 +1830,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 16.19,
       "brands": [
-        "Sanford"
+        "Real Canadian Superstore",
+        "Sanford",
+        "Sobeys",
+        "Walmart Canada"
       ],
       "image_hint": "mussels",
       "tags": [],
@@ -1828,11 +1864,13 @@
       ],
       "default_unit": "loaf",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 3.17,
       "brands": [
-        "Tip Top",
+        "Costco Canada",
         "Freyas",
-        "Vogels"
+        "Vogels",
+        "FreshCo",
+        "Sobeys"
       ],
       "image_hint": "bread_white",
       "tags": [],
@@ -1861,9 +1899,11 @@
       ],
       "default_unit": "loaf",
       "default_quantity": 1,
-      "price": 3.49,
+      "price": 3.48,
       "brands": [
-        "Tip Top",
+        "Food Basics",
+        "Walmart Canada",
+        "Sobeys",
         "Vogels"
       ],
       "image_hint": "bread_wholemeal",
@@ -1895,8 +1935,11 @@
       ],
       "default_unit": "loaf",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.45,
       "brands": [
+        "No Frills",
+        "Food Basics",
+        "Metro",
         "Vogels"
       ],
       "image_hint": "bread_vogels",
@@ -1924,10 +1967,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.28,
       "brands": [
-        "Tip Top",
-        "Bakery"
+        "Metro",
+        "Bakery",
+        "Loblaws",
+        "Longo's"
       ],
       "image_hint": "bread_rolls",
       "tags": [],
@@ -1953,10 +1998,8 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
-      "brands": [
-        "Tip Top"
-      ],
+      "price": 5.11,
+      "brands": [],
       "image_hint": "bagels",
       "tags": [],
       "collections": [],
@@ -1981,10 +2024,8 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.49,
-      "brands": [
-        "Tip Top"
-      ],
+      "price": 4.33,
+      "brands": [],
       "image_hint": "english_muffins",
       "tags": [],
       "collections": [],
@@ -2010,9 +2051,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 4.83,
       "brands": [
+        "Costco Canada",
         "Mission",
+        "FreshCo",
+        "Sobeys",
         "Farrah's"
       ],
       "image_hint": "wraps",
@@ -2039,8 +2083,11 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.25,
       "brands": [
+        "Food Basics",
+        "Costco Canada",
+        "Sobeys",
         "Farrah's"
       ],
       "image_hint": "pita_bread",
@@ -2067,9 +2114,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.72,
       "brands": [
-        "Bakery"
+        "Costco Canada",
+        "Bakery",
+        "Walmart Canada",
+        "Loblaws"
       ],
       "image_hint": "croissants",
       "tags": [],
@@ -2095,11 +2145,8 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.99,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "price": 5.18,
+      "brands": [],
       "image_hint": "frozen_peas",
       "tags": [],
       "collections": [],
@@ -2125,11 +2172,8 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.49,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "price": 6.25,
+      "brands": [],
       "image_hint": "frozen_mixed_veg",
       "tags": [],
       "collections": [],
@@ -2155,10 +2199,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.98,
       "brands": [
         "McCain",
-        "Watties"
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "FreshCo"
       ],
       "image_hint": "frozen_chips",
       "tags": [],
@@ -2186,10 +2232,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 7.99,
+      "price": 8.35,
       "brands": [
-        "Tip Top",
-        "Much Moore"
+        "Much Moore",
+        "Costco Canada",
+        "Metro",
+        "FreshCo"
       ],
       "image_hint": "ice_cream_vanilla",
       "tags": [],
@@ -2217,10 +2265,8 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 8.99,
-      "brands": [
-        "Tip Top"
-      ],
+      "price": 9.97,
+      "brands": [],
       "image_hint": "ice_cream_hokey_pokey",
       "tags": [],
       "collections": [],
@@ -2245,10 +2291,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 6.9,
       "brands": [
+        "McCain",
+        "Loblaws",
+        "Food Basics",
         "Dr Oetker",
-        "McCain"
+        "Real Canadian Superstore"
       ],
       "image_hint": "frozen_pizza",
       "tags": [],
@@ -2274,10 +2323,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 7.99,
+      "price": 8.25,
       "brands": [
-        "Birds Eye",
-        "Sealord"
+        "Food Basics",
+        "FreshCo",
+        "Walmart Canada",
+        "Birds Eye"
       ],
       "image_hint": "fish_fingers",
       "tags": [],
@@ -2305,10 +2356,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 6.79,
       "brands": [
-        "Pams",
-        "Value"
+        "No Frills",
+        "Longo's",
+        "Value",
+        "FreshCo"
       ],
       "image_hint": "frozen_berries",
       "tags": [],
@@ -2337,10 +2390,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 4.57,
       "brands": [
+        "Real Canadian Superstore",
+        "Longo's",
         "Sunrice",
-        "Pams"
+        "FreshCo"
       ],
       "image_hint": "rice_white",
       "tags": [
@@ -2373,10 +2428,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.79,
       "brands": [
-        "Sunrice",
-        "Tilda"
+        "FreshCo",
+        "Tilda",
+        "Walmart Canada",
+        "Real Canadian Superstore",
+        "Sunrice"
       ],
       "image_hint": "rice_basmati",
       "tags": [
@@ -2409,11 +2467,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 2.99,
+      "price": 2.87,
       "brands": [
+        "Loblaws",
         "Barilla",
-        "Pams",
-        "San Remo"
+        "No Frills",
+        "San Remo",
+        "Sobeys"
       ],
       "image_hint": "pasta_spaghetti",
       "tags": [],
@@ -2441,11 +2501,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 2.99,
+      "price": 2.95,
       "brands": [
+        "Metro",
         "Barilla",
-        "Pams",
-        "San Remo"
+        "FreshCo",
+        "San Remo",
+        "Longo's"
       ],
       "image_hint": "pasta_penne",
       "tags": [],
@@ -2472,11 +2534,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 3.99,
+      "price": 4.08,
       "brands": [
+        "Food Basics",
+        "Barilla",
         "Dolmio",
-        "Watties",
-        "Barilla"
+        "Real Canadian Superstore",
+        "Sobeys"
       ],
       "image_hint": "pasta_sauce",
       "tags": [],
@@ -2505,9 +2569,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 3.49,
+      "price": 3.48,
       "brands": [
+        "Metro",
         "Champion",
+        "FreshCo",
+        "Walmart Canada",
         "Edmonds"
       ],
       "image_hint": "flour_plain",
@@ -2536,9 +2603,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 3.49,
+      "price": 3.62,
       "brands": [
+        "Metro",
         "Champion",
+        "No Frills",
+        "Sobeys",
         "Edmonds"
       ],
       "image_hint": "flour_self_raising",
@@ -2568,9 +2638,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1.5,
-      "price": 3.99,
+      "price": 3.81,
       "brands": [
-        "Chelsea"
+        "Real Canadian Superstore",
+        "Chelsea",
+        "Sobeys",
+        "FreshCo"
       ],
       "image_hint": "sugar_white",
       "tags": [],
@@ -2599,9 +2672,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 4.49,
+      "price": 4.61,
       "brands": [
-        "Chelsea"
+        "Chelsea",
+        "Longo's",
+        "Metro",
+        "FreshCo"
       ],
       "image_hint": "sugar_brown",
       "tags": [],
@@ -2628,10 +2704,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 12.99,
+      "price": 14.85,
       "brands": [
+        "Sobeys",
+        "Walmart Canada",
         "Olivado",
-        "Pams"
+        "No Frills"
       ],
       "image_hint": "oil_olive",
       "tags": [],
@@ -2658,9 +2736,11 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 7.13,
       "brands": [
-        "Pams",
+        "Food Basics",
+        "Longo's",
+        "Sobeys",
         "Olivani"
       ],
       "image_hint": "oil_vegetable",
@@ -2690,11 +2770,8 @@
       ],
       "default_unit": "can",
       "default_quantity": 4,
-      "price": 1.99,
-      "brands": [
-        "Watties",
-        "Pams"
-      ],
+      "price": 2.17,
+      "brands": [],
       "image_hint": "tomatoes_canned",
       "tags": [],
       "collections": [],
@@ -2719,9 +2796,11 @@
       ],
       "default_unit": "can",
       "default_quantity": 1,
-      "price": 2.49,
+      "price": 2.53,
       "brands": [
-        "Watties",
+        "Metro",
+        "Walmart Canada",
+        "Loblaws",
         "Heinz"
       ],
       "image_hint": "baked_beans",
@@ -2751,10 +2830,12 @@
       ],
       "default_unit": "can",
       "default_quantity": 3,
-      "price": 2.99,
+      "price": 2.92,
       "brands": [
-        "Sealord",
-        "John West"
+        "No Frills",
+        "Food Basics",
+        "John West",
+        "Loblaws"
       ],
       "image_hint": "tuna",
       "tags": [],
@@ -2780,10 +2861,12 @@
       ],
       "default_unit": "can",
       "default_quantity": 2,
-      "price": 2.99,
+      "price": 3.43,
       "brands": [
-        "Ayam",
-        "Pams"
+        "No Frills",
+        "Food Basics",
+        "FreshCo",
+        "Ayam"
       ],
       "image_hint": "coconut_cream",
       "tags": [],
@@ -2810,11 +2893,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 380,
-      "price": 5.99,
+      "price": 6.62,
       "brands": [
-        "Pic's",
+        "Kraft",
         "ETA",
-        "Kraft"
+        "No Frills",
+        "Walmart Canada",
+        "Sobeys",
+        "Pic's"
       ],
       "image_hint": "peanut_butter",
       "tags": [],
@@ -2844,8 +2930,11 @@
       "default_quantity": 340,
       "price": 4.99,
       "brands": [
+        "Costco Canada",
+        "Anathoth",
+        "FreshCo",
         "Barker's",
-        "Anathoth"
+        "Sobeys"
       ],
       "image_hint": "jam_strawberry",
       "tags": [],
@@ -2872,10 +2961,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 8.99,
+      "price": 9.02,
       "brands": [
+        "Metro",
         "Airborne",
-        "Manuka Health"
+        "Manuka Health",
+        "No Frills",
+        "Longo's"
       ],
       "image_hint": "honey",
       "tags": [],
@@ -2901,10 +2993,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 5.99,
-      "brands": [
-        "Sanitarium"
-      ],
+      "price": 5.87,
+      "brands": [],
       "image_hint": "marmite",
       "tags": [],
       "collections": [],
@@ -2929,9 +3019,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 220,
-      "price": 5.49,
+      "price": 5.38,
       "brands": [
-        "Bega"
+        "No Frills",
+        "Metro",
+        "Bega",
+        "FreshCo"
       ],
       "image_hint": "vegemite",
       "tags": [],
@@ -2957,10 +3050,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 250,
-      "price": 4.99,
+      "price": 5.13,
       "brands": [
+        "No Frills",
+        "Real Canadian Superstore",
         "Kikkoman",
-        "Pams"
+        "Walmart Canada"
       ],
       "image_hint": "soy_sauce",
       "tags": [],
@@ -2989,9 +3084,11 @@
       ],
       "default_unit": "mL",
       "default_quantity": 560,
-      "price": 4.99,
+      "price": 5.41,
       "brands": [
-        "Watties",
+        "FreshCo",
+        "Metro",
+        "Walmart Canada",
         "Heinz"
       ],
       "image_hint": "tomato_sauce",
@@ -3020,10 +3117,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 4.99,
+      "price": 4.98,
       "brands": [
-        "Watties",
-        "Masterfoods"
+        "Masterfoods",
+        "Costco Canada",
+        "Sobeys",
+        "Loblaws"
       ],
       "image_hint": "bbq_sauce",
       "tags": [],
@@ -3051,10 +3150,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 440,
-      "price": 5.99,
+      "price": 6.32,
       "brands": [
+        "Food Basics",
         "Best Foods",
-        "Pams"
+        "Metro",
+        "Walmart Canada"
       ],
       "image_hint": "mayonnaise",
       "tags": [],
@@ -3081,10 +3182,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 3.99,
+      "price": 4.57,
       "brands": [
-        "Masterfoods",
-        "French's"
+        "Costco Canada",
+        "Food Basics",
+        "French's",
+        "No Frills",
+        "Masterfoods"
       ],
       "image_hint": "mustard",
       "tags": [],
@@ -3111,8 +3215,11 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 1.99,
+      "price": 2.16,
       "brands": [
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "Sobeys",
         "Cerebos"
       ],
       "image_hint": "salt",
@@ -3139,9 +3246,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 50,
-      "price": 3.99,
+      "price": 4.32,
       "brands": [
-        "Masterfoods"
+        "Masterfoods",
+        "Costco Canada",
+        "Longo's",
+        "Food Basics"
       ],
       "image_hint": "pepper",
       "tags": [],
@@ -3170,10 +3280,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 2.96,
       "brands": [
+        "Metro",
+        "Continental",
         "Maggi",
-        "Continental"
+        "Loblaws",
+        "Real Canadian Superstore"
       ],
       "image_hint": "stock_cubes",
       "tags": [],
@@ -3201,10 +3314,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 2.99,
+      "price": 2.97,
       "brands": [
+        "Costco Canada",
+        "Continental",
         "Maggi",
-        "Continental"
+        "Walmart Canada",
+        "Real Canadian Superstore"
       ],
       "image_hint": "stock_cubes",
       "tags": [],
@@ -3231,11 +3347,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 12.99,
+      "price": 13.66,
       "brands": [
-        "Nescafe",
+        "Metro",
+        "Robert Harris",
         "Gregg's",
-        "Robert Harris"
+        "Nescafe",
+        "Longo's",
+        "Walmart Canada"
       ],
       "image_hint": "coffee_instant",
       "tags": [],
@@ -3261,11 +3380,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 8.99,
+      "price": 9.67,
       "brands": [
-        "Vittoria",
         "Robert Harris",
-        "L'affare"
+        "Loblaws",
+        "L'affare",
+        "No Frills",
+        "Longo's",
+        "Vittoria"
       ],
       "image_hint": "coffee_ground",
       "tags": [],
@@ -3294,11 +3416,14 @@
       ],
       "default_unit": "ea",
       "default_quantity": 100,
-      "price": 6.99,
+      "price": 7.91,
       "brands": [
+        "Metro",
+        "Loblaws",
         "Bell",
-        "Dilmah",
-        "Twinings"
+        "No Frills",
+        "Twinings",
+        "Dilmah"
       ],
       "image_hint": "tea_black",
       "tags": [],
@@ -3326,10 +3451,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 40,
-      "price": 5.99,
+      "price": 6.84,
       "brands": [
-        "Dilmah",
-        "Twinings"
+        "Costco Canada",
+        "FreshCo",
+        "No Frills",
+        "Twinings",
+        "Dilmah"
       ],
       "image_hint": "tea_green",
       "tags": [],
@@ -3356,10 +3484,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 6.99,
+      "price": 7.47,
       "brands": [
+        "Costco Canada",
         "Just Juice",
-        "Charlies"
+        "Charlies",
+        "Real Canadian Superstore",
+        "Sobeys"
       ],
       "image_hint": "juice_orange",
       "tags": [],
@@ -3387,9 +3518,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2,
-      "price": 6.99,
+      "price": 7.29,
       "brands": [
+        "Loblaws",
         "Just Juice",
+        "Food Basics",
+        "Longo's",
         "Charlies"
       ],
       "image_hint": "juice_apple",
@@ -3419,9 +3553,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2.25,
-      "price": 4.99,
+      "price": 4.88,
       "brands": [
-        "Coca-Cola"
+        "No Frills",
+        "Real Canadian Superstore",
+        "Coca-Cola",
+        "Loblaws"
       ],
       "image_hint": "coke",
       "tags": [],
@@ -3448,9 +3585,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 2.25,
-      "price": 4.99,
+      "price": 5.6,
       "brands": [
         "Schweppes",
+        "FreshCo",
+        "No Frills",
+        "Longo's",
         "Sprite"
       ],
       "image_hint": "lemonade",
@@ -3480,9 +3620,12 @@
       ],
       "default_unit": "L",
       "default_quantity": 1.5,
-      "price": 2.49,
+      "price": 2.55,
       "brands": [
         "Pump",
+        "Metro",
+        "Loblaws",
+        "FreshCo",
         "Evian"
       ],
       "image_hint": "water_still",
@@ -3512,10 +3655,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1.5,
-      "price": 2.99,
+      "price": 3.4,
       "brands": [
+        "Food Basics",
         "Schweppes",
-        "San Pellegrino"
+        "San Pellegrino",
+        "FreshCo",
+        "Real Canadian Superstore"
       ],
       "image_hint": "water_sparkling",
       "tags": [],
@@ -3542,10 +3688,13 @@
       ],
       "default_unit": "can",
       "default_quantity": 12,
-      "price": 24.99,
+      "price": 27.14,
       "brands": [
-        "Steinlager",
+        "Costco Canada",
+        "Metro",
         "DB Export",
+        "No Frills",
+        "Steinlager",
         "Speights"
       ],
       "image_hint": "beer",
@@ -3574,10 +3723,13 @@
       ],
       "default_unit": "bottle",
       "default_quantity": 1,
-      "price": 15.99,
+      "price": 18.2,
       "brands": [
-        "Oyster Bay",
-        "Villa Maria"
+        "Costco Canada",
+        "FreshCo",
+        "Villa Maria",
+        "Longo's",
+        "Oyster Bay"
       ],
       "image_hint": "wine_red",
       "tags": [],
@@ -3606,11 +3758,14 @@
       ],
       "default_unit": "bottle",
       "default_quantity": 1,
-      "price": 15.99,
+      "price": 15.22,
       "brands": [
-        "Oyster Bay",
+        "Metro",
+        "Cloudy Bay",
+        "Loblaws",
         "Villa Maria",
-        "Cloudy Bay"
+        "Walmart Canada",
+        "Oyster Bay"
       ],
       "image_hint": "wine_white",
       "tags": [],
@@ -3636,10 +3791,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 7.99,
       "brands": [
+        "Metro",
+        "Walmart Canada",
         "Kelloggs",
-        "Pams"
+        "Loblaws"
       ],
       "image_hint": "cereal_cornflakes",
       "tags": [
@@ -3669,10 +3826,8 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 7.99,
-      "brands": [
-        "Sanitarium"
-      ],
+      "price": 9.15,
+      "brands": [],
       "image_hint": "cereal_weet_bix",
       "tags": [],
       "collections": [],
@@ -3697,10 +3852,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 8.71,
       "brands": [
-        "Hubbards",
-        "Pams"
+        "Costco Canada",
+        "Metro",
+        "Longo's",
+        "Hubbards"
       ],
       "image_hint": "cereal_muesli",
       "tags": [],
@@ -3727,10 +3884,12 @@
       ],
       "default_unit": "kg",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.47,
       "brands": [
+        "Real Canadian Superstore",
+        "Walmart Canada",
         "Harraways",
-        "Pams"
+        "Food Basics"
       ],
       "image_hint": "oats_rolled",
       "tags": [],
@@ -3759,10 +3918,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 150,
-      "price": 3.99,
+      "price": 4.46,
       "brands": [
+        "Food Basics",
+        "FreshCo",
         "Bluebird",
-        "Eta"
+        "Eta",
+        "Real Canadian Superstore"
       ],
       "image_hint": "chips_salt",
       "tags": [],
@@ -3790,8 +3952,11 @@
       ],
       "default_unit": "g",
       "default_quantity": 150,
-      "price": 3.99,
+      "price": 3.96,
       "brands": [
+        "Loblaws",
+        "Food Basics",
+        "No Frills",
         "Bluebird",
         "Eta"
       ],
@@ -3820,10 +3985,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 3.99,
+      "price": 3.91,
       "brands": [
-        "Griffin's",
-        "Arnott's"
+        "Arnott's",
+        "FreshCo",
+        "No Frills",
+        "Sobeys",
+        "Griffin's"
       ],
       "image_hint": "crackers",
       "tags": [],
@@ -3852,10 +4020,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.12,
       "brands": [
-        "Griffin's",
-        "Cookie Time"
+        "Metro",
+        "Cookie Time",
+        "Longo's",
+        "Sobeys",
+        "Griffin's"
       ],
       "image_hint": "cookies_chocolate_chip",
       "tags": [],
@@ -3881,9 +4052,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.49,
+      "price": 5.34,
       "brands": [
-        "Arnott's"
+        "No Frills",
+        "Metro",
+        "Arnott's",
+        "Loblaws"
       ],
       "image_hint": "tim_tams",
       "tags": [],
@@ -3912,10 +4086,8 @@
       ],
       "default_unit": "g",
       "default_quantity": 250,
-      "price": 5.99,
-      "brands": [
-        "Whittaker's"
-      ],
+      "price": 6.83,
+      "brands": [],
       "image_hint": "chocolate_whittakers",
       "tags": [],
       "collections": [],
@@ -3942,9 +4114,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 4.99,
+      "price": 4.78,
       "brands": [
-        "Cadbury"
+        "Real Canadian Superstore",
+        "Cadbury",
+        "Sobeys",
+        "FreshCo"
       ],
       "image_hint": "chocolate_cadbury",
       "tags": [],
@@ -3970,10 +4145,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 5.84,
       "brands": [
-        "Uncle Tobys",
-        "Nice & Natural"
+        "Metro",
+        "Food Basics",
+        "FreshCo",
+        "Nice & Natural",
+        "Uncle Tobys"
       ],
       "image_hint": "muesli_bars",
       "tags": [],
@@ -4001,10 +4179,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.54,
       "brands": [
+        "Costco Canada",
+        "FreshCo",
+        "Proper",
         "Eta",
-        "Proper"
+        "Sobeys"
       ],
       "image_hint": "popcorn",
       "tags": [
@@ -4034,10 +4215,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 200,
-      "price": 6.99,
+      "price": 6.82,
       "brands": [
+        "No Frills",
+        "Costco Canada",
         "Eta",
-        "Pams"
+        "FreshCo"
       ],
       "image_hint": "nuts_mixed",
       "tags": [],
@@ -4064,10 +4247,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 12,
-      "price": 12.99,
+      "price": 13.85,
       "brands": [
+        "Loblaws",
         "Sorbent",
-        "Purex"
+        "FreshCo",
+        "Purex",
+        "Sobeys"
       ],
       "image_hint": "toilet_paper",
       "tags": [],
@@ -4093,10 +4279,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 4,
-      "price": 8.99,
+      "price": 9.06,
       "brands": [
+        "Sorbent",
+        "FreshCo",
+        "No Frills",
         "Handee",
-        "Sorbent"
+        "Longo's"
       ],
       "image_hint": "paper_towels",
       "tags": [],
@@ -4123,10 +4312,13 @@
       ],
       "default_unit": "box",
       "default_quantity": 4,
-      "price": 7.99,
+      "price": 8.64,
       "brands": [
+        "Loblaws",
+        "Sorbent",
+        "FreshCo",
         "Kleenex",
-        "Sorbent"
+        "Sobeys"
       ],
       "image_hint": "tissues",
       "tags": [],
@@ -4153,10 +4345,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 4.99,
+      "price": 5.1,
       "brands": [
+        "Food Basics",
         "Sunlight",
-        "Morning Fresh"
+        "Walmart Canada",
+        "Morning Fresh",
+        "Real Canadian Superstore"
       ],
       "image_hint": "dishwashing_liquid",
       "tags": [],
@@ -4182,10 +4377,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 16.77,
       "brands": [
-        "Finish",
-        "Earthwise"
+        "Earthwise",
+        "Metro",
+        "Longo's",
+        "Walmart Canada",
+        "Finish"
       ],
       "image_hint": "dishwasher_tablets",
       "tags": [],
@@ -4211,11 +4409,14 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 16.99,
+      "price": 17.23,
       "brands": [
+        "Costco Canada",
         "Persil",
+        "Metro",
+        "Earthwise",
         "OMO",
-        "Earthwise"
+        "Sobeys"
       ],
       "image_hint": "laundry_powder",
       "tags": [],
@@ -4241,11 +4442,14 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 14.99,
+      "price": 16.96,
       "brands": [
         "Persil",
-        "OMO",
-        "Earthwise"
+        "Earthwise",
+        "Food Basics",
+        "FreshCo",
+        "No Frills",
+        "OMO"
       ],
       "image_hint": "laundry_liquid",
       "tags": [],
@@ -4272,10 +4476,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 9.99,
+      "price": 10.79,
       "brands": [
+        "Earthwise",
         "Comfort",
-        "Earthwise"
+        "Longo's",
+        "Walmart Canada",
+        "Real Canadian Superstore"
       ],
       "image_hint": "fabric_softener",
       "tags": [],
@@ -4302,10 +4509,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 6.99,
+      "price": 7.26,
       "brands": [
+        "Costco Canada",
+        "Metro",
+        "Jif",
         "Spray n Wipe",
-        "Jif"
+        "Real Canadian Superstore"
       ],
       "image_hint": "spray_cleaner",
       "tags": [],
@@ -4331,10 +4541,13 @@
       ],
       "default_unit": "L",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.66,
       "brands": [
-        "Janola",
-        "Domestos"
+        "Costco Canada",
+        "Metro",
+        "Domestos",
+        "Food Basics",
+        "Janola"
       ],
       "image_hint": "bleach",
       "tags": [],
@@ -4361,10 +4574,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 10.02,
       "brands": [
+        "FreshCo",
         "Glad",
-        "Ecostore"
+        "Ecostore",
+        "Longo's",
+        "Walmart Canada"
       ],
       "image_hint": "bin_bags",
       "tags": [],
@@ -4391,10 +4607,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.32,
       "brands": [
+        "Costco Canada",
+        "Loblaws",
+        "Multix",
         "Glad",
-        "Multix"
+        "Sobeys"
       ],
       "image_hint": "cling_film",
       "tags": [],
@@ -4421,10 +4640,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 6.99,
+      "price": 7.38,
       "brands": [
+        "Loblaws",
+        "Food Basics",
+        "Multix",
         "Alfoil",
-        "Multix"
+        "Walmart Canada"
       ],
       "image_hint": "aluminium_foil",
       "tags": [],
@@ -4450,10 +4672,13 @@
       ],
       "default_unit": "roll",
       "default_quantity": 1,
-      "price": 4.99,
+      "price": 5.44,
       "brands": [
+        "Metro",
+        "Loblaws",
+        "Alfoil",
         "Multix",
-        "Alfoil"
+        "Longo's"
       ],
       "image_hint": "baking_paper",
       "tags": [],
@@ -4479,11 +4704,14 @@
       ],
       "default_unit": "mL",
       "default_quantity": 400,
-      "price": 8.99,
+      "price": 10.27,
       "brands": [
-        "Pantene",
         "Head & Shoulders",
-        "Garnier"
+        "Metro",
+        "Food Basics",
+        "No Frills",
+        "Garnier",
+        "Pantene"
       ],
       "image_hint": "shampoo",
       "tags": [],
@@ -4511,11 +4739,14 @@
       ],
       "default_unit": "mL",
       "default_quantity": 400,
-      "price": 8.99,
+      "price": 9.95,
       "brands": [
-        "Pantene",
         "Head & Shoulders",
-        "Garnier"
+        "Costco Canada",
+        "Food Basics",
+        "No Frills",
+        "Garnier",
+        "Pantene"
       ],
       "image_hint": "conditioner",
       "tags": [],
@@ -4541,9 +4772,12 @@
       ],
       "default_unit": "mL",
       "default_quantity": 500,
-      "price": 7.99,
+      "price": 8.56,
       "brands": [
+        "Metro",
         "Dove",
+        "Loblaws",
+        "Walmart Canada",
         "Palmolive",
         "Nivea"
       ],
@@ -4572,9 +4806,12 @@
       ],
       "default_unit": "bar",
       "default_quantity": 4,
-      "price": 4.99,
+      "price": 5.63,
       "brands": [
+        "Costco Canada",
+        "Metro",
         "Dove",
+        "Loblaws",
         "Palmolive"
       ],
       "image_hint": "soap_bar",
@@ -4601,10 +4838,13 @@
       ],
       "default_unit": "g",
       "default_quantity": 110,
-      "price": 5.99,
+      "price": 6.67,
       "brands": [
-        "Colgate",
-        "Sensodyne"
+        "Costco Canada",
+        "Sensodyne",
+        "FreshCo",
+        "Walmart Canada",
+        "Colgate"
       ],
       "image_hint": "toothpaste",
       "tags": [],
@@ -4630,10 +4870,13 @@
       ],
       "default_unit": "ea",
       "default_quantity": 2,
-      "price": 6.99,
+      "price": 7.37,
       "brands": [
-        "Colgate",
-        "Oral-B"
+        "Loblaws",
+        "Oral-B",
+        "FreshCo",
+        "Longo's",
+        "Colgate"
       ],
       "image_hint": "toothbrush",
       "tags": [],
@@ -4659,11 +4902,14 @@
       ],
       "default_unit": "g",
       "default_quantity": 50,
-      "price": 7.99,
+      "price": 7.8,
       "brands": [
-        "Rexona",
+        "Costco Canada",
         "Dove",
-        "Lynx"
+        "Rexona",
+        "Loblaws",
+        "Lynx",
+        "Walmart Canada"
       ],
       "image_hint": "deodorant",
       "tags": [],
@@ -4690,10 +4936,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 19.99,
+      "price": 19.13,
       "brands": [
-        "Gillette",
-        "Schick"
+        "No Frills",
+        "Schick",
+        "Longo's",
+        "Walmart Canada",
+        "Gillette"
       ],
       "image_hint": "razor_blades",
       "tags": [],
@@ -4719,8 +4968,11 @@
       ],
       "default_unit": "mL",
       "default_quantity": 200,
-      "price": 6.99,
+      "price": 6.65,
       "brands": [
+        "Metro",
+        "Food Basics",
+        "FreshCo",
         "Gillette",
         "Nivea"
       ],
@@ -4749,10 +5001,13 @@
       ],
       "default_unit": "mL",
       "default_quantity": 200,
-      "price": 14.99,
+      "price": 16.82,
       "brands": [
+        "Costco Canada",
+        "Cancer Society",
+        "FreshCo",
         "Neutrogena",
-        "Cancer Society"
+        "Walmart Canada"
       ],
       "image_hint": "sunscreen",
       "tags": [],
@@ -4779,10 +5034,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 8.99,
+      "price": 10.15,
       "brands": [
-        "Panadol",
-        "Pams"
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "Sobeys",
+        "Panadol"
       ],
       "image_hint": "paracetamol",
       "tags": [],
@@ -4809,10 +5066,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 9.99,
+      "price": 10.09,
       "brands": [
         "Nurofen",
-        "Pams"
+        "Food Basics",
+        "Costco Canada",
+        "Walmart Canada"
       ],
       "image_hint": "ibuprofen",
       "tags": [],
@@ -4840,9 +5099,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.76,
       "brands": [
+        "Metro",
         "Band-Aid",
+        "No Frills",
+        "Sobeys",
         "Elastoplast"
       ],
       "image_hint": "bandaids",
@@ -4869,10 +5131,13 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 12.99,
+      "price": 12.51,
       "brands": [
-        "Healtheries",
-        "Blackmores"
+        "Loblaws",
+        "Blackmores",
+        "Food Basics",
+        "Walmart Canada",
+        "Healtheries"
       ],
       "image_hint": "vitamins_c",
       "tags": [],
@@ -4899,10 +5164,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 29.99,
+      "price": 29.36,
       "brands": [
+        "No Frills",
+        "Costco Canada",
         "Huggies",
-        "Pams"
+        "FreshCo"
       ],
       "image_hint": "nappies",
       "tags": [],
@@ -4928,10 +5195,12 @@
       ],
       "default_unit": "pack",
       "default_quantity": 1,
-      "price": 5.99,
+      "price": 6.65,
       "brands": [
+        "Costco Canada",
         "Huggies",
-        "Pams"
+        "Sobeys",
+        "Food Basics"
       ],
       "image_hint": "baby_wipes",
       "tags": [],
@@ -4957,9 +5226,12 @@
       ],
       "default_unit": "g",
       "default_quantity": 900,
-      "price": 29.99,
+      "price": 28.57,
       "brands": [
+        "Loblaws",
+        "Longo's",
         "Karicare",
+        "Real Canadian Superstore",
         "Aptamil"
       ],
       "image_hint": "baby_formula",
@@ -4989,10 +5261,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 3,
-      "price": 24.99,
+      "price": 28.17,
       "brands": [
-        "Eukanuba",
-        "Pedigree"
+        "Pedigree",
+        "Metro",
+        "No Frills",
+        "Longo's",
+        "Eukanuba"
       ],
       "image_hint": "dog_food_dry",
       "tags": [],
@@ -5020,9 +5295,12 @@
       ],
       "default_unit": "can",
       "default_quantity": 12,
-      "price": 19.99,
+      "price": 21.7,
       "brands": [
         "Pedigree",
+        "Costco Canada",
+        "Food Basics",
+        "No Frills",
         "Champ"
       ],
       "image_hint": "dog_food_wet",
@@ -5051,8 +5329,11 @@
       ],
       "default_unit": "kg",
       "default_quantity": 2,
-      "price": 19.99,
+      "price": 21.91,
       "brands": [
+        "Costco Canada",
+        "Loblaws",
+        "No Frills",
         "Whiskas",
         "Fancy Feast"
       ],
@@ -5082,8 +5363,11 @@
       ],
       "default_unit": "can",
       "default_quantity": 12,
-      "price": 14.99,
+      "price": 15.2,
       "brands": [
+        "Costco Canada",
+        "Food Basics",
+        "FreshCo",
         "Whiskas",
         "Fancy Feast"
       ],
@@ -5111,10 +5395,13 @@
       ],
       "default_unit": "kg",
       "default_quantity": 5,
-      "price": 12.99,
+      "price": 12.7,
       "brands": [
         "Catlove",
-        "Paws"
+        "Walmart Canada",
+        "Real Canadian Superstore",
+        "Paws",
+        "Sobeys"
       ],
       "image_hint": "cat_litter",
       "tags": [],
@@ -5129,5 +5416,6 @@
       "substitution_group": null,
       "priority_level": 1
     }
-  ]
+  ],
+  "country": "Canada"
 }
