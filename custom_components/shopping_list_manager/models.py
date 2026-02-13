@@ -52,6 +52,13 @@ class Product:
     last_used: Optional[str] = None
     custom: bool = False
     source: str = "user"
+    tags: List[str] = field(default_factory=list)
+    collections: List[str] = field(default_factory=list)
+    taxonomy: Dict[str, Any] = field(default_factory=dict)
+    allergens: List[str] = field(default_factory=list)
+    substitution_group: str = ""
+    priority_level: int = 0
+    image_hint: str = ""
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
