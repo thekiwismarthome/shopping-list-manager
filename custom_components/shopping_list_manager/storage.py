@@ -141,7 +141,15 @@ class ShoppingListStorage:
                 await self._save_products()
                 _LOGGER.info("Successfully imported %d products from catalog", len(self._products))
     
-
+# Initialize search engine after products are loaded
+        if self._products:
+            products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
+            self._search_engine = ProductSearch(products_dict)
+            _LOGGER.debug("Initialized product search engine with %d products", len(self._products))
+        else:
+            self._search_engine = None
+            _LOGGER.warning("No products loaded, search engine not initialized")
+            
     # Lists methods
     async def _save_lists(self) -> None:
         """Save lists to storage."""
