@@ -12,6 +12,7 @@ from .const import (
     STORAGE_KEY_PRODUCTS,
     STORAGE_KEY_CATEGORIES,
 )
+from .data.catalog_loader import load_product_catalog
 from .models import ShoppingList, Item, Product, Category, generate_id
 from .data.category_loader import load_categories
 
@@ -87,7 +88,6 @@ class ShoppingListStorage:
             _LOGGER.debug("Loaded %d categories", len(self._categories))
         else:
             # Initialize with default categories from JSON file
-            # Use HA's country code if available
             country_code = getattr(self.hass.config, 'country', None)
             default_categories = load_categories(self._component_path, country_code)
             self._categories = [Category(**cat) for cat in default_categories]
@@ -97,6 +97,39 @@ class ShoppingListStorage:
                 len(self._categories),
                 country_code or "default"
             )
+        
+        # NEW: Load product catalog if products are empty
+        if not self._products:
+            country_code = getattr(self.hass.config, 'country', None)
+            catalog_products = load_product_catalog(self._component_path, country_code)
+            
+            if catalog_products:
+                _LOGGER.info("Importing %d products from catalog", len(catalog_products))
+                for prod_data in catalog_products:
+                    try:
+                        # Create Product from catalog data
+                        product = Product(
+                            id=prod_data.get("id", generate_id()),
+                            name=prod_data["name"],
+                            category_id=prod_data.get("category_id", "other"),
+                            aliases=prod_data.get("aliases", []),
+                            default_unit=prod_data.get("default_unit", "units"),
+                            default_quantity=prod_data.get("default_quantity", 1),
+                            price=prod_data.get("typical_price"),
+                            currency=self.hass.config.currency,
+                            barcode=prod_data.get("barcode"),
+                            brands=prod_data.get("brands", []),
+                            image_url=prod_data.get("image_url", ""),
+                            custom=False,
+                            source="catalog"
+                        )
+                        self._products[product.id] = product
+                    except Exception as err:
+                        _LOGGER.error("Failed to import product %s: %s", prod_data.get("name"), err)
+                        continue
+                
+                await self._save_products()
+                _LOGGER.info("Successfully imported %d products from catalog", len(self._products))
     
     # Lists methods
     async def _save_lists(self) -> None:
