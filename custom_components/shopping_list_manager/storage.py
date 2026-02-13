@@ -102,7 +102,7 @@ class ShoppingListStorage:
         # Load product catalog if products are empty
         if not self._products:
             _LOGGER.info("Loading product catalog for country: %s", self._country)
-            catalog_products = load_product_catalog(self._component_path, self._country)  # Use self._country
+            catalog_products = await load_product_catalog(self._component_path, self._country)  # Use self._country
             
             if catalog_products:
                 _LOGGER.info("Importing %d products from catalog", len(catalog_products))
