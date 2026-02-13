@@ -69,7 +69,7 @@ IMAGE_MAX_SIZE_KB = 15
 METRIC_UNITS = {
     "weight": ["kg", "g"],
     "volume": ["L", "mL"],
-    "count": ["units", "pack", "loaf", "dozen", 'ea", "pkt", "tray", "bottle", "can", "bunch", "pottle", "roll", "sachet", "tub", "bar"]
+    "count": ["units", "pack", "loaf", "dozen", "ea", "pkt", "tray", "bottle", "can", "bunch", "pottle", "roll", "sachet", "tub", "bar"]
 }
 
 # Default quantities for common products (NZ-focused, can be country-specific later)
