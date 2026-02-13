@@ -21,7 +21,7 @@ class ShoppingListManagerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # Create entry with default country
             return self.async_create_entry(
                 title="Shopping List Manager",
-                data={"country": "NZ"},  # Default to NZ
+                data={"country": "NZ"},
                 options={
                     "country": "NZ",
                     "enable_price_tracking": True,
@@ -30,7 +30,7 @@ class ShoppingListManagerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 }
             )
 
-        # Show simple setup form (no country selection here)
+        # Show simple setup form
         return self.async_show_form(
             step_id="user",
             description_placeholders={
