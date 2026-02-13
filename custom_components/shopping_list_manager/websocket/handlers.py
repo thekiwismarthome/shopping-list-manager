@@ -550,6 +550,9 @@ def websocket_get_list_total(
         vol.Required("type"): WS_TYPE_PRODUCTS_SEARCH,
         vol.Required("query"): str,
         vol.Optional("limit", default=10): int,
+        vol.Optional("exclude_allergens"): [str],
+        vol.Optional("include_tags"): [str],
+        vol.Optional("substitution_group"): str,
     }
 )
 @callback
@@ -558,21 +561,91 @@ def websocket_search_products(
     connection: websocket_api.ActiveConnection,
     msg: Dict[str, Any],
 ) -> None:
-    """Handle search products command."""
+    """Handle search products command with enhanced filters."""
     storage = get_storage(hass)
-    query = msg["query"]
-    limit = msg.get("limit", 10)
     
-    results = storage.search_products(query, limit)
+    try:
+        results = storage.search_products(
+            query=msg["query"],
+            limit=msg.get("limit", 10),
+            exclude_allergens=msg.get("exclude_allergens"),
+            include_tags=msg.get("include_tags"),
+            substitution_group=msg.get("substitution_group"),
+        )
+        
+        connection.send_result(
+            msg["id"],
+            {"products": [product.to_dict() for product in results]}
+        )
+    except Exception as err:
+        _LOGGER.error("Error searching products: %s", err)
+        connection.send_error(msg["id"], "search_failed", str(err))
+
+@websocket_api.websocket_command(
+    {
+        vol.Required("type"): "shopping_list_manager/products/substitutes",
+        vol.Required("product_id"): str,
+        vol.Optional("limit", default=5): int,
+    }
+)
+@callback
+def websocket_get_product_substitutes(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Handle get product substitutes command."""
+    storage = get_storage(hass)
     
-    connection.send_result(
-        msg["id"],
-        {
-            "products": [product.to_dict() for product in results]
-        }
-    )
+    try:
+        substitutes = storage.find_product_substitutes(
+            product_id=msg["product_id"],
+            limit=msg.get("limit", 5),
+        )
+        
+        connection.send_result(
+            msg["id"],
+            {"substitutes": [product.to_dict() for product in substitutes]}
+        )
+    except Exception as err:
+        _LOGGER.error("Error finding substitutes: %s", err)
+        connection.send_error(msg["id"], "substitutes_failed", str(err))
 
-
+@websocket_api.websocket_command(
+    {
+        vol.Required("type"): WS_TYPE_PRODUCTS_SEARCH,
+        vol.Required("query"): str,
+        vol.Optional("limit", default=10): int,
+        vol.Optional("exclude_allergens"): [str],
+        vol.Optional("include_tags"): [str],
+        vol.Optional("substitution_group"): str,
+    }
+)
+@callback
+def websocket_search_products(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Handle search products command with enhanced filters."""
+    storage = get_storage(hass)
+    
+    try:
+        results = storage.search_products(
+            query=msg["query"],
+            limit=msg.get("limit", 10),
+            exclude_allergens=msg.get("exclude_allergens"),
+            include_tags=msg.get("include_tags"),
+            substitution_group=msg.get("substitution_group"),
+        )
+        
+        connection.send_result(
+            msg["id"],
+            {"products": [product.to_dict() for product in results]}
+        )
+    except Exception as err:
+        _LOGGER.error("Error searching products: %s", err)
+        connection.send_error(msg["id"], "search_failed", str(err))
 @websocket_api.websocket_command(
     {
         vol.Required("type"): WS_TYPE_PRODUCTS_SUGGESTIONS,
