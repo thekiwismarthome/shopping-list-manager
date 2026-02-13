@@ -115,7 +115,7 @@ class ShoppingListStorage:
                             aliases=prod_data.get("aliases", []),
                             default_unit=prod_data.get("default_unit", "units"),
                             default_quantity=prod_data.get("default_quantity", 1),
-                            price=prod_data.get("typical_price"),
+                            price=prod_data.get("price") or prod_data.get("typical_price"),
                             currency=self.hass.config.currency,
                             barcode=prod_data.get("barcode"),
                             brands=prod_data.get("brands", []),
