@@ -1,92 +1,109 @@
-"""Config flow for Shopping List Manager."""
-import voluptuous as vol
-from homeassistant import config_entries
-from homeassistant.core import callback
+"""Image handling utilities for Shopping List Manager."""
+import logging
+import os
+from pathlib import Path
+from typing import Optional
 
-from .const import DOMAIN
+_LOGGER = logging.getLogger(__name__)
 
 
-class ShoppingListManagerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for Shopping List Manager."""
-
-    VERSION = 1
-
-    def __init__(self):
-        """Initialize config flow."""
-        self._data = {}
-
-    async def async_step_user(self, user_input=None):
-        """Handle the initial step."""
-        # Only allow one instance
-        if self._async_current_entries():
-            return self.async_abort(reason="single_instance_allowed")
+class ImageHandler:
+    """Handle product images with URL and local file support."""
+    
+    def __init__(self, hass, config_path: str):
+        """Initialize image handler.
         
-        if user_input is not None:
-            # Store initial list name
-            self._data["initial_list_name"] = user_input.get("list_name", "Shopping List")
-            return await self.async_step_features()
-
-        # Show setup form
-        return self.async_show_form(
-            step_id="user",
-            data_schema=vol.Schema({
-                vol.Optional("list_name", default="Shopping List"): str,
-            }),
-            description_placeholders={
-                "version": "2.0.0",
-            }
-        )
-
-    async def async_step_features(self, user_input=None):
-        """Configure optional features."""
-        if user_input is not None:
-            self._data.update(user_input)
-            return self.async_create_entry(
-                title="Shopping List Manager",
-                data=self._data
-            )
-
-        return self.async_show_form(
-            step_id="features",
-            data_schema=vol.Schema({
-                vol.Optional("enable_price_tracking", default=True): bool,
-                vol.Optional("enable_image_search", default=True): bool,
-                vol.Optional("metric_units_only", default=True): bool,
-            }),
-            description_placeholders={
-                "features": "Configure optional features for your shopping lists"
-            }
-        )
-
-    @staticmethod
-    @callback
-    def async_get_options_flow(config_entry):
-        """Get the options flow for this handler."""
-        return OptionsFlowHandler(config_entry)
-
-
-class OptionsFlowHandler(config_entries.OptionsFlow):
-    """Handle options flow for Shopping List Manager."""
-
-    def __init__(self, config_entry):
-        """Initialize options flow."""
-        self.config_entry = config_entry
-
-    async def async_step_init(self, user_input=None):
-        """Manage the options."""
-        if user_input is not None:
-            return self.async_create_entry(title="", data=user_input)
-
-        return self.async_show_form(
-            step_id="init",
-            data_schema=vol.Schema({
-                vol.Optional(
-                    "enable_price_tracking",
-                    default=self.config_entry.data.get("enable_price_tracking", True)
-                ): bool,
-                vol.Optional(
-                    "enable_image_search",
-                    default=self.config_entry.data.get("enable_image_search", True)
-                ): bool,
-            })
-        )
+        Args:
+            hass: Home Assistant instance
+            config_path: Path to HA config directory
+        """
+        self.hass = hass
+        # Images stored in /config/www/shopping_list_manager/images/
+        self._local_images_dir = Path(config_path) / "www" / "shopping_list_manager" / "images"
+        self._local_images_dir.mkdir(parents=True, exist_ok=True)
+        
+        _LOGGER.info("Image directory: %s", self._local_images_dir)
+    
+    def get_image_url(self, product_name: str, external_url: Optional[str] = None) -> str:
+        """Get image URL for a product.
+        
+        Priority:
+        1. External URL (if provided)
+        2. Local file match
+        3. Placeholder
+        
+        Args:
+            product_name: Name of product to find image for
+            external_url: Optional external image URL
+            
+        Returns:
+            Image URL (external, local, or placeholder)
+        """
+        # Priority 1: Use external URL if provided
+        if external_url:
+            return external_url
+        
+        # Priority 2: Look for local file
+        local_url = self._find_local_image(product_name)
+        if local_url:
+            return local_url
+        
+        # Priority 3: Placeholder
+        return self._get_placeholder_url()
+    
+    def _find_local_image(self, product_name: str) -> Optional[str]:
+        """Find local image file for product.
+        
+        Searches for files matching product name (case-insensitive).
+        Supports: .webp, .jpg, .jpeg, .png
+        
+        Args:
+            product_name: Product name to search for
+            
+        Returns:
+            Local URL if found, None otherwise
+        """
+        # Normalize product name for filename matching
+        normalized_name = product_name.lower().replace(" ", "_")
+        
+        # Supported extensions
+        extensions = [".webp", ".jpg", ".jpeg", ".png"]
+        
+        for ext in extensions:
+            # Check exact match
+            image_file = self._local_images_dir / f"{normalized_name}{ext}"
+            if image_file.exists():
+                return f"/local/shopping_list_manager/images/{normalized_name}{ext}"
+            
+            # Check for files starting with the product name
+            for file in self._local_images_dir.glob(f"{normalized_name}*{ext}"):
+                return f"/local/shopping_list_manager/images/{file.name}"
+        
+        return None
+    
+    def _get_placeholder_url(self) -> str:
+        """Get placeholder image URL.
+        
+        Returns:
+            URL to placeholder image
+        """
+        # Use a simple colored placeholder
+        # You can replace this with a real placeholder image later
+        return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23999'%3ENo Image%3C/text%3E%3C/svg%3E"
+    
+    def list_available_images(self) -> list:
+        """List all available local images.
+        
+        Returns:
+            List of (filename, product_name_guess) tuples
+        """
+        images = []
+        extensions = [".webp", ".jpg", ".jpeg", ".png"]
+        
+        for ext in extensions:
+            for image_file in self._local_images_dir.glob(f"*{ext}"):
+                # Guess product name from filename
+                product_name = image_file.stem.replace("_", " ").title()
+                images.append((image_file.name, product_name))
+        
+        return sorted(images)
