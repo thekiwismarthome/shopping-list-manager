@@ -32,8 +32,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     component_path = os.path.dirname(__file__)
     config_path = hass.config.path()
     
-    # Get country from config entry (defaults to NZ)
-    country = entry.data.get("country", "NZ")
+    # Get country from options (or fall back to data, or default to NZ)
+    country = entry.options.get("country") or entry.data.get("country", "NZ")
     _LOGGER.info("Using country: %s", country)
     
     # Initialize storage with country
@@ -47,7 +47,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][DATA_STORAGE] = storage
     hass.data[DOMAIN]["image_handler"] = image_handler
-    hass.data[DOMAIN]["country"] = country  # Store for later use
+    hass.data[DOMAIN]["country"] = country
+    
+    # Register update listener for options changes
+    entry.async_on_unload(entry.add_update_listener(update_listener))
     
     # Register WebSocket commands
     await _async_register_websocket_handlers(hass, storage)
@@ -57,6 +60,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     
     _LOGGER.info("Shopping List Manager setup complete")
     return True
+
+
+async def update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
+    """Handle options update."""
+    # Reload the integration when options change
+    await hass.config_entries.async_reload(entry.entry_id)
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
