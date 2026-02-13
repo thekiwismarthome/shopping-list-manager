@@ -22,14 +22,22 @@ class ShoppingListManagerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             return self.async_abort(reason="single_instance_allowed")
         
         if user_input is not None:
-            # Store initial list name
+            # Store country and initial list name
+            self._data["country"] = user_input.get("country", "NZ")
             self._data["initial_list_name"] = user_input.get("list_name", "Shopping List")
             return await self.async_step_features()
 
-        # Show setup form
+        # Show setup form with country selection
         return self.async_show_form(
             step_id="user",
             data_schema=vol.Schema({
+                vol.Required("country", default="NZ"): vol.In({
+                    "NZ": "New Zealand",
+                    "AU": "Australia",
+                    "US": "United States",
+                    "GB": "United Kingdom",
+                    "CA": "Canada",
+                }),
                 vol.Optional("list_name", default="Shopping List"): str,
             }),
             description_placeholders={
@@ -80,6 +88,16 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema({
+                vol.Required(
+                    "country",
+                    default=self.config_entry.data.get("country", "NZ")
+                ): vol.In({
+                    "NZ": "New Zealand",
+                    "AU": "Australia",
+                    "US": "United States",
+                    "GB": "United Kingdom",
+                    "CA": "Canada",
+                }),
                 vol.Optional(
                     "enable_price_tracking",
                     default=self.config_entry.data.get("enable_price_tracking", True)
