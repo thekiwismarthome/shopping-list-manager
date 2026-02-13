@@ -141,44 +141,7 @@ class ShoppingListStorage:
                 await self._save_products()
                 _LOGGER.info("Successfully imported %d products from catalog", len(self._products))
     
-    def search_products(
-        self,
-        query: str,
-        limit: int = 10,
-        exclude_allergens: Optional[List[str]] = None,
-        include_tags: Optional[List[str]] = None,
-        substitution_group: Optional[str] = None,
-    ) -> List[Product]:
-        """Search products with enhanced fuzzy matching and filters.
-        
-        Args:
-            query: Search query
-            limit: Maximum results
-            exclude_allergens: Allergens to exclude
-            include_tags: Tags to include
-            substitution_group: Filter by substitution group
-            
-        Returns:
-            List of matching products
-        """
-        if not self._search_engine:
-            _LOGGER.warning("Search engine not initialized")
-            return []
-        
-        # Convert products dict to format search engine expects
-        products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
-        search_engine = ProductSearch(products_dict)
-        
-        results = search_engine.search(
-            query=query,
-            limit=limit,
-            exclude_allergens=exclude_allergens,
-            include_tags=include_tags,
-            substitution_group=substitution_group,
-        )
-        
-        # Convert back to Product objects
-        return [self._products[r["id"]] for r in results if r["id"] in self._products]
+
     # Lists methods
     async def _save_lists(self) -> None:
         """Save lists to storage."""
@@ -416,27 +379,64 @@ class ShoppingListStorage:
         """Get a specific product."""
         return self._products.get(product_id)
     
-    def search_products(self, query: str, limit: int = 10) -> List[Product]:
-        """Search products by name or alias."""
-        query_lower = query.lower()
-        results = []
+    def search_products(
+        self,
+        query: str,
+        limit: int = 10,
+        exclude_allergens: Optional[List[str]] = None,
+        include_tags: Optional[List[str]] = None,
+        substitution_group: Optional[str] = None,
+    ) -> List[Product]:
+        """Search products with enhanced fuzzy matching and filters.
         
-        for product in self._products.values():
-            # Check name
-            if query_lower in product.name.lower():
-                results.append(product)
-                continue
+        Args:
+            query: Search query
+            limit: Maximum results
+            exclude_allergens: Allergens to exclude
+            include_tags: Tags to include
+            substitution_group: Filter by substitution group
             
-            # Check aliases
-            if any(query_lower in alias.lower() for alias in product.aliases):
-                results.append(product)
-                continue
+        Returns:
+            List of matching products
+        """
+        if not self._search_engine:
+            _LOGGER.warning("Search engine not initialized")
+            return []
         
-        # Sort by frequency
-        results.sort(key=lambda p: p.user_frequency, reverse=True)
+        # Convert products dict to format search engine expects
+        products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
+        search_engine = ProductSearch(products_dict)
         
-        return results[:limit]
-    
+        results = search_engine.search(
+            query=query,
+            limit=limit,
+            exclude_allergens=exclude_allergens,
+            include_tags=include_tags,
+            substitution_group=substitution_group,
+        )
+        
+        # Convert back to Product objects
+        return [self._products[r["id"]] for r in results if r["id"] in self._products]
+
+    def find_product_substitutes(self, product_id: str, limit: int = 5) -> List[Product]:
+        """Find substitute products.
+        
+        Args:
+            product_id: Product to find substitutes for
+            limit: Maximum substitutes
+            
+        Returns:
+            List of substitute products
+        """
+        if not self._search_engine:
+            return []
+        
+        products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
+        search_engine = ProductSearch(products_dict)
+        
+        results = search_engine.find_substitutes(product_id, limit)
+        return [self._products[r["id"]] for r in results if r["id"] in self._products]
+        
     def get_product_suggestions(self, limit: int = 20) -> List[Product]:
         """Get product suggestions based on usage frequency."""
         products = list(self._products.values())
