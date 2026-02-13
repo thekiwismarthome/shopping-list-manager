@@ -3,12 +3,13 @@ import json
 import logging
 import os
 from typing import List, Dict, Any
+import aiofiles
 
 _LOGGER = logging.getLogger(__name__)
 
 
-def load_categories(component_path: str, country_code: str = None) -> List[Dict[str, Any]]:
-    """Load categories from JSON file.
+async def load_categories(component_path: str, country_code: str = None) -> List[Dict[str, Any]]:
+    """Load categories from JSON file asynchronously.
     
     Args:
         component_path: Path to the component directory
@@ -18,6 +19,8 @@ def load_categories(component_path: str, country_code: str = None) -> List[Dict[
     Returns:
         List of category dictionaries
     """
+    import os
+    
     # Try country-specific file first if country_code provided
     if country_code:
         country_file = os.path.join(
@@ -36,8 +39,9 @@ def load_categories(component_path: str, country_code: str = None) -> List[Dict[
         categories_file = os.path.join(component_path, "data", "categories.json")
     
     try:
-        with open(categories_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        async with aiofiles.open(categories_file, "r", encoding="utf-8") as f:
+            content = await f.read()
+            data = json.loads(content)
             
         _LOGGER.info(
             "Loaded categories version %s for region %s",
