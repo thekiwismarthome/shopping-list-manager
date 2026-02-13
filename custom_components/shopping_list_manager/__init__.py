@@ -40,10 +40,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     storage = ShoppingListStorage(hass, component_path, country)
     await storage.async_load()
 
-    # Initialize search engine after products are loaded
-    self._search_engine = ProductSearch(self._products)
-    _LOGGER.debug("Initialized product search engine")
-
     # Initialize image handler
     image_handler = ImageHandler(hass, config_path)
 
