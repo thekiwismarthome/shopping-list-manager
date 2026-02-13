@@ -32,8 +32,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     component_path = os.path.dirname(__file__)
     config_path = hass.config.path()
     
-    # Initialize storage
-    storage = ShoppingListStorage(hass, component_path)
+    # Get country from config entry (defaults to NZ)
+    country = entry.data.get("country", "NZ")
+    _LOGGER.info("Using country: %s", country)
+    
+    # Initialize storage with country
+    storage = ShoppingListStorage(hass, component_path, country)
     await storage.async_load()
     
     # Initialize image handler
@@ -42,7 +46,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     # Store instances in hass.data
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][DATA_STORAGE] = storage
-    hass.data[DOMAIN]["image_handler"] = image_handler  # NEW
+    hass.data[DOMAIN]["image_handler"] = image_handler
+    hass.data[DOMAIN]["country"] = country  # Store for later use
     
     # Register WebSocket commands
     await _async_register_websocket_handlers(hass, storage)
