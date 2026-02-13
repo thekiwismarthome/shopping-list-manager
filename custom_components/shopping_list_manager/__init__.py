@@ -166,6 +166,10 @@ async def _async_register_websocket_handlers(
         hass,
         handlers.websocket_update_product,
     )
+    websocket_api.async_register_command(
+        hass,
+        handlers.websocket_get_product_substitutes,
+    )
     
     # Categories handlers
     websocket_api.async_register_command(
