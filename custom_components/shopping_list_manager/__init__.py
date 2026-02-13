@@ -42,8 +42,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     # Initialize image handler
     image_handler = ImageHandler(hass, config_path)
-
-    self._search_engine: Optional[ProductSearch] = None
     
     # Store instances in hass.data
     hass.data.setdefault(DOMAIN, {})
