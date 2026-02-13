@@ -1,7 +1,7 @@
 """Storage management for Shopping List Manager."""
 import logging
 from typing import Dict, List, Optional, Any
-
+from .utils.search import ProductSearch
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.storage import Store
 
