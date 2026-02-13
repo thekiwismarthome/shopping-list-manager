@@ -42,6 +42,7 @@ class ShoppingListStorage:
         self._items: Dict[str, List[Item]] = {}
         self._products: Dict[str, Product] = {}
         self._categories: List[Category] = []
+        self._search_engine: Optional[ProductSearch] = None
     
     async def async_load(self) -> None:
         """Load data from storage."""
@@ -140,6 +141,44 @@ class ShoppingListStorage:
                 await self._save_products()
                 _LOGGER.info("Successfully imported %d products from catalog", len(self._products))
     
+    def search_products(
+        self,
+        query: str,
+        limit: int = 10,
+        exclude_allergens: Optional[List[str]] = None,
+        include_tags: Optional[List[str]] = None,
+        substitution_group: Optional[str] = None,
+    ) -> List[Product]:
+        """Search products with enhanced fuzzy matching and filters.
+        
+        Args:
+            query: Search query
+            limit: Maximum results
+            exclude_allergens: Allergens to exclude
+            include_tags: Tags to include
+            substitution_group: Filter by substitution group
+            
+        Returns:
+            List of matching products
+        """
+        if not self._search_engine:
+            _LOGGER.warning("Search engine not initialized")
+            return []
+        
+        # Convert products dict to format search engine expects
+        products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
+        search_engine = ProductSearch(products_dict)
+        
+        results = search_engine.search(
+            query=query,
+            limit=limit,
+            exclude_allergens=exclude_allergens,
+            include_tags=include_tags,
+            substitution_group=substitution_group,
+        )
+        
+        # Convert back to Product objects
+        return [self._products[r["id"]] for r in results if r["id"] in self._products]
     # Lists methods
     async def _save_lists(self) -> None:
         """Save lists to storage."""
