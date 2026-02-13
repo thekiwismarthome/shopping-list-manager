@@ -8,6 +8,7 @@ from homeassistant.helpers.typing import ConfigType
 
 from .const import DOMAIN
 from .storage import ShoppingListStorage
+from .utils.images import ImageHandler
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -22,16 +23,26 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     return True
 
 
+# In async_setup_entry function, after storage initialization:
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Shopping List Manager from a config entry."""
     _LOGGER.info("Setting up Shopping List Manager")
     
     # Get component path for loading data files
     component_path = os.path.dirname(__file__)
+    config_path = hass.config.path()
     
     # Initialize storage
     storage = ShoppingListStorage(hass, component_path)
     await storage.async_load()
+    
+    # Initialize image handler
+    image_handler = ImageHandler(hass, config_path)
+    
+    # Store instances in hass.data
+    hass.data.setdefault(DOMAIN, {})
+    hass.data[DOMAIN][DATA_STORAGE] = storage
+    hass.data[DOMAIN]["image_handler"] = image_handler  # NEW
     
     # Store storage instance in hass.data
     hass.data.setdefault(DOMAIN, {})
