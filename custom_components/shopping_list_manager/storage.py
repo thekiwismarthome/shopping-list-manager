@@ -90,7 +90,7 @@ class ShoppingListStorage:
             _LOGGER.debug("Loaded %d categories", len(self._categories))
         else:
             # Initialize with default categories from JSON file
-            default_categories = load_categories(self._component_path, self._country)  # Use self._country
+            default_categories = await load_categories(self._component_path, self._country)  # Use self._country
             self._categories = [Category(**cat) for cat in default_categories]
             await self._save_categories()
             _LOGGER.info(
