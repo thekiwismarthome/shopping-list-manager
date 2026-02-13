@@ -22,15 +22,17 @@ _LOGGER = logging.getLogger(__name__)
 class ShoppingListStorage:
     """Handle storage for shopping lists."""
     
-    def __init__(self, hass: HomeAssistant, component_path: str) -> None:
+    def __init__(self, hass: HomeAssistant, component_path: str, country: str = "NZ") -> None:
         """Initialize storage.
         
         Args:
             hass: Home Assistant instance
             component_path: Path to the component directory
+            country: Country code (NZ, AU, US, GB, CA, etc.)
         """
         self.hass = hass
         self._component_path = component_path
+        self._country = country  # Store country
         self._store_lists = Store(hass, STORAGE_VERSION, STORAGE_KEY_LISTS)
         self._store_items = Store(hass, STORAGE_VERSION, STORAGE_KEY_ITEMS)
         self._store_products = Store(hass, STORAGE_VERSION, STORAGE_KEY_PRODUCTS)
