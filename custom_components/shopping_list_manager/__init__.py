@@ -44,10 +44,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.data[DOMAIN][DATA_STORAGE] = storage
     hass.data[DOMAIN]["image_handler"] = image_handler  # NEW
     
-    # Store storage instance in hass.data
-    hass.data.setdefault(DOMAIN, {})
-    hass.data[DOMAIN][DATA_STORAGE] = storage
-    
     # Register WebSocket commands
     await _async_register_websocket_handlers(hass, storage)
     
