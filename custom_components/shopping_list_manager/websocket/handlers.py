@@ -550,9 +550,9 @@ def websocket_get_list_total(
         vol.Required("type"): WS_TYPE_PRODUCTS_SEARCH,
         vol.Required("query"): str,
         vol.Optional("limit", default=10): int,
-        vol.Optional("exclude_allergens"): [str],
-        vol.Optional("include_tags"): [str],
-        vol.Optional("substitution_group"): str,
+        vol.Optional("exclude_allergens", default=None): vol.Any(None, [str]),
+        vol.Optional("include_tags", default=None): vol.Any(None, [str]),
+        vol.Optional("substitution_group", default=None): vol.Any(None, str),
     }
 )
 @callback
@@ -580,6 +580,7 @@ def websocket_search_products(
     except Exception as err:
         _LOGGER.error("Error searching products: %s", err)
         connection.send_error(msg["id"], "search_failed", str(err))
+
 
 @websocket_api.websocket_command(
     {
