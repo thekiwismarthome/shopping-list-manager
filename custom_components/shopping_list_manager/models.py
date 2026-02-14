@@ -1,104 +1,113 @@
 """Data models for Shopping List Manager."""
-from dataclasses import dataclass, asdict
-from typing import Dict
+from dataclasses import dataclass, field, asdict
+from datetime import datetime
+from typing import Optional, List, Dict, Any
+import uuid
+
+
+def generate_id() -> str:
+    """Generate a unique ID."""
+    return str(uuid.uuid4())
+
+
+def current_timestamp() -> str:
+    """Get current ISO timestamp."""
+    return datetime.utcnow().isoformat() + "Z"
+
+
+@dataclass
+class Category:
+    """Category model."""
+    id: str
+    name: str
+    icon: str
+    color: str
+    sort_order: int
+    system: bool = True
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)
 
 
 @dataclass
 class Product:
-    """
-    Product catalog entry - authoritative product definition.
-    
-    Products exist independently of the shopping list.
-    They define WHAT can be shopped, not HOW MUCH is needed.
-    """
-    key: str
+    """Product model."""
+    id: str
     name: str
-    category: str = "other"
-    unit: str = "pcs"
-    image: str = ""
+    category_id: str
+    aliases: List[str] = field(default_factory=list)
+    default_unit: str = "units"
+    default_quantity: float = 1
+    price: Optional[float] = None
+    currency: Optional[str] = None
+    price_per_unit: Optional[float] = None
+    price_updated: Optional[str] = None
+    image_url: Optional[str] = None
+    image_source: Optional[str] = None
+    barcode: Optional[str] = None
+    brands: List[str] = field(default_factory=list)
+    nutrition: Optional[Dict[str, Any]] = None
+    user_frequency: int = 0
+    last_used: Optional[str] = None
+    custom: bool = False
+    source: str = "user"
+    tags: List[str] = field(default_factory=list)
+    collections: List[str] = field(default_factory=list)
+    taxonomy: Dict[str, Any] = field(default_factory=dict)
+    allergens: List[str] = field(default_factory=list)
+    substitution_group: str = ""
+    priority_level: int = 0
+    image_hint: str = ""
     
-    def to_dict(self) -> dict:
-        """Convert to dictionary for storage/transmission."""
-        return {
-            "key": self.key,
-            "name": self.name,
-            "category": self.category,
-            "unit": self.unit,
-            "image": self.image
-        }
-    
-    @staticmethod
-    def from_dict(data: dict) -> 'Product':
-        """Create Product from dictionary."""
-        return Product(
-            key=data["key"],
-            name=data["name"],
-            category=data.get("category", "other"),
-            unit=data.get("unit", "pcs"),
-            image=data.get("image", "")
-        )
-    
-    def __post_init__(self):
-        """Validate product data."""
-        if not self.key:
-            raise ValueError("Product key cannot be empty")
-        if not self.name:
-            raise ValueError("Product name cannot be empty")
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)
 
 
 @dataclass
-class ActiveItem:
-    """
-    Shopping list state - quantity only.
+class Item:
+    """Shopping list item model."""
+    id: str
+    list_id: str
+    name: str
+    category_id: str
+    product_id: Optional[str] = None
+    quantity: float = 1
+    unit: str = "units"
+    note: Optional[str] = None
+    checked: bool = False
+    checked_at: Optional[str] = None
+    created_at: str = field(default_factory=current_timestamp)
+    updated_at: str = field(default_factory=current_timestamp)
+    image_url: Optional[str] = None
+    order_index: int = 0
+    price: Optional[float] = None
+    estimated_total: Optional[float] = None
+    barcode: Optional[str] = None
     
-    Contains NO product metadata, only references products by key.
-    qty > 0 means "on the list"
-    qty == 0 means "not on the list" (should be removed)
-    """
-    qty: int
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)
     
-    def to_dict(self) -> dict:
-        """Convert to dictionary for storage/transmission."""
-        return {"qty": self.qty}
-    
-    @staticmethod
-    def from_dict(data: dict) -> 'ActiveItem':
-        """Create ActiveItem from dictionary."""
-        return ActiveItem(qty=data["qty"])
-    
-    def __post_init__(self):
-        """Validate quantity."""
-        if self.qty < 0:
-            raise ValueError("Quantity cannot be negative")
+    def calculate_total(self) -> None:
+        """Calculate estimated total from quantity and price."""
+        if self.price is not None:
+            self.estimated_total = self.quantity * self.price
 
 
-class InvariantError(Exception):
-    """
-    Raised when the core data model invariant is violated.
+@dataclass
+class ShoppingList:
+    """Shopping list model."""
+    id: str
+    name: str
+    icon: str = "mdi:cart"
+    created_at: str = field(default_factory=current_timestamp)
+    updated_at: str = field(default_factory=current_timestamp)
+    item_order: List[str] = field(default_factory=list)
+    category_order: List[str] = field(default_factory=list)
+    active: bool = False
     
-    Invariant: Every key in active_list MUST exist in products.
-    
-    If this exception is raised, the system is in an inconsistent state
-    and must be repaired before continuing.
-    """
-    pass
-
-
-def validate_invariant(products: Dict[str, Product], 
-                       active_list: Dict[str, ActiveItem]) -> None:
-    """
-    Validate the core data model invariant.
-    
-    Args:
-        products: Product catalog dictionary
-        active_list: Active shopping list dictionary
-        
-    Raises:
-        InvariantError: If any key in active_list doesn't exist in products
-    """
-    for key in active_list:
-        if key not in products:
-            raise InvariantError(
-                f"Invariant violated: active_list contains unknown product key '{key}'. "
-                f"This product must be added to the catalog first."
-            )
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)

@@ -1,0 +1,5421 @@
+{
+  "version": "2.1.0",
+  "region": "CA",
+  "currency": "CAD",
+  "last_updated": "2026-02-13",
+  "description": "Clean Canadian grocery catalog based on cleaned NZ dataset (no synthetic variants)",
+  "products": [
+    {
+      "id": "prod_milk_trim",
+      "name": "Milk - Trim",
+      "category_id": "dairy",
+      "aliases": [
+        "low fat milk",
+        "milk",
+        "milk   trim",
+        "milk - trims",
+        "milk trim",
+        "skim milk",
+        "trim milk"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 4.21,
+      "brands": [
+        "Real Canadian Superstore",
+        "FreshCo",
+        "Sobeys",
+        "Meadow Fresh"
+      ],
+      "barcode": "9400547000019",
+      "image_hint": "milk_trim",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_milk_whole",
+      "name": "Milk - Whole",
+      "category_id": "dairy",
+      "aliases": [
+        "blue top milk",
+        "full cream milk",
+        "milk",
+        "milk   whole",
+        "milk - wholes",
+        "milk whole",
+        "whole milk"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 4.82,
+      "brands": [
+        "Costco Canada",
+        "Metro",
+        "Loblaws",
+        "Meadow Fresh"
+      ],
+      "barcode": "9400547000026",
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_butter_salted",
+      "name": "Butter - Salted",
+      "category_id": "dairy",
+      "aliases": [
+        "butter",
+        "butter   salted",
+        "butter - salteds",
+        "butter salted",
+        "salted butter"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 7.72,
+      "brands": [
+        "Food Basics",
+        "Westgold",
+        "Sobeys",
+        "Loblaws"
+      ],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_butter_unsalted",
+      "name": "Butter - Unsalted",
+      "category_id": "dairy",
+      "aliases": [
+        "butter",
+        "butter   unsalted",
+        "butter - unsalteds",
+        "butter unsalted",
+        "unsalted butter"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 8.59,
+      "brands": [],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cheese_tasty",
+      "name": "Cheese - Tasty",
+      "category_id": "dairy",
+      "aliases": [
+        "cheddar",
+        "cheese",
+        "cheese   tasty",
+        "cheese - tastys",
+        "cheese block",
+        "cheese tasty",
+        "tasty cheese"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 9.86,
+      "brands": [],
+      "image_hint": "cheese_tasty",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cheese_edam",
+      "name": "Cheese - Edam",
+      "category_id": "dairy",
+      "aliases": [
+        "cheese",
+        "cheese   edam",
+        "cheese - edams",
+        "cheese edam",
+        "edam cheese"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 10.43,
+      "brands": [],
+      "image_hint": "cheese_edam",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cheese_colby",
+      "name": "Cheese - Colby",
+      "category_id": "dairy",
+      "aliases": [
+        "cheese",
+        "cheese   colby",
+        "cheese - colbys",
+        "cheese colby",
+        "colby cheese"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 10.6,
+      "brands": [],
+      "image_hint": "cheese_colby",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cheese_grated",
+      "name": "Cheese - Grated",
+      "category_id": "dairy",
+      "aliases": [
+        "cheese",
+        "cheese   grated",
+        "cheese - grateds",
+        "cheese grated",
+        "grated cheese",
+        "shredded cheese"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 6.97,
+      "brands": [],
+      "image_hint": "cheese_grated",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_yogurt_plain",
+      "name": "Yogurt - Plain",
+      "category_id": "dairy",
+      "aliases": [
+        "natural yogurt",
+        "plain yogurt",
+        "yogurt",
+        "yogurt   plain",
+        "yogurt - plains",
+        "yogurt plain"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.8,
+      "brands": [
+        "Metro",
+        "Cyclone",
+        "FreshCo",
+        "Sobeys",
+        "Meadow Fresh"
+      ],
+      "image_hint": "yogurt_plain",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_yogurt_greek",
+      "name": "Yogurt - Greek",
+      "category_id": "dairy",
+      "aliases": [
+        "greek yogurt",
+        "yogurt",
+        "yogurt   greek",
+        "yogurt - greeks",
+        "yogurt greek"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 7.98,
+      "brands": [
+        "Chobani",
+        "Costco Canada",
+        "Farmers Union",
+        "Food Basics",
+        "Longo's"
+      ],
+      "image_hint": "yogurt_greek",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_eggs_free_range",
+      "name": "Eggs - Free Range",
+      "category_id": "dairy",
+      "aliases": [
+        "eggs",
+        "eggs   free range",
+        "eggs - free ranges",
+        "eggs free range",
+        "free range eggs"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 10.09,
+      "brands": [
+        "Loblaws",
+        "Frenz",
+        "FreshCo",
+        "No Frills",
+        "Woodland",
+        "Farmer Brown"
+      ],
+      "image_hint": "eggs_free_range",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_eggs_cage",
+      "name": "Eggs - Cage",
+      "category_id": "dairy",
+      "aliases": [
+        "budget eggs",
+        "cage eggs",
+        "eggs",
+        "eggs   cage",
+        "eggs - cages",
+        "eggs cage"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 6.89,
+      "brands": [
+        "Food Basics",
+        "Metro",
+        "Sobeys",
+        "Value"
+      ],
+      "image_hint": "eggs",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cream",
+      "name": "Cream - Fresh",
+      "category_id": "dairy",
+      "aliases": [
+        "cream",
+        "cream   fresh",
+        "cream - freshs",
+        "cream fresh",
+        "fresh cream",
+        "pouring cream"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 300,
+      "price": 5.63,
+      "brands": [
+        "Real Canadian Superstore",
+        "Longo's",
+        "Loblaws",
+        "Meadow Fresh"
+      ],
+      "image_hint": "cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_sour_cream",
+      "name": "Sour Cream",
+      "category_id": "dairy",
+      "aliases": [
+        "sour cream",
+        "sour creams"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 4.99,
+      "brands": [
+        "Longo's",
+        "Sobeys",
+        "Loblaws",
+        "Meadow Fresh"
+      ],
+      "image_hint": "sour_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_apples_gala",
+      "name": "Apples - Gala",
+      "category_id": "produce",
+      "aliases": [
+        "apples",
+        "apples   gala",
+        "apples - galas",
+        "apples gala",
+        "gala apples"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.58,
+      "image_hint": "apples_gala",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_apples_granny_smith",
+      "name": "Apples - Granny Smith",
+      "category_id": "produce",
+      "aliases": [
+        "apples",
+        "apples   granny smith",
+        "apples - granny smiths",
+        "apples granny smith",
+        "granny smith",
+        "green apples"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.85,
+      "image_hint": "apples_granny_smith",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_bananas",
+      "name": "Bananas",
+      "category_id": "produce",
+      "aliases": [
+        "banana",
+        "bananas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.04,
+      "image_hint": "bananas",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_oranges",
+      "name": "Oranges",
+      "category_id": "produce",
+      "aliases": [
+        "orange",
+        "oranges"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.15,
+      "image_hint": "oranges",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_mandarins",
+      "name": "Mandarins",
+      "category_id": "produce",
+      "aliases": [
+        "easy peelers",
+        "mandarin",
+        "mandarins"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 6.53,
+      "image_hint": "mandarins",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_kiwifruit_green",
+      "name": "Kiwifruit - Green",
+      "category_id": "produce",
+      "aliases": [
+        "green kiwifruit",
+        "kiwi",
+        "kiwifruit",
+        "kiwifruit   green",
+        "kiwifruit - greens",
+        "kiwifruit green"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 7.84,
+      "image_hint": "kiwifruit_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_kiwifruit_gold",
+      "name": "Kiwifruit - Gold",
+      "category_id": "produce",
+      "aliases": [
+        "gold kiwifruit",
+        "kiwifruit",
+        "kiwifruit   gold",
+        "kiwifruit - golds",
+        "kiwifruit gold",
+        "sungold"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 9.25,
+      "image_hint": "kiwifruit_gold",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_strawberries",
+      "name": "Strawberries",
+      "category_id": "produce",
+      "aliases": [
+        "strawberrie",
+        "strawberries",
+        "strawberry"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 6.03,
+      "image_hint": "strawberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_blueberries",
+      "name": "Blueberries",
+      "category_id": "produce",
+      "aliases": [
+        "blueberrie",
+        "blueberries",
+        "blueberry"
+      ],
+      "default_unit": "g",
+      "default_quantity": 125,
+      "price": 7.22,
+      "image_hint": "blueberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_grapes_green",
+      "name": "Grapes - Green",
+      "category_id": "produce",
+      "aliases": [
+        "grapes",
+        "grapes   green",
+        "grapes - greens",
+        "grapes green",
+        "green grapes",
+        "white grapes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 7.75,
+      "image_hint": "grapes_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_grapes_red",
+      "name": "Grapes - Red",
+      "category_id": "produce",
+      "aliases": [
+        "grapes",
+        "grapes   red",
+        "grapes - reds",
+        "grapes red",
+        "red grapes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 7.96,
+      "image_hint": "grapes_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_avocado",
+      "name": "Avocados",
+      "category_id": "produce",
+      "aliases": [
+        "avo",
+        "avocado",
+        "avocados"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 3,
+      "price": 2.9,
+      "image_hint": "avocado",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_tomatoes",
+      "name": "Tomatoes",
+      "category_id": "produce",
+      "aliases": [
+        "tomato",
+        "tomatoe",
+        "tomatoes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 7.18,
+      "image_hint": "tomatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_tomatoes_cherry",
+      "name": "Cherry Tomatoes",
+      "category_id": "produce",
+      "aliases": [
+        "cherry tomato",
+        "cherry tomatoe",
+        "cherry tomatoes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 5.22,
+      "image_hint": "tomatoes_cherry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cucumber",
+      "name": "Cucumber",
+      "category_id": "produce",
+      "aliases": [
+        "cucumber",
+        "cucumbers"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 3.01,
+      "image_hint": "cucumber",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_lettuce_iceberg",
+      "name": "Lettuce - Iceberg",
+      "category_id": "produce",
+      "aliases": [
+        "iceberg lettuce",
+        "lettuce",
+        "lettuce   iceberg",
+        "lettuce - icebergs",
+        "lettuce iceberg"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 4.46,
+      "image_hint": "lettuce_iceberg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_lettuce_cos",
+      "name": "Lettuce - Cos",
+      "category_id": "produce",
+      "aliases": [
+        "cos lettuce",
+        "lettuce",
+        "lettuce   cos",
+        "lettuce - co",
+        "lettuce cos",
+        "romaine"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 4.48,
+      "image_hint": "lettuce_cos",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_capsicum_red",
+      "name": "Capsicum - Red",
+      "category_id": "produce",
+      "aliases": [
+        "capsicum",
+        "capsicum   red",
+        "capsicum - reds",
+        "capsicum red",
+        "red capsicum",
+        "red pepper"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 2.6,
+      "image_hint": "capsicum_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_capsicum_green",
+      "name": "Capsicum - Green",
+      "category_id": "produce",
+      "aliases": [
+        "capsicum",
+        "capsicum   green",
+        "capsicum - greens",
+        "capsicum green",
+        "green capsicum",
+        "green pepper"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 2.15,
+      "image_hint": "capsicum_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_broccoli",
+      "name": "Broccoli",
+      "category_id": "produce",
+      "aliases": [
+        "broccoli",
+        "broccoli head",
+        "broccolis"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 3.85,
+      "image_hint": "broccoli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_cauliflower",
+      "name": "Cauliflower",
+      "category_id": "produce",
+      "aliases": [
+        "cauli",
+        "cauliflower",
+        "cauliflowers"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 4.88,
+      "image_hint": "cauliflower",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_carrots",
+      "name": "Carrots",
+      "category_id": "produce",
+      "aliases": [
+        "carrot",
+        "carrots"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.42,
+      "image_hint": "carrots",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_potatoes",
+      "name": "Potatoes",
+      "category_id": "produce",
+      "aliases": [
+        "potato",
+        "potatoe",
+        "potatoes",
+        "spuds"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 5.26,
+      "image_hint": "potatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_kumara",
+      "name": "Sweet Potato",
+      "category_id": "produce",
+      "aliases": [
+        "kumara",
+        "kumaras",
+        "kumera",
+        "sweet potato",
+        "sweet potato"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.9,
+      "image_hint": "kumara",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_onions_brown",
+      "name": "Onions - Brown",
+      "category_id": "produce",
+      "aliases": [
+        "brown onions",
+        "onions",
+        "onions   brown",
+        "onions - browns",
+        "onions brown"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.5,
+      "image_hint": "onions_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_onions_red",
+      "name": "Onions - Red",
+      "category_id": "produce",
+      "aliases": [
+        "onions",
+        "onions   red",
+        "onions - reds",
+        "onions red",
+        "red onions"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.11,
+      "image_hint": "onions_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_garlic",
+      "name": "Garlic",
+      "category_id": "produce",
+      "aliases": [
+        "garlic",
+        "garlic bulb",
+        "garlics"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.91,
+      "image_hint": "garlic",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_ginger",
+      "name": "Ginger",
+      "category_id": "produce",
+      "aliases": [
+        "fresh ginger",
+        "ginger",
+        "gingers"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 3.06,
+      "image_hint": "ginger",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_mushrooms_button",
+      "name": "Mushrooms - Button",
+      "category_id": "produce",
+      "aliases": [
+        "button mushrooms",
+        "mushrooms",
+        "mushrooms   button",
+        "mushrooms - buttons",
+        "mushrooms button"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 4.81,
+      "image_hint": "mushrooms_button",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_courgette",
+      "name": "Courgette",
+      "category_id": "produce",
+      "aliases": [
+        "courgette",
+        "courgettes",
+        "zucchini"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 2.17,
+      "image_hint": "courgette",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_pumpkin",
+      "name": "Pumpkin",
+      "category_id": "produce",
+      "aliases": [
+        "butternut",
+        "pumpkin",
+        "pumpkins",
+        "squash"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.04,
+      "image_hint": "pumpkin",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_spinach",
+      "name": "Spinach",
+      "category_id": "produce",
+      "aliases": [
+        "baby spinach",
+        "spinach",
+        "spinachs"
+      ],
+      "default_unit": "g",
+      "default_quantity": 120,
+      "price": 4.56,
+      "image_hint": "spinach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 4
+    },
+    {
+      "id": "prod_chicken_breast",
+      "name": "Chicken Breast",
+      "category_id": "meat",
+      "aliases": [
+        "chicken breast",
+        "chicken breast fillets",
+        "chicken breasts"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 17.47,
+      "brands": [
+        "Tegel",
+        "Inghams",
+        "FreshCo",
+        "Walmart Canada",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "chicken_breast",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chicken_thigh",
+      "name": "Chicken Thighs",
+      "category_id": "meat",
+      "aliases": [
+        "chicken thigh",
+        "chicken thigh fillets",
+        "chicken thighs"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 16.94,
+      "brands": [
+        "Tegel",
+        "Inghams",
+        "Metro",
+        "Loblaws",
+        "FreshCo"
+      ],
+      "image_hint": "chicken_thigh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chicken_drumsticks",
+      "name": "Chicken Drumsticks",
+      "category_id": "meat",
+      "aliases": [
+        "chicken drumstick",
+        "chicken drumsticks",
+        "drumsticks"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 12.76,
+      "brands": [
+        "Tegel",
+        "Inghams",
+        "Food Basics",
+        "No Frills",
+        "Walmart Canada"
+      ],
+      "image_hint": "chicken_drumsticks",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chicken_whole",
+      "name": "Whole Chicken",
+      "category_id": "meat",
+      "aliases": [
+        "whole chicken",
+        "whole chickens",
+        "whole roasting chicken"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 15.43,
+      "brands": [
+        "Tegel",
+        "Costco Canada",
+        "Inghams",
+        "Real Canadian Superstore",
+        "Sobeys"
+      ],
+      "image_hint": "chicken_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_beef_mince",
+      "name": "Beef Mince",
+      "category_id": "meat",
+      "aliases": [
+        "beef mince",
+        "beef minces",
+        "ground beef",
+        "mince"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 16.52,
+      "brands": [
+        "No Frills",
+        "FreshCo",
+        "Angus",
+        "Loblaws"
+      ],
+      "image_hint": "beef_mince",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_beef_steak",
+      "name": "Beef Steak",
+      "category_id": "meat",
+      "aliases": [
+        "beef steak",
+        "beef steaks",
+        "scotch fillet",
+        "sirloin"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 33.81,
+      "brands": [
+        "Angus",
+        "Premium",
+        "FreshCo",
+        "Longo's",
+        "Sobeys"
+      ],
+      "image_hint": "beef_steak",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_lamb_chops",
+      "name": "Lamb Chops",
+      "category_id": "meat",
+      "aliases": [
+        "lamb chop",
+        "lamb chops",
+        "lamb loin chops"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 28.07,
+      "brands": [
+        "Metro",
+        "Loblaws",
+        "Coastal Spring",
+        "Food Basics",
+        "Silver Fern Farms"
+      ],
+      "image_hint": "lamb_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_lamb_leg",
+      "name": "Lamb Leg",
+      "category_id": "meat",
+      "aliases": [
+        "lamb leg",
+        "lamb legs",
+        "leg of lamb"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 20.57,
+      "brands": [
+        "Coastal Spring",
+        "Food Basics",
+        "No Frills",
+        "Silver Fern Farms",
+        "Sobeys"
+      ],
+      "image_hint": "lamb_leg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_pork_chops",
+      "name": "Pork Chops",
+      "category_id": "meat",
+      "aliases": [
+        "pork chop",
+        "pork chops",
+        "pork loin chops"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 18.46,
+      "image_hint": "pork_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bacon",
+      "name": "Bacon",
+      "category_id": "meat",
+      "aliases": [
+        "bacon",
+        "bacons",
+        "middle bacon",
+        "streaky bacon"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 8.81,
+      "brands": [
+        "Food Basics",
+        "Longo's",
+        "Beehive",
+        "Sobeys",
+        "Freedom Farms"
+      ],
+      "image_hint": "bacon",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_sausages",
+      "name": "Sausages",
+      "category_id": "meat",
+      "aliases": [
+        "bangers",
+        "pork sausages",
+        "sausage",
+        "sausages"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 13.53,
+      "brands": [
+        "Food Basics",
+        "Farmers Union",
+        "Longo's",
+        "Loblaws"
+      ],
+      "image_hint": "sausages",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_salami",
+      "name": "Salami",
+      "category_id": "meat",
+      "aliases": [
+        "italian salami",
+        "salami",
+        "salamis"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 6.68,
+      "brands": [
+        "No Frills",
+        "Costco Canada",
+        "Longo's",
+        "Continental"
+      ],
+      "image_hint": "salami",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_ham",
+      "name": "Ham",
+      "category_id": "meat",
+      "aliases": [
+        "deli ham",
+        "ham",
+        "hams",
+        "leg ham"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 8.59,
+      "brands": [
+        "Beehive",
+        "Real Canadian Superstore",
+        "Metro",
+        "Loblaws"
+      ],
+      "image_hint": "ham",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_salmon_fresh",
+      "name": "Salmon - Fresh",
+      "category_id": "meat",
+      "aliases": [
+        "fresh salmon",
+        "salmon",
+        "salmon   fresh",
+        "salmon - freshs",
+        "salmon fillet",
+        "salmon fresh"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 41.13,
+      "brands": [
+        "Real Canadian Superstore",
+        "Regal",
+        "Loblaws",
+        "FreshCo"
+      ],
+      "image_hint": "salmon_fresh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fish_hoki",
+      "name": "Hoki Fillets",
+      "category_id": "meat",
+      "aliases": [
+        "hoki",
+        "hoki fillet",
+        "hoki fillets",
+        "white fish"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 20.75,
+      "brands": [
+        "Food Basics",
+        "Sanford",
+        "Sobeys",
+        "FreshCo"
+      ],
+      "image_hint": "fish_hoki",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_prawns",
+      "name": "Prawns - Cooked",
+      "category_id": "meat",
+      "aliases": [
+        "cooked prawns",
+        "prawns",
+        "prawns   cooked",
+        "prawns - cookeds",
+        "prawns cooked",
+        "shrimp"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 33.89,
+      "brands": [],
+      "image_hint": "prawns",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_mussels",
+      "name": "Mussels - Green Lipped",
+      "category_id": "meat",
+      "aliases": [
+        "green lipped mussels",
+        "mussels",
+        "mussels   green lipped",
+        "mussels - green lippeds",
+        "mussels green lipped"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 16.19,
+      "brands": [
+        "Real Canadian Superstore",
+        "Sanford",
+        "Sobeys",
+        "Walmart Canada"
+      ],
+      "image_hint": "mussels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bread_white",
+      "name": "Bread - White",
+      "category_id": "bakery",
+      "aliases": [
+        "bread",
+        "bread   white",
+        "bread - whites",
+        "bread white",
+        "sandwich bread",
+        "white bread"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 3.17,
+      "brands": [
+        "Costco Canada",
+        "Freyas",
+        "Vogels",
+        "FreshCo",
+        "Sobeys"
+      ],
+      "image_hint": "bread_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bread_wholemeal",
+      "name": "Bread - Wholemeal",
+      "category_id": "bakery",
+      "aliases": [
+        "bread",
+        "bread   wholemeal",
+        "bread - wholemeals",
+        "bread wholemeal",
+        "brown bread",
+        "wholemeal bread"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 3.48,
+      "brands": [
+        "Food Basics",
+        "Walmart Canada",
+        "Sobeys",
+        "Vogels"
+      ],
+      "image_hint": "bread_wholemeal",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [
+          "wholegrain"
+        ],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bread_vogels",
+      "name": "Bread - Vogels",
+      "category_id": "bakery",
+      "aliases": [
+        "bread",
+        "bread   vogels",
+        "bread - vogel",
+        "bread vogels",
+        "seed bread",
+        "vogels bread"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 5.45,
+      "brands": [
+        "No Frills",
+        "Food Basics",
+        "Metro",
+        "Vogels"
+      ],
+      "image_hint": "bread_vogels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bread_rolls",
+      "name": "Bread Rolls",
+      "category_id": "bakery",
+      "aliases": [
+        "bread roll",
+        "bread rolls",
+        "dinner rolls",
+        "white rolls"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 4.28,
+      "brands": [
+        "Metro",
+        "Bakery",
+        "Loblaws",
+        "Longo's"
+      ],
+      "image_hint": "bread_rolls",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bagels",
+      "name": "Bagels",
+      "category_id": "bakery",
+      "aliases": [
+        "bagel",
+        "bagels",
+        "plain bagels"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.11,
+      "brands": [],
+      "image_hint": "bagels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_english_muffins",
+      "name": "English Muffins",
+      "category_id": "bakery",
+      "aliases": [
+        "english muffin",
+        "english muffins",
+        "muffins"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 4.33,
+      "brands": [],
+      "image_hint": "english_muffins",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_wraps",
+      "name": "Wraps",
+      "category_id": "bakery",
+      "aliases": [
+        "flour tortillas",
+        "tortilla wraps",
+        "wrap",
+        "wraps"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 4.83,
+      "brands": [
+        "Costco Canada",
+        "Mission",
+        "FreshCo",
+        "Sobeys",
+        "Farrah's"
+      ],
+      "image_hint": "wraps",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_pita_bread",
+      "name": "Pita Bread",
+      "category_id": "bakery",
+      "aliases": [
+        "pita bread",
+        "pita breads",
+        "pita pocket"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 4.25,
+      "brands": [
+        "Food Basics",
+        "Costco Canada",
+        "Sobeys",
+        "Farrah's"
+      ],
+      "image_hint": "pita_bread",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_croissants",
+      "name": "Croissants",
+      "category_id": "bakery",
+      "aliases": [
+        "butter croissants",
+        "croissant",
+        "croissants"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 6.72,
+      "brands": [
+        "Costco Canada",
+        "Bakery",
+        "Walmart Canada",
+        "Loblaws"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_frozen_peas",
+      "name": "Frozen Peas",
+      "category_id": "frozen",
+      "aliases": [
+        "frozen pea",
+        "frozen peas",
+        "peas frozen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.18,
+      "brands": [],
+      "image_hint": "frozen_peas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_frozen_mixed_veg",
+      "name": "Frozen Mixed Vegetables",
+      "category_id": "frozen",
+      "aliases": [
+        "frozen mixed vegetable",
+        "frozen mixed vegetables",
+        "frozen vegetables",
+        "mixed veg"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 6.25,
+      "brands": [],
+      "image_hint": "frozen_mixed_veg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_frozen_chips",
+      "name": "Frozen Chips",
+      "category_id": "frozen",
+      "aliases": [
+        "french fries",
+        "frozen chip",
+        "frozen chips",
+        "oven chips"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.98,
+      "brands": [
+        "McCain",
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "FreshCo"
+      ],
+      "image_hint": "frozen_chips",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_ice_cream_vanilla",
+      "name": "Ice Cream - Vanilla",
+      "category_id": "frozen",
+      "aliases": [
+        "ice cream",
+        "ice cream   vanilla",
+        "ice cream - vanillas",
+        "ice cream vanilla",
+        "vanilla ice cream"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 8.35,
+      "brands": [
+        "Much Moore",
+        "Costco Canada",
+        "Metro",
+        "FreshCo"
+      ],
+      "image_hint": "ice_cream_vanilla",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_ice_cream_hokey_pokey",
+      "name": "Ice Cream - Hokey Pokey",
+      "category_id": "frozen",
+      "aliases": [
+        "hokey pokey ice cream",
+        "ice cream",
+        "ice cream   hokey pokey",
+        "ice cream - hokey pokeys",
+        "ice cream hokey pokey"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 9.97,
+      "brands": [],
+      "image_hint": "ice_cream_hokey_pokey",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_frozen_pizza",
+      "name": "Frozen Pizza",
+      "category_id": "frozen",
+      "aliases": [
+        "frozen pizza",
+        "frozen pizzas",
+        "pizza"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 6.9,
+      "brands": [
+        "McCain",
+        "Loblaws",
+        "Food Basics",
+        "Dr Oetker",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "frozen_pizza",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_frozen_fish_fingers",
+      "name": "Fish Fingers",
+      "category_id": "frozen",
+      "aliases": [
+        "fish finger",
+        "fish fingers",
+        "fish sticks"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 8.25,
+      "brands": [
+        "Food Basics",
+        "FreshCo",
+        "Walmart Canada",
+        "Birds Eye"
+      ],
+      "image_hint": "fish_fingers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [
+        "fish"
+      ],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_frozen_berries",
+      "name": "Frozen Mixed Berries",
+      "category_id": "frozen",
+      "aliases": [
+        "frozen berries",
+        "frozen mixed berrie",
+        "frozen mixed berries"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 6.79,
+      "brands": [
+        "No Frills",
+        "Longo's",
+        "Value",
+        "FreshCo"
+      ],
+      "image_hint": "frozen_berries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_rice_white",
+      "name": "Rice - White",
+      "category_id": "pantry",
+      "aliases": [
+        "long grain rice",
+        "rice",
+        "rice   white",
+        "rice - whites",
+        "rice white",
+        "white rice"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.57,
+      "brands": [
+        "Real Canadian Superstore",
+        "Longo's",
+        "Sunrice",
+        "FreshCo"
+      ],
+      "image_hint": "rice_white",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_rice_basmati",
+      "name": "Rice - Basmati",
+      "category_id": "pantry",
+      "aliases": [
+        "basmati rice",
+        "rice",
+        "rice   basmati",
+        "rice - basmatis",
+        "rice basmati"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.79,
+      "brands": [
+        "FreshCo",
+        "Tilda",
+        "Walmart Canada",
+        "Real Canadian Superstore",
+        "Sunrice"
+      ],
+      "image_hint": "rice_basmati",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_pasta_spaghetti",
+      "name": "Pasta - Spaghetti",
+      "category_id": "pantry",
+      "aliases": [
+        "pasta",
+        "pasta   spaghetti",
+        "pasta - spaghettis",
+        "pasta spaghetti",
+        "spaghetti"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.87,
+      "brands": [
+        "Loblaws",
+        "Barilla",
+        "No Frills",
+        "San Remo",
+        "Sobeys"
+      ],
+      "image_hint": "pasta_spaghetti",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_pasta_penne",
+      "name": "Pasta - Penne",
+      "category_id": "pantry",
+      "aliases": [
+        "pasta",
+        "pasta   penne",
+        "pasta - pennes",
+        "pasta penne",
+        "penne pasta"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.95,
+      "brands": [
+        "Metro",
+        "Barilla",
+        "FreshCo",
+        "San Remo",
+        "Longo's"
+      ],
+      "image_hint": "pasta_penne",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_pasta_sauce",
+      "name": "Pasta Sauce",
+      "category_id": "pantry",
+      "aliases": [
+        "bolognese sauce",
+        "pasta sauce",
+        "pasta sauces",
+        "tomato pasta sauce"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 4.08,
+      "brands": [
+        "Food Basics",
+        "Barilla",
+        "Dolmio",
+        "Real Canadian Superstore",
+        "Sobeys"
+      ],
+      "image_hint": "pasta_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_flour_plain",
+      "name": "Flour - Plain",
+      "category_id": "pantry",
+      "aliases": [
+        "flour",
+        "flour   plain",
+        "flour - plains",
+        "flour plain",
+        "plain flour",
+        "white flour"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 3.48,
+      "brands": [
+        "Metro",
+        "Champion",
+        "FreshCo",
+        "Walmart Canada",
+        "Edmonds"
+      ],
+      "image_hint": "flour_plain",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_flour_self_raising",
+      "name": "Flour - Self Raising",
+      "category_id": "pantry",
+      "aliases": [
+        "flour",
+        "flour   self raising",
+        "flour - self raisings",
+        "flour self raising",
+        "self raising flour"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 3.62,
+      "brands": [
+        "Metro",
+        "Champion",
+        "No Frills",
+        "Sobeys",
+        "Edmonds"
+      ],
+      "image_hint": "flour_self_raising",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_sugar_white",
+      "name": "Sugar - White",
+      "category_id": "pantry",
+      "aliases": [
+        "caster sugar",
+        "sugar",
+        "sugar   white",
+        "sugar - whites",
+        "sugar white",
+        "white sugar"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 3.81,
+      "brands": [
+        "Real Canadian Superstore",
+        "Chelsea",
+        "Sobeys",
+        "FreshCo"
+      ],
+      "image_hint": "sugar_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_sugar_brown",
+      "name": "Sugar - Brown",
+      "category_id": "pantry",
+      "aliases": [
+        "brown sugar",
+        "soft brown",
+        "sugar",
+        "sugar   brown",
+        "sugar - browns",
+        "sugar brown"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.61,
+      "brands": [
+        "Chelsea",
+        "Longo's",
+        "Metro",
+        "FreshCo"
+      ],
+      "image_hint": "sugar_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_oil_olive",
+      "name": "Olive Oil",
+      "category_id": "pantry",
+      "aliases": [
+        "EVOO",
+        "extra virgin olive oil",
+        "olive oil",
+        "olive oils"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 14.85,
+      "brands": [
+        "Sobeys",
+        "Walmart Canada",
+        "Olivado",
+        "No Frills"
+      ],
+      "image_hint": "oil_olive",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_oil_vegetable",
+      "name": "Vegetable Oil",
+      "category_id": "pantry",
+      "aliases": [
+        "canola oil",
+        "cooking oil",
+        "vegetable oil",
+        "vegetable oils"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 7.13,
+      "brands": [
+        "Food Basics",
+        "Longo's",
+        "Sobeys",
+        "Olivani"
+      ],
+      "image_hint": "oil_vegetable",
+      "tags": [
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_tomatoes_canned",
+      "name": "Canned Tomatoes",
+      "category_id": "pantry",
+      "aliases": [
+        "canned tomatoe",
+        "canned tomatoes",
+        "chopped tomatoes",
+        "tinned tomatoes"
+      ],
+      "default_unit": "can",
+      "default_quantity": 4,
+      "price": 2.17,
+      "brands": [],
+      "image_hint": "tomatoes_canned",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_baked_beans",
+      "name": "Baked Beans",
+      "category_id": "pantry",
+      "aliases": [
+        "baked bean",
+        "baked beans",
+        "beans in tomato sauce"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 2.53,
+      "brands": [
+        "Metro",
+        "Walmart Canada",
+        "Loblaws",
+        "Heinz"
+      ],
+      "image_hint": "baked_beans",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_tuna",
+      "name": "Tuna in Oil",
+      "category_id": "pantry",
+      "aliases": [
+        "canned tuna",
+        "tinned tuna",
+        "tuna in oil",
+        "tuna in oils"
+      ],
+      "default_unit": "can",
+      "default_quantity": 3,
+      "price": 2.92,
+      "brands": [
+        "No Frills",
+        "Food Basics",
+        "John West",
+        "Loblaws"
+      ],
+      "image_hint": "tuna",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_coconut_cream",
+      "name": "Coconut Cream",
+      "category_id": "pantry",
+      "aliases": [
+        "coconut cream",
+        "coconut creams",
+        "coconut milk"
+      ],
+      "default_unit": "can",
+      "default_quantity": 2,
+      "price": 3.43,
+      "brands": [
+        "No Frills",
+        "Food Basics",
+        "FreshCo",
+        "Ayam"
+      ],
+      "image_hint": "coconut_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_peanut_butter",
+      "name": "Peanut Butter",
+      "category_id": "pantry",
+      "aliases": [
+        "crunchy peanut butter",
+        "peanut butter",
+        "peanut butters",
+        "smooth peanut butter"
+      ],
+      "default_unit": "g",
+      "default_quantity": 380,
+      "price": 6.62,
+      "brands": [
+        "Kraft",
+        "ETA",
+        "No Frills",
+        "Walmart Canada",
+        "Sobeys",
+        "Pic's"
+      ],
+      "image_hint": "peanut_butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_jam_strawberry",
+      "name": "Jam - Strawberry",
+      "category_id": "pantry",
+      "aliases": [
+        "jam",
+        "jam   strawberry",
+        "jam - strawberrys",
+        "jam strawberry",
+        "strawberry jam"
+      ],
+      "default_unit": "g",
+      "default_quantity": 340,
+      "price": 4.99,
+      "brands": [
+        "Costco Canada",
+        "Anathoth",
+        "FreshCo",
+        "Barker's",
+        "Sobeys"
+      ],
+      "image_hint": "jam_strawberry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_honey",
+      "name": "Honey",
+      "category_id": "pantry",
+      "aliases": [
+        "clover honey",
+        "honey",
+        "honeys",
+        "manuka honey"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 9.02,
+      "brands": [
+        "Metro",
+        "Airborne",
+        "Manuka Health",
+        "No Frills",
+        "Longo's"
+      ],
+      "image_hint": "honey",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_marmite",
+      "name": "Marmite",
+      "category_id": "pantry",
+      "aliases": [
+        "marmite",
+        "marmites",
+        "yeast spread"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 5.87,
+      "brands": [],
+      "image_hint": "marmite",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_vegemite",
+      "name": "Vegemite",
+      "category_id": "pantry",
+      "aliases": [
+        "vegemite",
+        "vegemites",
+        "yeast spread"
+      ],
+      "default_unit": "g",
+      "default_quantity": 220,
+      "price": 5.38,
+      "brands": [
+        "No Frills",
+        "Metro",
+        "Bega",
+        "FreshCo"
+      ],
+      "image_hint": "vegemite",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_soy_sauce",
+      "name": "Soy Sauce",
+      "category_id": "pantry",
+      "aliases": [
+        "kikkoman",
+        "soy sauce",
+        "soy sauces"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 250,
+      "price": 5.13,
+      "brands": [
+        "No Frills",
+        "Real Canadian Superstore",
+        "Kikkoman",
+        "Walmart Canada"
+      ],
+      "image_hint": "soy_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "soy"
+      ],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_tomato_sauce",
+      "name": "Tomato Sauce",
+      "category_id": "pantry",
+      "aliases": [
+        "ketchup",
+        "tomato ketchup",
+        "tomato sauce",
+        "tomato sauces"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 560,
+      "price": 5.41,
+      "brands": [
+        "FreshCo",
+        "Metro",
+        "Walmart Canada",
+        "Heinz"
+      ],
+      "image_hint": "tomato_sauce",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_bbq_sauce",
+      "name": "BBQ Sauce",
+      "category_id": "pantry",
+      "aliases": [
+        "barbecue sauce",
+        "bbq sauce",
+        "bbq sauces"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 4.98,
+      "brands": [
+        "Masterfoods",
+        "Costco Canada",
+        "Sobeys",
+        "Loblaws"
+      ],
+      "image_hint": "bbq_sauce",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_mayonnaise",
+      "name": "Mayonnaise",
+      "category_id": "pantry",
+      "aliases": [
+        "mayo",
+        "mayonnaise",
+        "mayonnaises"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 440,
+      "price": 6.32,
+      "brands": [
+        "Food Basics",
+        "Best Foods",
+        "Metro",
+        "Walmart Canada"
+      ],
+      "image_hint": "mayonnaise",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_mustard",
+      "name": "Mustard",
+      "category_id": "pantry",
+      "aliases": [
+        "american mustard",
+        "dijon mustard",
+        "mustard",
+        "mustards"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 4.57,
+      "brands": [
+        "Costco Canada",
+        "Food Basics",
+        "French's",
+        "No Frills",
+        "Masterfoods"
+      ],
+      "image_hint": "mustard",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_salt",
+      "name": "Salt",
+      "category_id": "pantry",
+      "aliases": [
+        "cooking salt",
+        "salt",
+        "salts",
+        "table salt"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.16,
+      "brands": [
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "Sobeys",
+        "Cerebos"
+      ],
+      "image_hint": "salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_pepper",
+      "name": "Black Pepper",
+      "category_id": "pantry",
+      "aliases": [
+        "black pepper",
+        "black peppers",
+        "ground pepper"
+      ],
+      "default_unit": "g",
+      "default_quantity": 50,
+      "price": 4.32,
+      "brands": [
+        "Masterfoods",
+        "Costco Canada",
+        "Longo's",
+        "Food Basics"
+      ],
+      "image_hint": "pepper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_stock_cubes_chicken",
+      "name": "Stock Cubes - Chicken",
+      "category_id": "pantry",
+      "aliases": [
+        "bouillon",
+        "chicken stock",
+        "stock cubes",
+        "stock cubes   chicken",
+        "stock cubes - chickens",
+        "stock cubes chicken"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.96,
+      "brands": [
+        "Metro",
+        "Continental",
+        "Maggi",
+        "Loblaws",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_stock_cubes_beef",
+      "name": "Stock Cubes - Beef",
+      "category_id": "pantry",
+      "aliases": [
+        "beef stock",
+        "stock cubes",
+        "stock cubes   beef",
+        "stock cubes - beefs",
+        "stock cubes beef"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.97,
+      "brands": [
+        "Costco Canada",
+        "Continental",
+        "Maggi",
+        "Walmart Canada",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 3
+    },
+    {
+      "id": "prod_coffee_instant",
+      "name": "Instant Coffee",
+      "category_id": "beverages",
+      "aliases": [
+        "coffee",
+        "instant coffee",
+        "instant coffees",
+        "nescafe"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 13.66,
+      "brands": [
+        "Metro",
+        "Robert Harris",
+        "Gregg's",
+        "Nescafe",
+        "Longo's",
+        "Walmart Canada"
+      ],
+      "image_hint": "coffee_instant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_coffee_ground",
+      "name": "Ground Coffee",
+      "category_id": "beverages",
+      "aliases": [
+        "filter coffee",
+        "ground coffee",
+        "ground coffees"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 9.67,
+      "brands": [
+        "Robert Harris",
+        "Loblaws",
+        "L'affare",
+        "No Frills",
+        "Longo's",
+        "Vittoria"
+      ],
+      "image_hint": "coffee_ground",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_tea_black",
+      "name": "Tea - Black",
+      "category_id": "beverages",
+      "aliases": [
+        "black tea",
+        "tea",
+        "tea   black",
+        "tea - blacks",
+        "tea bags",
+        "tea black"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 100,
+      "price": 7.91,
+      "brands": [
+        "Metro",
+        "Loblaws",
+        "Bell",
+        "No Frills",
+        "Twinings",
+        "Dilmah"
+      ],
+      "image_hint": "tea_black",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_tea_green",
+      "name": "Tea - Green",
+      "category_id": "beverages",
+      "aliases": [
+        "green tea",
+        "tea",
+        "tea   green",
+        "tea - greens",
+        "tea green"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 40,
+      "price": 6.84,
+      "brands": [
+        "Costco Canada",
+        "FreshCo",
+        "No Frills",
+        "Twinings",
+        "Dilmah"
+      ],
+      "image_hint": "tea_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_juice_orange",
+      "name": "Orange Juice",
+      "category_id": "beverages",
+      "aliases": [
+        "OJ",
+        "fresh orange juice",
+        "orange juice",
+        "orange juices"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 7.47,
+      "brands": [
+        "Costco Canada",
+        "Just Juice",
+        "Charlies",
+        "Real Canadian Superstore",
+        "Sobeys"
+      ],
+      "image_hint": "juice_orange",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_juice_apple",
+      "name": "Apple Juice",
+      "category_id": "beverages",
+      "aliases": [
+        "apple juice",
+        "apple juices",
+        "fresh apple juice"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 7.29,
+      "brands": [
+        "Loblaws",
+        "Just Juice",
+        "Food Basics",
+        "Longo's",
+        "Charlies"
+      ],
+      "image_hint": "juice_apple",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_soft_drink_coke",
+      "name": "Coca Cola",
+      "category_id": "beverages",
+      "aliases": [
+        "coca cola",
+        "coca colas",
+        "coke",
+        "cola"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2.25,
+      "price": 4.88,
+      "brands": [
+        "No Frills",
+        "Real Canadian Superstore",
+        "Coca-Cola",
+        "Loblaws"
+      ],
+      "image_hint": "coke",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_soft_drink_lemonade",
+      "name": "Lemonade",
+      "category_id": "beverages",
+      "aliases": [
+        "7up",
+        "lemonade",
+        "lemonades",
+        "sprite"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2.25,
+      "price": 5.6,
+      "brands": [
+        "Schweppes",
+        "FreshCo",
+        "No Frills",
+        "Longo's",
+        "Sprite"
+      ],
+      "image_hint": "lemonade",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_water_still",
+      "name": "Water - Still",
+      "category_id": "beverages",
+      "aliases": [
+        "bottled water",
+        "spring water",
+        "water",
+        "water   still",
+        "water - stills",
+        "water still"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 2.55,
+      "brands": [
+        "Pump",
+        "Metro",
+        "Loblaws",
+        "FreshCo",
+        "Evian"
+      ],
+      "image_hint": "water_still",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_water_sparkling",
+      "name": "Water - Sparkling",
+      "category_id": "beverages",
+      "aliases": [
+        "soda water",
+        "sparkling water",
+        "water",
+        "water   sparkling",
+        "water - sparklings",
+        "water sparkling"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 3.4,
+      "brands": [
+        "Food Basics",
+        "Schweppes",
+        "San Pellegrino",
+        "FreshCo",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "water_sparkling",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_beer",
+      "name": "Beer",
+      "category_id": "beverages",
+      "aliases": [
+        "ale",
+        "beer",
+        "beers",
+        "lager"
+      ],
+      "default_unit": "can",
+      "default_quantity": 12,
+      "price": 27.14,
+      "brands": [
+        "Costco Canada",
+        "Metro",
+        "DB Export",
+        "No Frills",
+        "Steinlager",
+        "Speights"
+      ],
+      "image_hint": "beer",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_wine_red",
+      "name": "Wine - Red",
+      "category_id": "beverages",
+      "aliases": [
+        "red wine",
+        "wine",
+        "wine   red",
+        "wine - reds",
+        "wine red"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 18.2,
+      "brands": [
+        "Costco Canada",
+        "FreshCo",
+        "Villa Maria",
+        "Longo's",
+        "Oyster Bay"
+      ],
+      "image_hint": "wine_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_wine_white",
+      "name": "Wine - White",
+      "category_id": "beverages",
+      "aliases": [
+        "sauvignon blanc",
+        "white wine",
+        "wine",
+        "wine   white",
+        "wine - whites",
+        "wine white"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 15.22,
+      "brands": [
+        "Metro",
+        "Cloudy Bay",
+        "Loblaws",
+        "Villa Maria",
+        "Walmart Canada",
+        "Oyster Bay"
+      ],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cereal_cornflakes",
+      "name": "Cornflakes",
+      "category_id": "snacks",
+      "aliases": [
+        "cornflake",
+        "cornflakes",
+        "kelloggs cornflakes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 7.99,
+      "brands": [
+        "Metro",
+        "Walmart Canada",
+        "Kelloggs",
+        "Loblaws"
+      ],
+      "image_hint": "cereal_cornflakes",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cereal_weet_bix",
+      "name": "Weet-Bix",
+      "category_id": "snacks",
+      "aliases": [
+        "weet bix",
+        "weet-bix",
+        "weet-bixs",
+        "weetbix",
+        "wheat biscuits"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 9.15,
+      "brands": [],
+      "image_hint": "cereal_weet_bix",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cereal_muesli",
+      "name": "Muesli",
+      "category_id": "snacks",
+      "aliases": [
+        "muesli",
+        "mueslis",
+        "toasted muesli"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 8.71,
+      "brands": [
+        "Costco Canada",
+        "Metro",
+        "Longo's",
+        "Hubbards"
+      ],
+      "image_hint": "cereal_muesli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_oats_rolled",
+      "name": "Rolled Oats",
+      "category_id": "snacks",
+      "aliases": [
+        "oats",
+        "porridge oats",
+        "rolled oat",
+        "rolled oats"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 6.47,
+      "brands": [
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "Harraways",
+        "Food Basics"
+      ],
+      "image_hint": "oats_rolled",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chips_salt",
+      "name": "Potato Chips - Salt",
+      "category_id": "snacks",
+      "aliases": [
+        "crisps",
+        "potato chips",
+        "potato chips   salt",
+        "potato chips - salts",
+        "potato chips salt",
+        "ready salted chips"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 4.46,
+      "brands": [
+        "Food Basics",
+        "FreshCo",
+        "Bluebird",
+        "Eta",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "chips_salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chips_chicken",
+      "name": "Potato Chips - Chicken",
+      "category_id": "snacks",
+      "aliases": [
+        "chicken chips",
+        "potato chips",
+        "potato chips   chicken",
+        "potato chips - chickens",
+        "potato chips chicken"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 3.96,
+      "brands": [
+        "Loblaws",
+        "Food Basics",
+        "No Frills",
+        "Bluebird",
+        "Eta"
+      ],
+      "image_hint": "chips_chicken",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_crackers",
+      "name": "Crackers",
+      "category_id": "snacks",
+      "aliases": [
+        "cracker",
+        "crackers",
+        "savoy",
+        "water crackers"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.91,
+      "brands": [
+        "Arnott's",
+        "FreshCo",
+        "No Frills",
+        "Sobeys",
+        "Griffin's"
+      ],
+      "image_hint": "crackers",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cookies_chocolate_chip",
+      "name": "Chocolate Chip Cookies",
+      "category_id": "snacks",
+      "aliases": [
+        "choc chip biscuits",
+        "chocolate chip cookie",
+        "chocolate chip cookies",
+        "cookies"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.12,
+      "brands": [
+        "Metro",
+        "Cookie Time",
+        "Longo's",
+        "Sobeys",
+        "Griffin's"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_tim_tams",
+      "name": "Tim Tams",
+      "category_id": "snacks",
+      "aliases": [
+        "chocolate biscuits",
+        "tim tam",
+        "tim tams"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.34,
+      "brands": [
+        "No Frills",
+        "Metro",
+        "Arnott's",
+        "Loblaws"
+      ],
+      "image_hint": "tim_tams",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chocolate_whittakers",
+      "name": "Chocolate - Whittaker's",
+      "category_id": "snacks",
+      "aliases": [
+        "chocolate",
+        "chocolate   whittaker's",
+        "chocolate - whittaker'",
+        "chocolate bar",
+        "chocolate whittaker's",
+        "whittakers block"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 6.83,
+      "brands": [],
+      "image_hint": "chocolate_whittakers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_chocolate_cadbury",
+      "name": "Chocolate - Cadbury",
+      "category_id": "snacks",
+      "aliases": [
+        "cadbury block",
+        "chocolate",
+        "chocolate   cadbury",
+        "chocolate - cadburys",
+        "chocolate cadbury"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 4.78,
+      "brands": [
+        "Real Canadian Superstore",
+        "Cadbury",
+        "Sobeys",
+        "FreshCo"
+      ],
+      "image_hint": "chocolate_cadbury",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_muesli_bars",
+      "name": "Muesli Bars",
+      "category_id": "snacks",
+      "aliases": [
+        "granola bars",
+        "muesli bar",
+        "muesli bars"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.84,
+      "brands": [
+        "Metro",
+        "Food Basics",
+        "FreshCo",
+        "Nice & Natural",
+        "Uncle Tobys"
+      ],
+      "image_hint": "muesli_bars",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_popcorn",
+      "name": "Popcorn",
+      "category_id": "snacks",
+      "aliases": [
+        "microwave popcorn",
+        "popcorn",
+        "popcorns"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.54,
+      "brands": [
+        "Costco Canada",
+        "FreshCo",
+        "Proper",
+        "Eta",
+        "Sobeys"
+      ],
+      "image_hint": "popcorn",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_nuts_mixed",
+      "name": "Mixed Nuts",
+      "category_id": "snacks",
+      "aliases": [
+        "mixed nut",
+        "mixed nuts",
+        "roasted nuts"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 6.82,
+      "brands": [
+        "No Frills",
+        "Costco Canada",
+        "Eta",
+        "FreshCo"
+      ],
+      "image_hint": "nuts_mixed",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_toilet_paper",
+      "name": "Toilet Paper",
+      "category_id": "household",
+      "aliases": [
+        "TP",
+        "bathroom tissue",
+        "toilet paper",
+        "toilet papers"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 12,
+      "price": 13.85,
+      "brands": [
+        "Loblaws",
+        "Sorbent",
+        "FreshCo",
+        "Purex",
+        "Sobeys"
+      ],
+      "image_hint": "toilet_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_paper_towels",
+      "name": "Paper Towels",
+      "category_id": "household",
+      "aliases": [
+        "kitchen paper",
+        "paper towel",
+        "paper towels"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 4,
+      "price": 9.06,
+      "brands": [
+        "Sorbent",
+        "FreshCo",
+        "No Frills",
+        "Handee",
+        "Longo's"
+      ],
+      "image_hint": "paper_towels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_tissues",
+      "name": "Tissues",
+      "category_id": "household",
+      "aliases": [
+        "facial tissues",
+        "kleenex",
+        "tissue",
+        "tissues"
+      ],
+      "default_unit": "box",
+      "default_quantity": 4,
+      "price": 8.64,
+      "brands": [
+        "Loblaws",
+        "Sorbent",
+        "FreshCo",
+        "Kleenex",
+        "Sobeys"
+      ],
+      "image_hint": "tissues",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_dishwashing_liquid",
+      "name": "Dishwashing Liquid",
+      "category_id": "household",
+      "aliases": [
+        "dish soap",
+        "dishwash",
+        "dishwashing liquid",
+        "dishwashing liquids"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 5.1,
+      "brands": [
+        "Food Basics",
+        "Sunlight",
+        "Walmart Canada",
+        "Morning Fresh",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "dishwashing_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_dishwasher_tablets",
+      "name": "Dishwasher Tablets",
+      "category_id": "household",
+      "aliases": [
+        "dishwasher pods",
+        "dishwasher tablet",
+        "dishwasher tablets"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 16.77,
+      "brands": [
+        "Earthwise",
+        "Metro",
+        "Longo's",
+        "Walmart Canada",
+        "Finish"
+      ],
+      "image_hint": "dishwasher_tablets",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_laundry_powder",
+      "name": "Laundry Powder",
+      "category_id": "household",
+      "aliases": [
+        "laundry powder",
+        "laundry powders",
+        "washing powder"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 17.23,
+      "brands": [
+        "Costco Canada",
+        "Persil",
+        "Metro",
+        "Earthwise",
+        "OMO",
+        "Sobeys"
+      ],
+      "image_hint": "laundry_powder",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_laundry_liquid",
+      "name": "Laundry Liquid",
+      "category_id": "household",
+      "aliases": [
+        "laundry liquid",
+        "laundry liquids",
+        "washing liquid"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 16.96,
+      "brands": [
+        "Persil",
+        "Earthwise",
+        "Food Basics",
+        "FreshCo",
+        "No Frills",
+        "OMO"
+      ],
+      "image_hint": "laundry_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fabric_softener",
+      "name": "Fabric Softener",
+      "category_id": "household",
+      "aliases": [
+        "comfort",
+        "downy",
+        "fabric softener",
+        "fabric softeners"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 10.79,
+      "brands": [
+        "Earthwise",
+        "Comfort",
+        "Longo's",
+        "Walmart Canada",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "fabric_softener",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_spray_cleaner",
+      "name": "Spray Cleaner",
+      "category_id": "household",
+      "aliases": [
+        "multi-purpose cleaner",
+        "spray cleaner",
+        "spray cleaners",
+        "spray n wipe"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 7.26,
+      "brands": [
+        "Costco Canada",
+        "Metro",
+        "Jif",
+        "Spray n Wipe",
+        "Real Canadian Superstore"
+      ],
+      "image_hint": "spray_cleaner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bleach",
+      "name": "Bleach",
+      "category_id": "household",
+      "aliases": [
+        "bleach",
+        "bleachs",
+        "janola"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 6.66,
+      "brands": [
+        "Costco Canada",
+        "Metro",
+        "Domestos",
+        "Food Basics",
+        "Janola"
+      ],
+      "image_hint": "bleach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bin_bags",
+      "name": "Bin Bags",
+      "category_id": "household",
+      "aliases": [
+        "bin bag",
+        "bin bags",
+        "garbage bags",
+        "rubbish bags"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 10.02,
+      "brands": [
+        "FreshCo",
+        "Glad",
+        "Ecostore",
+        "Longo's",
+        "Walmart Canada"
+      ],
+      "image_hint": "bin_bags",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cling_film",
+      "name": "Cling Film",
+      "category_id": "household",
+      "aliases": [
+        "cling film",
+        "cling films",
+        "glad wrap",
+        "plastic wrap"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 6.32,
+      "brands": [
+        "Costco Canada",
+        "Loblaws",
+        "Multix",
+        "Glad",
+        "Sobeys"
+      ],
+      "image_hint": "cling_film",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_aluminium_foil",
+      "name": "Aluminium Foil",
+      "category_id": "household",
+      "aliases": [
+        "alfoil",
+        "aluminium foil",
+        "aluminium foils",
+        "tin foil"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 7.38,
+      "brands": [
+        "Loblaws",
+        "Food Basics",
+        "Multix",
+        "Alfoil",
+        "Walmart Canada"
+      ],
+      "image_hint": "aluminium_foil",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_baking_paper",
+      "name": "Baking Paper",
+      "category_id": "household",
+      "aliases": [
+        "baking paper",
+        "baking papers",
+        "parchment paper"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 5.44,
+      "brands": [
+        "Metro",
+        "Loblaws",
+        "Alfoil",
+        "Multix",
+        "Longo's"
+      ],
+      "image_hint": "baking_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_shampoo",
+      "name": "Shampoo",
+      "category_id": "health",
+      "aliases": [
+        "hair shampoo",
+        "shampoo",
+        "shampoos"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 10.27,
+      "brands": [
+        "Head & Shoulders",
+        "Metro",
+        "Food Basics",
+        "No Frills",
+        "Garnier",
+        "Pantene"
+      ],
+      "image_hint": "shampoo",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_conditioner",
+      "name": "Conditioner",
+      "category_id": "health",
+      "aliases": [
+        "conditioner",
+        "conditioners",
+        "hair conditioner"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 9.95,
+      "brands": [
+        "Head & Shoulders",
+        "Costco Canada",
+        "Food Basics",
+        "No Frills",
+        "Garnier",
+        "Pantene"
+      ],
+      "image_hint": "conditioner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_body_wash",
+      "name": "Body Wash",
+      "category_id": "health",
+      "aliases": [
+        "body wash",
+        "body washs",
+        "shower gel"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 8.56,
+      "brands": [
+        "Metro",
+        "Dove",
+        "Loblaws",
+        "Walmart Canada",
+        "Palmolive",
+        "Nivea"
+      ],
+      "image_hint": "body_wash",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_soap_bar",
+      "name": "Bar Soap",
+      "category_id": "health",
+      "aliases": [
+        "bar soap",
+        "bar soaps",
+        "bath soap",
+        "hand soap"
+      ],
+      "default_unit": "bar",
+      "default_quantity": 4,
+      "price": 5.63,
+      "brands": [
+        "Costco Canada",
+        "Metro",
+        "Dove",
+        "Loblaws",
+        "Palmolive"
+      ],
+      "image_hint": "soap_bar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_toothpaste",
+      "name": "Toothpaste",
+      "category_id": "health",
+      "aliases": [
+        "colgate",
+        "toothpaste",
+        "toothpastes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 110,
+      "price": 6.67,
+      "brands": [
+        "Costco Canada",
+        "Sensodyne",
+        "FreshCo",
+        "Walmart Canada",
+        "Colgate"
+      ],
+      "image_hint": "toothpaste",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_toothbrush",
+      "name": "Toothbrush",
+      "category_id": "health",
+      "aliases": [
+        "tooth brush",
+        "toothbrush",
+        "toothbrushs"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 7.37,
+      "brands": [
+        "Loblaws",
+        "Oral-B",
+        "FreshCo",
+        "Longo's",
+        "Colgate"
+      ],
+      "image_hint": "toothbrush",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_deodorant",
+      "name": "Deodorant",
+      "category_id": "health",
+      "aliases": [
+        "antiperspirant",
+        "deodorant",
+        "deodorants"
+      ],
+      "default_unit": "g",
+      "default_quantity": 50,
+      "price": 7.8,
+      "brands": [
+        "Costco Canada",
+        "Dove",
+        "Rexona",
+        "Loblaws",
+        "Lynx",
+        "Walmart Canada"
+      ],
+      "image_hint": "deodorant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_razor_blades",
+      "name": "Razor Blades",
+      "category_id": "health",
+      "aliases": [
+        "gillette",
+        "razor blade",
+        "razor blades",
+        "shaving blades"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 19.13,
+      "brands": [
+        "No Frills",
+        "Schick",
+        "Longo's",
+        "Walmart Canada",
+        "Gillette"
+      ],
+      "image_hint": "razor_blades",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_shaving_cream",
+      "name": "Shaving Cream",
+      "category_id": "health",
+      "aliases": [
+        "shave gel",
+        "shaving cream",
+        "shaving creams"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 6.65,
+      "brands": [
+        "Metro",
+        "Food Basics",
+        "FreshCo",
+        "Gillette",
+        "Nivea"
+      ],
+      "image_hint": "shaving_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_sunscreen",
+      "name": "Sunscreen SPF50",
+      "category_id": "health",
+      "aliases": [
+        "sun cream",
+        "sunblock",
+        "sunscreen spf50",
+        "sunscreen spf50s"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 16.82,
+      "brands": [
+        "Costco Canada",
+        "Cancer Society",
+        "FreshCo",
+        "Neutrogena",
+        "Walmart Canada"
+      ],
+      "image_hint": "sunscreen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_paracetamol",
+      "name": "Paracetamol",
+      "category_id": "health",
+      "aliases": [
+        "pain relief",
+        "panadol",
+        "paracetamol",
+        "paracetamols"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 10.15,
+      "brands": [
+        "Real Canadian Superstore",
+        "Walmart Canada",
+        "Sobeys",
+        "Panadol"
+      ],
+      "image_hint": "paracetamol",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_ibuprofen",
+      "name": "Ibuprofen",
+      "category_id": "health",
+      "aliases": [
+        "ibuprofen",
+        "ibuprofens",
+        "nurofen",
+        "pain relief"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 10.09,
+      "brands": [
+        "Nurofen",
+        "Food Basics",
+        "Costco Canada",
+        "Walmart Canada"
+      ],
+      "image_hint": "ibuprofen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_bandaids",
+      "name": "Band-Aids",
+      "category_id": "health",
+      "aliases": [
+        "band aids",
+        "band-aid",
+        "band-aids",
+        "bandages",
+        "plasters"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 6.76,
+      "brands": [
+        "Metro",
+        "Band-Aid",
+        "No Frills",
+        "Sobeys",
+        "Elastoplast"
+      ],
+      "image_hint": "bandaids",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_vitamins_c",
+      "name": "Vitamin C",
+      "category_id": "health",
+      "aliases": [
+        "vitamin c",
+        "vitamin c tablets",
+        "vitamin cs"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 12.51,
+      "brands": [
+        "Loblaws",
+        "Blackmores",
+        "Food Basics",
+        "Walmart Canada",
+        "Healtheries"
+      ],
+      "image_hint": "vitamins_c",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_nappies",
+      "name": "Nappies",
+      "category_id": "baby",
+      "aliases": [
+        "baby nappies",
+        "diapers",
+        "nappie",
+        "nappies"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 29.36,
+      "brands": [
+        "No Frills",
+        "Costco Canada",
+        "Huggies",
+        "FreshCo"
+      ],
+      "image_hint": "nappies",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_baby_wipes",
+      "name": "Baby Wipes",
+      "category_id": "baby",
+      "aliases": [
+        "baby wipe",
+        "baby wipes",
+        "wet wipes"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 6.65,
+      "brands": [
+        "Costco Canada",
+        "Huggies",
+        "Sobeys",
+        "Food Basics"
+      ],
+      "image_hint": "baby_wipes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_baby_formula",
+      "name": "Baby Formula",
+      "category_id": "baby",
+      "aliases": [
+        "baby formula",
+        "baby formulas",
+        "infant formula"
+      ],
+      "default_unit": "g",
+      "default_quantity": 900,
+      "price": 28.57,
+      "brands": [
+        "Loblaws",
+        "Longo's",
+        "Karicare",
+        "Real Canadian Superstore",
+        "Aptamil"
+      ],
+      "image_hint": "baby_formula",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_dog_food_dry",
+      "name": "Dog Food - Dry",
+      "category_id": "pet",
+      "aliases": [
+        "dog biscuits",
+        "dog food",
+        "dog food   dry",
+        "dog food - drys",
+        "dog food dry",
+        "dog kibble"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 3,
+      "price": 28.17,
+      "brands": [
+        "Pedigree",
+        "Metro",
+        "No Frills",
+        "Longo's",
+        "Eukanuba"
+      ],
+      "image_hint": "dog_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_dog_food_wet",
+      "name": "Dog Food - Wet",
+      "category_id": "pet",
+      "aliases": [
+        "canned dog food",
+        "dog food",
+        "dog food   wet",
+        "dog food - wets",
+        "dog food wet"
+      ],
+      "default_unit": "can",
+      "default_quantity": 12,
+      "price": 21.7,
+      "brands": [
+        "Pedigree",
+        "Costco Canada",
+        "Food Basics",
+        "No Frills",
+        "Champ"
+      ],
+      "image_hint": "dog_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cat_food_dry",
+      "name": "Cat Food - Dry",
+      "category_id": "pet",
+      "aliases": [
+        "cat biscuits",
+        "cat food",
+        "cat food   dry",
+        "cat food - drys",
+        "cat food dry"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 21.91,
+      "brands": [
+        "Costco Canada",
+        "Loblaws",
+        "No Frills",
+        "Whiskas",
+        "Fancy Feast"
+      ],
+      "image_hint": "cat_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cat_food_wet",
+      "name": "Cat Food - Wet",
+      "category_id": "pet",
+      "aliases": [
+        "canned cat food",
+        "cat food",
+        "cat food   wet",
+        "cat food - wets",
+        "cat food wet"
+      ],
+      "default_unit": "can",
+      "default_quantity": 12,
+      "price": 15.2,
+      "brands": [
+        "Costco Canada",
+        "Food Basics",
+        "FreshCo",
+        "Whiskas",
+        "Fancy Feast"
+      ],
+      "image_hint": "cat_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    },
+    {
+      "id": "prod_cat_litter",
+      "name": "Cat Litter",
+      "category_id": "pet",
+      "aliases": [
+        "cat litter",
+        "cat litters",
+        "kitty litter"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 5,
+      "price": 12.7,
+      "brands": [
+        "Catlove",
+        "Walmart Canada",
+        "Real Canadian Superstore",
+        "Paws",
+        "Sobeys"
+      ],
+      "image_hint": "cat_litter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": null,
+      "priority_level": 1
+    }
+  ],
+  "country": "Canada"
+}
