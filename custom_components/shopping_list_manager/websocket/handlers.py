@@ -6,6 +6,7 @@ import voluptuous as vol
 
 from homeassistant.components import websocket_api
 from homeassistant.core import HomeAssistant, callback
+from ..const import DOMAIN
 
 from ..const import (
     WS_TYPE_LISTS_GET_ALL,
@@ -49,17 +50,21 @@ _LOGGER = logging.getLogger(__name__)
 })
 @websocket_api.async_response
 async def ws_get_products_by_ids(hass, connection, msg):
-    product_ids = msg["product_ids"]
+    """Return products matching given product IDs."""
 
-    catalog = hass.data[DOMAIN]["catalog"]
+    product_ids = set(msg["product_ids"])
+
+    # Catalog is stored as a LIST
+    catalog = hass.data[DOMAIN].get("catalog", [])
 
     products = [
         product
-        for product in catalog.values()
-        if product["id"] in product_ids
+        for product in catalog
+        if str(product.get("id")) in product_ids
     ]
 
     connection.send_result(msg["id"], {"products": products})
+
 
 @websocket_api.websocket_command(
     {
