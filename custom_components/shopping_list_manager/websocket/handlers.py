@@ -61,25 +61,27 @@ async def websocket_increment_item(
     item_id = msg["item_id"]
     amount = msg["amount"]
 
-    # Get current item
-    item = storage.get_items(item_id)
+    # Loop through all lists to find the item
+    for list_id in storage.lists:
+        items = storage.get_items(list_id)
 
-    if not item:
-        connection.send_error(msg["id"], "not_found", "Item not found")
-        return
+        for item in items:
+            if item.id == item_id:
+                item.quantity += amount
 
-    # Atomic update
-    item.quantity += amount
+                # Prevent negative quantities
+                if item.quantity < 1:
+                    item.quantity = 1
 
-    await storage.async_save()
+                await storage.async_save()
 
-    # Fire update event so all clients refresh
-    hass.bus.async_fire(
-        "shopping_list_manager_item_updated",
-        {"item_id": item.id}
-    )
+                connection.send_result(msg["id"], {
+                    "item": item.to_dict()
+                })
+                return
 
-    connection.send_result(msg["id"], {"item": item.to_dict()})
+    connection.send_error(msg["id"], "not_found", "Item not found")
+
 
 @websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/products/get_by_ids",
