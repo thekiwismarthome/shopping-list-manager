@@ -45,6 +45,43 @@ _LOGGER = logging.getLogger(__name__)
 # =============================================================================
 
 @websocket_api.websocket_command({
+    vol.Required("type"): "shopping_list_manager/items/increment",
+    vol.Required("item_id"): str,
+    vol.Required("amount"): vol.Coerce(float),
+})
+@websocket_api.async_response
+async def websocket_increment_item(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Increment item quantity atomically."""
+
+    storage = get_storage(hass)
+    item_id = msg["item_id"]
+    amount = msg["amount"]
+
+    # Get current item
+    item = storage.get_item(item_id)
+
+    if not item:
+        connection.send_error(msg["id"], "not_found", "Item not found")
+        return
+
+    # Atomic update
+    item.quantity += amount
+
+    await storage.async_save()
+
+    # Fire update event so all clients refresh
+    hass.bus.async_fire(
+        "shopping_list_manager_item_updated",
+        {"item_id": item.id}
+    )
+
+    connection.send_result(msg["id"], {"item": item.to_dict()})
+
+@websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/products/get_by_ids",
     vol.Required("product_ids"): [str],
 })

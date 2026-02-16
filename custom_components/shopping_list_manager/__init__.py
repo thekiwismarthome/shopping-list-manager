@@ -128,6 +128,11 @@ async def _async_register_websocket_handlers(
     )
     websocket_api.async_register_command(
         hass,
+        handlers.websocket_increment_item,
+    )
+
+    websocket_api.async_register_command(
+        hass,
         handlers.websocket_delete_item,
     )
     websocket_api.async_register_command(
