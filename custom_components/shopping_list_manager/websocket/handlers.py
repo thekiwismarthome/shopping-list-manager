@@ -43,6 +43,24 @@ _LOGGER = logging.getLogger(__name__)
 # LIST HANDLERS
 # =============================================================================
 
+@websocket_api.websocket_command({
+    vol.Required("type"): "shopping_list_manager/products/get_by_ids",
+    vol.Required("product_ids"): [str],
+})
+@websocket_api.async_response
+async def ws_get_products_by_ids(hass, connection, msg):
+    product_ids = msg["product_ids"]
+
+    catalog = hass.data[DOMAIN]["catalog"]
+
+    products = [
+        product
+        for product in catalog.values()
+        if product["id"] in product_ids
+    ]
+
+    connection.send_result(msg["id"], {"products": products})
+
 @websocket_api.websocket_command(
     {
         vol.Required("type"): WS_TYPE_LISTS_GET_ALL,
