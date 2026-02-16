@@ -62,7 +62,7 @@ async def websocket_increment_item(
     amount = msg["amount"]
 
     # Get current item
-    item = storage.get_item(item_id)
+    item = storage.get_items(item_id)
 
     if not item:
         connection.send_error(msg["id"], "not_found", "Item not found")
