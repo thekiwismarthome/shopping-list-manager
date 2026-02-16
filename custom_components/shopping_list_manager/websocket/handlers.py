@@ -61,24 +61,25 @@ async def websocket_increment_item(
     item_id = msg["item_id"]
     amount = msg["amount"]
 
-    # Loop through all lists to find the item
-    for list_id in storage.lists:
-        items = storage.get_items(list_id)
-
+    # First get current item
+    for list_id, items in storage._items.items():
         for item in items:
             if item.id == item_id:
-                item.quantity += amount
+                new_quantity = item.quantity + amount
 
-                # Prevent negative quantities
-                if item.quantity < 1:
-                    item.quantity = 1
+                if new_quantity < 1:
+                    new_quantity = 1
 
-                await storage.async_save()
+                updated_item = await storage.update_item(
+                    item_id,
+                    quantity=new_quantity
+                )
 
-                connection.send_result(msg["id"], {
-                    "item": item.to_dict()
-                })
-                return
+                if updated_item:
+                    connection.send_result(msg["id"], {
+                        "item": updated_item.to_dict()
+                    })
+                    return
 
     connection.send_error(msg["id"], "not_found", "Item not found")
 
