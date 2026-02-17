@@ -2,12 +2,14 @@
 import logging
 import os
 
+from pathlib import Path
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.typing import ConfigType
 
-from .const import DOMAIN
+from .const import DOMAIN, EVENT_ITEM_ADDED, EVENT_ITEM_UPDATED, EVENT_ITEM_CHECKED, EVENT_ITEM_DELETED, EVENT_LIST_UPDATED, EVENT_LIST_DELETED
 from .storage import ShoppingListStorage
+from .websocket import register_websocket_handlers
 from .utils.images import ImageHandler
 
 _LOGGER = logging.getLogger(__name__)
@@ -23,7 +25,6 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     return True
 
 
-# In async_setup_entry function, after storage initialization:
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Shopping List Manager from a config entry."""
     _LOGGER.info("Setting up Shopping List Manager")
@@ -58,7 +59,21 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     # Register frontend resources
     await _async_register_frontend(hass)
     
-    _LOGGER.info("Shopping List Manager setup complete")
+    # CRITICAL: Register event listeners so non-admin users can subscribe
+    # Without these, non-admin users cannot receive real-time updates
+    def _dummy_listener(event):
+        """Dummy listener to enable event subscription for all users."""
+        pass
+    
+    hass.bus.async_listen(EVENT_ITEM_ADDED, _dummy_listener)
+    hass.bus.async_listen(EVENT_ITEM_UPDATED, _dummy_listener)
+    hass.bus.async_listen(EVENT_ITEM_CHECKED, _dummy_listener)
+    hass.bus.async_listen(EVENT_ITEM_DELETED, _dummy_listener)
+    hass.bus.async_listen(EVENT_LIST_UPDATED, _dummy_listener)
+    hass.bus.async_listen(EVENT_LIST_DELETED, _dummy_listener)
+    
+    _LOGGER.info("Shopping List Manager setup complete with event subscriptions enabled")
+    
     return True
 
 
@@ -158,8 +173,8 @@ async def _async_register_websocket_handlers(
         handlers.websocket_search_products,
     )
     websocket_api.async_register_command(
-    hass,
-    handlers.ws_get_products_by_ids,
+        hass,
+        handlers.ws_get_products_by_ids,
     )
 
     websocket_api.async_register_command(
@@ -193,8 +208,6 @@ async def _async_register_frontend(hass: HomeAssistant) -> None:
     # Since frontend is a separate HACS module, we don't need to register it here
     # The frontend card registers itself independently
     _LOGGER.debug("Frontend resources skipped (separate HACS module)")
-    
-    _LOGGER.debug("Frontend resources registered")
 
 
 def get_storage(hass: HomeAssistant) -> ShoppingListStorage:
