@@ -82,7 +82,7 @@ async def websocket_subscribe(
     connection.subscriptions[msg["id"]] = lambda: [unsub() for unsub in unsubs]
     
     connection.send_message(websocket_api.result_message(msg["id"]))
-    
+
 @websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/items/increment",
     vol.Required("item_id"): str,
@@ -652,43 +652,6 @@ def websocket_get_list_total(
 # =============================================================================
 # PRODUCT HANDLERS
 # =============================================================================
-
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): WS_TYPE_PRODUCTS_SEARCH,
-        vol.Required("query"): str,
-        vol.Optional("limit", default=10): int,
-        vol.Optional("exclude_allergens", default=None): vol.Any(None, [str]),
-        vol.Optional("include_tags", default=None): vol.Any(None, [str]),
-        vol.Optional("substitution_group", default=None): vol.Any(None, str),
-    }
-)
-@callback
-def websocket_search_products(
-    hass: HomeAssistant,
-    connection: websocket_api.ActiveConnection,
-    msg: Dict[str, Any],
-) -> None:
-    """Handle search products command with enhanced filters."""
-    storage = get_storage(hass)
-    
-    try:
-        results = storage.search_products(
-            query=msg["query"],
-            limit=msg.get("limit", 10),
-            exclude_allergens=msg.get("exclude_allergens"),
-            include_tags=msg.get("include_tags"),
-            substitution_group=msg.get("substitution_group"),
-        )
-        
-        connection.send_result(
-            msg["id"],
-            {"products": [product.to_dict() for product in results]}
-        )
-    except Exception as err:
-        _LOGGER.error("Error searching products: %s", err)
-        connection.send_error(msg["id"], "search_failed", str(err))
-
 
 @websocket_api.websocket_command(
     {
