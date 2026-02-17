@@ -113,8 +113,15 @@ async def websocket_increment_item(
                     item_id,
                     quantity=new_quantity
                 )
-
                 if updated_item:
+                    hass.bus.async_fire(
+                        EVENT_ITEM_UPDATED,
+                        {
+                            "list_id": updated_item.list_id,
+                            "item_id": item_id,
+                            "item": updated_item.to_dict()
+                        }
+                    )
                     connection.send_result(msg["id"], {
                         "item": updated_item.to_dict()
                     })
