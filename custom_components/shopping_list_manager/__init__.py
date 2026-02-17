@@ -9,7 +9,6 @@ from homeassistant.helpers.typing import ConfigType
 
 from .const import DOMAIN, EVENT_ITEM_ADDED, EVENT_ITEM_UPDATED, EVENT_ITEM_CHECKED, EVENT_ITEM_DELETED, EVENT_LIST_UPDATED, EVENT_LIST_DELETED
 from .storage import ShoppingListStorage
-from .websocket import register_websocket_handlers
 from .utils.images import ImageHandler
 
 _LOGGER = logging.getLogger(__name__)
