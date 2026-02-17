@@ -57,6 +57,7 @@ EVENT_ITEM_UPDATED = f"{DOMAIN}_item_updated"
 EVENT_ITEM_CHECKED = f"{DOMAIN}_item_checked"
 EVENT_ITEM_DELETED = f"{DOMAIN}_item_deleted"
 EVENT_LIST_UPDATED = f"{DOMAIN}_list_updated"
+EVENT_LIST_DELETED = f"{DOMAIN}_list_deleted"
 
 # Image Configuration
 IMAGE_FORMAT = "webp"

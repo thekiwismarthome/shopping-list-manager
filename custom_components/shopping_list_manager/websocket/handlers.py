@@ -28,6 +28,7 @@ from ..const import (
     WS_TYPE_PRODUCTS_ADD,
     WS_TYPE_PRODUCTS_UPDATE,
     WS_TYPE_CATEGORIES_GET_ALL,
+    WS_TYPE_SUBSCRIBE,
     EVENT_ITEM_ADDED,
     EVENT_ITEM_UPDATED,
     EVENT_ITEM_CHECKED,
@@ -44,6 +45,44 @@ _LOGGER = logging.getLogger(__name__)
 # LIST HANDLERS
 # =============================================================================
 
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_SUBSCRIBE,
+})
+@websocket_api.async_response
+async def websocket_subscribe(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: dict,
+) -> None:
+    """Subscribe to shopping list manager events via WebSocket."""
+    
+    @callback
+    def forward_event(event):
+        """Forward HA bus event to WebSocket connection."""
+        connection.send_message(
+            websocket_api.event_message(
+                msg["id"],
+                {
+                    "event_type": event.event_type,
+                    "data": event.data,
+                }
+            )
+        )
+    
+    # Subscribe to all SLM events on the HA bus (backend has permission)
+    unsubs = []
+    unsubs.append(hass.bus.async_listen(EVENT_ITEM_ADDED, forward_event))
+    unsubs.append(hass.bus.async_listen(EVENT_ITEM_UPDATED, forward_event))
+    unsubs.append(hass.bus.async_listen(EVENT_ITEM_CHECKED, forward_event))
+    unsubs.append(hass.bus.async_listen(EVENT_ITEM_DELETED, forward_event))
+    unsubs.append(hass.bus.async_listen(EVENT_LIST_UPDATED, forward_event))
+    unsubs.append(hass.bus.async_listen(EVENT_LIST_DELETED, forward_event))
+    
+    # Clean up when connection closes
+    connection.subscriptions[msg["id"]] = lambda: [unsub() for unsub in unsubs]
+    
+    connection.send_message(websocket_api.result_message(msg["id"]))
+    
 @websocket_api.websocket_command({
     vol.Required("type"): "shopping_list_manager/items/increment",
     vol.Required("item_id"): str,

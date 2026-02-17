@@ -105,6 +105,10 @@ async def _async_register_websocket_handlers(
     # Lists handlers
     websocket_api.async_register_command(
         hass,
+        handlers.websocket_subscribe,
+    )
+    websocket_api.async_register_command(
+        hass,
         handlers.websocket_get_lists,
     )
     websocket_api.async_register_command(
