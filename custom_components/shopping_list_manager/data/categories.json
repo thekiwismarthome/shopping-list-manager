@@ -78,7 +78,7 @@
         "id": "health",
         "name": "Health & Beauty",
         "icon": "mdi:heart-pulse",
-        "color": "#E91E63",
+        "color": "#009688",
         "sort_order": 10,
         "system": true
     },
@@ -94,7 +94,7 @@
         "id": "baby",
         "name": "Baby",
         "icon": "mdi:baby-face",
-        "color": "#FFEB3B",
+        "color": "#F48FB1",
         "sort_order": 12,
         "system": true
     },
