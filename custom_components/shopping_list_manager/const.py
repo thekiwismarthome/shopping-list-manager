@@ -10,6 +10,7 @@ STORAGE_KEY_ITEMS = f"{DOMAIN}.items"
 STORAGE_KEY_PRODUCTS = f"{DOMAIN}.products"
 STORAGE_KEY_CATEGORIES = f"{DOMAIN}.categories"
 STORAGE_KEY_LOYALTY_CARDS = f"{DOMAIN}.loyalty_cards"
+STORAGE_KEY_CUSTOM_REGIONS = f"{DOMAIN}.custom_regions"
 
 # WebSocket Commands - Lists
 WS_TYPE_LISTS_GET_ALL = f"{DOMAIN}/lists/get_all"
