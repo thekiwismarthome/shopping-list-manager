@@ -1217,12 +1217,13 @@ def websocket_get_integration_settings(
         "BE": "Belgium (Dutch)",
     }
     custom = storage.get_custom_regions()
+    custom_names = {code: region["name"] for code, region in custom.items()}
     connection.send_result(
         msg["id"],
         {
             "country": country,
             "version": version,
-            "available_countries": {**built_in, **custom},
+            "available_countries": {**built_in, **custom_names},
             "custom_regions": custom,
         }
     )
@@ -1272,6 +1273,8 @@ async def websocket_set_country(
         vol.Required("type"): "shopping_list_manager/regions/create",
         vol.Required("code"): vol.All(str, vol.Length(min=2, max=8), vol.Upper),
         vol.Required("name"): vol.All(str, vol.Length(min=1, max=64)),
+        vol.Optional("currency_symbol"): vol.Any(vol.All(str, vol.Length(min=1, max=5)), None),
+        vol.Optional("language"): vol.Any(vol.All(str, vol.Length(min=1, max=64)), None),
     }
 )
 @websocket_api.async_response
@@ -1283,20 +1286,22 @@ async def websocket_create_custom_region(
     """Create a custom region."""
     code = msg["code"].upper()
     name = msg["name"].strip()
+    currency_symbol = msg.get("currency_symbol")
+    language = msg.get("language")
     storage = get_storage(hass)
 
     if code in _BUILT_IN_COUNTRIES:
         connection.send_error(msg["id"], "conflict", f"{code} is a built-in region")
         return
 
-    created = await storage.create_custom_region(code, name)
+    created = await storage.create_custom_region(code, name, currency_symbol, language)
     if not created:
         connection.send_error(msg["id"], "conflict", f"Region {code} already exists")
         return
 
     connection.send_result(
         msg["id"],
-        {"success": True, "code": code, "name": name, "custom_regions": storage.get_custom_regions()}
+        {"success": True, "code": code, "custom_regions": storage.get_custom_regions()}
     )
 
 

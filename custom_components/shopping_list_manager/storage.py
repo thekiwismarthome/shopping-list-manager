@@ -56,7 +56,7 @@ class ShoppingListStorage:
         self._products: Dict[str, Product] = {}
         self._categories: List[Category] = []
         self._loyalty_cards: Dict[str, LoyaltyCard] = {}
-        self._custom_regions: Dict[str, str] = {}  # code -> display name
+        self._custom_regions: Dict[str, Any] = {}  # code -> {name, currency_symbol, language}
         self._search_engine: Optional[ProductSearch] = None
         self._images_dir = Path(hass.config.path(IMAGES_LOCAL_DIR))
         self._legacy_images_dir = Path(hass.config.path(LEGACY_IMAGES_LOCAL_DIR))
@@ -158,10 +158,14 @@ class ShoppingListStorage:
             }
             _LOGGER.debug("Loaded %d loyalty cards", len(self._loyalty_cards))
 
-        # Load custom regions
+        # Load custom regions (migrate old string-only format)
         custom_regions_data = await self._store_custom_regions.async_load()
         if custom_regions_data:
-            self._custom_regions = custom_regions_data.get("regions", {})
+            raw = custom_regions_data.get("regions", {})
+            self._custom_regions = {
+                k: (v if isinstance(v, dict) else {"name": v, "currency_symbol": None, "language": None})
+                for k, v in raw.items()
+            }
             _LOGGER.debug("Loaded %d custom regions", len(self._custom_regions))
 
 # Initialize search engine after products are loaded
@@ -838,15 +842,21 @@ class ShoppingListStorage:
     # Custom Regions
     # ==========================================================================
 
-    def get_custom_regions(self) -> Dict[str, str]:
-        """Return all custom regions as {code: display_name}."""
+    def get_custom_regions(self) -> Dict[str, Any]:
+        """Return all custom regions as {code: {name, currency_symbol, language}}."""
         return dict(self._custom_regions)
 
-    async def create_custom_region(self, code: str, name: str) -> bool:
+    async def create_custom_region(
+        self, code: str, name: str, currency_symbol: Optional[str] = None, language: Optional[str] = None
+    ) -> bool:
         """Create a new custom region. Returns False if the code already exists."""
         if code in self._custom_regions:
             return False
-        self._custom_regions[code] = name
+        self._custom_regions[code] = {
+            "name": name,
+            "currency_symbol": currency_symbol,
+            "language": language,
+        }
         await self._save_custom_regions()
         _LOGGER.debug("Created custom region: %s (%s)", code, name)
         return True
