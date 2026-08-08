@@ -132,7 +132,8 @@ class ShoppingList:
     # Ownership: None = visible to all users; set = private to owner + allowed_users
     owner_id: Optional[str] = None
     allowed_users: List[str] = field(default_factory=list)
-    
+    ha_todo_entity_id: Optional[str] = None
+
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
         return asdict(self)

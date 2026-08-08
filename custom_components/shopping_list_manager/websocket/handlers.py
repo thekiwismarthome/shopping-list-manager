@@ -341,6 +341,7 @@ async def websocket_create_list(
         vol.Optional("name"): str,
         vol.Optional("icon"): str,
         vol.Optional("category_order"): [str],
+        vol.Optional("ha_todo_entity_id"): vol.Any(str, None),
     }
 )
 @websocket_api.async_response
@@ -364,7 +365,9 @@ async def websocket_update_list(
         update_data["icon"] = msg["icon"]
     if "category_order" in msg:
         update_data["category_order"] = msg["category_order"]
-    
+    if "ha_todo_entity_id" in msg:
+        update_data["ha_todo_entity_id"] = msg["ha_todo_entity_id"]
+
     updated_list = await storage.update_list(list_id, **update_data)
     
     if updated_list is None:
