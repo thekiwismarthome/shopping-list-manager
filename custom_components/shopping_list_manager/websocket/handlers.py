@@ -4,6 +4,7 @@ import logging
 import re
 from pathlib import Path
 from typing import Any, Dict
+from urllib.parse import quote_plus
 
 import voluptuous as vol
 from aiohttp import ClientTimeout
@@ -1159,7 +1160,7 @@ async def websocket_off_fetch(
     try:
         if msg.get("barcode"):
             barcode = msg["barcode"]
-            fields = "product_name,categories_tags,image_front_thumb_url,image_front_url,image_url,price"
+            fields = "code,product_name,categories_tags,image_front_thumb_url,image_front_url,image_url,price"
             url = f"{base_url}/api/v2/product/{barcode}.json?fields={fields}"
             async with session.get(url, timeout=ClientTimeout(total=10), headers=headers) as resp:
                 if not resp.ok:
@@ -1173,10 +1174,11 @@ async def websocket_off_fetch(
         else:
             query = msg.get("query", "")
             page_size = msg.get("page_size", 5)
-            fields = "product_name,categories_tags,image_front_thumb_url,image_front_url,image_url,price"
+            fields = "code,product_name,categories_tags,image_front_thumb_url,image_front_url,image_url,price"
             url = (
                 f"{base_url}/api/v2/search"
-                f"?search_terms={query}&fields={fields}&page_size={page_size}"
+                f"?search_terms={quote_plus(query)}&fields={fields}"
+                f"&page_size={page_size}&sort_by=unique_scans_n"
             )
             async with session.get(url, timeout=ClientTimeout(total=10), headers=headers) as resp:
                 if not resp.ok:
