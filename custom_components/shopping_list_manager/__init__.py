@@ -242,6 +242,14 @@ async def _async_register_websocket_handlers(
         hass,
         handlers.websocket_set_country,
     )
+    websocket_api.async_register_command(
+        hass,
+        handlers.websocket_create_custom_region,
+    )
+    websocket_api.async_register_command(
+        hass,
+        handlers.websocket_delete_custom_region,
+    )
 
     # Backup / Restore handlers
     websocket_api.async_register_command(

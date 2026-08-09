@@ -1,0 +1,33 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Shopping List Manager",
+        "description": "Configure a integração do Shopping List Manager. O país e outras configurações podem ser ajustados após a instalação através do botão Configurar."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Apenas uma instância do Shopping List Manager é permitida."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opções do Shopping List Manager",
+        "description": "Alterar o país recarregará o catálogo de produtos no próximo reinício.",
+        "data": {
+          "country": "País",
+          "enable_price_tracking": "Ativar rastreamento de preços",
+          "enable_image_search": "Ativar pesquisa de imagens",
+          "metric_units_only": "Apenas unidades métricas"
+        },
+        "data_description": {
+          "country": "Usado para localizar o catálogo de produtos e os preços.",
+          "enable_price_tracking": "Rastrear e exibir os preços dos produtos.",
+          "enable_image_search": "Pesquisar imagens de produtos automaticamente.",
+          "metric_units_only": "Exibir apenas unidades métricas (g, kg, ml, L)."
+        }
+      }
+    }
+  }
+}

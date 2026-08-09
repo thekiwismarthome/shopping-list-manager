@@ -17,6 +17,7 @@ from .const import (
     STORAGE_KEY_PRODUCTS,
     STORAGE_KEY_CATEGORIES,
     STORAGE_KEY_LOYALTY_CARDS,
+    STORAGE_KEY_CUSTOM_REGIONS,
     IMAGES_LOCAL_DIR,
     LEGACY_IMAGES_LOCAL_DIR,
     LOCAL_IMAGE_URL_PREFIX,
@@ -48,12 +49,14 @@ class ShoppingListStorage:
         self._store_products = Store(hass, STORAGE_VERSION, STORAGE_KEY_PRODUCTS)
         self._store_categories = Store(hass, STORAGE_VERSION, STORAGE_KEY_CATEGORIES)
         self._store_loyalty_cards = Store(hass, STORAGE_VERSION, STORAGE_KEY_LOYALTY_CARDS)
+        self._store_custom_regions = Store(hass, STORAGE_VERSION, STORAGE_KEY_CUSTOM_REGIONS)
 
         self._lists: Dict[str, ShoppingList] = {}
         self._items: Dict[str, List[Item]] = {}
         self._products: Dict[str, Product] = {}
         self._categories: List[Category] = []
         self._loyalty_cards: Dict[str, LoyaltyCard] = {}
+        self._custom_regions: Dict[str, Any] = {}  # code -> {name, currency_symbol, language}
         self._search_engine: Optional[ProductSearch] = None
         self._images_dir = Path(hass.config.path(IMAGES_LOCAL_DIR))
         self._legacy_images_dir = Path(hass.config.path(LEGACY_IMAGES_LOCAL_DIR))
@@ -154,6 +157,21 @@ class ShoppingListStorage:
                 for card_id, card_data in loyalty_data.items()
             }
             _LOGGER.debug("Loaded %d loyalty cards", len(self._loyalty_cards))
+
+        # Load custom regions (migrate old string-only format)
+        custom_regions_data = await self._store_custom_regions.async_load()
+        if custom_regions_data:
+            raw = custom_regions_data.get("regions", {})
+            needs_migration = any(isinstance(v, str) for v in raw.values())
+            self._custom_regions = {
+                k: (v if isinstance(v, dict) else {"name": v, "currency_symbol": None, "language": None})
+                for k, v in raw.items()
+            }
+            if needs_migration:
+                await self._save_custom_regions()
+                _LOGGER.info("Migrated %d custom regions to new dict format", len(self._custom_regions))
+            else:
+                _LOGGER.debug("Loaded %d custom regions", len(self._custom_regions))
 
 # Initialize search engine after products are loaded
         if self._products:
@@ -824,3 +842,39 @@ class ShoppingListStorage:
         await self._save_loyalty_cards()
         _LOGGER.debug("Updated members for loyalty card: %s", card_id)
         return card
+
+    # ==========================================================================
+    # Custom Regions
+    # ==========================================================================
+
+    def get_custom_regions(self) -> Dict[str, Any]:
+        """Return all custom regions as {code: {name, currency_symbol, language}}."""
+        return dict(self._custom_regions)
+
+    async def create_custom_region(
+        self, code: str, name: str, currency_symbol: Optional[str] = None, language: Optional[str] = None
+    ) -> bool:
+        """Create a new custom region. Returns False if the code already exists."""
+        if code in self._custom_regions:
+            return False
+        self._custom_regions[code] = {
+            "name": name,
+            "currency_symbol": currency_symbol,
+            "language": language,
+        }
+        await self._save_custom_regions()
+        _LOGGER.debug("Created custom region: %s (%s)", code, name)
+        return True
+
+    async def delete_custom_region(self, code: str) -> bool:
+        """Delete a custom region. Returns False if not found."""
+        if code not in self._custom_regions:
+            return False
+        del self._custom_regions[code]
+        await self._save_custom_regions()
+        _LOGGER.debug("Deleted custom region: %s", code)
+        return True
+
+    async def _save_custom_regions(self) -> None:
+        """Persist custom regions to storage."""
+        await self._store_custom_regions.async_save({"regions": self._custom_regions})

@@ -1207,29 +1207,38 @@ def websocket_get_integration_settings(
     """Return current country and available country options."""
     country = hass.data[DOMAIN].get("country", "NZ")
     version = hass.data[DOMAIN].get("version", "unknown")
+    storage = get_storage(hass)
+    built_in = {
+        "NZ": "New Zealand",
+        "AU": "Australia",
+        "US": "United States",
+        "GB": "United Kingdom",
+        "CA": "Canada",
+        "BE": "Belgium (Dutch)",
+    }
+    custom = storage.get_custom_regions()
+    custom_names = {code: region["name"] for code, region in custom.items()}
+    entries = hass.config_entries.async_entries(DOMAIN)
+    options = entries[0].options if entries else {}
     connection.send_result(
         msg["id"],
         {
             "country": country,
             "version": version,
-            "available_countries": {
-                "NZ": "New Zealand",
-                "AU": "Australia",
-                "US": "United States",
-                "GB": "United Kingdom",
-                "CA": "Canada",
-                "BE": "Belgium (Dutch)",
-            },
+            "available_countries": {**built_in, **custom_names},
+            "custom_regions": custom,
+            "metric_units_only": options.get("metric_units_only", True),
+            "enable_price_tracking": options.get("enable_price_tracking", True),
         }
     )
 
 
-_VALID_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE"]
+_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE"]
 
 @websocket_api.websocket_command(
     {
         vol.Required("type"): "shopping_list_manager/set_country",
-        vol.Required("country"): vol.In(_VALID_COUNTRIES),
+        vol.Required("country"): str,
     }
 )
 @websocket_api.async_response
@@ -1241,6 +1250,11 @@ async def websocket_set_country(
     """Switch to a different country catalog. Preserves user-added products."""
     country = msg["country"].upper()
     storage = get_storage(hass)
+
+    custom_regions = storage.get_custom_regions()
+    if country not in _BUILT_IN_COUNTRIES and country not in custom_regions:
+        connection.send_error(msg["id"], "invalid_country", f"Unknown region: {country}")
+        return
 
     count = await storage.reload_catalog(country)
 
@@ -1255,6 +1269,78 @@ async def websocket_set_country(
     connection.send_result(
         msg["id"],
         {"success": True, "country": country, "products_loaded": count}
+    )
+
+
+@websocket_api.websocket_command(
+    {
+        vol.Required("type"): "shopping_list_manager/regions/create",
+        vol.Required("code"): vol.All(str, vol.Length(min=2, max=8), vol.Upper),
+        vol.Required("name"): vol.All(str, vol.Length(min=1, max=64)),
+        vol.Optional("currency_symbol"): vol.Any(vol.All(str, vol.Length(min=1, max=5)), None),
+        vol.Optional("language"): vol.Any(vol.All(str, vol.Length(min=1, max=64)), None),
+    }
+)
+@websocket_api.async_response
+async def websocket_create_custom_region(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Create a custom region."""
+    code = msg["code"].upper()
+    name = msg["name"].strip()
+    currency_symbol = msg.get("currency_symbol")
+    language = msg.get("language")
+    storage = get_storage(hass)
+
+    if code in _BUILT_IN_COUNTRIES:
+        connection.send_error(msg["id"], "conflict", f"{code} is a built-in region")
+        return
+
+    created = await storage.create_custom_region(code, name, currency_symbol, language)
+    if not created:
+        connection.send_error(msg["id"], "conflict", f"Region {code} already exists")
+        return
+
+    connection.send_result(
+        msg["id"],
+        {"success": True, "code": code, "custom_regions": storage.get_custom_regions()}
+    )
+
+
+@websocket_api.websocket_command(
+    {
+        vol.Required("type"): "shopping_list_manager/regions/delete",
+        vol.Required("code"): str,
+    }
+)
+@websocket_api.async_response
+async def websocket_delete_custom_region(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Delete a custom region."""
+    code = msg["code"].upper()
+    storage = get_storage(hass)
+
+    deleted = await storage.delete_custom_region(code)
+    if not deleted:
+        connection.send_error(msg["id"], "not_found", f"Custom region {code} not found")
+        return
+
+    # If the active country was this region, fall back to NZ
+    if hass.data[DOMAIN].get("country") == code:
+        hass.data[DOMAIN]["country"] = "NZ"
+        entries = hass.config_entries.async_entries(DOMAIN)
+        if entries:
+            entry = entries[0]
+            hass.config_entries.async_update_entry(entry, options={**entry.options, "country": "NZ"})
+
+    connection.send_result(
+        msg["id"],
+        {"success": True, "code": code, "custom_regions": storage.get_custom_regions()}
     )
 
 
