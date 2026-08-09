@@ -162,11 +162,16 @@ class ShoppingListStorage:
         custom_regions_data = await self._store_custom_regions.async_load()
         if custom_regions_data:
             raw = custom_regions_data.get("regions", {})
+            needs_migration = any(isinstance(v, str) for v in raw.values())
             self._custom_regions = {
                 k: (v if isinstance(v, dict) else {"name": v, "currency_symbol": None, "language": None})
                 for k, v in raw.items()
             }
-            _LOGGER.debug("Loaded %d custom regions", len(self._custom_regions))
+            if needs_migration:
+                await self._save_custom_regions()
+                _LOGGER.info("Migrated %d custom regions to new dict format", len(self._custom_regions))
+            else:
+                _LOGGER.debug("Loaded %d custom regions", len(self._custom_regions))
 
 # Initialize search engine after products are loaded
         if self._products:
