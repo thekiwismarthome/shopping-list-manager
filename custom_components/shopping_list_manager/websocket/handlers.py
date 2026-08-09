@@ -1218,6 +1218,8 @@ def websocket_get_integration_settings(
     }
     custom = storage.get_custom_regions()
     custom_names = {code: region["name"] for code, region in custom.items()}
+    entries = hass.config_entries.async_entries(DOMAIN)
+    options = entries[0].options if entries else {}
     connection.send_result(
         msg["id"],
         {
@@ -1225,6 +1227,8 @@ def websocket_get_integration_settings(
             "version": version,
             "available_countries": {**built_in, **custom_names},
             "custom_regions": custom,
+            "metric_units_only": options.get("metric_units_only", True),
+            "enable_price_tracking": options.get("enable_price_tracking", True),
         }
     )
 
