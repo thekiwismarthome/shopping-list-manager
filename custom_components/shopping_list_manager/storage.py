@@ -518,20 +518,15 @@ class ShoppingListStorage:
         if not self._search_engine:
             _LOGGER.warning("Search engine not initialized")
             return []
-        
-        # Convert products dict to format search engine expects
-        products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
-        search_engine = ProductSearch(products_dict)
-        
-        results = search_engine.search(
+
+        results = self._search_engine.search(
             query=query,
             limit=limit,
             exclude_allergens=exclude_allergens,
             include_tags=include_tags,
             substitution_group=substitution_group,
         )
-        
-        # Convert back to Product objects
+
         return [self._products[r["id"]] for r in results if r["id"] in self._products]
 
     def find_product_substitutes(self, product_id: str, limit: int = 5) -> List[Product]:
@@ -546,11 +541,8 @@ class ShoppingListStorage:
         """
         if not self._search_engine:
             return []
-        
-        products_dict = {pid: p.to_dict() for pid, p in self._products.items()}
-        search_engine = ProductSearch(products_dict)
-        
-        results = search_engine.find_substitutes(product_id, limit)
+
+        results = self._search_engine.find_substitutes(product_id, limit)
         return [self._products[r["id"]] for r in results if r["id"] in self._products]
         
     def get_product_suggestions(self, limit: int = 20) -> List[Product]:
