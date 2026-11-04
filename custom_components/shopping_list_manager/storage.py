@@ -1,4 +1,7 @@
 """Storage management for Shopping List Manager."""
+import base64
+import hashlib
+import io
 import json
 import logging
 import os
@@ -19,6 +22,8 @@ from .const import (
     STORAGE_KEY_LOYALTY_CARDS,
     STORAGE_KEY_CUSTOM_REGIONS,
     IMAGES_LOCAL_DIR,
+    IMAGE_SIZE,
+    IMAGE_QUALITY,
     LEGACY_IMAGES_LOCAL_DIR,
     LOCAL_IMAGE_URL_PREFIX,
     LEGACY_IMAGE_URL_PREFIX,
@@ -104,6 +109,7 @@ class ShoppingListStorage:
         # Ensure image directory exists and migrate legacy image paths/URLs.
         self._images_dir.mkdir(parents=True, exist_ok=True)
         await self._migrate_legacy_images_and_urls()
+        await self._migrate_inline_images()
         
         # Load country-specific system categories so labels follow the selected country.
         await self._load_categories_for_country(self._country)
@@ -314,6 +320,9 @@ class ShoppingListStorage:
             **kwargs
         )
         new_item.calculate_total()
+        new_item.image_url = await self._externalize_data_image(
+            new_item.image_url, f"item_{new_item.id}"
+        )
         
         if list_id not in self._items:
             self._items[list_id] = []
@@ -338,6 +347,8 @@ class ShoppingListStorage:
             for item in items:
                 if item.id == item_id:
                     for key, value in kwargs.items():
+                        if key == "image_url":
+                            value = await self._externalize_data_image(value, f"item_{item.id}")
                         if hasattr(item, key):
                             setattr(item, key, value)
                     
@@ -487,6 +498,84 @@ class ShoppingListStorage:
                 updated_item_urls,
             )
     
+    async def _externalize_data_image(self, image_url: Optional[str], stem: str) -> Optional[str]:
+        """Convert an inline ``data:image/...`` URL into a small WebP file.
+
+        Inline images are stored inside the item/product JSON and shipped in every
+        ``items/get`` response. A few phone photos can make that response many MB,
+        which stalls the whole WebSocket (notably through the Nabu Casa relay).
+        Returns the new ``/local/...`` URL, or the original value on failure.
+        """
+        if not image_url or not image_url.startswith("data:image/"):
+            return image_url
+        try:
+            header, _, payload = image_url.partition(",")
+            if ";base64" not in header:
+                return image_url
+            raw = base64.b64decode(payload)
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.warning("Could not decode inline image for %s: %s", stem, err)
+            return image_url
+
+        filename = f"{stem}_{hashlib.sha1(raw).hexdigest()[:8]}.webp"
+        dest = self._images_dir / filename
+
+        def _convert() -> None:
+            from PIL import Image, ImageOps
+
+            img = ImageOps.exif_transpose(Image.open(io.BytesIO(raw)))
+            if img.mode in ("RGBA", "LA", "P"):
+                img = img.convert("RGBA")
+                bg = Image.new("RGB", img.size, (255, 255, 255))
+                bg.paste(img, mask=img.split()[3])
+                img = bg
+            elif img.mode != "RGB":
+                img = img.convert("RGB")
+            img.thumbnail((IMAGE_SIZE * 2, IMAGE_SIZE * 2), Image.LANCZOS)
+            self._images_dir.mkdir(parents=True, exist_ok=True)
+            img.save(dest, format="WEBP", quality=IMAGE_QUALITY)
+
+        try:
+            await self.hass.async_add_executor_job(_convert)
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.warning("Could not convert inline image for %s: %s", stem, err)
+            return image_url
+        return f"{LOCAL_IMAGE_URL_PREFIX}{filename}"
+
+    async def _migrate_inline_images(self) -> None:
+        """One-time move of inline base64 images on existing items/products to files."""
+        items_done = products_done = 0
+        bytes_freed = 0
+
+        for product in self._products.values():
+            url = product.image_url or ""
+            if url.startswith("data:image/"):
+                new_url = await self._externalize_data_image(url, f"product_{product.id}")
+                if new_url != url:
+                    bytes_freed += len(url)
+                    product.image_url = new_url
+                    products_done += 1
+
+        for items in self._items.values():
+            for item in items:
+                url = item.image_url or ""
+                if url.startswith("data:image/"):
+                    new_url = await self._externalize_data_image(url, f"item_{item.id}")
+                    if new_url != url:
+                        bytes_freed += len(url)
+                        item.image_url = new_url
+                        items_done += 1
+
+        if products_done:
+            await self._save_products()
+        if items_done:
+            await self._save_items()
+        if products_done or items_done:
+            _LOGGER.info(
+                "Moved inline images to files (items=%d, products=%d, ~%.1f MB removed from stored data)",
+                items_done, products_done, bytes_freed / 1_000_000,
+            )
+
     def get_products(self) -> List[Product]:
         """Get all products."""
         return list(self._products.values())
@@ -557,6 +646,9 @@ class ShoppingListStorage:
             id=generate_id(),
             currency=self.hass.config.currency,
             **kwargs
+        )
+        new_product.image_url = await self._externalize_data_image(
+            new_product.image_url, f"product_{new_product.id}"
         )
         self._products[new_product.id] = new_product
         await self._save_products()
@@ -636,6 +728,8 @@ class ShoppingListStorage:
 
         product = self._products[product_id]
         for key, value in kwargs.items():
+            if key == "image_url":
+                value = await self._externalize_data_image(value, f"product_{product_id}")
             if hasattr(product, key):
                 setattr(product, key, value)
 
