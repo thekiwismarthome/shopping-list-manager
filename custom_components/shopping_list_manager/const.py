@@ -11,6 +11,7 @@ STORAGE_KEY_PRODUCTS = f"{DOMAIN}.products"
 STORAGE_KEY_CATEGORIES = f"{DOMAIN}.categories"
 STORAGE_KEY_LOYALTY_CARDS = f"{DOMAIN}.loyalty_cards"
 STORAGE_KEY_CUSTOM_REGIONS = f"{DOMAIN}.custom_regions"
+STORAGE_KEY_USER_SETTINGS = f"{DOMAIN}.user_settings"
 
 # WebSocket Commands - Lists
 WS_TYPE_LISTS_GET_ALL = f"{DOMAIN}/lists/get_all"
@@ -62,6 +63,8 @@ WS_TYPE_BARCODE_ADD = f"{DOMAIN}/barcode/add_to_list"
 
 # WebSocket Commands - OpenFoodFacts (Phase 5)
 WS_TYPE_OFF_FETCH = f"{DOMAIN}/openfoodfacts/fetch"
+WS_TYPE_USER_SETTINGS_GET = f"{DOMAIN}/user_settings/get"
+WS_TYPE_USER_SETTINGS_SET = f"{DOMAIN}/user_settings/set"
 WS_TYPE_OFF_IMPORT = f"{DOMAIN}/openfoodfacts/import"
 
 # Events

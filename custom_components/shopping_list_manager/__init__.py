@@ -295,6 +295,16 @@ async def _async_register_websocket_handlers(
         handlers.websocket_update_loyalty_card_members,
     )
 
+    # User settings handlers (synced card preferences)
+    websocket_api.async_register_command(
+        hass,
+        handlers.websocket_get_user_settings,
+    )
+    websocket_api.async_register_command(
+        hass,
+        handlers.websocket_set_user_settings,
+    )
+
     _LOGGER.debug("WebSocket handlers registered")
 
 

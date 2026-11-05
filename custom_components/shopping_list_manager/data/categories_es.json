@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "region": "ES",
+  "language": "es-ES",
+  "categories": [
+    {
+      "id": "produce",
+      "name": "Frutas y Verduras",
+      "icon": "mdi:fruit-cherries",
+      "color": "#4CAF50",
+      "sort_order": 1,
+      "system": true
+    },
+    {
+      "id": "dairy",
+      "name": "Lácteos y Huevos",
+      "icon": "mdi:cheese",
+      "color": "#FFC107",
+      "sort_order": 2,
+      "system": true
+    },
+    {
+      "id": "meat",
+      "name": "Carne y Pescado",
+      "icon": "mdi:food-steak",
+      "color": "#F44336",
+      "sort_order": 3,
+      "system": true
+    },
+    {
+      "id": "bakery",
+      "name": "Panadería",
+      "icon": "mdi:bread-slice",
+      "color": "#FF9800",
+      "sort_order": 4,
+      "system": true
+    },
+    {
+      "id": "frozen",
+      "name": "Congelados",
+      "icon": "mdi:snowflake",
+      "color": "#2196F3",
+      "sort_order": 5,
+      "system": true
+    },
+    {
+      "id": "pantry",
+      "name": "Despensa",
+      "icon": "mdi:package-variant",
+      "color": "#795548",
+      "sort_order": 6,
+      "system": true
+    },
+    {
+      "id": "beverages",
+      "name": "Bebidas",
+      "icon": "mdi:cup",
+      "color": "#00BCD4",
+      "sort_order": 7,
+      "system": true
+    },
+    {
+      "id": "snacks",
+      "name": "Desayuno y Snacks",
+      "icon": "mdi:food-apple",
+      "color": "#E91E63",
+      "sort_order": 8,
+      "system": true
+    },
+    {
+      "id": "household",
+      "name": "Hogar y Limpieza",
+      "icon": "mdi:spray-bottle",
+      "color": "#9C27B0",
+      "sort_order": 9,
+      "system": true
+    },
+    {
+      "id": "health",
+      "name": "Higiene y Salud",
+      "icon": "mdi:heart-pulse",
+      "color": "#009688",
+      "sort_order": 10,
+      "system": true
+    },
+    {
+      "id": "pet",
+      "name": "Mascotas",
+      "icon": "mdi:paw",
+      "color": "#FF5722",
+      "sort_order": 11,
+      "system": true
+    },
+    {
+      "id": "baby",
+      "name": "Bebé",
+      "icon": "mdi:baby-face",
+      "color": "#F48FB1",
+      "sort_order": 12,
+      "system": true
+    },
+    {
+      "id": "other",
+      "name": "Otros",
+      "icon": "mdi:dots-horizontal",
+      "color": "#9E9E9E",
+      "sort_order": 99,
+      "system": true
+    }
+  ]
+}

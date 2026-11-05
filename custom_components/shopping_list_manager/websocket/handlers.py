@@ -1,5 +1,6 @@
 """WebSocket API handlers for Shopping List Manager."""
 import io
+import json
 import logging
 import re
 from pathlib import Path
@@ -42,6 +43,8 @@ from ..const import (
     WS_TYPE_PRODUCTS_UPDATE,
     WS_TYPE_PRODUCTS_DELETE,
     WS_TYPE_OFF_FETCH,
+    WS_TYPE_USER_SETTINGS_GET,
+    WS_TYPE_USER_SETTINGS_SET,
     WS_TYPE_CATEGORIES_GET_ALL,
     WS_TYPE_LOYALTY_GET_ALL,
     WS_TYPE_LOYALTY_ADD,
@@ -57,15 +60,31 @@ from ..const import (
     EVENT_LIST_DELETED,
 )
 from .. import get_storage
+from ..utils.openfoodfacts import search_products as search_off_products
 
 _LOGGER = logging.getLogger(__name__)
 
 OPENFOODFACTS_DEFAULT_BASE_URL = "https://world.openfoodfacts.org"
 OPENFOODFACTS_BASE_URL_BY_COUNTRY = {
     "BE": "https://be.openfoodfacts.org",
+    "ES": "https://es.openfoodfacts.org",
+    "FR": "https://fr.openfoodfacts.org",
 }
 OPENFOODFACTS_ACCEPT_LANGUAGE_BY_COUNTRY = {
     "BE": "nl-BE,nl;q=0.9,en;q=0.7",
+    "ES": "es-ES,es;q=0.9,en;q=0.7",
+    "FR": "fr-FR,fr;q=0.9,en;q=0.7",
+}
+# Currency symbol shown by the card for each built-in catalog region.
+BUILT_IN_CURRENCY_SYMBOLS = {
+    "NZ": "$",
+    "AU": "$",
+    "US": "$",
+    "GB": "£",
+    "CA": "$",
+    "BE": "€",
+    "ES": "€",
+    "FR": "€",
 }
 
 
@@ -1172,20 +1191,18 @@ async def websocket_off_fetch(
                     "product": data.get("product"),
                 })
         else:
-            query = msg.get("query", "")
-            page_size = msg.get("page_size", 5)
-            fields = "code,product_name,categories_tags,image_front_thumb_url,image_front_url,image_url,price"
-            url = (
-                f"{base_url}/api/v2/search"
-                f"?search_terms={quote_plus(query)}&fields={fields}"
-                f"&page_size={page_size}&sort_by=unique_scans_n"
+            # Free-text search goes through Search-a-licious: the v2 search API
+            # ignores the search text and always returns the same products.
+            country = hass.data.get(DOMAIN, {}).get("country", "NZ")
+            products = await search_off_products(
+                session,
+                headers,
+                msg.get("query", ""),
+                msg.get("page_size", 5),
+                country,
+                ClientTimeout(total=10),
             )
-            async with session.get(url, timeout=ClientTimeout(total=10), headers=headers) as resp:
-                if not resp.ok:
-                    connection.send_result(msg["id"], {"products": []})
-                    return
-                data = await resp.json(content_type=None)
-                connection.send_result(msg["id"], {"products": data.get("products", [])})
+            connection.send_result(msg["id"], {"products": products})
     except Exception as err:
         _LOGGER.warning("OpenFoodFacts proxy request failed: %s", err)
         connection.send_error(msg["id"], "fetch_failed", str(err))
@@ -1217,6 +1234,8 @@ def websocket_get_integration_settings(
         "GB": "United Kingdom",
         "CA": "Canada",
         "BE": "Belgium (Dutch)",
+        "ES": "Spain (Español)",
+        "FR": "France (Français)",
     }
     custom = storage.get_custom_regions()
     custom_names = {code: region["name"] for code, region in custom.items()}
@@ -1229,13 +1248,14 @@ def websocket_get_integration_settings(
             "version": version,
             "available_countries": {**built_in, **custom_names},
             "custom_regions": custom,
+            "currency_symbol": BUILT_IN_CURRENCY_SYMBOLS.get(country),
             "metric_units_only": options.get("metric_units_only", True),
             "enable_price_tracking": options.get("enable_price_tracking", True),
         }
     )
 
 
-_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE"]
+_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE", "ES", "FR"]
 
 @websocket_api.websocket_command(
     {
@@ -1448,6 +1468,66 @@ async def websocket_get_ha_users(
         if not u.system_generated and u.is_active
     ]
     connection.send_result(msg["id"], {"users": result})
+
+
+# =============================================================================
+# USER SETTINGS HANDLERS (card preferences synced across a user's devices)
+# =============================================================================
+
+# Guard against a client storing arbitrary amounts of data.
+MAX_USER_SETTINGS_BYTES = 32 * 1024
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_USER_SETTINGS_GET,
+})
+@callback
+def websocket_get_user_settings(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Return the connected user's synced card settings (private to that user)."""
+    user = connection.user
+    if user is None:
+        connection.send_error(msg["id"], "unauthorized", "No user on this connection")
+        return
+    entry = get_storage(hass).get_user_settings(user.id)
+    connection.send_result(
+        msg["id"],
+        {
+            "settings": entry["settings"] if entry else None,
+            "updated_at": entry["updated_at"] if entry else None,
+        },
+    )
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_USER_SETTINGS_SET,
+    vol.Required("settings"): dict,
+})
+@websocket_api.async_response
+async def websocket_set_user_settings(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Store the connected user's card settings (last write wins)."""
+    user = connection.user
+    if user is None:
+        connection.send_error(msg["id"], "unauthorized", "No user on this connection")
+        return
+    settings = msg["settings"]
+    try:
+        size = len(json.dumps(settings))
+    except (TypeError, ValueError):
+        connection.send_error(msg["id"], "invalid_format", "Settings must be JSON-serialisable")
+        return
+    if size > MAX_USER_SETTINGS_BYTES:
+        connection.send_error(msg["id"], "too_large", "Settings are too large")
+        return
+    entry = await get_storage(hass).set_user_settings(user.id, settings)
+    connection.send_result(msg["id"], {"updated_at": entry["updated_at"]})
 
 
 # =============================================================================
