@@ -21,6 +21,7 @@ from .const import (
     STORAGE_KEY_CATEGORIES,
     STORAGE_KEY_LOYALTY_CARDS,
     STORAGE_KEY_CUSTOM_REGIONS,
+    STORAGE_KEY_USER_SETTINGS,
     IMAGES_LOCAL_DIR,
     IMAGE_SIZE,
     IMAGE_QUALITY,
@@ -55,6 +56,7 @@ class ShoppingListStorage:
         self._store_categories = Store(hass, STORAGE_VERSION, STORAGE_KEY_CATEGORIES)
         self._store_loyalty_cards = Store(hass, STORAGE_VERSION, STORAGE_KEY_LOYALTY_CARDS)
         self._store_custom_regions = Store(hass, STORAGE_VERSION, STORAGE_KEY_CUSTOM_REGIONS)
+        self._store_user_settings = Store(hass, STORAGE_VERSION, STORAGE_KEY_USER_SETTINGS)
 
         self._lists: Dict[str, ShoppingList] = {}
         self._items: Dict[str, List[Item]] = {}
@@ -62,6 +64,8 @@ class ShoppingListStorage:
         self._categories: List[Category] = []
         self._loyalty_cards: Dict[str, LoyaltyCard] = {}
         self._custom_regions: Dict[str, Any] = {}  # code -> {name, currency_symbol, language}
+        # HA user id -> {"settings": {...}, "updated_at": iso}; card UI preferences synced across devices
+        self._user_settings: Dict[str, Dict[str, Any]] = {}
         self._search_engine: Optional[ProductSearch] = None
         self._images_dir = Path(hass.config.path(IMAGES_LOCAL_DIR))
         self._legacy_images_dir = Path(hass.config.path(LEGACY_IMAGES_LOCAL_DIR))
@@ -163,6 +167,11 @@ class ShoppingListStorage:
                 for card_id, card_data in loyalty_data.items()
             }
             _LOGGER.debug("Loaded %d loyalty cards", len(self._loyalty_cards))
+
+        # Load per-user card settings (synced across a user's devices)
+        user_settings_data = await self._store_user_settings.async_load()
+        if user_settings_data:
+            self._user_settings = user_settings_data.get("users", {})
 
         # Load custom regions (migrate old string-only format)
         custom_regions_data = await self._store_custom_regions.async_load()
@@ -960,6 +969,20 @@ class ShoppingListStorage:
         await self._save_custom_regions()
         _LOGGER.debug("Deleted custom region: %s", code)
         return True
+
+    # User settings methods
+    def get_user_settings(self, user_id: str) -> Optional[Dict[str, Any]]:
+        """Return the stored settings entry for a user, or None."""
+        return self._user_settings.get(user_id)
+
+    async def set_user_settings(self, user_id: str, settings: Dict[str, Any]) -> Dict[str, Any]:
+        """Replace a user's synced settings (last write wins) and persist."""
+        from .models import current_timestamp
+
+        entry = {"settings": settings, "updated_at": current_timestamp()}
+        self._user_settings[user_id] = entry
+        await self._store_user_settings.async_save({"users": self._user_settings})
+        return entry
 
     async def _save_custom_regions(self) -> None:
         """Persist custom regions to storage."""
