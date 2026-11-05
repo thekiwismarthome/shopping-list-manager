@@ -63,9 +63,21 @@ _LOGGER = logging.getLogger(__name__)
 OPENFOODFACTS_DEFAULT_BASE_URL = "https://world.openfoodfacts.org"
 OPENFOODFACTS_BASE_URL_BY_COUNTRY = {
     "BE": "https://be.openfoodfacts.org",
+    "ES": "https://es.openfoodfacts.org",
 }
 OPENFOODFACTS_ACCEPT_LANGUAGE_BY_COUNTRY = {
     "BE": "nl-BE,nl;q=0.9,en;q=0.7",
+    "ES": "es-ES,es;q=0.9,en;q=0.7",
+}
+# Currency symbol shown by the card for each built-in catalog region.
+BUILT_IN_CURRENCY_SYMBOLS = {
+    "NZ": "$",
+    "AU": "$",
+    "US": "$",
+    "GB": "£",
+    "CA": "$",
+    "BE": "€",
+    "ES": "€",
 }
 
 
@@ -1217,6 +1229,7 @@ def websocket_get_integration_settings(
         "GB": "United Kingdom",
         "CA": "Canada",
         "BE": "Belgium (Dutch)",
+        "ES": "Spain (Español)",
     }
     custom = storage.get_custom_regions()
     custom_names = {code: region["name"] for code, region in custom.items()}
@@ -1229,13 +1242,14 @@ def websocket_get_integration_settings(
             "version": version,
             "available_countries": {**built_in, **custom_names},
             "custom_regions": custom,
+            "currency_symbol": BUILT_IN_CURRENCY_SYMBOLS.get(country),
             "metric_units_only": options.get("metric_units_only", True),
             "enable_price_tracking": options.get("enable_price_tracking", True),
         }
     )
 
 
-_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE"]
+_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE", "ES"]
 
 @websocket_api.websocket_command(
     {

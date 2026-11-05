@@ -1,0 +1,4741 @@
+{
+  "version": "1.0.0",
+  "region": "ES",
+  "language": "es-ES",
+  "currency": "EUR",
+  "last_updated": "2026-11-05",
+  "description": "Spain grocery catalog with common Spanish supermarket products and local brands (prices are approximate EUR estimates)",
+  "country": "Spain",
+  "products": [
+    {
+      "id": "prod_es_leche_entera",
+      "name": "Leche entera",
+      "category_id": "dairy",
+      "aliases": [
+        "leche",
+        "leche entera",
+        "leche de vaca"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.05,
+      "brands": [
+        "Pascual",
+        "Puleva",
+        "Central Lechera Asturiana",
+        "Hacendado"
+      ],
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_es_leche_semidesnatada",
+      "name": "Leche semidesnatada",
+      "category_id": "dairy",
+      "aliases": [
+        "leche semi",
+        "leche semidesnatada",
+        "leche desnatada"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 0.95,
+      "brands": [
+        "Pascual",
+        "Puleva",
+        "Central Lechera Asturiana",
+        "Hacendado"
+      ],
+      "image_hint": "milk_trim",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_es_leche_sin_lactosa",
+      "name": "Leche sin lactosa",
+      "category_id": "dairy",
+      "aliases": [
+        "leche sin lactosa"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.25,
+      "brands": [
+        "Pascual",
+        "Puleva",
+        "Hacendado"
+      ],
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_mantequilla",
+      "name": "Mantequilla",
+      "category_id": "dairy",
+      "aliases": [
+        "mantequilla",
+        "manteca"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 2.6,
+      "brands": [
+        "Président",
+        "Arias",
+        "Hacendado"
+      ],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_queso_curado",
+      "name": "Queso curado",
+      "category_id": "dairy",
+      "aliases": [
+        "queso",
+        "queso curado",
+        "queso manchego",
+        "manchego"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 4.5,
+      "brands": [
+        "García Baquero",
+        "Hacendado",
+        "Dia"
+      ],
+      "image_hint": "cheese_tasty",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_queso_en_lonchas",
+      "name": "Queso en lonchas",
+      "category_id": "dairy",
+      "aliases": [
+        "queso lonchas",
+        "queso en lonchas",
+        "queso de sándwich"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.9,
+      "brands": [
+        "El Caserío",
+        "Président",
+        "Hacendado"
+      ],
+      "image_hint": "cheese_edam",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_queso_rallado",
+      "name": "Queso rallado",
+      "category_id": "dairy",
+      "aliases": [
+        "queso rallado"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.6,
+      "brands": [
+        "Président",
+        "El Caserío",
+        "Hacendado"
+      ],
+      "image_hint": "cheese_grated",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_yogur_natural",
+      "name": "Yogur natural",
+      "category_id": "dairy",
+      "aliases": [
+        "yogur",
+        "yogures",
+        "yogur natural"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Danone",
+        "Kaiku",
+        "Pascual",
+        "Hacendado"
+      ],
+      "image_hint": "yogurt_plain",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_yogur_griego",
+      "name": "Yogur griego",
+      "category_id": "dairy",
+      "aliases": [
+        "yogur griego"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Danone",
+        "Fage",
+        "Hacendado"
+      ],
+      "image_hint": "yogurt_greek",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_huevos_camperos",
+      "name": "Huevos camperos",
+      "category_id": "dairy",
+      "aliases": [
+        "huevos",
+        "huevos camperos",
+        "docena de huevos"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 3.2,
+      "brands": [
+        "Hacendado",
+        "Dia",
+        "Carrefour"
+      ],
+      "image_hint": "eggs_free_range",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_huevos_de_suelo",
+      "name": "Huevos de suelo",
+      "category_id": "dairy",
+      "aliases": [
+        "huevos de suelo",
+        "huevos l"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 2.6,
+      "brands": [
+        "Hacendado",
+        "Dia",
+        "Carrefour"
+      ],
+      "image_hint": "eggs",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_nata_para_cocinar",
+      "name": "Nata para cocinar",
+      "category_id": "dairy",
+      "aliases": [
+        "nata",
+        "nata líquida",
+        "nata para cocinar"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 1.1,
+      "brands": [
+        "Président",
+        "Pascual",
+        "Hacendado"
+      ],
+      "image_hint": "cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_manzanas_gala",
+      "name": "Manzanas Gala",
+      "category_id": "produce",
+      "aliases": [
+        "manzanas",
+        "manzana",
+        "manzanas gala"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [],
+      "image_hint": "apples_gala",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_manzanas_granny_smith",
+      "name": "Manzanas Granny Smith",
+      "category_id": "produce",
+      "aliases": [
+        "manzana verde",
+        "manzanas granny smith"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.3,
+      "brands": [],
+      "image_hint": "apples_granny_smith",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_platanos",
+      "name": "Plátanos",
+      "category_id": "produce",
+      "aliases": [
+        "plátano",
+        "plátanos",
+        "banana",
+        "bananas",
+        "plátano de canarias"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.1,
+      "brands": [],
+      "image_hint": "bananas",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_naranjas",
+      "name": "Naranjas",
+      "category_id": "produce",
+      "aliases": [
+        "naranja",
+        "naranjas",
+        "naranjas de zumo"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.7,
+      "brands": [],
+      "image_hint": "oranges",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_mandarinas",
+      "name": "Mandarinas",
+      "category_id": "produce",
+      "aliases": [
+        "mandarina",
+        "clementinas",
+        "clementina"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.3,
+      "brands": [],
+      "image_hint": "mandarins",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_limones",
+      "name": "Limones",
+      "category_id": "produce",
+      "aliases": [
+        "limón",
+        "limones"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [],
+      "image_hint": "lemons",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_peras",
+      "name": "Peras",
+      "category_id": "produce",
+      "aliases": [
+        "pera",
+        "peras",
+        "peras conferencia"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [],
+      "image_hint": "pears",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_fresas",
+      "name": "Fresas",
+      "category_id": "produce",
+      "aliases": [
+        "fresas",
+        "fresón",
+        "fresones"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.5,
+      "brands": [],
+      "image_hint": "strawberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_arandanos",
+      "name": "Arándanos",
+      "category_id": "produce",
+      "aliases": [
+        "arándanos"
+      ],
+      "default_unit": "g",
+      "default_quantity": 125,
+      "price": 2.6,
+      "brands": [],
+      "image_hint": "blueberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_uvas_blancas",
+      "name": "Uvas blancas",
+      "category_id": "produce",
+      "aliases": [
+        "uvas",
+        "uvas blancas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [],
+      "image_hint": "grapes_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_uvas_negras",
+      "name": "Uvas negras",
+      "category_id": "produce",
+      "aliases": [
+        "uvas negras",
+        "uvas rojas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.2,
+      "brands": [],
+      "image_hint": "grapes_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_aguacates",
+      "name": "Aguacates",
+      "category_id": "produce",
+      "aliases": [
+        "aguacate",
+        "aguacates",
+        "palta"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 2.4,
+      "brands": [],
+      "image_hint": "avocado",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_tomates",
+      "name": "Tomates",
+      "category_id": "produce",
+      "aliases": [
+        "tomate",
+        "tomates",
+        "tomate pera",
+        "tomate ensalada"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [],
+      "image_hint": "tomatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_tomates_cherry",
+      "name": "Tomates cherry",
+      "category_id": "produce",
+      "aliases": [
+        "tomate cherry",
+        "cherry"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.9,
+      "brands": [],
+      "image_hint": "tomatoes_cherry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_pepino",
+      "name": "Pepino",
+      "category_id": "produce",
+      "aliases": [
+        "pepino",
+        "pepinos"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 0.7,
+      "brands": [],
+      "image_hint": "cucumber",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_lechuga_iceberg",
+      "name": "Lechuga iceberg",
+      "category_id": "produce",
+      "aliases": [
+        "lechuga",
+        "iceberg"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.0,
+      "brands": [],
+      "image_hint": "lettuce_iceberg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_lechuga_romana",
+      "name": "Lechuga romana",
+      "category_id": "produce",
+      "aliases": [
+        "romana",
+        "lechuga romana",
+        "cogollos"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.1,
+      "brands": [],
+      "image_hint": "lettuce_cos",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_pimiento_rojo",
+      "name": "Pimiento rojo",
+      "category_id": "produce",
+      "aliases": [
+        "pimiento",
+        "pimientos",
+        "pimiento rojo"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.3,
+      "brands": [],
+      "image_hint": "capsicum_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_pimiento_verde",
+      "name": "Pimiento verde",
+      "category_id": "produce",
+      "aliases": [
+        "pimiento verde",
+        "pimientos verdes"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.1,
+      "brands": [],
+      "image_hint": "capsicum_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_brocoli",
+      "name": "Brócoli",
+      "category_id": "produce",
+      "aliases": [
+        "brócoli",
+        "brocoli"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [],
+      "image_hint": "broccoli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_coliflor",
+      "name": "Coliflor",
+      "category_id": "produce",
+      "aliases": [
+        "coliflor"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [],
+      "image_hint": "cauliflower",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_zanahorias",
+      "name": "Zanahorias",
+      "category_id": "produce",
+      "aliases": [
+        "zanahoria",
+        "zanahorias"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.2,
+      "brands": [],
+      "image_hint": "carrots",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_patatas",
+      "name": "Patatas",
+      "category_id": "produce",
+      "aliases": [
+        "patata",
+        "patatas",
+        "papas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 2.8,
+      "brands": [],
+      "image_hint": "potatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_cebollas",
+      "name": "Cebollas",
+      "category_id": "produce",
+      "aliases": [
+        "cebolla",
+        "cebollas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.4,
+      "brands": [],
+      "image_hint": "onions_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_cebolla_morada",
+      "name": "Cebolla morada",
+      "category_id": "produce",
+      "aliases": [
+        "cebolla roja",
+        "cebolla morada"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [],
+      "image_hint": "onions_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_ajos",
+      "name": "Ajos",
+      "category_id": "produce",
+      "aliases": [
+        "ajo",
+        "ajos",
+        "cabeza de ajos"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 0.8,
+      "brands": [],
+      "image_hint": "garlic",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_champinones",
+      "name": "Champiñones",
+      "category_id": "produce",
+      "aliases": [
+        "champiñones",
+        "champiñón",
+        "setas"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.6,
+      "brands": [],
+      "image_hint": "mushrooms_button",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_calabacin",
+      "name": "Calabacín",
+      "category_id": "produce",
+      "aliases": [
+        "calabacín",
+        "calabacines"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.1,
+      "brands": [],
+      "image_hint": "courgette",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_espinacas",
+      "name": "Espinacas",
+      "category_id": "produce",
+      "aliases": [
+        "espinacas"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.6,
+      "brands": [],
+      "image_hint": "spinach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_berenjenas",
+      "name": "Berenjenas",
+      "category_id": "produce",
+      "aliases": [
+        "berenjena",
+        "berenjenas"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.4,
+      "brands": [],
+      "image_hint": "eggplant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_pechuga_de_pollo",
+      "name": "Pechuga de pollo",
+      "category_id": "meat",
+      "aliases": [
+        "pollo",
+        "pechuga",
+        "pechuga de pollo",
+        "filetes de pollo"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 4.2,
+      "brands": [],
+      "image_hint": "chicken_breast",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_muslos_de_pollo",
+      "name": "Muslos de pollo",
+      "category_id": "meat",
+      "aliases": [
+        "muslos",
+        "contramuslos",
+        "muslos de pollo"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.8,
+      "brands": [],
+      "image_hint": "chicken_thigh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pollo_entero",
+      "name": "Pollo entero",
+      "category_id": "meat",
+      "aliases": [
+        "pollo entero",
+        "pollo"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 6.0,
+      "brands": [],
+      "image_hint": "chicken_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_carne_picada",
+      "name": "Carne picada",
+      "category_id": "meat",
+      "aliases": [
+        "carne picada",
+        "picada mixta",
+        "carne picada de ternera"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 4.5,
+      "brands": [],
+      "image_hint": "beef_mince",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_filetes_de_ternera",
+      "name": "Filetes de ternera",
+      "category_id": "meat",
+      "aliases": [
+        "ternera",
+        "filetes de ternera",
+        "bistec",
+        "entrecot"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 7.5,
+      "brands": [],
+      "image_hint": "beef_steak",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_chuletas_de_cerdo",
+      "name": "Chuletas de cerdo",
+      "category_id": "meat",
+      "aliases": [
+        "chuletas",
+        "chuletas de cerdo",
+        "lomo"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 6.5,
+      "brands": [],
+      "image_hint": "pork_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_chuletillas_de_cordero",
+      "name": "Chuletillas de cordero",
+      "category_id": "meat",
+      "aliases": [
+        "cordero",
+        "chuletillas",
+        "chuletas de cordero"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.5,
+      "brands": [],
+      "image_hint": "lamb_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_bacon",
+      "name": "Bacon",
+      "category_id": "meat",
+      "aliases": [
+        "bacon",
+        "beicon",
+        "panceta",
+        "panceta ahumada"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 1.9,
+      "brands": [
+        "Campofrío",
+        "El Pozo",
+        "Hacendado"
+      ],
+      "image_hint": "bacon",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_salchichas",
+      "name": "Salchichas",
+      "category_id": "meat",
+      "aliases": [
+        "salchichas",
+        "salchichas frescas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 3.0,
+      "brands": [
+        "Campofrío",
+        "Argal",
+        "Hacendado"
+      ],
+      "image_hint": "sausages",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_chorizo",
+      "name": "Chorizo",
+      "category_id": "meat",
+      "aliases": [
+        "chorizo",
+        "chorizo ibérico"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.8,
+      "brands": [
+        "Campofrío",
+        "El Pozo",
+        "Hacendado"
+      ],
+      "image_hint": "salami",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_jamon_cocido",
+      "name": "Jamón cocido",
+      "category_id": "meat",
+      "aliases": [
+        "jamón",
+        "jamón york",
+        "jamón cocido",
+        "york"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.4,
+      "brands": [
+        "El Pozo",
+        "Campofrío",
+        "Hacendado"
+      ],
+      "image_hint": "ham",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_jamon_serrano",
+      "name": "Jamón serrano",
+      "category_id": "meat",
+      "aliases": [
+        "jamón serrano",
+        "serrano"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 3.0,
+      "brands": [
+        "El Pozo",
+        "Campofrío",
+        "Hacendado"
+      ],
+      "image_hint": "ham",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_salmon_fresco",
+      "name": "Salmón fresco",
+      "category_id": "meat",
+      "aliases": [
+        "salmón",
+        "lomos de salmón"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 7.5,
+      "brands": [],
+      "image_hint": "salmon_fresh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_merluza",
+      "name": "Merluza",
+      "category_id": "meat",
+      "aliases": [
+        "merluza",
+        "filetes de merluza"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 6.5,
+      "brands": [],
+      "image_hint": "fish_hoki",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_gambas",
+      "name": "Gambas",
+      "category_id": "meat",
+      "aliases": [
+        "gambas",
+        "langostinos",
+        "gambas cocidas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.0,
+      "brands": [],
+      "image_hint": "prawns",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_mejillones",
+      "name": "Mejillones",
+      "category_id": "meat",
+      "aliases": [
+        "mejillones",
+        "mejillones frescos"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.5,
+      "brands": [],
+      "image_hint": "mussels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pan_de_molde_blanco",
+      "name": "Pan de molde blanco",
+      "category_id": "bakery",
+      "aliases": [
+        "pan",
+        "pan de molde",
+        "pan blanco",
+        "pan de molde blanco"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [
+        "Bimbo",
+        "Hacendado",
+        "Panrico"
+      ],
+      "image_hint": "bread_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pan_integral",
+      "name": "Pan integral",
+      "category_id": "bakery",
+      "aliases": [
+        "pan integral",
+        "pan de molde integral"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 1.7,
+      "brands": [
+        "Bimbo",
+        "Hacendado",
+        "Panrico"
+      ],
+      "image_hint": "bread_wholemeal",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [
+          "wholegrain"
+        ],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_barra_de_pan",
+      "name": "Barra de pan",
+      "category_id": "bakery",
+      "aliases": [
+        "barra de pan",
+        "barra",
+        "baguette",
+        "pan"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 0.6,
+      "brands": [],
+      "image_hint": "bread_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_pan_de_hamburguesa",
+      "name": "Pan de hamburguesa",
+      "category_id": "bakery",
+      "aliases": [
+        "pan hamburguesa",
+        "bollos hamburguesa",
+        "panecillos"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.4,
+      "brands": [
+        "Bimbo",
+        "Hacendado"
+      ],
+      "image_hint": "bread_rolls",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_tortillas_de_trigo",
+      "name": "Tortillas de trigo",
+      "category_id": "bakery",
+      "aliases": [
+        "tortillas",
+        "wraps",
+        "tortitas",
+        "fajitas"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Old El Paso",
+        "Hacendado"
+      ],
+      "image_hint": "wraps",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pan_de_pita",
+      "name": "Pan de pita",
+      "category_id": "bakery",
+      "aliases": [
+        "pan de pita",
+        "pita"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [
+        "Hacendado"
+      ],
+      "image_hint": "pita_bread",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_croissants",
+      "name": "Croissants",
+      "category_id": "bakery",
+      "aliases": [
+        "croissants",
+        "cruasanes",
+        "cruasán"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Bimbo",
+        "Hacendado",
+        "Panrico"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_magdalenas",
+      "name": "Magdalenas",
+      "category_id": "bakery",
+      "aliases": [
+        "magdalenas",
+        "magdalena"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Hacendado",
+        "Bimbo",
+        "Dulcesol"
+      ],
+      "image_hint": "english_muffins",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "eggs",
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_guisantes_congelados",
+      "name": "Guisantes congelados",
+      "category_id": "frozen",
+      "aliases": [
+        "guisantes",
+        "guisantes congelados"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [
+        "Findus",
+        "Hacendado"
+      ],
+      "image_hint": "frozen_peas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_menestra_congelada",
+      "name": "Menestra congelada",
+      "category_id": "frozen",
+      "aliases": [
+        "menestra",
+        "verduras congeladas",
+        "verduras"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Findus",
+        "Hacendado"
+      ],
+      "image_hint": "frozen_mixed_veg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_patatas_fritas_congeladas",
+      "name": "Patatas fritas congeladas",
+      "category_id": "frozen",
+      "aliases": [
+        "patatas congeladas",
+        "patatas fritas",
+        "patatas para freír"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [
+        "McCain",
+        "Hacendado"
+      ],
+      "image_hint": "frozen_chips",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_helado_de_vainilla",
+      "name": "Helado de vainilla",
+      "category_id": "frozen",
+      "aliases": [
+        "helado",
+        "helado de vainilla"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 2.8,
+      "brands": [
+        "Frigo",
+        "Hacendado",
+        "Carte d'Or"
+      ],
+      "image_hint": "ice_cream_vanilla",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pizza_congelada",
+      "name": "Pizza congelada",
+      "category_id": "frozen",
+      "aliases": [
+        "pizza",
+        "pizza congelada"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [
+        "Dr. Oetker",
+        "Casa Tarradellas",
+        "Hacendado"
+      ],
+      "image_hint": "frozen_pizza",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_palitos_de_merluza",
+      "name": "Palitos de merluza",
+      "category_id": "frozen",
+      "aliases": [
+        "palitos de merluza",
+        "palitos de pescado"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [
+        "Pescanova",
+        "Findus",
+        "Hacendado"
+      ],
+      "image_hint": "fish_fingers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [
+        "fish"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_frutos_rojos_congelados",
+      "name": "Frutos rojos congelados",
+      "category_id": "frozen",
+      "aliases": [
+        "frutos rojos",
+        "frutas del bosque"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.2,
+      "brands": [
+        "Hacendado"
+      ],
+      "image_hint": "frozen_berries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_arroz",
+      "name": "Arroz",
+      "category_id": "pantry",
+      "aliases": [
+        "arroz",
+        "arroz blanco",
+        "arroz redondo",
+        "arroz para paella"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Brillante",
+        "La Fallera",
+        "SOS",
+        "Hacendado"
+      ],
+      "image_hint": "rice_white",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_arroz_basmati",
+      "name": "Arroz basmati",
+      "category_id": "pantry",
+      "aliases": [
+        "basmati",
+        "arroz basmati"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.4,
+      "brands": [
+        "SOS",
+        "Brillante",
+        "Hacendado"
+      ],
+      "image_hint": "rice_basmati",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_espaguetis",
+      "name": "Espaguetis",
+      "category_id": "pantry",
+      "aliases": [
+        "espaguetis",
+        "espagueti",
+        "spaghetti",
+        "pasta"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.3,
+      "brands": [
+        "Barilla",
+        "Gallo",
+        "Hacendado"
+      ],
+      "image_hint": "pasta_spaghetti",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_macarrones",
+      "name": "Macarrones",
+      "category_id": "pantry",
+      "aliases": [
+        "macarrones",
+        "penne",
+        "pasta"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.3,
+      "brands": [
+        "Barilla",
+        "Gallo",
+        "Hacendado"
+      ],
+      "image_hint": "pasta_penne",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_tomate_frito",
+      "name": "Tomate frito",
+      "category_id": "pantry",
+      "aliases": [
+        "tomate frito",
+        "salsa de tomate",
+        "salsa tomate"
+      ],
+      "default_unit": "g",
+      "default_quantity": 400,
+      "price": 1.4,
+      "brands": [
+        "Orlando",
+        "Solís",
+        "Hacendado"
+      ],
+      "image_hint": "pasta_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_harina_de_trigo",
+      "name": "Harina de trigo",
+      "category_id": "pantry",
+      "aliases": [
+        "harina",
+        "harina de trigo"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.1,
+      "brands": [
+        "Harivenasa",
+        "Hacendado"
+      ],
+      "image_hint": "flour_plain",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_harina_con_levadura",
+      "name": "Harina con levadura",
+      "category_id": "pantry",
+      "aliases": [
+        "harina de repostería",
+        "harina con levadura"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [
+        "Harivenasa",
+        "Hacendado"
+      ],
+      "image_hint": "flour_self_raising",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_azucar",
+      "name": "Azúcar",
+      "category_id": "pantry",
+      "aliases": [
+        "azúcar",
+        "azúcar blanco",
+        "azúcar blanca"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [
+        "Azucarera",
+        "Hacendado"
+      ],
+      "image_hint": "sugar_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_azucar_moreno",
+      "name": "Azúcar moreno",
+      "category_id": "pantry",
+      "aliases": [
+        "azúcar moreno",
+        "azúcar de caña"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Azucarera",
+        "Hacendado"
+      ],
+      "image_hint": "sugar_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_aceite_de_oliva_virgen_extra",
+      "name": "Aceite de oliva virgen extra",
+      "category_id": "pantry",
+      "aliases": [
+        "aceite",
+        "aceite de oliva",
+        "aove",
+        "aceite de oliva virgen extra"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 8.5,
+      "brands": [
+        "Carbonell",
+        "Coosur",
+        "Ybarra",
+        "Hacendado"
+      ],
+      "image_hint": "oil_olive",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_aceite_de_girasol",
+      "name": "Aceite de girasol",
+      "category_id": "pantry",
+      "aliases": [
+        "aceite de girasol",
+        "aceite"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Koipesol",
+        "Coosur",
+        "Hacendado"
+      ],
+      "image_hint": "oil_vegetable",
+      "tags": [
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_tomate_triturado",
+      "name": "Tomate triturado",
+      "category_id": "pantry",
+      "aliases": [
+        "tomate triturado",
+        "tomate en lata",
+        "tomate natural"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 1.1,
+      "brands": [
+        "Hacendado",
+        "Orlando",
+        "Solís"
+      ],
+      "image_hint": "tomatoes_canned",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_alubias_cocidas",
+      "name": "Alubias cocidas",
+      "category_id": "pantry",
+      "aliases": [
+        "alubias",
+        "alubias cocidas",
+        "judías blancas",
+        "alubias en conserva"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 1.2,
+      "brands": [
+        "Luengo",
+        "Hacendado"
+      ],
+      "image_hint": "baked_beans",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_atun_en_aceite",
+      "name": "Atún en aceite",
+      "category_id": "pantry",
+      "aliases": [
+        "atún",
+        "atún en lata",
+        "atún claro",
+        "latas de atún"
+      ],
+      "default_unit": "can",
+      "default_quantity": 3,
+      "price": 3.5,
+      "brands": [
+        "Calvo",
+        "Isabel",
+        "Hacendado"
+      ],
+      "image_hint": "tuna",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_garbanzos_cocidos",
+      "name": "Garbanzos cocidos",
+      "category_id": "pantry",
+      "aliases": [
+        "garbanzos",
+        "garbanzos cocidos"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 1.0,
+      "brands": [
+        "Luengo",
+        "Hacendado"
+      ],
+      "image_hint": "chickpeas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_lentejas",
+      "name": "Lentejas",
+      "category_id": "pantry",
+      "aliases": [
+        "lentejas",
+        "lentejas pardinas"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.8,
+      "brands": [
+        "Luengo",
+        "Hacendado"
+      ],
+      "image_hint": "lentils",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_crema_de_cacahuete",
+      "name": "Crema de cacahuete",
+      "category_id": "pantry",
+      "aliases": [
+        "crema de cacahuete",
+        "mantequilla de cacahuete"
+      ],
+      "default_unit": "g",
+      "default_quantity": 350,
+      "price": 3.0,
+      "brands": [
+        "Hacendado"
+      ],
+      "image_hint": "peanut_butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_mermelada_de_fresa",
+      "name": "Mermelada de fresa",
+      "category_id": "pantry",
+      "aliases": [
+        "mermelada",
+        "mermelada de fresa"
+      ],
+      "default_unit": "g",
+      "default_quantity": 340,
+      "price": 1.9,
+      "brands": [
+        "Hero",
+        "Hacendado"
+      ],
+      "image_hint": "jam_strawberry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_miel",
+      "name": "Miel",
+      "category_id": "pantry",
+      "aliases": [
+        "miel"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 4.5,
+      "brands": [
+        "Hacendado",
+        "Carrefour"
+      ],
+      "image_hint": "honey",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_cacao_soluble",
+      "name": "Cacao soluble",
+      "category_id": "pantry",
+      "aliases": [
+        "cola cao",
+        "colacao",
+        "cacao",
+        "nesquik"
+      ],
+      "default_unit": "g",
+      "default_quantity": 383,
+      "price": 3.2,
+      "brands": [
+        "Cola Cao",
+        "Nesquik",
+        "Hacendado"
+      ],
+      "image_hint": "cocoa",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_salsa_de_soja",
+      "name": "Salsa de soja",
+      "category_id": "pantry",
+      "aliases": [
+        "soja",
+        "salsa de soja"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 150,
+      "price": 2.2,
+      "brands": [
+        "Kikkoman"
+      ],
+      "image_hint": "soy_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "soy"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_ketchup",
+      "name": "Ketchup",
+      "category_id": "pantry",
+      "aliases": [
+        "ketchup",
+        "kétchup"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 2.1,
+      "brands": [
+        "Heinz",
+        "Hacendado",
+        "Prima"
+      ],
+      "image_hint": "tomato_sauce",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_mayonesa",
+      "name": "Mayonesa",
+      "category_id": "pantry",
+      "aliases": [
+        "mayonesa",
+        "mahonesa"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 450,
+      "price": 2.3,
+      "brands": [
+        "Hellmann's",
+        "Ybarra",
+        "Hacendado"
+      ],
+      "image_hint": "mayonnaise",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_mostaza",
+      "name": "Mostaza",
+      "category_id": "pantry",
+      "aliases": [
+        "mostaza"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.8,
+      "brands": [
+        "Maille",
+        "Hacendado"
+      ],
+      "image_hint": "mustard",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_sal",
+      "name": "Sal",
+      "category_id": "pantry",
+      "aliases": [
+        "sal",
+        "sal fina",
+        "sal gorda"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 0.6,
+      "brands": [
+        "Costa",
+        "Hacendado"
+      ],
+      "image_hint": "salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_pimienta_negra",
+      "name": "Pimienta negra",
+      "category_id": "pantry",
+      "aliases": [
+        "pimienta",
+        "pimienta negra"
+      ],
+      "default_unit": "g",
+      "default_quantity": 50,
+      "price": 1.8,
+      "brands": [
+        "Carmencita",
+        "Hacendado"
+      ],
+      "image_hint": "pepper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_pimenton",
+      "name": "Pimentón",
+      "category_id": "pantry",
+      "aliases": [
+        "pimentón",
+        "pimentón dulce",
+        "pimentón de la vera"
+      ],
+      "default_unit": "g",
+      "default_quantity": 75,
+      "price": 1.8,
+      "brands": [
+        "Carmencita",
+        "La Chinata"
+      ],
+      "image_hint": "paprika",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_caldo_de_pollo",
+      "name": "Caldo de pollo",
+      "category_id": "pantry",
+      "aliases": [
+        "pastillas de caldo",
+        "caldo de pollo",
+        "caldo"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Gallina Blanca",
+        "Knorr",
+        "Hacendado"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_caldo_de_carne",
+      "name": "Caldo de carne",
+      "category_id": "pantry",
+      "aliases": [
+        "caldo de carne",
+        "pastillas de caldo de carne"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Gallina Blanca",
+        "Knorr",
+        "Hacendado"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_es_vinagre_de_vino",
+      "name": "Vinagre de vino",
+      "category_id": "pantry",
+      "aliases": [
+        "vinagre",
+        "vinagre de vino"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.2,
+      "brands": [
+        "Borges",
+        "Hacendado"
+      ],
+      "image_hint": "vinegar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_cafe_soluble",
+      "name": "Café soluble",
+      "category_id": "beverages",
+      "aliases": [
+        "café soluble",
+        "nescafé"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 5.5,
+      "brands": [
+        "Nescafé",
+        "Hacendado"
+      ],
+      "image_hint": "coffee_instant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_cafe_molido",
+      "name": "Café molido",
+      "category_id": "beverages",
+      "aliases": [
+        "café",
+        "café molido",
+        "café en grano"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 3.2,
+      "brands": [
+        "Marcilla",
+        "Saimaza",
+        "Hacendado"
+      ],
+      "image_hint": "coffee_ground",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_te_negro",
+      "name": "Té negro",
+      "category_id": "beverages",
+      "aliases": [
+        "té",
+        "té negro"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 25,
+      "price": 1.8,
+      "brands": [
+        "Lipton",
+        "Hornimans",
+        "Hacendado"
+      ],
+      "image_hint": "tea_black",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_te_verde",
+      "name": "Té verde",
+      "category_id": "beverages",
+      "aliases": [
+        "té verde"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 20,
+      "price": 1.8,
+      "brands": [
+        "Lipton",
+        "Hornimans",
+        "Hacendado"
+      ],
+      "image_hint": "tea_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_zumo_de_naranja",
+      "name": "Zumo de naranja",
+      "category_id": "beverages",
+      "aliases": [
+        "zumo",
+        "zumo de naranja",
+        "zumo naranja"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Granini",
+        "Don Simón",
+        "Hacendado"
+      ],
+      "image_hint": "juice_orange",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_zumo_de_manzana",
+      "name": "Zumo de manzana",
+      "category_id": "beverages",
+      "aliases": [
+        "zumo de manzana"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.4,
+      "brands": [
+        "Granini",
+        "Don Simón",
+        "Hacendado"
+      ],
+      "image_hint": "juice_apple",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_coca_cola",
+      "name": "Coca-Cola",
+      "category_id": "beverages",
+      "aliases": [
+        "coca cola",
+        "cocacola",
+        "refresco",
+        "cola"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 2.2,
+      "brands": [
+        "Coca-Cola",
+        "Pepsi"
+      ],
+      "image_hint": "coke",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_gaseosa",
+      "name": "Gaseosa",
+      "category_id": "beverages",
+      "aliases": [
+        "gaseosa",
+        "limonada",
+        "refresco de limón"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 1.5,
+      "brands": [
+        "La Casera",
+        "Fanta",
+        "Sprite"
+      ],
+      "image_hint": "lemonade",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_agua_mineral",
+      "name": "Agua mineral",
+      "category_id": "beverages",
+      "aliases": [
+        "agua",
+        "agua mineral",
+        "agua sin gas"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 0.4,
+      "brands": [
+        "Font Vella",
+        "Bezoya",
+        "Solán de Cabras",
+        "Hacendado"
+      ],
+      "image_hint": "water_still",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_agua_con_gas",
+      "name": "Agua con gas",
+      "category_id": "beverages",
+      "aliases": [
+        "agua con gas",
+        "agua con gas natural"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 0.9,
+      "brands": [
+        "Vichy Catalán",
+        "Perrier",
+        "Hacendado"
+      ],
+      "image_hint": "water_sparkling",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_cerveza",
+      "name": "Cerveza",
+      "category_id": "beverages",
+      "aliases": [
+        "cerveza",
+        "cervezas",
+        "cañas"
+      ],
+      "default_unit": "can",
+      "default_quantity": 6,
+      "price": 5.0,
+      "brands": [
+        "Mahou",
+        "Estrella Damm",
+        "San Miguel",
+        "Cruzcampo",
+        "Estrella Galicia"
+      ],
+      "image_hint": "beer",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_vino_tinto",
+      "name": "Vino tinto",
+      "category_id": "beverages",
+      "aliases": [
+        "vino",
+        "vino tinto",
+        "tinto"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 4.5,
+      "brands": [
+        "Campo Viejo",
+        "Faustino",
+        "Marqués de Cáceres"
+      ],
+      "image_hint": "wine_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_vino_blanco",
+      "name": "Vino blanco",
+      "category_id": "beverages",
+      "aliases": [
+        "vino blanco",
+        "blanco"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 4.0,
+      "brands": [
+        "Marqués de Riscal",
+        "Viña Sol",
+        "Protos"
+      ],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_cava",
+      "name": "Cava",
+      "category_id": "beverages",
+      "aliases": [
+        "cava",
+        "espumoso"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 6.0,
+      "brands": [
+        "Freixenet",
+        "Codorníu"
+      ],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_cereales_de_maiz",
+      "name": "Cereales de maíz",
+      "category_id": "snacks",
+      "aliases": [
+        "cereales",
+        "corn flakes",
+        "copos de maíz"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.0,
+      "brands": [
+        "Kellogg's",
+        "Hacendado"
+      ],
+      "image_hint": "cereal_cornflakes",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_muesli",
+      "name": "Muesli",
+      "category_id": "snacks",
+      "aliases": [
+        "muesli",
+        "muesli crujiente"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.0,
+      "brands": [
+        "Kellogg's",
+        "Hacendado"
+      ],
+      "image_hint": "cereal_muesli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_copos_de_avena",
+      "name": "Copos de avena",
+      "category_id": "snacks",
+      "aliases": [
+        "avena",
+        "copos de avena"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.6,
+      "brands": [
+        "Quaker",
+        "Hacendado"
+      ],
+      "image_hint": "oats_rolled",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_patatas_fritas",
+      "name": "Patatas fritas",
+      "category_id": "snacks",
+      "aliases": [
+        "patatas fritas",
+        "patatas chips",
+        "chips",
+        "patatas fritas de bolsa"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 1.8,
+      "brands": [
+        "Lay's",
+        "Pringles",
+        "Hacendado"
+      ],
+      "image_hint": "chips_salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_galletas_saladas",
+      "name": "Galletas saladas",
+      "category_id": "snacks",
+      "aliases": [
+        "crackers",
+        "galletas saladas",
+        "tostadas"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [
+        "Fontaneda",
+        "Hacendado"
+      ],
+      "image_hint": "crackers",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_galletas_con_pepitas_de_chocolate",
+      "name": "Galletas con pepitas de chocolate",
+      "category_id": "snacks",
+      "aliases": [
+        "galletas",
+        "galletas de chocolate"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [
+        "Chips Ahoy",
+        "Hacendado"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_galletas_maria",
+      "name": "Galletas María",
+      "category_id": "snacks",
+      "aliases": [
+        "galletas maría",
+        "maría"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [
+        "Fontaneda",
+        "Hacendado"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_chocolate_negro",
+      "name": "Chocolate negro",
+      "category_id": "snacks",
+      "aliases": [
+        "chocolate negro",
+        "chocolate puro"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 1.5,
+      "brands": [
+        "Lindt",
+        "Nestlé",
+        "Valor"
+      ],
+      "image_hint": "chocolate_whittakers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_chocolate_con_leche",
+      "name": "Chocolate con leche",
+      "category_id": "snacks",
+      "aliases": [
+        "chocolate",
+        "chocolate con leche",
+        "tableta de chocolate"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 1.6,
+      "brands": [
+        "Milka",
+        "Nestlé",
+        "Hacendado"
+      ],
+      "image_hint": "chocolate_cadbury",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_barritas_de_cereales",
+      "name": "Barritas de cereales",
+      "category_id": "snacks",
+      "aliases": [
+        "barritas",
+        "barritas de cereales"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Kellogg's",
+        "Hacendado"
+      ],
+      "image_hint": "muesli_bars",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_palomitas",
+      "name": "Palomitas",
+      "category_id": "snacks",
+      "aliases": [
+        "palomitas",
+        "palomitas de maíz"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.2,
+      "brands": [
+        "Hacendado"
+      ],
+      "image_hint": "popcorn",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_frutos_secos",
+      "name": "Frutos secos",
+      "category_id": "snacks",
+      "aliases": [
+        "frutos secos",
+        "nueces",
+        "almendras",
+        "cacahuetes",
+        "pipas"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.9,
+      "brands": [
+        "Borges",
+        "Hacendado"
+      ],
+      "image_hint": "nuts_mixed",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_papel_higienico",
+      "name": "Papel higiénico",
+      "category_id": "household",
+      "aliases": [
+        "papel higiénico",
+        "papel wc"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 12,
+      "price": 3.5,
+      "brands": [
+        "Scottex",
+        "Colhogar",
+        "Hacendado"
+      ],
+      "image_hint": "toilet_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_papel_de_cocina",
+      "name": "Papel de cocina",
+      "category_id": "household",
+      "aliases": [
+        "papel de cocina",
+        "rollos de cocina"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 4,
+      "price": 2.8,
+      "brands": [
+        "Scottex",
+        "Colhogar",
+        "Foxy"
+      ],
+      "image_hint": "paper_towels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_panuelos_de_papel",
+      "name": "Pañuelos de papel",
+      "category_id": "household",
+      "aliases": [
+        "pañuelos",
+        "kleenex",
+        "clínex"
+      ],
+      "default_unit": "box",
+      "default_quantity": 1,
+      "price": 1.2,
+      "brands": [
+        "Kleenex",
+        "Foxy",
+        "Hacendado"
+      ],
+      "image_hint": "tissues",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_lavavajillas_a_mano",
+      "name": "Lavavajillas a mano",
+      "category_id": "household",
+      "aliases": [
+        "fairy",
+        "lavavajillas",
+        "jabón de platos",
+        "lavavajillas líquido"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.8,
+      "brands": [
+        "Fairy",
+        "Mistol",
+        "Hacendado"
+      ],
+      "image_hint": "dishwashing_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pastillas_para_lavavajillas",
+      "name": "Pastillas para lavavajillas",
+      "category_id": "household",
+      "aliases": [
+        "pastillas lavavajillas",
+        "tabletas lavavajillas",
+        "finish"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 6.5,
+      "brands": [
+        "Finish",
+        "Fairy",
+        "Somat",
+        "Bosque Verde"
+      ],
+      "image_hint": "dishwasher_tablets",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_detergente_en_polvo",
+      "name": "Detergente en polvo",
+      "category_id": "household",
+      "aliases": [
+        "detergente",
+        "detergente en polvo",
+        "ariel"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 8.5,
+      "brands": [
+        "Ariel",
+        "Skip",
+        "Colón",
+        "Bosque Verde"
+      ],
+      "image_hint": "laundry_powder",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_detergente_liquido",
+      "name": "Detergente líquido",
+      "category_id": "household",
+      "aliases": [
+        "detergente líquido",
+        "detergente"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 8.0,
+      "brands": [
+        "Ariel",
+        "Skip",
+        "Colón",
+        "Bosque Verde"
+      ],
+      "image_hint": "laundry_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_suavizante",
+      "name": "Suavizante",
+      "category_id": "household",
+      "aliases": [
+        "suavizante",
+        "vernel"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 2.8,
+      "brands": [
+        "Mimosín",
+        "Vernel",
+        "Hacendado"
+      ],
+      "image_hint": "fabric_softener",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_limpiador_multiusos",
+      "name": "Limpiador multiusos",
+      "category_id": "household",
+      "aliases": [
+        "limpiador",
+        "limpiahogar",
+        "multiusos",
+        "spray limpiador"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 750,
+      "price": 2.0,
+      "brands": [
+        "Cif",
+        "Don Limpio",
+        "Hacendado"
+      ],
+      "image_hint": "spray_cleaner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_lejia",
+      "name": "Lejía",
+      "category_id": "household",
+      "aliases": [
+        "lejía",
+        "lejia"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 1.0,
+      "brands": [
+        "Conejo",
+        "Hacendado"
+      ],
+      "image_hint": "bleach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_bolsas_de_basura",
+      "name": "Bolsas de basura",
+      "category_id": "household",
+      "aliases": [
+        "bolsas de basura",
+        "bolsas basura"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [
+        "Albal",
+        "Hacendado"
+      ],
+      "image_hint": "bin_bags",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_film_transparente",
+      "name": "Film transparente",
+      "category_id": "household",
+      "aliases": [
+        "film",
+        "papel film",
+        "film transparente"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Albal",
+        "Hacendado"
+      ],
+      "image_hint": "cling_film",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_papel_de_aluminio",
+      "name": "Papel de aluminio",
+      "category_id": "household",
+      "aliases": [
+        "aluminio",
+        "papel aluminio",
+        "albal"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [
+        "Albal",
+        "Hacendado"
+      ],
+      "image_hint": "aluminium_foil",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_papel_de_horno",
+      "name": "Papel de horno",
+      "category_id": "household",
+      "aliases": [
+        "papel de horno",
+        "papel sulfurizado"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [
+        "Albal",
+        "Hacendado"
+      ],
+      "image_hint": "baking_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_champu",
+      "name": "Champú",
+      "category_id": "health",
+      "aliases": [
+        "champú",
+        "champu",
+        "shampoo"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 3.0,
+      "brands": [
+        "Pantene",
+        "Head & Shoulders",
+        "Garnier",
+        "Sanex"
+      ],
+      "image_hint": "shampoo",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_acondicionador",
+      "name": "Acondicionador",
+      "category_id": "health",
+      "aliases": [
+        "acondicionador",
+        "suavizante pelo"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 300,
+      "price": 3.0,
+      "brands": [
+        "Pantene",
+        "Garnier"
+      ],
+      "image_hint": "conditioner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_gel_de_ducha",
+      "name": "Gel de ducha",
+      "category_id": "health",
+      "aliases": [
+        "gel",
+        "gel de ducha",
+        "gel de baño"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 600,
+      "price": 2.3,
+      "brands": [
+        "Sanex",
+        "Dove",
+        "Nivea",
+        "Hacendado"
+      ],
+      "image_hint": "body_wash",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_jabon_de_manos",
+      "name": "Jabón de manos",
+      "category_id": "health",
+      "aliases": [
+        "jabón",
+        "pastilla de jabón",
+        "jabón en barra"
+      ],
+      "default_unit": "bar",
+      "default_quantity": 4,
+      "price": 2.0,
+      "brands": [
+        "Dove",
+        "Lux",
+        "Heno de Pravia"
+      ],
+      "image_hint": "soap_bar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pasta_de_dientes",
+      "name": "Pasta de dientes",
+      "category_id": "health",
+      "aliases": [
+        "dentífrico",
+        "pasta de dientes",
+        "colgate"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 75,
+      "price": 1.8,
+      "brands": [
+        "Colgate",
+        "Sensodyne",
+        "Lacer"
+      ],
+      "image_hint": "toothpaste",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_cepillo_de_dientes",
+      "name": "Cepillo de dientes",
+      "category_id": "health",
+      "aliases": [
+        "cepillo",
+        "cepillo de dientes"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 3.0,
+      "brands": [
+        "Oral-B",
+        "Colgate"
+      ],
+      "image_hint": "toothbrush",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_desodorante",
+      "name": "Desodorante",
+      "category_id": "health",
+      "aliases": [
+        "desodorante"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 150,
+      "price": 2.5,
+      "brands": [
+        "Dove",
+        "Rexona",
+        "Nivea",
+        "Sanex"
+      ],
+      "image_hint": "deodorant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_cuchillas_de_afeitar",
+      "name": "Cuchillas de afeitar",
+      "category_id": "health",
+      "aliases": [
+        "cuchillas",
+        "maquinillas",
+        "gillette"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 8.0,
+      "brands": [
+        "Gillette",
+        "Wilkinson"
+      ],
+      "image_hint": "razor_blades",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_espuma_de_afeitar",
+      "name": "Espuma de afeitar",
+      "category_id": "health",
+      "aliases": [
+        "espuma de afeitar",
+        "gel de afeitar"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 2.2,
+      "brands": [
+        "Gillette",
+        "Nivea"
+      ],
+      "image_hint": "shaving_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_protector_solar_spf50",
+      "name": "Protector solar SPF50",
+      "category_id": "health",
+      "aliases": [
+        "protector solar",
+        "crema solar",
+        "bronceador"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 9.0,
+      "brands": [
+        "ISDIN",
+        "Nivea",
+        "Delial"
+      ],
+      "image_hint": "sunscreen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_paracetamol",
+      "name": "Paracetamol",
+      "category_id": "health",
+      "aliases": [
+        "paracetamol",
+        "gelocatil",
+        "dolor"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Gelocatil",
+        "Cinfa"
+      ],
+      "image_hint": "paracetamol",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_ibuprofeno",
+      "name": "Ibuprofeno",
+      "category_id": "health",
+      "aliases": [
+        "ibuprofeno",
+        "dalsy",
+        "dolor"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [
+        "Cinfa",
+        "Espidifen"
+      ],
+      "image_hint": "ibuprofen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_tiritas",
+      "name": "Tiritas",
+      "category_id": "health",
+      "aliases": [
+        "tiritas",
+        "apósitos"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [
+        "Hansaplast",
+        "Hartmann"
+      ],
+      "image_hint": "bandaids",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_vitamina_c",
+      "name": "Vitamina C",
+      "category_id": "health",
+      "aliases": [
+        "vitamina c",
+        "cebión"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.0,
+      "brands": [
+        "Redoxon",
+        "Cebión"
+      ],
+      "image_hint": "vitamins_c",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_compresas",
+      "name": "Compresas",
+      "category_id": "health",
+      "aliases": [
+        "compresas",
+        "tampones",
+        "higiene femenina"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [
+        "Ausonia",
+        "Tampax",
+        "Always"
+      ],
+      "image_hint": "sanitary_pads",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_es_panales",
+      "name": "Pañales",
+      "category_id": "baby",
+      "aliases": [
+        "pañales",
+        "pañal"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 9.0,
+      "brands": [
+        "Dodot",
+        "Huggies",
+        "Pampers"
+      ],
+      "image_hint": "nappies",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_toallitas_para_bebe",
+      "name": "Toallitas para bebé",
+      "category_id": "baby",
+      "aliases": [
+        "toallitas",
+        "toallitas húmedas"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Dodot",
+        "Huggies",
+        "Hacendado"
+      ],
+      "image_hint": "baby_wipes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_leche_infantil",
+      "name": "Leche infantil",
+      "category_id": "baby",
+      "aliases": [
+        "leche de continuación",
+        "leche de fórmula",
+        "leche en polvo bebé"
+      ],
+      "default_unit": "g",
+      "default_quantity": 800,
+      "price": 17.0,
+      "brands": [
+        "Nutribén",
+        "Blemil",
+        "Almirón",
+        "Hero Baby"
+      ],
+      "image_hint": "baby_formula",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pienso_para_perros",
+      "name": "Pienso para perros",
+      "category_id": "pet",
+      "aliases": [
+        "pienso perro",
+        "comida de perro",
+        "pienso"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 3,
+      "price": 9.0,
+      "brands": [
+        "Pedigree",
+        "Purina",
+        "Brekkies"
+      ],
+      "image_hint": "dog_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_comida_humeda_para_perros",
+      "name": "Comida húmeda para perros",
+      "category_id": "pet",
+      "aliases": [
+        "latas de perro",
+        "comida húmeda perro"
+      ],
+      "default_unit": "can",
+      "default_quantity": 6,
+      "price": 5.5,
+      "brands": [
+        "Cesar",
+        "Pedigree",
+        "Purina"
+      ],
+      "image_hint": "dog_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_pienso_para_gatos",
+      "name": "Pienso para gatos",
+      "category_id": "pet",
+      "aliases": [
+        "pienso gato",
+        "comida de gato"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 6.0,
+      "brands": [
+        "Whiskas",
+        "Purina",
+        "Gourmet",
+        "Brekkies"
+      ],
+      "image_hint": "cat_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_comida_humeda_para_gatos",
+      "name": "Comida húmeda para gatos",
+      "category_id": "pet",
+      "aliases": [
+        "latas gato",
+        "sobres gato"
+      ],
+      "default_unit": "can",
+      "default_quantity": 12,
+      "price": 7.0,
+      "brands": [
+        "Whiskas",
+        "Gourmet",
+        "Felix"
+      ],
+      "image_hint": "cat_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_es_arena_para_gatos",
+      "name": "Arena para gatos",
+      "category_id": "pet",
+      "aliases": [
+        "arena",
+        "arena gato",
+        "arena sanitaria"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 5,
+      "price": 4.5,
+      "brands": [
+        "Catsan",
+        "Hacendado"
+      ],
+      "image_hint": "cat_litter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    }
+  ]
+}
