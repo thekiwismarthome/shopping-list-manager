@@ -57,6 +57,7 @@ from ..const import (
     EVENT_LIST_DELETED,
 )
 from .. import get_storage
+from ..utils.openfoodfacts import search_products as search_off_products
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -1172,20 +1173,18 @@ async def websocket_off_fetch(
                     "product": data.get("product"),
                 })
         else:
-            query = msg.get("query", "")
-            page_size = msg.get("page_size", 5)
-            fields = "code,product_name,categories_tags,image_front_thumb_url,image_front_url,image_url,price"
-            url = (
-                f"{base_url}/api/v2/search"
-                f"?search_terms={quote_plus(query)}&fields={fields}"
-                f"&page_size={page_size}&sort_by=unique_scans_n"
+            # Free-text search goes through Search-a-licious: the v2 search API
+            # ignores the search text and always returns the same products.
+            country = hass.data.get(DOMAIN, {}).get("country", "NZ")
+            products = await search_off_products(
+                session,
+                headers,
+                msg.get("query", ""),
+                msg.get("page_size", 5),
+                country,
+                ClientTimeout(total=10),
             )
-            async with session.get(url, timeout=ClientTimeout(total=10), headers=headers) as resp:
-                if not resp.ok:
-                    connection.send_result(msg["id"], {"products": []})
-                    return
-                data = await resp.json(content_type=None)
-                connection.send_result(msg["id"], {"products": data.get("products", [])})
+            connection.send_result(msg["id"], {"products": products})
     except Exception as err:
         _LOGGER.warning("OpenFoodFacts proxy request failed: %s", err)
         connection.send_error(msg["id"], "fetch_failed", str(err))
