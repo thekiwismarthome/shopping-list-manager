@@ -1,0 +1,4927 @@
+{
+  "version": "1.0.0",
+  "region": "FR",
+  "language": "fr-FR",
+  "currency": "EUR",
+  "last_updated": "2026-11-05",
+  "description": "France grocery catalog with common French supermarket products and local brands (prices are approximate EUR estimates)",
+  "country": "France",
+  "products": [
+    {
+      "id": "prod_fr_lait_entier",
+      "name": "Lait entier",
+      "category_id": "dairy",
+      "aliases": [
+        "lait",
+        "lait entier"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.15,
+      "brands": [
+        "Lactel",
+        "Candia",
+        "Carrefour"
+      ],
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_fr_lait_demi_ecreme",
+      "name": "Lait demi-écrémé",
+      "category_id": "dairy",
+      "aliases": [
+        "lait demi-écrémé",
+        "lait demi écrémé",
+        "lait écrémé",
+        "lait"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.05,
+      "brands": [
+        "Lactel",
+        "Candia",
+        "Carrefour"
+      ],
+      "image_hint": "milk_trim",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_fr_lait_sans_lactose",
+      "name": "Lait sans lactose",
+      "category_id": "dairy",
+      "aliases": [
+        "lait sans lactose"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.4,
+      "brands": [
+        "Lactel",
+        "Candia",
+        "Carrefour"
+      ],
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_beurre_demi_sel",
+      "name": "Beurre demi-sel",
+      "category_id": "dairy",
+      "aliases": [
+        "beurre",
+        "beurre demi-sel",
+        "beurre salé"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 2.7,
+      "brands": [
+        "Président",
+        "Elle & Vire",
+        "Carrefour"
+      ],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_beurre_doux",
+      "name": "Beurre doux",
+      "category_id": "dairy",
+      "aliases": [
+        "beurre doux",
+        "beurre"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 2.6,
+      "brands": [
+        "Président",
+        "Elle & Vire",
+        "Carrefour"
+      ],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_comte",
+      "name": "Comté",
+      "category_id": "dairy",
+      "aliases": [
+        "comté",
+        "fromage",
+        "fromage à pâte dure"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 4.9,
+      "brands": [
+        "Entremont",
+        "Président",
+        "Carrefour"
+      ],
+      "image_hint": "cheese_tasty",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_emmental",
+      "name": "Emmental",
+      "category_id": "dairy",
+      "aliases": [
+        "emmental",
+        "fromage en tranches",
+        "tranches de fromage"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.5,
+      "brands": [
+        "Entremont",
+        "Président",
+        "Carrefour"
+      ],
+      "image_hint": "cheese_edam",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_camembert",
+      "name": "Camembert",
+      "category_id": "dairy",
+      "aliases": [
+        "camembert",
+        "fromage"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 2.3,
+      "brands": [
+        "Président",
+        "Le Rustique",
+        "Isigny Sainte-Mère"
+      ],
+      "image_hint": "cheese_colby",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_emmental_rape",
+      "name": "Emmental râpé",
+      "category_id": "dairy",
+      "aliases": [
+        "emmental râpé",
+        "fromage râpé",
+        "gruyère râpé"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.9,
+      "brands": [
+        "Président",
+        "Entremont",
+        "Carrefour"
+      ],
+      "image_hint": "cheese_grated",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_yaourt_nature",
+      "name": "Yaourt nature",
+      "category_id": "dairy",
+      "aliases": [
+        "yaourt",
+        "yaourts",
+        "yaourt nature",
+        "yogourt"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [
+        "Danone",
+        "Yoplait",
+        "Carrefour"
+      ],
+      "image_hint": "yogurt_plain",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_yaourt_grec",
+      "name": "Yaourt grec",
+      "category_id": "dairy",
+      "aliases": [
+        "yaourt grec",
+        "yaourt à la grecque"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.3,
+      "brands": [
+        "Fage",
+        "Danone",
+        "Carrefour"
+      ],
+      "image_hint": "yogurt_greek",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_fromage_blanc",
+      "name": "Fromage blanc",
+      "category_id": "dairy",
+      "aliases": [
+        "fromage blanc",
+        "faisselle"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.8,
+      "brands": [
+        "Danone",
+        "Yoplait",
+        "Carrefour"
+      ],
+      "image_hint": "yogurt_plain",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_ufs_plein_air",
+      "name": "Œufs plein air",
+      "category_id": "dairy",
+      "aliases": [
+        "oeufs",
+        "œufs",
+        "oeufs plein air",
+        "œufs plein air",
+        "douzaine d'œufs"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 3.4,
+      "brands": [
+        "Loué",
+        "Matines",
+        "Carrefour"
+      ],
+      "image_hint": "eggs_free_range",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_ufs_eleves_au_sol",
+      "name": "Œufs élevés au sol",
+      "category_id": "dairy",
+      "aliases": [
+        "œufs sol",
+        "oeufs",
+        "œufs"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 2.8,
+      "brands": [
+        "Carrefour",
+        "Lidl",
+        "Auchan"
+      ],
+      "image_hint": "eggs",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_creme_fraiche_liquide",
+      "name": "Crème fraîche liquide",
+      "category_id": "dairy",
+      "aliases": [
+        "crème",
+        "crème fraîche",
+        "crème liquide"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 1.2,
+      "brands": [
+        "Elle & Vire",
+        "Président",
+        "Carrefour"
+      ],
+      "image_hint": "cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_creme_fraiche_epaisse",
+      "name": "Crème fraîche épaisse",
+      "category_id": "dairy",
+      "aliases": [
+        "crème épaisse",
+        "crème fraîche épaisse"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.4,
+      "brands": [
+        "Elle & Vire",
+        "Président",
+        "Carrefour"
+      ],
+      "image_hint": "sour_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_pommes_gala",
+      "name": "Pommes Gala",
+      "category_id": "produce",
+      "aliases": [
+        "pommes",
+        "pomme",
+        "pommes gala"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.9,
+      "brands": [],
+      "image_hint": "apples_gala",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_pommes_granny_smith",
+      "name": "Pommes Granny Smith",
+      "category_id": "produce",
+      "aliases": [
+        "pomme verte",
+        "pommes granny"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.9,
+      "brands": [],
+      "image_hint": "apples_granny_smith",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_bananes",
+      "name": "Bananes",
+      "category_id": "produce",
+      "aliases": [
+        "banane",
+        "bananes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [],
+      "image_hint": "bananas",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_oranges",
+      "name": "Oranges",
+      "category_id": "produce",
+      "aliases": [
+        "orange",
+        "oranges"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [],
+      "image_hint": "oranges",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_clementines",
+      "name": "Clémentines",
+      "category_id": "produce",
+      "aliases": [
+        "clémentines",
+        "clémentine",
+        "mandarines"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.8,
+      "brands": [],
+      "image_hint": "mandarins",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_citrons",
+      "name": "Citrons",
+      "category_id": "produce",
+      "aliases": [
+        "citron",
+        "citrons"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [],
+      "image_hint": "lemons",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_poires",
+      "name": "Poires",
+      "category_id": "produce",
+      "aliases": [
+        "poire",
+        "poires"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.9,
+      "brands": [],
+      "image_hint": "pears",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_fraises",
+      "name": "Fraises",
+      "category_id": "produce",
+      "aliases": [
+        "fraises",
+        "fraise"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.5,
+      "brands": [],
+      "image_hint": "strawberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_myrtilles",
+      "name": "Myrtilles",
+      "category_id": "produce",
+      "aliases": [
+        "myrtilles"
+      ],
+      "default_unit": "g",
+      "default_quantity": 125,
+      "price": 2.8,
+      "brands": [],
+      "image_hint": "blueberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_raisin_blanc",
+      "name": "Raisin blanc",
+      "category_id": "produce",
+      "aliases": [
+        "raisin",
+        "raisins",
+        "raisin blanc"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.5,
+      "brands": [],
+      "image_hint": "grapes_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_raisin_noir",
+      "name": "Raisin noir",
+      "category_id": "produce",
+      "aliases": [
+        "raisin noir",
+        "raisin rouge"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.8,
+      "brands": [],
+      "image_hint": "grapes_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_avocats",
+      "name": "Avocats",
+      "category_id": "produce",
+      "aliases": [
+        "avocat",
+        "avocats"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 2.2,
+      "brands": [],
+      "image_hint": "avocado",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_tomates",
+      "name": "Tomates",
+      "category_id": "produce",
+      "aliases": [
+        "tomate",
+        "tomates",
+        "tomates rondes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.9,
+      "brands": [],
+      "image_hint": "tomatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_tomates_cerises",
+      "name": "Tomates cerises",
+      "category_id": "produce",
+      "aliases": [
+        "tomates cerises",
+        "tomate cerise"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.9,
+      "brands": [],
+      "image_hint": "tomatoes_cherry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_concombre",
+      "name": "Concombre",
+      "category_id": "produce",
+      "aliases": [
+        "concombre"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.0,
+      "brands": [],
+      "image_hint": "cucumber",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_salade_iceberg",
+      "name": "Salade iceberg",
+      "category_id": "produce",
+      "aliases": [
+        "salade",
+        "iceberg",
+        "laitue"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.2,
+      "brands": [],
+      "image_hint": "lettuce_iceberg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_laitue_romaine",
+      "name": "Laitue romaine",
+      "category_id": "produce",
+      "aliases": [
+        "romaine",
+        "laitue romaine",
+        "salade romaine"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [],
+      "image_hint": "lettuce_cos",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_poivron_rouge",
+      "name": "Poivron rouge",
+      "category_id": "produce",
+      "aliases": [
+        "poivron",
+        "poivrons",
+        "poivron rouge"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.5,
+      "brands": [],
+      "image_hint": "capsicum_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_poivron_vert",
+      "name": "Poivron vert",
+      "category_id": "produce",
+      "aliases": [
+        "poivron vert"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.3,
+      "brands": [],
+      "image_hint": "capsicum_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_brocoli",
+      "name": "Brocoli",
+      "category_id": "produce",
+      "aliases": [
+        "brocoli",
+        "brocolis"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [],
+      "image_hint": "broccoli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_chou_fleur",
+      "name": "Chou-fleur",
+      "category_id": "produce",
+      "aliases": [
+        "chou-fleur",
+        "chou fleur"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [],
+      "image_hint": "cauliflower",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_carottes",
+      "name": "Carottes",
+      "category_id": "produce",
+      "aliases": [
+        "carotte",
+        "carottes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [],
+      "image_hint": "carrots",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_pommes_de_terre",
+      "name": "Pommes de terre",
+      "category_id": "produce",
+      "aliases": [
+        "pommes de terre",
+        "patates",
+        "patate"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 2.8,
+      "brands": [],
+      "image_hint": "potatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_oignons",
+      "name": "Oignons",
+      "category_id": "produce",
+      "aliases": [
+        "oignon",
+        "oignons"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [],
+      "image_hint": "onions_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_oignons_rouges",
+      "name": "Oignons rouges",
+      "category_id": "produce",
+      "aliases": [
+        "oignon rouge",
+        "oignons rouges"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [],
+      "image_hint": "onions_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_ail",
+      "name": "Ail",
+      "category_id": "produce",
+      "aliases": [
+        "ail",
+        "tête d'ail"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 0.8,
+      "brands": [],
+      "image_hint": "garlic",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_champignons_de_paris",
+      "name": "Champignons de Paris",
+      "category_id": "produce",
+      "aliases": [
+        "champignons",
+        "champignon de paris"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.8,
+      "brands": [],
+      "image_hint": "mushrooms_button",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_courgettes",
+      "name": "Courgettes",
+      "category_id": "produce",
+      "aliases": [
+        "courgette",
+        "courgettes"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.2,
+      "brands": [],
+      "image_hint": "courgette",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_epinards",
+      "name": "Épinards",
+      "category_id": "produce",
+      "aliases": [
+        "épinards",
+        "epinards"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 2.0,
+      "brands": [],
+      "image_hint": "spinach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_aubergines",
+      "name": "Aubergines",
+      "category_id": "produce",
+      "aliases": [
+        "aubergine",
+        "aubergines"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.6,
+      "brands": [],
+      "image_hint": "eggplant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_poireaux",
+      "name": "Poireaux",
+      "category_id": "produce",
+      "aliases": [
+        "poireau",
+        "poireaux"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.8,
+      "brands": [],
+      "image_hint": "leeks",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_blancs_de_poulet",
+      "name": "Blancs de poulet",
+      "category_id": "meat",
+      "aliases": [
+        "poulet",
+        "blanc de poulet",
+        "filet de poulet"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 5.5,
+      "brands": [],
+      "image_hint": "chicken_breast",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_cuisses_de_poulet",
+      "name": "Cuisses de poulet",
+      "category_id": "meat",
+      "aliases": [
+        "cuisses de poulet",
+        "poulet"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.9,
+      "brands": [],
+      "image_hint": "chicken_thigh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pilons_de_poulet",
+      "name": "Pilons de poulet",
+      "category_id": "meat",
+      "aliases": [
+        "pilons",
+        "pilons de poulet"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.5,
+      "brands": [],
+      "image_hint": "chicken_drumsticks",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_poulet_entier",
+      "name": "Poulet entier",
+      "category_id": "meat",
+      "aliases": [
+        "poulet entier",
+        "poulet rôti",
+        "poulet fermier"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 7.5,
+      "brands": [],
+      "image_hint": "chicken_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_steak_hache",
+      "name": "Steak haché",
+      "category_id": "meat",
+      "aliases": [
+        "steak haché",
+        "viande hachée",
+        "bœuf haché",
+        "boeuf haché"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 5.5,
+      "brands": [
+        "Charal",
+        "Bigard",
+        "Carrefour"
+      ],
+      "image_hint": "beef_mince",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_steak_de_buf",
+      "name": "Steak de bœuf",
+      "category_id": "meat",
+      "aliases": [
+        "steak",
+        "bœuf",
+        "boeuf",
+        "entrecôte",
+        "rumsteck"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.5,
+      "brands": [
+        "Charal",
+        "Bigard",
+        "Carrefour"
+      ],
+      "image_hint": "beef_steak",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_cotes_de_porc",
+      "name": "Côtes de porc",
+      "category_id": "meat",
+      "aliases": [
+        "côtes de porc",
+        "porc",
+        "côtelettes de porc"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 7.5,
+      "brands": [],
+      "image_hint": "pork_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_cotelettes_d_agneau",
+      "name": "Côtelettes d'agneau",
+      "category_id": "meat",
+      "aliases": [
+        "agneau",
+        "côtelettes d'agneau"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 9.5,
+      "brands": [],
+      "image_hint": "lamb_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_lardons",
+      "name": "Lardons",
+      "category_id": "meat",
+      "aliases": [
+        "lardons",
+        "lardons fumés",
+        "bacon",
+        "poitrine fumée"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.3,
+      "brands": [
+        "Herta",
+        "Fleury Michon",
+        "Carrefour"
+      ],
+      "image_hint": "bacon",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_saucisses",
+      "name": "Saucisses",
+      "category_id": "meat",
+      "aliases": [
+        "saucisses",
+        "saucisses de Toulouse",
+        "merguez",
+        "chipolatas"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 5.0,
+      "brands": [
+        "Herta",
+        "Fleury Michon",
+        "Carrefour"
+      ],
+      "image_hint": "sausages",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_saucisson_sec",
+      "name": "Saucisson sec",
+      "category_id": "meat",
+      "aliases": [
+        "saucisson",
+        "saucisson sec",
+        "rosette"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 4.5,
+      "brands": [
+        "Aoste",
+        "Justin Bridou",
+        "Cochonou"
+      ],
+      "image_hint": "salami",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_jambon_blanc",
+      "name": "Jambon blanc",
+      "category_id": "meat",
+      "aliases": [
+        "jambon",
+        "jambon blanc",
+        "jambon de Paris"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.8,
+      "brands": [
+        "Herta",
+        "Fleury Michon",
+        "Madrange",
+        "Carrefour"
+      ],
+      "image_hint": "ham",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pave_de_saumon",
+      "name": "Pavé de saumon",
+      "category_id": "meat",
+      "aliases": [
+        "saumon",
+        "pavé de saumon",
+        "filet de saumon"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.5,
+      "brands": [],
+      "image_hint": "salmon_fresh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_filet_de_cabillaud",
+      "name": "Filet de cabillaud",
+      "category_id": "meat",
+      "aliases": [
+        "cabillaud",
+        "filet de cabillaud",
+        "poisson blanc"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.5,
+      "brands": [],
+      "image_hint": "fish_hoki",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_crevettes",
+      "name": "Crevettes",
+      "category_id": "meat",
+      "aliases": [
+        "crevettes",
+        "crevettes cuites"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.0,
+      "brands": [],
+      "image_hint": "prawns",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_moules",
+      "name": "Moules",
+      "category_id": "meat",
+      "aliases": [
+        "moules",
+        "moules de bouchot"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.0,
+      "brands": [],
+      "image_hint": "mussels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_baguette",
+      "name": "Baguette",
+      "category_id": "bakery",
+      "aliases": [
+        "baguette",
+        "pain",
+        "baguette tradition"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.0,
+      "brands": [],
+      "image_hint": "bread_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_pain_de_mie",
+      "name": "Pain de mie",
+      "category_id": "bakery",
+      "aliases": [
+        "pain de mie",
+        "pain de mie blanc",
+        "pain sandwich"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Harrys",
+        "Jacquet",
+        "Carrefour"
+      ],
+      "image_hint": "bread_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pain_de_mie_complet",
+      "name": "Pain de mie complet",
+      "category_id": "bakery",
+      "aliases": [
+        "pain complet",
+        "pain de mie complet"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Harrys",
+        "Jacquet",
+        "Carrefour"
+      ],
+      "image_hint": "bread_wholemeal",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [
+          "wholegrain"
+        ],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_petits_pains",
+      "name": "Petits pains",
+      "category_id": "bakery",
+      "aliases": [
+        "petits pains",
+        "pains burger",
+        "pain à hamburger"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Harrys",
+        "Pasquier",
+        "Carrefour"
+      ],
+      "image_hint": "bread_rolls",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_tortillas_de_ble",
+      "name": "Tortillas de blé",
+      "category_id": "bakery",
+      "aliases": [
+        "tortillas",
+        "wraps",
+        "galettes de blé"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.1,
+      "brands": [
+        "Old El Paso",
+        "Carrefour"
+      ],
+      "image_hint": "wraps",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pain_pita",
+      "name": "Pain pita",
+      "category_id": "bakery",
+      "aliases": [
+        "pita",
+        "pain pita"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Carrefour"
+      ],
+      "image_hint": "pita_bread",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_croissants",
+      "name": "Croissants",
+      "category_id": "bakery",
+      "aliases": [
+        "croissants",
+        "croissant"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.3,
+      "brands": [
+        "Pasquier",
+        "Harrys",
+        "Carrefour"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pains_au_chocolat",
+      "name": "Pains au chocolat",
+      "category_id": "bakery",
+      "aliases": [
+        "pain au chocolat",
+        "pains au chocolat"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Pasquier",
+        "Harrys",
+        "Carrefour"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk",
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_brioche",
+      "name": "Brioche",
+      "category_id": "bakery",
+      "aliases": [
+        "brioche",
+        "brioche tranchée"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [
+        "Pasquier",
+        "Harrys",
+        "Carrefour"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk",
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_petits_pois_surgeles",
+      "name": "Petits pois surgelés",
+      "category_id": "frozen",
+      "aliases": [
+        "petits pois",
+        "petits pois surgelés"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [
+        "Findus",
+        "D'aucy",
+        "Picard"
+      ],
+      "image_hint": "frozen_peas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_poelee_de_legumes_surgelee",
+      "name": "Poêlée de légumes surgelée",
+      "category_id": "frozen",
+      "aliases": [
+        "légumes surgelés",
+        "poêlée de légumes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.5,
+      "brands": [
+        "Findus",
+        "D'aucy",
+        "Picard"
+      ],
+      "image_hint": "frozen_mixed_veg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_frites_surgelees",
+      "name": "Frites surgelées",
+      "category_id": "frozen",
+      "aliases": [
+        "frites",
+        "frites surgelées"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "McCain",
+        "Carrefour"
+      ],
+      "image_hint": "frozen_chips",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_glace_a_la_vanille",
+      "name": "Glace à la vanille",
+      "category_id": "frozen",
+      "aliases": [
+        "glace",
+        "glace vanille",
+        "crème glacée"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 3.5,
+      "brands": [
+        "Carte d'Or",
+        "Ben & Jerry's",
+        "Carrefour"
+      ],
+      "image_hint": "ice_cream_vanilla",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pizza_surgelee",
+      "name": "Pizza surgelée",
+      "category_id": "frozen",
+      "aliases": [
+        "pizza",
+        "pizza surgelée"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 3.2,
+      "brands": [
+        "Buitoni",
+        "Picard",
+        "Carrefour"
+      ],
+      "image_hint": "frozen_pizza",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_batonnets_de_poisson",
+      "name": "Bâtonnets de poisson",
+      "category_id": "frozen",
+      "aliases": [
+        "bâtonnets de poisson",
+        "poisson pané"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.2,
+      "brands": [
+        "Findus",
+        "Picard",
+        "Carrefour"
+      ],
+      "image_hint": "fish_fingers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [
+        "fish"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_fruits_rouges_surgeles",
+      "name": "Fruits rouges surgelés",
+      "category_id": "frozen",
+      "aliases": [
+        "fruits rouges",
+        "fruits rouges surgelés"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 4.5,
+      "brands": [
+        "Picard",
+        "Carrefour"
+      ],
+      "image_hint": "frozen_berries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_riz",
+      "name": "Riz",
+      "category_id": "pantry",
+      "aliases": [
+        "riz",
+        "riz blanc",
+        "riz long"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [
+        "Uncle Ben's",
+        "Lustucru",
+        "Taureau Ailé",
+        "Carrefour"
+      ],
+      "image_hint": "rice_white",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_riz_basmati",
+      "name": "Riz basmati",
+      "category_id": "pantry",
+      "aliases": [
+        "basmati",
+        "riz basmati"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.6,
+      "brands": [
+        "Taureau Ailé",
+        "Uncle Ben's",
+        "Lustucru"
+      ],
+      "image_hint": "rice_basmati",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_spaghetti",
+      "name": "Spaghetti",
+      "category_id": "pantry",
+      "aliases": [
+        "spaghetti",
+        "spaghettis",
+        "pâtes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.4,
+      "brands": [
+        "Panzani",
+        "Barilla",
+        "Lustucru"
+      ],
+      "image_hint": "pasta_spaghetti",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_penne",
+      "name": "Penne",
+      "category_id": "pantry",
+      "aliases": [
+        "penne",
+        "pâtes",
+        "coquillettes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.4,
+      "brands": [
+        "Panzani",
+        "Barilla",
+        "Lustucru"
+      ],
+      "image_hint": "pasta_penne",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_sauce_tomate",
+      "name": "Sauce tomate",
+      "category_id": "pantry",
+      "aliases": [
+        "sauce tomate",
+        "sauce bolognaise"
+      ],
+      "default_unit": "g",
+      "default_quantity": 400,
+      "price": 2.0,
+      "brands": [
+        "Panzani",
+        "Barilla",
+        "Carrefour"
+      ],
+      "image_hint": "pasta_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_farine_de_ble",
+      "name": "Farine de blé",
+      "category_id": "pantry",
+      "aliases": [
+        "farine",
+        "farine de blé",
+        "farine T55"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [
+        "Francine",
+        "Carrefour"
+      ],
+      "image_hint": "flour_plain",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_farine_fermentante",
+      "name": "Farine fermentante",
+      "category_id": "pantry",
+      "aliases": [
+        "farine avec levure",
+        "farine fermentante"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Francine"
+      ],
+      "image_hint": "flour_self_raising",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_sucre",
+      "name": "Sucre",
+      "category_id": "pantry",
+      "aliases": [
+        "sucre",
+        "sucre blanc",
+        "sucre en poudre"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.6,
+      "brands": [
+        "Béghin Say",
+        "Daddy",
+        "Carrefour"
+      ],
+      "image_hint": "sugar_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_sucre_roux",
+      "name": "Sucre roux",
+      "category_id": "pantry",
+      "aliases": [
+        "cassonade",
+        "sucre roux",
+        "sucre brun"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.6,
+      "brands": [
+        "Béghin Say",
+        "Daddy"
+      ],
+      "image_hint": "sugar_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_huile_d_olive",
+      "name": "Huile d'olive",
+      "category_id": "pantry",
+      "aliases": [
+        "huile d'olive",
+        "huile d'olive vierge extra"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 8.5,
+      "brands": [
+        "Puget",
+        "Lesieur",
+        "Carrefour"
+      ],
+      "image_hint": "oil_olive",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_huile_de_tournesol",
+      "name": "Huile de tournesol",
+      "category_id": "pantry",
+      "aliases": [
+        "huile",
+        "huile de tournesol",
+        "huile végétale"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Lesieur",
+        "Isio 4",
+        "Carrefour"
+      ],
+      "image_hint": "oil_vegetable",
+      "tags": [
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_tomates_concassees",
+      "name": "Tomates concassées",
+      "category_id": "pantry",
+      "aliases": [
+        "tomates concassées",
+        "tomates en boîte",
+        "tomates pelées"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 1.1,
+      "brands": [
+        "Cirio",
+        "Mutti",
+        "Carrefour"
+      ],
+      "image_hint": "tomatoes_canned",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_haricots_blancs",
+      "name": "Haricots blancs",
+      "category_id": "pantry",
+      "aliases": [
+        "haricots blancs",
+        "haricots à la tomate",
+        "haricots en boîte"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [
+        "Heinz",
+        "Cassegrain",
+        "Carrefour"
+      ],
+      "image_hint": "baked_beans",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_thon_a_l_huile",
+      "name": "Thon à l'huile",
+      "category_id": "pantry",
+      "aliases": [
+        "thon",
+        "thon en boîte",
+        "thon à l'huile",
+        "thon au naturel"
+      ],
+      "default_unit": "can",
+      "default_quantity": 3,
+      "price": 4.5,
+      "brands": [
+        "Petit Navire",
+        "Saupiquet",
+        "Carrefour"
+      ],
+      "image_hint": "tuna",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_pois_chiches",
+      "name": "Pois chiches",
+      "category_id": "pantry",
+      "aliases": [
+        "pois chiches"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 1.2,
+      "brands": [
+        "Cassegrain",
+        "Carrefour"
+      ],
+      "image_hint": "chickpeas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_lentilles",
+      "name": "Lentilles",
+      "category_id": "pantry",
+      "aliases": [
+        "lentilles",
+        "lentilles vertes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.2,
+      "brands": [
+        "Cassegrain",
+        "Lustucru",
+        "Carrefour"
+      ],
+      "image_hint": "lentils",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_beurre_de_cacahuete",
+      "name": "Beurre de cacahuète",
+      "category_id": "pantry",
+      "aliases": [
+        "beurre de cacahuète",
+        "beurre de cacahuètes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 350,
+      "price": 3.2,
+      "brands": [
+        "Skippy",
+        "Carrefour"
+      ],
+      "image_hint": "peanut_butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_confiture_de_fraises",
+      "name": "Confiture de fraises",
+      "category_id": "pantry",
+      "aliases": [
+        "confiture",
+        "confiture de fraises"
+      ],
+      "default_unit": "g",
+      "default_quantity": 370,
+      "price": 2.5,
+      "brands": [
+        "Bonne Maman",
+        "Andros",
+        "Carrefour"
+      ],
+      "image_hint": "jam_strawberry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_miel",
+      "name": "Miel",
+      "category_id": "pantry",
+      "aliases": [
+        "miel",
+        "miel de fleurs"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 5.5,
+      "brands": [
+        "Lune de Miel",
+        "Carrefour"
+      ],
+      "image_hint": "honey",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_pate_a_tartiner",
+      "name": "Pâte à tartiner",
+      "category_id": "pantry",
+      "aliases": [
+        "nutella",
+        "pâte à tartiner",
+        "chocolat à tartiner"
+      ],
+      "default_unit": "g",
+      "default_quantity": 400,
+      "price": 3.9,
+      "brands": [
+        "Nutella",
+        "Carrefour"
+      ],
+      "image_hint": "chocolate_spread",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk",
+        "nuts"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_sauce_soja",
+      "name": "Sauce soja",
+      "category_id": "pantry",
+      "aliases": [
+        "sauce soja",
+        "soja"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 150,
+      "price": 2.4,
+      "brands": [
+        "Kikkoman",
+        "Carrefour"
+      ],
+      "image_hint": "soy_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "soy"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_ketchup",
+      "name": "Ketchup",
+      "category_id": "pantry",
+      "aliases": [
+        "ketchup"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 2.3,
+      "brands": [
+        "Heinz",
+        "Amora",
+        "Carrefour"
+      ],
+      "image_hint": "tomato_sauce",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_mayonnaise",
+      "name": "Mayonnaise",
+      "category_id": "pantry",
+      "aliases": [
+        "mayonnaise",
+        "mayo"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 2.4,
+      "brands": [
+        "Amora",
+        "Heinz",
+        "Carrefour"
+      ],
+      "image_hint": "mayonnaise",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_moutarde",
+      "name": "Moutarde",
+      "category_id": "pantry",
+      "aliases": [
+        "moutarde",
+        "moutarde de Dijon"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.9,
+      "brands": [
+        "Maille",
+        "Amora",
+        "Carrefour"
+      ],
+      "image_hint": "mustard",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_sel",
+      "name": "Sel",
+      "category_id": "pantry",
+      "aliases": [
+        "sel",
+        "sel fin",
+        "gros sel"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 0.7,
+      "brands": [
+        "La Baleine",
+        "Carrefour"
+      ],
+      "image_hint": "salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_poivre_noir",
+      "name": "Poivre noir",
+      "category_id": "pantry",
+      "aliases": [
+        "poivre",
+        "poivre noir"
+      ],
+      "default_unit": "g",
+      "default_quantity": 50,
+      "price": 2.5,
+      "brands": [
+        "Ducros",
+        "Carrefour"
+      ],
+      "image_hint": "pepper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_herbes_de_provence",
+      "name": "Herbes de Provence",
+      "category_id": "pantry",
+      "aliases": [
+        "herbes de provence",
+        "herbes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 20,
+      "price": 1.8,
+      "brands": [
+        "Ducros"
+      ],
+      "image_hint": "herbs",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_bouillon_de_volaille",
+      "name": "Bouillon de volaille",
+      "category_id": "pantry",
+      "aliases": [
+        "bouillon",
+        "bouillon de poule",
+        "bouillon de volaille",
+        "cubes"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [
+        "Maggi",
+        "Knorr",
+        "Carrefour"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_bouillon_de_buf",
+      "name": "Bouillon de bœuf",
+      "category_id": "pantry",
+      "aliases": [
+        "bouillon de bœuf",
+        "bouillon de boeuf"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.9,
+      "brands": [
+        "Maggi",
+        "Knorr",
+        "Carrefour"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_fr_vinaigre",
+      "name": "Vinaigre",
+      "category_id": "pantry",
+      "aliases": [
+        "vinaigre",
+        "vinaigre de vin"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.5,
+      "brands": [
+        "Amora",
+        "Maille"
+      ],
+      "image_hint": "vinegar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_cafe_soluble",
+      "name": "Café soluble",
+      "category_id": "beverages",
+      "aliases": [
+        "café soluble",
+        "nescafé"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 4.5,
+      "brands": [
+        "Nescafé",
+        "Carte Noire"
+      ],
+      "image_hint": "coffee_instant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_cafe_moulu",
+      "name": "Café moulu",
+      "category_id": "beverages",
+      "aliases": [
+        "café",
+        "café moulu",
+        "café en grains",
+        "dosettes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 3.9,
+      "brands": [
+        "Carte Noire",
+        "Lavazza",
+        "Grand'Mère"
+      ],
+      "image_hint": "coffee_ground",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_the_noir",
+      "name": "Thé noir",
+      "category_id": "beverages",
+      "aliases": [
+        "thé",
+        "thé noir",
+        "thé en sachets"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 25,
+      "price": 2.6,
+      "brands": [
+        "Lipton",
+        "Éléphant",
+        "Twinings"
+      ],
+      "image_hint": "tea_black",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_the_vert",
+      "name": "Thé vert",
+      "category_id": "beverages",
+      "aliases": [
+        "thé vert"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 25,
+      "price": 2.6,
+      "brands": [
+        "Lipton",
+        "Éléphant",
+        "Twinings"
+      ],
+      "image_hint": "tea_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_jus_d_orange",
+      "name": "Jus d'orange",
+      "category_id": "beverages",
+      "aliases": [
+        "jus d'orange",
+        "jus"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Tropicana",
+        "Joker",
+        "Carrefour"
+      ],
+      "image_hint": "juice_orange",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_jus_de_pomme",
+      "name": "Jus de pomme",
+      "category_id": "beverages",
+      "aliases": [
+        "jus de pomme"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Joker",
+        "Andros",
+        "Carrefour"
+      ],
+      "image_hint": "juice_apple",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_coca_cola",
+      "name": "Coca-Cola",
+      "category_id": "beverages",
+      "aliases": [
+        "coca",
+        "coca-cola",
+        "soda",
+        "cola"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 2.2,
+      "brands": [
+        "Coca-Cola",
+        "Pepsi"
+      ],
+      "image_hint": "coke",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_limonade",
+      "name": "Limonade",
+      "category_id": "beverages",
+      "aliases": [
+        "limonade",
+        "orangina",
+        "sprite"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 1.4,
+      "brands": [
+        "Orangina",
+        "Schweppes",
+        "Carrefour"
+      ],
+      "image_hint": "lemonade",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_eau_minerale",
+      "name": "Eau minérale",
+      "category_id": "beverages",
+      "aliases": [
+        "eau",
+        "eau minérale",
+        "eau plate"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 0.5,
+      "brands": [
+        "Evian",
+        "Volvic",
+        "Cristaline",
+        "Carrefour"
+      ],
+      "image_hint": "water_still",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_eau_gazeuse",
+      "name": "Eau gazeuse",
+      "category_id": "beverages",
+      "aliases": [
+        "eau gazeuse",
+        "eau pétillante",
+        "badoit",
+        "perrier"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.0,
+      "brands": [
+        "Badoit",
+        "Perrier",
+        "San Pellegrino"
+      ],
+      "image_hint": "water_sparkling",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_biere",
+      "name": "Bière",
+      "category_id": "beverages",
+      "aliases": [
+        "bière",
+        "bières"
+      ],
+      "default_unit": "can",
+      "default_quantity": 6,
+      "price": 6.0,
+      "brands": [
+        "Kronenbourg",
+        "1664",
+        "Heineken",
+        "Leffe"
+      ],
+      "image_hint": "beer",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_vin_rouge",
+      "name": "Vin rouge",
+      "category_id": "beverages",
+      "aliases": [
+        "vin",
+        "vin rouge",
+        "rouge"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 5.5,
+      "brands": [
+        "Bordeaux",
+        "Côtes du Rhône",
+        "Carrefour"
+      ],
+      "image_hint": "wine_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_vin_blanc",
+      "name": "Vin blanc",
+      "category_id": "beverages",
+      "aliases": [
+        "vin blanc",
+        "blanc"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 5.0,
+      "brands": [
+        "Bourgogne",
+        "Loire",
+        "Carrefour"
+      ],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_cremant",
+      "name": "Crémant",
+      "category_id": "beverages",
+      "aliases": [
+        "crémant",
+        "champagne",
+        "mousseux"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 8.0,
+      "brands": [],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_cidre",
+      "name": "Cidre",
+      "category_id": "beverages",
+      "aliases": [
+        "cidre",
+        "cidre brut"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Loïc Raison"
+      ],
+      "image_hint": "beer",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_cereales_corn_flakes",
+      "name": "Céréales corn flakes",
+      "category_id": "snacks",
+      "aliases": [
+        "céréales",
+        "corn flakes"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.2,
+      "brands": [
+        "Kellogg's",
+        "Carrefour"
+      ],
+      "image_hint": "cereal_cornflakes",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_muesli",
+      "name": "Muesli",
+      "category_id": "snacks",
+      "aliases": [
+        "muesli",
+        "müesli"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.5,
+      "brands": [
+        "Jordans",
+        "Kellogg's",
+        "Carrefour"
+      ],
+      "image_hint": "cereal_muesli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_flocons_d_avoine",
+      "name": "Flocons d'avoine",
+      "category_id": "snacks",
+      "aliases": [
+        "flocons d'avoine",
+        "avoine",
+        "porridge"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.8,
+      "brands": [
+        "Quaker",
+        "Carrefour"
+      ],
+      "image_hint": "oats_rolled",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_chips",
+      "name": "Chips",
+      "category_id": "snacks",
+      "aliases": [
+        "chips",
+        "chips nature",
+        "chips de pommes de terre"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 1.9,
+      "brands": [
+        "Lay's",
+        "Vico",
+        "Pringles"
+      ],
+      "image_hint": "chips_salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_biscuits_sales",
+      "name": "Biscuits salés",
+      "category_id": "snacks",
+      "aliases": [
+        "crackers",
+        "biscuits salés",
+        "biscuits apéritif"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "Belin",
+        "LU",
+        "Carrefour"
+      ],
+      "image_hint": "crackers",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_cookies_aux_pepites_de_chocolat",
+      "name": "Cookies aux pépites de chocolat",
+      "category_id": "snacks",
+      "aliases": [
+        "cookies",
+        "biscuits",
+        "biscuits au chocolat"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "LU",
+        "Pasquier",
+        "Carrefour"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_petit_beurre",
+      "name": "Petit Beurre",
+      "category_id": "snacks",
+      "aliases": [
+        "petit beurre",
+        "petits beurre",
+        "biscuits secs"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.8,
+      "brands": [
+        "LU",
+        "Carrefour"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_chocolat_noir",
+      "name": "Chocolat noir",
+      "category_id": "snacks",
+      "aliases": [
+        "chocolat noir",
+        "tablette de chocolat noir"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 1.7,
+      "brands": [
+        "Lindt",
+        "Poulain",
+        "Nestlé"
+      ],
+      "image_hint": "chocolate_whittakers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_chocolat_au_lait",
+      "name": "Chocolat au lait",
+      "category_id": "snacks",
+      "aliases": [
+        "chocolat",
+        "chocolat au lait",
+        "tablette de chocolat"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 1.5,
+      "brands": [
+        "Milka",
+        "Nestlé",
+        "Côte d'Or"
+      ],
+      "image_hint": "chocolate_cadbury",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_barres_de_cereales",
+      "name": "Barres de céréales",
+      "category_id": "snacks",
+      "aliases": [
+        "barres de céréales"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Kellogg's",
+        "Carrefour"
+      ],
+      "image_hint": "muesli_bars",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pop_corn",
+      "name": "Pop-corn",
+      "category_id": "snacks",
+      "aliases": [
+        "pop-corn",
+        "popcorn"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.3,
+      "brands": [
+        "Carrefour"
+      ],
+      "image_hint": "popcorn",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_fruits_secs",
+      "name": "Fruits secs",
+      "category_id": "snacks",
+      "aliases": [
+        "fruits secs",
+        "noix",
+        "amandes",
+        "cacahuètes",
+        "noix de cajou"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 3.2,
+      "brands": [
+        "Carrefour"
+      ],
+      "image_hint": "nuts_mixed",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_papier_toilette",
+      "name": "Papier toilette",
+      "category_id": "household",
+      "aliases": [
+        "papier toilette",
+        "papier wc",
+        "pq"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 12,
+      "price": 4.5,
+      "brands": [
+        "Lotus",
+        "Okay",
+        "Carrefour"
+      ],
+      "image_hint": "toilet_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_essuie_tout",
+      "name": "Essuie-tout",
+      "category_id": "household",
+      "aliases": [
+        "essuie-tout",
+        "sopalin",
+        "papier absorbant"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 4,
+      "price": 3.2,
+      "brands": [
+        "Sopalin",
+        "Lotus",
+        "Carrefour"
+      ],
+      "image_hint": "paper_towels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_mouchoirs_en_papier",
+      "name": "Mouchoirs en papier",
+      "category_id": "household",
+      "aliases": [
+        "mouchoirs",
+        "kleenex"
+      ],
+      "default_unit": "box",
+      "default_quantity": 1,
+      "price": 1.5,
+      "brands": [
+        "Kleenex",
+        "Lotus",
+        "Carrefour"
+      ],
+      "image_hint": "tissues",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_liquide_vaisselle",
+      "name": "Liquide vaisselle",
+      "category_id": "household",
+      "aliases": [
+        "liquide vaisselle",
+        "produit vaisselle",
+        "paic"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.9,
+      "brands": [
+        "Paic",
+        "Mir",
+        "Fairy"
+      ],
+      "image_hint": "dishwashing_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pastilles_lave_vaisselle",
+      "name": "Pastilles lave-vaisselle",
+      "category_id": "household",
+      "aliases": [
+        "pastilles lave-vaisselle",
+        "tablettes lave-vaisselle",
+        "finish"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 7.5,
+      "brands": [
+        "Finish",
+        "Somat",
+        "Carrefour"
+      ],
+      "image_hint": "dishwasher_tablets",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_lessive_en_poudre",
+      "name": "Lessive en poudre",
+      "category_id": "household",
+      "aliases": [
+        "lessive",
+        "lessive en poudre"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 9.0,
+      "brands": [
+        "Ariel",
+        "Skip",
+        "Le Chat",
+        "Carrefour"
+      ],
+      "image_hint": "laundry_powder",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_lessive_liquide",
+      "name": "Lessive liquide",
+      "category_id": "household",
+      "aliases": [
+        "lessive liquide",
+        "lessive"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 8.5,
+      "brands": [
+        "Ariel",
+        "Skip",
+        "Le Chat",
+        "Carrefour"
+      ],
+      "image_hint": "laundry_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_adoucissant",
+      "name": "Adoucissant",
+      "category_id": "household",
+      "aliases": [
+        "adoucissant",
+        "assouplissant"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 3.5,
+      "brands": [
+        "Lenor",
+        "Soupline",
+        "Carrefour"
+      ],
+      "image_hint": "fabric_softener",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_nettoyant_multi_usages",
+      "name": "Nettoyant multi-usages",
+      "category_id": "household",
+      "aliases": [
+        "nettoyant",
+        "spray nettoyant",
+        "multi-usages",
+        "ajax"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 750,
+      "price": 2.2,
+      "brands": [
+        "Ajax",
+        "Cif",
+        "Mr Propre",
+        "Carrefour"
+      ],
+      "image_hint": "spray_cleaner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_eau_de_javel",
+      "name": "Eau de Javel",
+      "category_id": "household",
+      "aliases": [
+        "javel",
+        "eau de javel"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 1.2,
+      "brands": [
+        "La Croix",
+        "Carrefour"
+      ],
+      "image_hint": "bleach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_sacs_poubelle",
+      "name": "Sacs poubelle",
+      "category_id": "household",
+      "aliases": [
+        "sacs poubelle"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [
+        "Alfapac",
+        "Carrefour"
+      ],
+      "image_hint": "bin_bags",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_film_alimentaire",
+      "name": "Film alimentaire",
+      "category_id": "household",
+      "aliases": [
+        "film étirable",
+        "film alimentaire",
+        "film"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Albal",
+        "Carrefour"
+      ],
+      "image_hint": "cling_film",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_papier_aluminium",
+      "name": "Papier aluminium",
+      "category_id": "household",
+      "aliases": [
+        "papier aluminium",
+        "aluminium",
+        "alu"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 2.4,
+      "brands": [
+        "Albal",
+        "Carrefour"
+      ],
+      "image_hint": "aluminium_foil",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_papier_cuisson",
+      "name": "Papier cuisson",
+      "category_id": "household",
+      "aliases": [
+        "papier cuisson",
+        "papier sulfurisé"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 2.2,
+      "brands": [
+        "Albal",
+        "Carrefour"
+      ],
+      "image_hint": "baking_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_shampooing",
+      "name": "Shampooing",
+      "category_id": "health",
+      "aliases": [
+        "shampooing",
+        "shampoing"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 3.2,
+      "brands": [
+        "Elsève",
+        "Head & Shoulders",
+        "Garnier"
+      ],
+      "image_hint": "shampoo",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_apres_shampooing",
+      "name": "Après-shampooing",
+      "category_id": "health",
+      "aliases": [
+        "après-shampooing",
+        "démêlant"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 300,
+      "price": 3.2,
+      "brands": [
+        "Elsève",
+        "Garnier"
+      ],
+      "image_hint": "conditioner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_gel_douche",
+      "name": "Gel douche",
+      "category_id": "health",
+      "aliases": [
+        "gel douche"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 2.5,
+      "brands": [
+        "Dove",
+        "Le Petit Marseillais",
+        "Nivea"
+      ],
+      "image_hint": "body_wash",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_savon",
+      "name": "Savon",
+      "category_id": "health",
+      "aliases": [
+        "savon",
+        "savon de Marseille",
+        "pain de savon"
+      ],
+      "default_unit": "bar",
+      "default_quantity": 4,
+      "price": 2.5,
+      "brands": [
+        "Dove",
+        "Le Chat",
+        "Palmolive"
+      ],
+      "image_hint": "soap_bar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_dentifrice",
+      "name": "Dentifrice",
+      "category_id": "health",
+      "aliases": [
+        "dentifrice",
+        "colgate"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 75,
+      "price": 2.0,
+      "brands": [
+        "Colgate",
+        "Signal",
+        "Elmex"
+      ],
+      "image_hint": "toothpaste",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_brosse_a_dents",
+      "name": "Brosse à dents",
+      "category_id": "health",
+      "aliases": [
+        "brosse à dents"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 3.0,
+      "brands": [
+        "Oral-B",
+        "Colgate"
+      ],
+      "image_hint": "toothbrush",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_deodorant",
+      "name": "Déodorant",
+      "category_id": "health",
+      "aliases": [
+        "déodorant"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 150,
+      "price": 3.2,
+      "brands": [
+        "Dove",
+        "Nivea",
+        "Rexona"
+      ],
+      "image_hint": "deodorant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_lames_de_rasoir",
+      "name": "Lames de rasoir",
+      "category_id": "health",
+      "aliases": [
+        "rasoirs",
+        "lames",
+        "gillette"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 9.0,
+      "brands": [
+        "Gillette",
+        "Wilkinson"
+      ],
+      "image_hint": "razor_blades",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_mousse_a_raser",
+      "name": "Mousse à raser",
+      "category_id": "health",
+      "aliases": [
+        "mousse à raser",
+        "gel à raser"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 2.5,
+      "brands": [
+        "Gillette",
+        "Nivea"
+      ],
+      "image_hint": "shaving_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_creme_solaire_spf50",
+      "name": "Crème solaire SPF50",
+      "category_id": "health",
+      "aliases": [
+        "crème solaire",
+        "solaire"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 10.0,
+      "brands": [
+        "Nivea",
+        "Garnier",
+        "La Roche-Posay"
+      ],
+      "image_hint": "sunscreen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_paracetamol",
+      "name": "Paracétamol",
+      "category_id": "health",
+      "aliases": [
+        "paracétamol",
+        "doliprane",
+        "dafalgan"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.0,
+      "brands": [
+        "Doliprane",
+        "Dafalgan",
+        "Efferalgan"
+      ],
+      "image_hint": "paracetamol",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_ibuprofene",
+      "name": "Ibuprofène",
+      "category_id": "health",
+      "aliases": [
+        "ibuprofène",
+        "advil",
+        "nurofen"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.5,
+      "brands": [
+        "Advil",
+        "Nurofen"
+      ],
+      "image_hint": "ibuprofen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_pansements",
+      "name": "Pansements",
+      "category_id": "health",
+      "aliases": [
+        "pansements",
+        "sparadrap"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.0,
+      "brands": [
+        "Urgo",
+        "Hansaplast"
+      ],
+      "image_hint": "bandaids",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_vitamine_c",
+      "name": "Vitamine C",
+      "category_id": "health",
+      "aliases": [
+        "vitamine c",
+        "upsa"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.0,
+      "brands": [
+        "Upsa",
+        "Arkopharma"
+      ],
+      "image_hint": "vitamins_c",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_serviettes_hygieniques",
+      "name": "Serviettes hygiéniques",
+      "category_id": "health",
+      "aliases": [
+        "serviettes hygiéniques",
+        "tampons",
+        "protections périodiques"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [
+        "Always",
+        "Tampax",
+        "Nana"
+      ],
+      "image_hint": "sanitary_pads",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_fr_couches",
+      "name": "Couches",
+      "category_id": "baby",
+      "aliases": [
+        "couches",
+        "couche"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 10.0,
+      "brands": [
+        "Pampers",
+        "Huggies",
+        "Carrefour Baby"
+      ],
+      "image_hint": "nappies",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_lingettes_bebe",
+      "name": "Lingettes bébé",
+      "category_id": "baby",
+      "aliases": [
+        "lingettes",
+        "lingettes bébé"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.5,
+      "brands": [
+        "Pampers",
+        "Huggies",
+        "Mixa Bébé"
+      ],
+      "image_hint": "baby_wipes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_lait_infantile",
+      "name": "Lait infantile",
+      "category_id": "baby",
+      "aliases": [
+        "lait infantile",
+        "lait 1er âge",
+        "lait 2ème âge"
+      ],
+      "default_unit": "g",
+      "default_quantity": 800,
+      "price": 18.0,
+      "brands": [
+        "Gallia",
+        "Guigoz",
+        "Blédina",
+        "Modilac"
+      ],
+      "image_hint": "baby_formula",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_croquettes_pour_chien",
+      "name": "Croquettes pour chien",
+      "category_id": "pet",
+      "aliases": [
+        "croquettes chien",
+        "nourriture chien"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 3,
+      "price": 9.5,
+      "brands": [
+        "Pedigree",
+        "Royal Canin",
+        "Purina"
+      ],
+      "image_hint": "dog_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_patee_pour_chien",
+      "name": "Pâtée pour chien",
+      "category_id": "pet",
+      "aliases": [
+        "pâtée chien",
+        "boîtes chien"
+      ],
+      "default_unit": "can",
+      "default_quantity": 6,
+      "price": 5.5,
+      "brands": [
+        "Cesar",
+        "Pedigree",
+        "Purina"
+      ],
+      "image_hint": "dog_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_croquettes_pour_chat",
+      "name": "Croquettes pour chat",
+      "category_id": "pet",
+      "aliases": [
+        "croquettes chat",
+        "nourriture chat"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 6.5,
+      "brands": [
+        "Whiskas",
+        "Purina",
+        "Royal Canin"
+      ],
+      "image_hint": "cat_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_patee_pour_chat",
+      "name": "Pâtée pour chat",
+      "category_id": "pet",
+      "aliases": [
+        "pâtée chat",
+        "sachets chat",
+        "boîtes chat"
+      ],
+      "default_unit": "can",
+      "default_quantity": 12,
+      "price": 7.5,
+      "brands": [
+        "Whiskas",
+        "Gourmet",
+        "Felix"
+      ],
+      "image_hint": "cat_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_fr_litiere_pour_chat",
+      "name": "Litière pour chat",
+      "category_id": "pet",
+      "aliases": [
+        "litière",
+        "litière chat"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 5,
+      "price": 5.0,
+      "brands": [
+        "Catsan",
+        "Carrefour"
+      ],
+      "image_hint": "cat_litter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    }
+  ]
+}
