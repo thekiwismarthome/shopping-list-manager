@@ -1,5 +1,6 @@
 """WebSocket API handlers for Shopping List Manager."""
 import io
+import json
 import logging
 import re
 from pathlib import Path
@@ -42,6 +43,8 @@ from ..const import (
     WS_TYPE_PRODUCTS_UPDATE,
     WS_TYPE_PRODUCTS_DELETE,
     WS_TYPE_OFF_FETCH,
+    WS_TYPE_USER_SETTINGS_GET,
+    WS_TYPE_USER_SETTINGS_SET,
     WS_TYPE_CATEGORIES_GET_ALL,
     WS_TYPE_LOYALTY_GET_ALL,
     WS_TYPE_LOYALTY_ADD,
@@ -1447,6 +1450,66 @@ async def websocket_get_ha_users(
         if not u.system_generated and u.is_active
     ]
     connection.send_result(msg["id"], {"users": result})
+
+
+# =============================================================================
+# USER SETTINGS HANDLERS (card preferences synced across a user's devices)
+# =============================================================================
+
+# Guard against a client storing arbitrary amounts of data.
+MAX_USER_SETTINGS_BYTES = 32 * 1024
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_USER_SETTINGS_GET,
+})
+@callback
+def websocket_get_user_settings(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Return the connected user's synced card settings (private to that user)."""
+    user = connection.user
+    if user is None:
+        connection.send_error(msg["id"], "unauthorized", "No user on this connection")
+        return
+    entry = get_storage(hass).get_user_settings(user.id)
+    connection.send_result(
+        msg["id"],
+        {
+            "settings": entry["settings"] if entry else None,
+            "updated_at": entry["updated_at"] if entry else None,
+        },
+    )
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_USER_SETTINGS_SET,
+    vol.Required("settings"): dict,
+})
+@websocket_api.async_response
+async def websocket_set_user_settings(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Store the connected user's card settings (last write wins)."""
+    user = connection.user
+    if user is None:
+        connection.send_error(msg["id"], "unauthorized", "No user on this connection")
+        return
+    settings = msg["settings"]
+    try:
+        size = len(json.dumps(settings))
+    except (TypeError, ValueError):
+        connection.send_error(msg["id"], "invalid_format", "Settings must be JSON-serialisable")
+        return
+    if size > MAX_USER_SETTINGS_BYTES:
+        connection.send_error(msg["id"], "too_large", "Settings are too large")
+        return
+    entry = await get_storage(hass).set_user_settings(user.id, settings)
+    connection.send_result(msg["id"], {"updated_at": entry["updated_at"]})
 
 
 # =============================================================================
