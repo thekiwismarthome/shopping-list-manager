@@ -75,6 +75,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                     "CA": "Canada",
                     "BE": "Belgium (Dutch)",
                     "ES": "Spain (Español)",
+                    "FR": "France (Français)",
                 }),
                 vol.Optional(
                     "enable_price_tracking",
