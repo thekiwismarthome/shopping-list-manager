@@ -12,6 +12,7 @@ STORAGE_KEY_CATEGORIES = f"{DOMAIN}.categories"
 STORAGE_KEY_LOYALTY_CARDS = f"{DOMAIN}.loyalty_cards"
 STORAGE_KEY_CUSTOM_REGIONS = f"{DOMAIN}.custom_regions"
 STORAGE_KEY_USER_SETTINGS = f"{DOMAIN}.user_settings"
+STORAGE_KEY_GROUPS = f"{DOMAIN}.groups"
 
 # WebSocket Commands - Lists
 WS_TYPE_LISTS_GET_ALL = f"{DOMAIN}/lists/get_all"
@@ -23,6 +24,11 @@ WS_TYPE_LISTS_UPDATE_MEMBERS = f"{DOMAIN}/lists/update_members"
 
 # WebSocket Commands - Users
 WS_TYPE_USERS_GET_ALL = f"{DOMAIN}/users/get_all"
+WS_TYPE_GROUPS_GET_ALL = f"{DOMAIN}/groups/get_all"
+WS_TYPE_GROUPS_CREATE = f"{DOMAIN}/groups/create"
+WS_TYPE_GROUPS_UPDATE = f"{DOMAIN}/groups/update"
+WS_TYPE_GROUPS_DELETE = f"{DOMAIN}/groups/delete"
+WS_TYPE_GROUPS_ADOPT = f"{DOMAIN}/groups/adopt_shared"
 
 # WebSocket Commands - Items
 WS_TYPE_ITEMS_GET = f"{DOMAIN}/items/get"
@@ -74,6 +80,7 @@ EVENT_ITEM_CHECKED = f"{DOMAIN}_item_checked"
 EVENT_ITEM_DELETED = f"{DOMAIN}_item_deleted"
 EVENT_LIST_UPDATED = f"{DOMAIN}_list_updated"
 EVENT_LIST_DELETED = f"{DOMAIN}_list_deleted"
+EVENT_GROUPS_UPDATED = f"{DOMAIN}_groups_updated"
 
 # Image Configuration
 IMAGE_FORMAT = "webp"

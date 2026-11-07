@@ -28,6 +28,12 @@ from ..const import (
     WS_TYPE_LISTS_SET_ACTIVE,
     WS_TYPE_LISTS_UPDATE_MEMBERS,
     WS_TYPE_USERS_GET_ALL,
+    WS_TYPE_GROUPS_GET_ALL,
+    WS_TYPE_GROUPS_CREATE,
+    WS_TYPE_GROUPS_UPDATE,
+    WS_TYPE_GROUPS_DELETE,
+    WS_TYPE_GROUPS_ADOPT,
+    EVENT_GROUPS_UPDATED,
     WS_TYPE_ITEMS_GET,
     WS_TYPE_ITEMS_ADD,
     WS_TYPE_ITEMS_UPDATE,
@@ -61,6 +67,7 @@ from ..const import (
 )
 from .. import get_storage
 from ..utils.openfoodfacts import search_products as search_off_products
+from ..utils.access import can_manage
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -108,19 +115,22 @@ def _get_openfoodfacts_request_config(hass: HomeAssistant) -> tuple[str, Dict[st
     return base_url, headers
 
 
-def _user_can_access_list(lst, user) -> bool:
+def _user_can_access_list(storage, lst, user) -> bool:
     """Return True if the user may read or write to this list.
 
-    Global lists (owner_id=None) are accessible to everyone.
-    Private lists are accessible to their owner, anyone in allowed_users, and admins.
+    Lists with no owner are accessible to everyone. Other lists are accessible to their owner,
+    the group they belong to, anyone they are shared with (people or groups), and admins.
     """
     if lst.owner_id is None:
         return True
     if user is None:
         return False
-    if user.is_admin or user.id == lst.owner_id:
-        return True
-    return user.id in (lst.allowed_users or [])
+    return storage.user_can_access(lst, user.id, user.is_admin)
+
+
+def _user_can_manage(owner_id, user) -> bool:
+    """Owner or admin (anyone, for items with no owner)."""
+    return can_manage(owner_id, user.id if user else None, bool(user and user.is_admin))
 
 
 def _check_list_access(storage, connection, msg, list_id, require_owner=False):
@@ -140,11 +150,11 @@ def _check_list_access(storage, connection, msg, list_id, require_owner=False):
 
     user = connection.user
     if require_owner:
-        if lst.owner_id is not None and not (user and (user.is_admin or user.id == lst.owner_id)):
+        if not _user_can_manage(lst.owner_id, user):
             connection.send_error(msg["id"], "forbidden", "Only the list owner can perform this action")
             return None
     else:
-        if not _user_can_access_list(lst, user):
+        if not _user_can_access_list(storage, lst, user):
             connection.send_error(msg["id"], "forbidden", "You do not have access to this list")
             return None
 
@@ -158,6 +168,14 @@ def _find_item_list_id(storage, item_id):
             if item.id == item_id:
                 return list_id
     return None
+
+
+def _user_in_group_or_admin(storage, user, group_id) -> bool:
+    """True if the group exists and the user belongs to it (admins may use any group)."""
+    group = storage.get_group(group_id)
+    if group is None or user is None:
+        return False
+    return user.is_admin or user.id in (group.members or [])
 
 
 # =============================================================================
@@ -187,7 +205,7 @@ async def websocket_subscribe(
         list_id = data.get("list_id")
         if list_id:
             lst = storage.get_list(list_id)
-            if lst and not _user_can_access_list(lst, connection.user):
+            if lst and not _user_can_access_list(storage, lst, connection.user):
                 return  # skip — user cannot see this list
 
         connection.send_message(
@@ -208,6 +226,7 @@ async def websocket_subscribe(
     unsubs.append(hass.bus.async_listen(EVENT_ITEM_DELETED, forward_event))
     unsubs.append(hass.bus.async_listen(EVENT_LIST_UPDATED, forward_event))
     unsubs.append(hass.bus.async_listen(EVENT_LIST_DELETED, forward_event))
+    unsubs.append(hass.bus.async_listen(EVENT_GROUPS_UPDATED, forward_event))
     
     # Clean up when connection closes
     connection.subscriptions[msg["id"]] = lambda: [unsub() for unsub in unsubs]
@@ -321,6 +340,8 @@ def websocket_get_lists(
         vol.Required("name"): str,
         vol.Optional("icon", default="mdi:cart"): str,
         vol.Optional("private", default=True): bool,
+        # Share the new list with one of the user's own households
+        vol.Optional("group_id"): vol.Any(str, None),
     }
 )
 @websocket_api.async_response
@@ -336,10 +357,20 @@ async def websocket_create_list(
     is_private = msg.get("private", True)
     owner_id = connection.user.id if is_private and connection.user else None
 
+    # A household list: the user must belong to the group (admins may pick any group)
+    group_id = msg.get("group_id")
+    if group_id:
+        if not _user_in_group_or_admin(storage, connection.user, group_id):
+            connection.send_error(msg["id"], "forbidden", "You are not in that group")
+            return
+        if owner_id is None:
+            owner_id = connection.user.id if connection.user else None
+
     new_list = await storage.create_list(
         name=msg["name"],
         icon=msg.get("icon", "mdi:cart"),
         owner_id=owner_id,
+        group_id=group_id,
     )
     
     # Fire event
@@ -362,6 +393,8 @@ async def websocket_create_list(
         vol.Optional("icon"): str,
         vol.Optional("category_order"): [str],
         vol.Optional("ha_todo_entity_id"): vol.Any(str, None),
+        # Move the list to one of the user's households (None takes it out of its household)
+        vol.Optional("group_id"): vol.Any(str, None),
     }
 )
 @websocket_api.async_response
@@ -374,7 +407,8 @@ async def websocket_update_list(
     storage = get_storage(hass)
     list_id = msg["list_id"]
 
-    if _check_list_access(storage, connection, msg, list_id, require_owner=True) is None:
+    current_list = _check_list_access(storage, connection, msg, list_id, require_owner=True)
+    if current_list is None:
         return
 
     # Build update kwargs
@@ -387,6 +421,15 @@ async def websocket_update_list(
         update_data["category_order"] = msg["category_order"]
     if "ha_todo_entity_id" in msg:
         update_data["ha_todo_entity_id"] = msg["ha_todo_entity_id"]
+    if "group_id" in msg:
+        new_group = msg["group_id"]
+        if new_group and not _user_in_group_or_admin(storage, connection.user, new_group):
+            connection.send_error(msg["id"], "forbidden", "You are not in that group")
+            return
+        update_data["group_id"] = new_group
+        # A list that was visible to everyone gets an owner when it joins a household
+        if new_group and current_list.owner_id is None and connection.user:
+            update_data["owner_id"] = connection.user.id
 
     updated_list = await storage.update_list(list_id, **update_data)
     
@@ -428,11 +471,9 @@ async def websocket_delete_list(
         return
 
     # Only the owner or an admin may delete a private list
-    if lst.owner_id is not None:
-        user = connection.user
-        if not (user and (user.is_admin or user.id == lst.owner_id)):
-            connection.send_error(msg["id"], "forbidden", "Only the list owner can delete this list")
-            return
+    if not _user_can_manage(lst.owner_id, connection.user):
+        connection.send_error(msg["id"], "forbidden", "Only the list owner can delete this list")
+        return
 
     success = await storage.delete_list(list_id)
 
@@ -1383,7 +1424,11 @@ async def websocket_export_data(
 ) -> None:
     """Export all user-created data as a JSON-serialisable dict."""
     storage = get_storage(hass)
-    data = await storage.export_user_data()
+    user = connection.user
+    data = await storage.export_user_data(
+        user_id=user.id if user else None,
+        is_admin=user.is_admin if user else True,
+    )
     connection.send_result(msg["id"], data)
 
 
@@ -1401,7 +1446,12 @@ async def websocket_import_data(
 ) -> None:
     """Import user data from a backup payload."""
     storage = get_storage(hass)
-    counts = await storage.import_user_data(msg["data"])
+    user = connection.user
+    counts = await storage.import_user_data(
+        msg["data"],
+        user_id=user.id if user else None,
+        is_admin=user.is_admin if user else True,
+    )
     connection.send_result(msg["id"], {"success": True, "imported": counts})
 
 
@@ -1414,6 +1464,7 @@ async def websocket_import_data(
         vol.Required("type"): WS_TYPE_LISTS_UPDATE_MEMBERS,
         vol.Required("list_id"): str,
         vol.Required("allowed_users"): [str],
+        vol.Optional("allowed_groups"): [str],
     }
 )
 @websocket_api.async_response
@@ -1433,11 +1484,11 @@ async def websocket_update_list_members(
 
     # Only the owner or an admin may manage members
     user = connection.user
-    if lst.owner_id is not None and not (user and (user.is_admin or user.id == lst.owner_id)):
+    if not _user_can_manage(lst.owner_id, user):
         connection.send_error(msg["id"], "forbidden", "Only the list owner can manage members")
         return
 
-    updated = await storage.update_list_members(list_id, msg["allowed_users"])
+    updated = await storage.update_list_members(list_id, msg["allowed_users"], msg.get("allowed_groups"))
     hass.bus.async_fire(
         EVENT_LIST_UPDATED,
         {"list_id": list_id, "action": "members_updated"}
@@ -1468,6 +1519,169 @@ async def websocket_get_ha_users(
         if not u.system_generated and u.is_active
     ]
     connection.send_result(msg["id"], {"users": result})
+
+
+# =============================================================================
+# GROUP (HOUSEHOLD) HANDLERS
+# =============================================================================
+
+MAX_GROUP_NAME = 60
+
+
+def _group_dict(group, include_members: bool) -> Dict[str, Any]:
+    d = {"id": group.id, "name": group.name}
+    if include_members:
+        d["members"] = list(group.members or [])
+    return d
+
+
+async def _valid_member_ids(hass: HomeAssistant, ids) -> list:
+    """Keep only ids that belong to real, active, non-system Home Assistant users."""
+    users = await hass.auth.async_get_users()
+    ok = {u.id for u in users if not u.system_generated and u.is_active}
+    return [i for i in dict.fromkeys(ids or []) if i in ok]
+
+
+def _require_admin(connection, msg) -> bool:
+    user = connection.user
+    if user is None or not user.is_admin:
+        connection.send_error(msg["id"], "forbidden", "Only a Home Assistant administrator can manage groups")
+        return False
+    return True
+
+
+@websocket_api.websocket_command({vol.Required("type"): WS_TYPE_GROUPS_GET_ALL})
+@callback
+def websocket_get_groups(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Return the groups.
+
+    Admins get every group with its members. Other users get the groups they belong to (with
+    members) plus the names of the other groups, so they can share a list with one.
+    """
+    storage = get_storage(hass)
+    user = connection.user
+    mine = storage.get_user_group_ids(user.id if user else None)
+    is_admin = bool(user and user.is_admin)
+    groups = [
+        _group_dict(g, include_members=is_admin or g.id in mine)
+        for g in storage.get_groups()
+    ]
+    result: Dict[str, Any] = {"groups": groups, "mine": sorted(mine)}
+    if is_admin:
+        result["shared_with_everyone"] = storage.count_shared_with_everyone()
+    connection.send_result(msg["id"], result)
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_GROUPS_CREATE,
+    vol.Required("name"): vol.All(str, vol.Length(min=1, max=MAX_GROUP_NAME)),
+    vol.Optional("members", default=[]): [str],
+})
+@websocket_api.async_response
+async def websocket_create_group(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Create a group (admin only)."""
+    if not _require_admin(connection, msg):
+        return
+    storage = get_storage(hass)
+    if not msg["name"].strip():
+        connection.send_error(msg["id"], "invalid_format", "A group needs a name")
+        return
+    members = await _valid_member_ids(hass, msg.get("members"))
+    group = await storage.create_group(msg["name"], members)
+    hass.bus.async_fire(EVENT_GROUPS_UPDATED, {"action": "created", "group_id": group.id})
+    connection.send_result(msg["id"], {"group": _group_dict(group, True)})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_GROUPS_UPDATE,
+    vol.Required("group_id"): str,
+    vol.Optional("name"): vol.All(str, vol.Length(min=1, max=MAX_GROUP_NAME)),
+    vol.Optional("members"): [str],
+})
+@websocket_api.async_response
+async def websocket_update_group(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Rename a group or change its members (admin only)."""
+    if not _require_admin(connection, msg):
+        return
+    storage = get_storage(hass)
+    if "name" in msg and not msg["name"].strip():
+        connection.send_error(msg["id"], "invalid_format", "A group needs a name")
+        return
+    members = await _valid_member_ids(hass, msg["members"]) if "members" in msg else None
+    group = await storage.update_group(msg["group_id"], name=msg.get("name"), members=members)
+    if group is None:
+        connection.send_error(msg["id"], "not_found", "Group not found")
+        return
+    hass.bus.async_fire(EVENT_GROUPS_UPDATED, {"action": "updated", "group_id": group.id})
+    connection.send_result(msg["id"], {"group": _group_dict(group, True)})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_GROUPS_DELETE,
+    vol.Required("group_id"): str,
+})
+@websocket_api.async_response
+async def websocket_delete_group(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Delete a group (admin only). A group that still owns lists or cards cannot be deleted."""
+    if not _require_admin(connection, msg):
+        return
+    storage = get_storage(hass)
+    group_id = msg["group_id"]
+    if storage.get_group(group_id) is None:
+        connection.send_error(msg["id"], "not_found", "Group not found")
+        return
+    owned = storage.count_group_owned(group_id)
+    if owned:
+        connection.send_error(
+            msg["id"], "group_in_use",
+            f"This group still has {owned} list(s) or card(s). Move or delete them first.",
+        )
+        return
+    await storage.delete_group(group_id)
+    hass.bus.async_fire(EVENT_GROUPS_UPDATED, {"action": "deleted", "group_id": group_id})
+    connection.send_result(msg["id"], {"success": True})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_GROUPS_ADOPT,
+    vol.Required("group_id"): str,
+})
+@websocket_api.async_response
+async def websocket_adopt_shared(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Move every list and card that is visible to everyone into a group (admin only).
+
+    The admin who runs it becomes their owner. Use it once when households are first set up.
+    """
+    if not _require_admin(connection, msg):
+        return
+    storage = get_storage(hass)
+    if storage.get_group(msg["group_id"]) is None:
+        connection.send_error(msg["id"], "not_found", "Group not found")
+        return
+    moved = await storage.adopt_shared(msg["group_id"], connection.user.id)
+    hass.bus.async_fire(EVENT_LIST_UPDATED, {"action": "adopted"})
+    hass.bus.async_fire(EVENT_GROUPS_UPDATED, {"action": "adopted", "group_id": msg["group_id"]})
+    connection.send_result(msg["id"], {"moved": moved})
 
 
 # =============================================================================
@@ -1562,6 +1776,7 @@ async def websocket_get_loyalty_cards(
     vol.Optional("notes", default=""): str,
     vol.Optional("color", default="#9fa8da"): str,
     vol.Optional("private", default=True): bool,
+    vol.Optional("group_id"): vol.Any(str, None),
 })
 @websocket_api.async_response
 async def websocket_add_loyalty_card(
@@ -1574,8 +1789,17 @@ async def websocket_add_loyalty_card(
     user = connection.user
     owner_id = user.id if (user and msg.get("private")) else None
 
+    group_id = msg.get("group_id")
+    if group_id:
+        if not _user_in_group_or_admin(storage, user, group_id):
+            connection.send_error(msg["id"], "forbidden", "You are not in that group")
+            return
+        if owner_id is None and user:
+            owner_id = user.id
+
     card = await storage.create_loyalty_card(
         owner_id=owner_id,
+        group_id=group_id,
         name=msg["name"],
         number=msg["number"],
         barcode=msg.get("barcode", ""),
@@ -1614,7 +1838,7 @@ async def websocket_update_loyalty_card(
         return
 
     user = connection.user
-    if card.owner_id is not None and not (user and (user.is_admin or user.id == card.owner_id)):
+    if not _user_can_manage(card.owner_id, user):
         connection.send_error(msg["id"], "forbidden", "Only the card owner can update it")
         return
 
@@ -1643,7 +1867,7 @@ async def websocket_delete_loyalty_card(
         return
 
     user = connection.user
-    if card.owner_id is not None and not (user and (user.is_admin or user.id == card.owner_id)):
+    if not _user_can_manage(card.owner_id, user):
         connection.send_error(msg["id"], "forbidden", "Only the card owner can delete it")
         return
 
@@ -1655,6 +1879,7 @@ async def websocket_delete_loyalty_card(
     vol.Required("type"): WS_TYPE_LOYALTY_UPDATE_MEMBERS,
     vol.Required("card_id"): str,
     vol.Required("allowed_users"): [str],
+    vol.Optional("allowed_groups"): [str],
 })
 @websocket_api.async_response
 async def websocket_update_loyalty_card_members(
@@ -1672,9 +1897,9 @@ async def websocket_update_loyalty_card_members(
         return
 
     user = connection.user
-    if card.owner_id is not None and not (user and (user.is_admin or user.id == card.owner_id)):
+    if not _user_can_manage(card.owner_id, user):
         connection.send_error(msg["id"], "forbidden", "Only the card owner can manage members")
         return
 
-    updated = await storage.update_loyalty_card_members(card_id, msg["allowed_users"])
+    updated = await storage.update_loyalty_card_members(card_id, msg["allowed_users"], msg.get("allowed_groups"))
     connection.send_result(msg["id"], {"card": updated.to_dict()})

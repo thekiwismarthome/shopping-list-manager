@@ -112,6 +112,23 @@ class LoyaltyCard:
     # Ownership: None = visible to all users; set = private to owner + allowed_users
     owner_id: Optional[str] = None
     allowed_users: List[str] = field(default_factory=list)
+    # Households: the card also belongs to a group, and can be shared with other groups
+    group_id: Optional[str] = None
+    allowed_groups: List[str] = field(default_factory=list)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)
+
+
+@dataclass
+class Group:
+    """A household: a named set of Home Assistant users who share lists and loyalty cards."""
+    id: str
+    name: str
+    members: List[str] = field(default_factory=list)  # Home Assistant user ids
+    created_at: str = field(default_factory=current_timestamp)
+    updated_at: str = field(default_factory=current_timestamp)
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
@@ -132,6 +149,9 @@ class ShoppingList:
     # Ownership: None = visible to all users; set = private to owner + allowed_users
     owner_id: Optional[str] = None
     allowed_users: List[str] = field(default_factory=list)
+    # Households: the group the list belongs to, and other groups it is shared with
+    group_id: Optional[str] = None
+    allowed_groups: List[str] = field(default_factory=list)
     ha_todo_entity_id: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
