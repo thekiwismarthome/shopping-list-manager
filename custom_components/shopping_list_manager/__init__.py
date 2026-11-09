@@ -138,6 +138,16 @@ async def _async_register_websocket_handlers(
         hass,
         handlers.websocket_set_active_list,
     )
+
+    # Groups (households)
+    for _cmd in (
+        handlers.websocket_get_groups,
+        handlers.websocket_create_group,
+        handlers.websocket_update_group,
+        handlers.websocket_delete_group,
+        handlers.websocket_adopt_shared,
+    ):
+        websocket_api.async_register_command(hass, _cmd)
     
     # Items handlers
     websocket_api.async_register_command(

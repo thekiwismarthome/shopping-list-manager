@@ -22,6 +22,7 @@ from .const import (
     STORAGE_KEY_LOYALTY_CARDS,
     STORAGE_KEY_CUSTOM_REGIONS,
     STORAGE_KEY_USER_SETTINGS,
+    STORAGE_KEY_GROUPS,
     IMAGES_LOCAL_DIR,
     IMAGE_SIZE,
     IMAGE_QUALITY,
@@ -30,7 +31,8 @@ from .const import (
     LEGACY_IMAGE_URL_PREFIX,
 )
 from .data.catalog_loader import load_product_catalog
-from .models import ShoppingList, Item, Product, Category, LoyaltyCard, generate_id
+from .models import ShoppingList, Item, Product, Category, LoyaltyCard, Group, generate_id
+from .utils.access import can_access
 from .data.category_loader import load_categories
 
 _LOGGER = logging.getLogger(__name__)
@@ -57,12 +59,15 @@ class ShoppingListStorage:
         self._store_loyalty_cards = Store(hass, STORAGE_VERSION, STORAGE_KEY_LOYALTY_CARDS)
         self._store_custom_regions = Store(hass, STORAGE_VERSION, STORAGE_KEY_CUSTOM_REGIONS)
         self._store_user_settings = Store(hass, STORAGE_VERSION, STORAGE_KEY_USER_SETTINGS)
+        self._store_groups = Store(hass, STORAGE_VERSION, STORAGE_KEY_GROUPS)
 
         self._lists: Dict[str, ShoppingList] = {}
         self._items: Dict[str, List[Item]] = {}
         self._products: Dict[str, Product] = {}
         self._categories: List[Category] = []
         self._loyalty_cards: Dict[str, LoyaltyCard] = {}
+        # Households: named sets of HA users who share lists and loyalty cards
+        self._groups: Dict[str, Group] = {}
         self._custom_regions: Dict[str, Any] = {}  # code -> {name, currency_symbol, language}
         # HA user id -> {"settings": {...}, "updated_at": iso}; card UI preferences synced across devices
         self._user_settings: Dict[str, Dict[str, Any]] = {}
@@ -168,6 +173,15 @@ class ShoppingListStorage:
             }
             _LOGGER.debug("Loaded %d loyalty cards", len(self._loyalty_cards))
 
+        # Load groups (households)
+        groups_data = await self._store_groups.async_load()
+        if groups_data:
+            self._groups = {
+                group_id: Group(**group_data)
+                for group_id, group_data in groups_data.items()
+            }
+            _LOGGER.debug("Loaded %d groups", len(self._groups))
+
         # Load per-user card settings (synced across a user's devices)
         user_settings_data = await self._store_user_settings.async_load()
         if user_settings_data:
@@ -203,20 +217,122 @@ class ShoppingListStorage:
         data = {list_id: lst.to_dict() for list_id, lst in self._lists.items()}
         await self._store_lists.async_save(data)
     
+    # Groups (households) -----------------------------------------------------
+    async def _save_groups(self) -> None:
+        """Save groups to storage."""
+        data = {group_id: g.to_dict() for group_id, g in self._groups.items()}
+        await self._store_groups.async_save(data)
+
+    def get_groups(self) -> List[Group]:
+        """Return every group."""
+        return list(self._groups.values())
+
+    def get_group(self, group_id: str) -> Optional[Group]:
+        """Return one group."""
+        return self._groups.get(group_id)
+
+    def get_user_group_ids(self, user_id: Optional[str]) -> set:
+        """Return the ids of the groups a user belongs to."""
+        if not user_id:
+            return set()
+        return {g.id for g in self._groups.values() if user_id in (g.members or [])}
+
+    def user_can_access(self, item, user_id: Optional[str], is_admin: bool) -> bool:
+        """Return True if the user may see a list or loyalty card."""
+        return can_access(
+            item.owner_id, getattr(item, "group_id", None),
+            item.allowed_users, getattr(item, "allowed_groups", None),
+            user_id, is_admin, self.get_user_group_ids(user_id),
+        )
+
+    async def create_group(self, name: str, members: Optional[List[str]] = None) -> Group:
+        """Create a group."""
+        group = Group(id=generate_id(), name=name.strip(), members=list(dict.fromkeys(members or [])))
+        self._groups[group.id] = group
+        await self._save_groups()
+        _LOGGER.info("Created group: %s", group.name)
+        return group
+
+    async def update_group(
+        self, group_id: str, name: Optional[str] = None, members: Optional[List[str]] = None
+    ) -> Optional[Group]:
+        """Rename a group or change who is in it."""
+        group = self._groups.get(group_id)
+        if group is None:
+            return None
+        if name is not None:
+            group.name = name.strip()
+        if members is not None:
+            group.members = list(dict.fromkeys(members))
+        from .models import current_timestamp
+        group.updated_at = current_timestamp()
+        await self._save_groups()
+        return group
+
+    def count_group_owned(self, group_id: str) -> int:
+        """How many lists and loyalty cards belong to this group (not just shared with it)."""
+        return (
+            sum(1 for l in self._lists.values() if l.group_id == group_id)
+            + sum(1 for c in self._loyalty_cards.values() if c.group_id == group_id)
+        )
+
+    async def delete_group(self, group_id: str) -> bool:
+        """Delete a group and stop sharing anything with it. The caller checks count_group_owned first."""
+        if group_id not in self._groups:
+            return False
+        del self._groups[group_id]
+        for lst in self._lists.values():
+            if group_id in (lst.allowed_groups or []):
+                lst.allowed_groups = [g for g in lst.allowed_groups if g != group_id]
+        for card in self._loyalty_cards.values():
+            if group_id in (card.allowed_groups or []):
+                card.allowed_groups = [g for g in card.allowed_groups if g != group_id]
+        await self._save_groups()
+        await self._save_lists()
+        await self._save_loyalty_cards()
+        return True
+
+    def count_shared_with_everyone(self) -> Dict[str, int]:
+        """Lists and cards with no owner, which every user can see."""
+        return {
+            "lists": sum(1 for l in self._lists.values() if l.owner_id is None),
+            "cards": sum(1 for c in self._loyalty_cards.values() if c.owner_id is None),
+        }
+
+    async def adopt_shared(self, group_id: str, owner_id: str) -> Dict[str, int]:
+        """Move everything visible to everyone into a group, owned by owner_id.
+
+        Used once, when households are first set up, so existing lists stop being visible to
+        people outside the household.
+        """
+        moved = {"lists": 0, "cards": 0}
+        for lst in self._lists.values():
+            if lst.owner_id is None:
+                lst.owner_id, lst.group_id = owner_id, group_id
+                moved["lists"] += 1
+        for card in self._loyalty_cards.values():
+            if card.owner_id is None:
+                card.owner_id, card.group_id = owner_id, group_id
+                moved["cards"] += 1
+        if moved["lists"]:
+            await self._save_lists()
+        if moved["cards"]:
+            await self._save_loyalty_cards()
+        return moved
+
     def get_lists(self, user_id: str = None, is_admin: bool = False) -> List[ShoppingList]:
         """Get lists visible to the specified user.
 
-        Global lists (owner_id=None) are visible to everyone.
-        Private lists are visible to their owner, anyone in allowed_users, and admins.
+        Lists with no owner are visible to everyone. Other lists are visible to their owner,
+        the group they belong to, anyone they are shared with (people or groups), and admins.
         """
         all_lists = list(self._lists.values())
         if is_admin or user_id is None:
             return all_lists
+        groups = self.get_user_group_ids(user_id)
         return [
             lst for lst in all_lists
-            if lst.owner_id is None
-            or lst.owner_id == user_id
-            or user_id in (lst.allowed_users or [])
+            if can_access(lst.owner_id, lst.group_id, lst.allowed_users, lst.allowed_groups, user_id, is_admin, groups)
         ]
     
     def get_list(self, list_id: str) -> Optional[ShoppingList]:
@@ -230,14 +346,18 @@ class ShoppingListStorage:
                 return lst
         return None
     
-    async def create_list(self, name: str, icon: str = "mdi:cart", owner_id: str = None) -> ShoppingList:
-        """Create a new list. Pass owner_id to make the list private to that user."""
+    async def create_list(
+        self, name: str, icon: str = "mdi:cart", owner_id: str = None, group_id: str = None
+    ) -> ShoppingList:
+        """Create a new list. Pass owner_id to make the list private to that user, and group_id
+        to also share it with that group."""
         new_list = ShoppingList(
             id=generate_id(),
             name=name,
             icon=icon,
             category_order=[cat.id for cat in self._categories],
             owner_id=owner_id,
+            group_id=group_id if owner_id else None,
         )
         self._lists[new_list.id] = new_list
         self._items[new_list.id] = []
@@ -263,12 +383,16 @@ class ShoppingListStorage:
         _LOGGER.debug("Updated list: %s", list_id)
         return lst
     
-    async def update_list_members(self, list_id: str, allowed_users: List[str]) -> Optional[ShoppingList]:
-        """Update the allowed_users for a private list."""
+    async def update_list_members(
+        self, list_id: str, allowed_users: List[str], allowed_groups: Optional[List[str]] = None
+    ) -> Optional[ShoppingList]:
+        """Update who a private list is shared with (people, and optionally groups)."""
         if list_id not in self._lists:
             return None
         lst = self._lists[list_id]
         lst.allowed_users = allowed_users
+        if allowed_groups is not None:
+            lst.allowed_groups = [g for g in dict.fromkeys(allowed_groups) if g in self._groups]
         from .models import current_timestamp
         lst.updated_at = current_timestamp()
         await self._save_lists()
@@ -751,16 +875,23 @@ class ShoppingListStorage:
     # Backup / Restore
     # ---------------------------------------------------------------------------
 
-    async def export_user_data(self) -> dict:
-        """Return a serialisable snapshot of all user-created data."""
+    async def export_user_data(self, user_id: Optional[str] = None, is_admin: bool = True) -> dict:
+        """Return a serialisable snapshot of the user-created data the user may see.
+
+        Admins (and callers with no user) get everything; other users only get the lists they
+        can see, so a backup never contains another household's lists.
+        """
         user_products = [
             p.to_dict() for p in self._products.values()
             if getattr(p, "source", "user") == "user"
         ]
-        lists = [lst.to_dict() for lst in self._lists.values()]
+        visible = self.get_lists(user_id=user_id, is_admin=is_admin)
+        lists = [lst.to_dict() for lst in visible]
+        visible_ids = {lst.id for lst in visible}
         items = {
             list_id: [item.to_dict() for item in items_list]
             for list_id, items_list in self._items.items()
+            if list_id in visible_ids
         }
         return {
             "slm_backup_version": "1.0",
@@ -771,8 +902,13 @@ class ShoppingListStorage:
             "items": items,
         }
 
-    async def import_user_data(self, data: dict) -> dict:
-        """Merge a backup into live storage. Skips anything already present by ID."""
+    async def import_user_data(self, data: dict, user_id: Optional[str] = None, is_admin: bool = True) -> dict:
+        """Merge a backup into live storage. Skips anything already present by ID.
+
+        Admins restore lists exactly as they were. For anyone else, imported lists become theirs:
+        the owner, group and sharing from the file are dropped, so a file cannot hand a user
+        access to someone else's list.
+        """
         imported_products = 0
         imported_lists = 0
         imported_items = 0
@@ -797,6 +933,9 @@ class ShoppingListStorage:
                 try:
                     lst = ShoppingList(**list_data)
                     lst.active = False
+                    if not is_admin and user_id:
+                        lst.owner_id, lst.group_id = user_id, None
+                        lst.allowed_users, lst.allowed_groups = [], []
                     self._lists[list_id] = lst
                     imported_lists += 1
                 except Exception as err:
@@ -869,29 +1008,29 @@ class ShoppingListStorage:
     def get_loyalty_cards(self, user_id: str = None, is_admin: bool = False) -> List[LoyaltyCard]:
         """Get loyalty cards visible to the specified user.
 
-        Global cards (owner_id=None) are visible to everyone.
-        Private cards are visible to their owner, anyone in allowed_users, and admins.
+        Cards with no owner are visible to everyone. Other cards are visible to their owner,
+        the group they belong to, anyone they are shared with (people or groups), and admins.
         """
         all_cards = list(self._loyalty_cards.values())
         if is_admin or user_id is None:
             return all_cards
+        groups = self.get_user_group_ids(user_id)
         return [
             card for card in all_cards
-            if card.owner_id is None
-            or card.owner_id == user_id
-            or user_id in (card.allowed_users or [])
+            if can_access(card.owner_id, card.group_id, card.allowed_users, card.allowed_groups, user_id, is_admin, groups)
         ]
 
     def get_loyalty_card(self, card_id: str) -> Optional[LoyaltyCard]:
         """Get a specific loyalty card."""
         return self._loyalty_cards.get(card_id)
 
-    async def create_loyalty_card(self, owner_id: str = None, **kwargs) -> LoyaltyCard:
+    async def create_loyalty_card(self, owner_id: str = None, group_id: str = None, **kwargs) -> LoyaltyCard:
         """Create a new loyalty card."""
         from .models import current_timestamp
         new_card = LoyaltyCard(
             id=generate_id(),
             owner_id=owner_id,
+            group_id=group_id if owner_id else None,
             **kwargs
         )
         self._loyalty_cards[new_card.id] = new_card
@@ -925,13 +1064,17 @@ class ShoppingListStorage:
         _LOGGER.debug("Deleted loyalty card: %s", card_id)
         return True
 
-    async def update_loyalty_card_members(self, card_id: str, allowed_users: List[str]) -> Optional[LoyaltyCard]:
-        """Update the allowed_users for a private loyalty card."""
+    async def update_loyalty_card_members(
+        self, card_id: str, allowed_users: List[str], allowed_groups: Optional[List[str]] = None
+    ) -> Optional[LoyaltyCard]:
+        """Update who a private loyalty card is shared with (people, and optionally groups)."""
         if card_id not in self._loyalty_cards:
             return None
 
         card = self._loyalty_cards[card_id]
         card.allowed_users = allowed_users
+        if allowed_groups is not None:
+            card.allowed_groups = [g for g in dict.fromkeys(allowed_groups) if g in self._groups]
         from .models import current_timestamp
         card.updated_at = current_timestamp()
         await self._save_loyalty_cards()
