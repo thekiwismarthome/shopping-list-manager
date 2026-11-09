@@ -146,6 +146,11 @@ async def _async_register_websocket_handlers(
         handlers.websocket_update_group,
         handlers.websocket_delete_group,
         handlers.websocket_adopt_shared,
+        handlers.websocket_get_supermarket_chains,
+        handlers.websocket_get_supermarkets,
+        handlers.websocket_add_supermarket,
+        handlers.websocket_update_supermarket,
+        handlers.websocket_delete_supermarket,
     ):
         websocket_api.async_register_command(hass, _cmd)
     

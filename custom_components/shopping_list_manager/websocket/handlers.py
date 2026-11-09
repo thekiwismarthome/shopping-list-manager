@@ -33,6 +33,11 @@ from ..const import (
     WS_TYPE_GROUPS_UPDATE,
     WS_TYPE_GROUPS_DELETE,
     WS_TYPE_GROUPS_ADOPT,
+    WS_TYPE_SUPERMARKETS_CHAINS,
+    WS_TYPE_SUPERMARKETS_GET_ALL,
+    WS_TYPE_SUPERMARKETS_ADD,
+    WS_TYPE_SUPERMARKETS_UPDATE,
+    WS_TYPE_SUPERMARKETS_DELETE,
     EVENT_GROUPS_UPDATED,
     WS_TYPE_ITEMS_GET,
     WS_TYPE_ITEMS_ADD,
@@ -68,6 +73,7 @@ from ..const import (
 from .. import get_storage
 from ..utils.openfoodfacts import search_products as search_off_products
 from ..utils.access import can_manage
+from ..data.supermarkets import get_chains
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -1682,6 +1688,157 @@ async def websocket_adopt_shared(
     hass.bus.async_fire(EVENT_LIST_UPDATED, {"action": "adopted"})
     hass.bus.async_fire(EVENT_GROUPS_UPDATED, {"action": "adopted", "group_id": msg["group_id"]})
     connection.send_result(msg["id"], {"moved": moved})
+
+
+# =============================================================================
+# SUPERMARKET HANDLERS
+# =============================================================================
+
+_LATITUDE = vol.Any(None, vol.All(vol.Coerce(float), vol.Range(min=-90, max=90)))
+_LONGITUDE = vol.Any(None, vol.All(vol.Coerce(float), vol.Range(min=-180, max=180)))
+
+
+def _check_coordinates(connection, msg, lat, lng) -> bool:
+    """Latitude and longitude go together: both, or neither."""
+    if (lat is None) != (lng is None):
+        connection.send_error(msg["id"], "invalid_format", "Give both latitude and longitude, or neither")
+        return False
+    return True
+
+
+@websocket_api.websocket_command({vol.Required("type"): WS_TYPE_SUPERMARKETS_CHAINS})
+@callback
+def websocket_get_supermarket_chains(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """The main supermarket chains for the current region."""
+    country = hass.data.get(DOMAIN, {}).get("country", "NZ")
+    connection.send_result(msg["id"], {"country": country, "chains": get_chains(country)})
+
+
+@websocket_api.websocket_command({vol.Required("type"): WS_TYPE_SUPERMARKETS_GET_ALL})
+@callback
+def websocket_get_supermarkets(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Supermarkets the connected user can see."""
+    storage = get_storage(hass)
+    user = connection.user
+    shops = storage.get_supermarkets(user.id if user else None, bool(user and user.is_admin))
+    connection.send_result(msg["id"], {"supermarkets": [s.to_dict() for s in shops]})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_SUPERMARKETS_ADD,
+    vol.Required("name"): vol.All(str, vol.Length(min=1, max=80)),
+    vol.Optional("chain_id"): vol.Any(str, None),
+    vol.Optional("address", default=""): vol.All(str, vol.Length(max=200)),
+    vol.Optional("latitude"): _LATITUDE,
+    vol.Optional("longitude"): _LONGITUDE,
+    vol.Optional("private", default=True): bool,
+    vol.Optional("group_id"): vol.Any(str, None),
+})
+@websocket_api.async_response
+async def websocket_add_supermarket(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Save a supermarket. It is private to the user, or shared with one of their households."""
+    storage = get_storage(hass)
+    user = connection.user
+    if not msg["name"].strip():
+        connection.send_error(msg["id"], "invalid_format", "A supermarket needs a name")
+        return
+    lat, lng = msg.get("latitude"), msg.get("longitude")
+    if not _check_coordinates(connection, msg, lat, lng):
+        return
+
+    owner_id = user.id if (user and msg.get("private", True)) else None
+    group_id = msg.get("group_id")
+    if group_id:
+        if not _user_in_group_or_admin(storage, user, group_id):
+            connection.send_error(msg["id"], "forbidden", "You are not in that group")
+            return
+        if owner_id is None and user:
+            owner_id = user.id
+
+    shop = await storage.create_supermarket(
+        owner_id=owner_id, group_id=group_id,
+        name=msg["name"].strip(), chain_id=msg.get("chain_id"),
+        address=msg.get("address", "").strip(), latitude=lat, longitude=lng,
+    )
+    connection.send_result(msg["id"], {"supermarket": shop.to_dict()})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_SUPERMARKETS_UPDATE,
+    vol.Required("supermarket_id"): str,
+    vol.Optional("name"): vol.All(str, vol.Length(min=1, max=80)),
+    vol.Optional("chain_id"): vol.Any(str, None),
+    vol.Optional("address"): vol.All(str, vol.Length(max=200)),
+    vol.Optional("latitude"): _LATITUDE,
+    vol.Optional("longitude"): _LONGITUDE,
+})
+@websocket_api.async_response
+async def websocket_update_supermarket(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Change a supermarket (owner or administrator)."""
+    storage = get_storage(hass)
+    shop = storage.get_supermarket(msg["supermarket_id"])
+    if shop is None:
+        connection.send_error(msg["id"], "not_found", "Supermarket not found")
+        return
+    user = connection.user
+    if not _user_can_manage(shop.owner_id, user):
+        connection.send_error(msg["id"], "forbidden", "Only the owner can change this supermarket")
+        return
+
+    fields = {k: msg[k] for k in ("name", "chain_id", "address", "latitude", "longitude") if k in msg}
+    if "name" in fields:
+        fields["name"] = fields["name"].strip()
+        if not fields["name"]:
+            connection.send_error(msg["id"], "invalid_format", "A supermarket needs a name")
+            return
+    if "address" in fields:
+        fields["address"] = fields["address"].strip()
+    lat = fields.get("latitude", shop.latitude)
+    lng = fields.get("longitude", shop.longitude)
+    if not _check_coordinates(connection, msg, lat, lng):
+        return
+
+    updated = await storage.update_supermarket(msg["supermarket_id"], **fields)
+    connection.send_result(msg["id"], {"supermarket": updated.to_dict()})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_SUPERMARKETS_DELETE,
+    vol.Required("supermarket_id"): str,
+})
+@websocket_api.async_response
+async def websocket_delete_supermarket(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Remove a supermarket (owner or administrator)."""
+    storage = get_storage(hass)
+    shop = storage.get_supermarket(msg["supermarket_id"])
+    if shop is None:
+        connection.send_error(msg["id"], "not_found", "Supermarket not found")
+        return
+    if not _user_can_manage(shop.owner_id, connection.user):
+        connection.send_error(msg["id"], "forbidden", "Only the owner can delete this supermarket")
+        return
+    await storage.delete_supermarket(msg["supermarket_id"])
+    connection.send_result(msg["id"], {"success": True})
 
 
 # =============================================================================

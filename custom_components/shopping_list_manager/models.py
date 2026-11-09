@@ -122,6 +122,28 @@ class LoyaltyCard:
 
 
 @dataclass
+class Supermarket:
+    """A supermarket the user shops at: a chain (or a custom name), with where it is."""
+    id: str
+    name: str
+    chain_id: Optional[str] = None      # id of a built-in chain for the region, None for a custom store
+    address: str = ""
+    latitude: Optional[float] = None    # for automations (arriving at the shop, and so on)
+    longitude: Optional[float] = None
+    created_at: str = field(default_factory=current_timestamp)
+    updated_at: str = field(default_factory=current_timestamp)
+    # Same ownership rules as lists: no owner = everyone; otherwise the owner, their household and admins
+    owner_id: Optional[str] = None
+    group_id: Optional[str] = None
+    allowed_users: List[str] = field(default_factory=list)
+    allowed_groups: List[str] = field(default_factory=list)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)
+
+
+@dataclass
 class Group:
     """A household: a named set of Home Assistant users who share lists and loyalty cards."""
     id: str

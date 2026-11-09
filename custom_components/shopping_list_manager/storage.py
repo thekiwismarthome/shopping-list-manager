@@ -5,6 +5,7 @@ import io
 import json
 import logging
 import os
+import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,6 +24,7 @@ from .const import (
     STORAGE_KEY_CUSTOM_REGIONS,
     STORAGE_KEY_USER_SETTINGS,
     STORAGE_KEY_GROUPS,
+    STORAGE_KEY_SUPERMARKETS,
     IMAGES_LOCAL_DIR,
     IMAGE_SIZE,
     IMAGE_QUALITY,
@@ -31,7 +33,7 @@ from .const import (
     LEGACY_IMAGE_URL_PREFIX,
 )
 from .data.catalog_loader import load_product_catalog
-from .models import ShoppingList, Item, Product, Category, LoyaltyCard, Group, generate_id
+from .models import ShoppingList, Item, Product, Category, LoyaltyCard, Group, Supermarket, generate_id
 from .utils.access import can_access
 from .data.category_loader import load_categories
 
@@ -60,6 +62,7 @@ class ShoppingListStorage:
         self._store_custom_regions = Store(hass, STORAGE_VERSION, STORAGE_KEY_CUSTOM_REGIONS)
         self._store_user_settings = Store(hass, STORAGE_VERSION, STORAGE_KEY_USER_SETTINGS)
         self._store_groups = Store(hass, STORAGE_VERSION, STORAGE_KEY_GROUPS)
+        self._store_supermarkets = Store(hass, STORAGE_VERSION, STORAGE_KEY_SUPERMARKETS)
 
         self._lists: Dict[str, ShoppingList] = {}
         self._items: Dict[str, List[Item]] = {}
@@ -68,6 +71,7 @@ class ShoppingListStorage:
         self._loyalty_cards: Dict[str, LoyaltyCard] = {}
         # Households: named sets of HA users who share lists and loyalty cards
         self._groups: Dict[str, Group] = {}
+        self._supermarkets: Dict[str, Supermarket] = {}
         self._custom_regions: Dict[str, Any] = {}  # code -> {name, currency_symbol, language}
         # HA user id -> {"settings": {...}, "updated_at": iso}; card UI preferences synced across devices
         self._user_settings: Dict[str, Dict[str, Any]] = {}
@@ -182,6 +186,13 @@ class ShoppingListStorage:
             }
             _LOGGER.debug("Loaded %d groups", len(self._groups))
 
+        # Load saved supermarkets
+        supermarkets_data = await self._store_supermarkets.async_load()
+        if supermarkets_data:
+            self._supermarkets = {
+                sid: Supermarket(**sdata) for sid, sdata in supermarkets_data.items()
+            }
+
         # Load per-user card settings (synced across a user's devices)
         user_settings_data = await self._store_user_settings.async_load()
         if user_settings_data:
@@ -274,6 +285,7 @@ class ShoppingListStorage:
         return (
             sum(1 for l in self._lists.values() if l.group_id == group_id)
             + sum(1 for c in self._loyalty_cards.values() if c.group_id == group_id)
+            + sum(1 for s in self._supermarkets.values() if s.group_id == group_id)
         )
 
     async def delete_group(self, group_id: str) -> bool:
@@ -319,6 +331,50 @@ class ShoppingListStorage:
         if moved["cards"]:
             await self._save_loyalty_cards()
         return moved
+
+    # Supermarkets -------------------------------------------------------------
+    async def _save_supermarkets(self) -> None:
+        data = {sid: s.to_dict() for sid, s in self._supermarkets.items()}
+        await self._store_supermarkets.async_save(data)
+
+    def get_supermarkets(self, user_id: str = None, is_admin: bool = False) -> List[Supermarket]:
+        """Supermarkets visible to the user: their own, their household's, and (for admins) all."""
+        every = list(self._supermarkets.values())
+        if is_admin or user_id is None:
+            return every
+        groups = self.get_user_group_ids(user_id)
+        return [
+            s for s in every
+            if can_access(s.owner_id, s.group_id, s.allowed_users, s.allowed_groups, user_id, is_admin, groups)
+        ]
+
+    def get_supermarket(self, supermarket_id: str) -> Optional[Supermarket]:
+        return self._supermarkets.get(supermarket_id)
+
+    async def create_supermarket(self, owner_id: str = None, group_id: str = None, **fields) -> Supermarket:
+        shop = Supermarket(id=generate_id(), owner_id=owner_id, group_id=group_id if owner_id else None, **fields)
+        self._supermarkets[shop.id] = shop
+        await self._save_supermarkets()
+        return shop
+
+    async def update_supermarket(self, supermarket_id: str, **fields) -> Optional[Supermarket]:
+        shop = self._supermarkets.get(supermarket_id)
+        if shop is None:
+            return None
+        for key, value in fields.items():
+            if hasattr(shop, key):
+                setattr(shop, key, value)
+        from .models import current_timestamp
+        shop.updated_at = current_timestamp()
+        await self._save_supermarkets()
+        return shop
+
+    async def delete_supermarket(self, supermarket_id: str) -> bool:
+        if supermarket_id not in self._supermarkets:
+            return False
+        del self._supermarkets[supermarket_id]
+        await self._save_supermarkets()
+        return True
 
     def get_lists(self, user_id: str = None, is_admin: bool = False) -> List[ShoppingList]:
         """Get lists visible to the specified user.
@@ -1033,6 +1089,8 @@ class ShoppingListStorage:
             group_id=group_id if owner_id else None,
             **kwargs
         )
+        # A picture sent from the card arrives inline; keep it as a small file instead
+        new_card.logo = await self._externalize_data_image(new_card.logo, f"loyalty_{new_card.id}") or ""
         self._loyalty_cards[new_card.id] = new_card
         await self._save_loyalty_cards()
         _LOGGER.debug("Created loyalty card: %s", new_card.name)
@@ -1044,9 +1102,14 @@ class ShoppingListStorage:
             return None
 
         card = self._loyalty_cards[card_id]
+        old_logo = card.logo
         for key, value in kwargs.items():
+            if key == "logo":
+                value = await self._externalize_data_image(value, f"loyalty_{card_id}") or ""
             if hasattr(card, key):
                 setattr(card, key, value)
+        if "logo" in kwargs and card.logo != old_logo:
+            await self._remove_logo_file(old_logo)
 
         from .models import current_timestamp
         card.updated_at = current_timestamp()
@@ -1054,13 +1117,31 @@ class ShoppingListStorage:
         _LOGGER.debug("Updated loyalty card: %s", card_id)
         return card
 
+    async def _remove_logo_file(self, url: Optional[str]) -> None:
+        """Delete a loyalty card logo file we saved earlier. Anything else is left alone."""
+        if not url or not url.startswith(LOCAL_IMAGE_URL_PREFIX):
+            return
+        # A duplicated card shares its logo file, so keep the file while any card still uses it
+        if any(card.logo == url for card in self._loyalty_cards.values()):
+            return
+        name = url[len(LOCAL_IMAGE_URL_PREFIX):]
+        if not re.fullmatch(r"loyalty_[\w\-]+_[0-9a-f]{8}\.webp", name):
+            return
+        path = self._images_dir / name
+        try:
+            await self.hass.async_add_executor_job(lambda: path.unlink(missing_ok=True))
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.debug("Could not remove logo %s: %s", name, err)
+
     async def delete_loyalty_card(self, card_id: str) -> bool:
         """Delete a loyalty card."""
         if card_id not in self._loyalty_cards:
             return False
 
+        logo = self._loyalty_cards[card_id].logo
         del self._loyalty_cards[card_id]
         await self._save_loyalty_cards()
+        await self._remove_logo_file(logo)
         _LOGGER.debug("Deleted loyalty card: %s", card_id)
         return True
 

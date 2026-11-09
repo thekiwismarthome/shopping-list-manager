@@ -13,6 +13,7 @@ STORAGE_KEY_LOYALTY_CARDS = f"{DOMAIN}.loyalty_cards"
 STORAGE_KEY_CUSTOM_REGIONS = f"{DOMAIN}.custom_regions"
 STORAGE_KEY_USER_SETTINGS = f"{DOMAIN}.user_settings"
 STORAGE_KEY_GROUPS = f"{DOMAIN}.groups"
+STORAGE_KEY_SUPERMARKETS = f"{DOMAIN}.supermarkets"
 
 # WebSocket Commands - Lists
 WS_TYPE_LISTS_GET_ALL = f"{DOMAIN}/lists/get_all"
@@ -29,6 +30,11 @@ WS_TYPE_GROUPS_CREATE = f"{DOMAIN}/groups/create"
 WS_TYPE_GROUPS_UPDATE = f"{DOMAIN}/groups/update"
 WS_TYPE_GROUPS_DELETE = f"{DOMAIN}/groups/delete"
 WS_TYPE_GROUPS_ADOPT = f"{DOMAIN}/groups/adopt_shared"
+WS_TYPE_SUPERMARKETS_CHAINS = f"{DOMAIN}/supermarkets/get_chains"
+WS_TYPE_SUPERMARKETS_GET_ALL = f"{DOMAIN}/supermarkets/get_all"
+WS_TYPE_SUPERMARKETS_ADD = f"{DOMAIN}/supermarkets/add"
+WS_TYPE_SUPERMARKETS_UPDATE = f"{DOMAIN}/supermarkets/update"
+WS_TYPE_SUPERMARKETS_DELETE = f"{DOMAIN}/supermarkets/delete"
 
 # WebSocket Commands - Items
 WS_TYPE_ITEMS_GET = f"{DOMAIN}/items/get"

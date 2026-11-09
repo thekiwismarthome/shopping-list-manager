@@ -1,0 +1,32 @@
+{
+  "NZ": [
+    "PAK'nSAVE", "Woolworths", "New World", "Four Square", "SuperValue", "Fresh Choice",
+    "Farro Fresh", "Costco", "Gilmours", "Bin Inn", "Moore Wilson's", "Night 'n Day"
+  ],
+  "AU": [
+    "Woolworths", "Coles", "ALDI", "IGA", "Costco", "Harris Farm Markets", "Foodland", "Drakes"
+  ],
+  "US": [
+    "Walmart", "Kroger", "Costco", "Target", "Safeway", "Publix", "Albertsons", "Whole Foods Market",
+    "Trader Joe's", "ALDI", "Wegmans", "H-E-B", "Meijer", "Sam's Club"
+  ],
+  "GB": [
+    "Tesco", "Sainsbury's", "Asda", "Morrisons", "Aldi", "Lidl", "Waitrose", "Marks & Spencer",
+    "Co-op", "Iceland", "Ocado", "Booths"
+  ],
+  "CA": [
+    "Loblaws", "Sobeys", "Metro", "No Frills", "Real Canadian Superstore", "Costco", "Walmart",
+    "Safeway", "Save-On-Foods", "FreshCo", "Food Basics", "T&T Supermarket"
+  ],
+  "BE": [
+    "Colruyt", "Delhaize", "Carrefour", "Aldi", "Lidl", "Albert Heijn", "Okay", "Spar", "Intermarché"
+  ],
+  "ES": [
+    "Mercadona", "Carrefour", "Lidl", "Dia", "Alcampo", "Eroski", "Aldi", "El Corte Inglés",
+    "Consum", "Hipercor", "Ahorramas"
+  ],
+  "FR": [
+    "Carrefour", "E.Leclerc", "Intermarché", "Auchan", "Lidl", "Système U", "Monoprix", "Casino",
+    "Aldi", "Picard", "Franprix", "Cora"
+  ]
+}
