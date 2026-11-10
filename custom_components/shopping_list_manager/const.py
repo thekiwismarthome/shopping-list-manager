@@ -35,6 +35,7 @@ WS_TYPE_SUPERMARKETS_GET_ALL = f"{DOMAIN}/supermarkets/get_all"
 WS_TYPE_SUPERMARKETS_ADD = f"{DOMAIN}/supermarkets/add"
 WS_TYPE_SUPERMARKETS_UPDATE = f"{DOMAIN}/supermarkets/update"
 WS_TYPE_SUPERMARKETS_DELETE = f"{DOMAIN}/supermarkets/delete"
+WS_TYPE_SUPERMARKETS_SEARCH = f"{DOMAIN}/supermarkets/search"
 
 # WebSocket Commands - Items
 WS_TYPE_ITEMS_GET = f"{DOMAIN}/items/get"

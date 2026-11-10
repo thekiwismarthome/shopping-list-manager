@@ -38,6 +38,7 @@ from ..const import (
     WS_TYPE_SUPERMARKETS_ADD,
     WS_TYPE_SUPERMARKETS_UPDATE,
     WS_TYPE_SUPERMARKETS_DELETE,
+    WS_TYPE_SUPERMARKETS_SEARCH,
     EVENT_GROUPS_UPDATED,
     WS_TYPE_ITEMS_GET,
     WS_TYPE_ITEMS_ADD,
@@ -74,6 +75,7 @@ from .. import get_storage
 from ..utils.openfoodfacts import search_products as search_off_products
 from ..utils.access import can_manage
 from ..data.supermarkets import get_chains
+from ..utils.places import search_places, split_chain
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -1716,6 +1718,51 @@ def websocket_get_supermarket_chains(
     """The main supermarket chains for the current region."""
     country = hass.data.get(DOMAIN, {}).get("country", "NZ")
     connection.send_result(msg["id"], {"country": country, "chains": get_chains(country)})
+
+
+@websocket_api.websocket_command({
+    vol.Required("type"): WS_TYPE_SUPERMARKETS_SEARCH,
+    vol.Optional("query", default=""): vol.All(str, vol.Length(max=100)),
+    vol.Optional("chain_id"): vol.Any(str, None),
+    vol.Optional("latitude"): vol.All(vol.Coerce(float), vol.Range(min=-90, max=90)),
+    vol.Optional("longitude"): vol.All(vol.Coerce(float), vol.Range(min=-180, max=180)),
+})
+@websocket_api.async_response
+async def websocket_search_supermarkets(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: Dict[str, Any],
+) -> None:
+    """Look up shops on a map by name or suburb, nearest first when a position is given.
+
+    The position is only used for this search. It is sent to the map service and not saved.
+    """
+    lat, lng = msg.get("latitude"), msg.get("longitude")
+    if (lat is None) != (lng is None):
+        connection.send_error(msg["id"], "invalid_format", "Give both latitude and longitude, or neither")
+        return
+    country = hass.data.get(DOMAIN, {}).get("country", "NZ")
+    chains = get_chains(country)
+    chain_name = next((c["name"] for c in chains if c["id"] == msg.get("chain_id")), None)
+    place = msg.get("query", "")
+    if not chain_name:
+        # "PAK'nSAVE Glen Innes" typed in one go: the chain, then where
+        chain_name, place = split_chain(place, [c["name"] for c in chains])
+    if not (chain_name or place or lat is not None):
+        connection.send_error(msg["id"], "invalid_format", "Type a shop or suburb to look for, or pick a chain")
+        return
+    # Built-in regions limit the search to that country; a custom region searches everywhere.
+    codes = {"NZ", "AU", "US", "GB", "CA", "BE", "ES", "FR"}
+    try:
+        results, _centre = await search_places(
+            async_get_clientsession(hass), chain_name, place, country if country in codes else None,
+            lat, lng, 8, ClientTimeout(total=15),
+        )
+    except Exception as err:  # noqa: BLE001 - the map service is outside our control
+        _LOGGER.warning("Supermarket lookup failed: %s", err)
+        connection.send_error(msg["id"], "search_failed", "The map search is not available right now")
+        return
+    connection.send_result(msg["id"], {"results": results})
 
 
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_SUPERMARKETS_GET_ALL})
