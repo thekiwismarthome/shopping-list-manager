@@ -17,8 +17,13 @@ _LOGGER = logging.getLogger(__name__)
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 USER_AGENT = "HomeAssistant-ShoppingListManager/1.0 (supermarket lookup)"
 
-# Searched around the user's position: roughly 28 km first, then about 160 km.
-_RADII_DEG = (0.25, 1.5)
+# Searched around the user's position in growing steps (degrees; 0.1 is about 11 km), starting small.
+# Nominatim returns the most "important" matches in the box, not the nearest, so a big box over a city
+# loses nearby shops of a common chain. A small box that holds enough shops cannot.
+_RADII_DEG = (0.05, 0.1, 0.18, 0.33, 0.6, 1.1, 2.0)
+_MAX_HITS = 40  # the most Nominatim gives for one search
+# With no chain picked, only places that sell groceries (not a takeaway that tagged itself a shop)
+_GROCERY_TYPES = {"supermarket", "convenience", "greengrocer", "wholesale", "general", "grocery"}
 _MIN_GAP_S = 1.1
 _CACHE_TTL_S = 3600
 _CACHE_MAX = 100
@@ -166,10 +171,11 @@ async def search_places(
     if centre:
         terms = chain or place or "supermarket"
         for radius in _RADII_DEG:
-            raw = [h for h in await _get(session, dict(base, q=terms, limit=20, bounded=1,
+            raw = [h for h in await _get(session, dict(base, q=terms, limit=_MAX_HITS, bounded=1,
                                                        viewbox=_box(centre[0], centre[1], radius)), timeout)
-                   if h.get("category") == "shop"]
-            if raw:
+                   if h.get("category") == "shop" and (chain or place or h.get("type") in _GROCERY_TYPES)]
+            # Enough close shops: stop. In thinly served areas settle for a few after a wide look.
+            if len(raw) >= limit or (radius >= 0.6 and len(raw) >= 3):
                 break
     else:
         raw = [h for h in await _get(session, dict(base, q=chain or place, limit=20), timeout)
@@ -181,9 +187,11 @@ async def search_places(
         parsed = _parse(item, centre[0] if centre else None, centre[1] if centre else None)
         if not parsed:
             continue
-        ident = item.get("place_id") or (parsed["name"], parsed["latitude"], parsed["longitude"])
-        if ident in seen:
+        # The same shop can be mapped twice (as a building and as a shop): same name within ~150 m
+        ident = (parsed["name"].lower(), round(parsed["latitude"], 3), round(parsed["longitude"], 3))
+        if item.get("place_id") in seen or ident in seen:
             continue
+        seen.add(item.get("place_id"))
         seen.add(ident)
         results.append(parsed)
     if centre:

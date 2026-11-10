@@ -1756,7 +1756,7 @@ async def websocket_search_supermarkets(
     try:
         results, _centre = await search_places(
             async_get_clientsession(hass), chain_name, place, country if country in codes else None,
-            lat, lng, 8, ClientTimeout(total=15),
+            lat, lng, 10, ClientTimeout(total=15),
         )
     except Exception as err:  # noqa: BLE001 - the map service is outside our control
         _LOGGER.warning("Supermarket lookup failed: %s", err)
