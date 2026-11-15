@@ -84,11 +84,13 @@ OPENFOODFACTS_BASE_URL_BY_COUNTRY = {
     "BE": "https://be.openfoodfacts.org",
     "ES": "https://es.openfoodfacts.org",
     "FR": "https://fr.openfoodfacts.org",
+    "DE": "https://de.openfoodfacts.org",
 }
 OPENFOODFACTS_ACCEPT_LANGUAGE_BY_COUNTRY = {
     "BE": "nl-BE,nl;q=0.9,en;q=0.7",
     "ES": "es-ES,es;q=0.9,en;q=0.7",
     "FR": "fr-FR,fr;q=0.9,en;q=0.7",
+    "DE": "de-DE,de;q=0.9,en;q=0.7",
 }
 # Currency symbol shown by the card for each built-in catalog region.
 BUILT_IN_CURRENCY_SYMBOLS = {
@@ -100,6 +102,7 @@ BUILT_IN_CURRENCY_SYMBOLS = {
     "BE": "€",
     "ES": "€",
     "FR": "€",
+    "DE": "€",
 }
 
 
@@ -1285,6 +1288,7 @@ def websocket_get_integration_settings(
         "BE": "Belgium (Dutch)",
         "ES": "Spain (Español)",
         "FR": "France (Français)",
+        "DE": "Germany (Deutsch)",
     }
     custom = storage.get_custom_regions()
     custom_names = {code: region["name"] for code, region in custom.items()}
@@ -1304,7 +1308,7 @@ def websocket_get_integration_settings(
     )
 
 
-_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE", "ES", "FR"]
+_BUILT_IN_COUNTRIES = ["NZ", "AU", "US", "GB", "CA", "BE", "ES", "FR", "DE"]
 
 @websocket_api.websocket_command(
     {

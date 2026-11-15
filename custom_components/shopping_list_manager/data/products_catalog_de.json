@@ -1,0 +1,5110 @@
+{
+  "version": "1.0.0",
+  "region": "DE",
+  "language": "de-DE",
+  "currency": "EUR",
+  "last_updated": "2026-11-15",
+  "description": "Germany grocery catalog with common German supermarket products and local brands (prices are approximate EUR estimates)",
+  "country": "Germany",
+  "products": [
+    {
+      "id": "prod_de_vollmilch",
+      "name": "Vollmilch",
+      "category_id": "dairy",
+      "aliases": [
+        "milch",
+        "vollmilch",
+        "frischmilch"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.19,
+      "brands": [
+        "Weihenstephan",
+        "Landliebe",
+        "Müller",
+        "Milbona"
+      ],
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_de_fettarme_milch",
+      "name": "Fettarme Milch",
+      "category_id": "dairy",
+      "aliases": [
+        "milch 1,5",
+        "fettarme milch",
+        "h-milch"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.09,
+      "brands": [
+        "Weihenstephan",
+        "Landliebe",
+        "Müller",
+        "Milbona"
+      ],
+      "image_hint": "milk_trim",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 5
+    },
+    {
+      "id": "prod_de_laktosefreie_milch",
+      "name": "Laktosefreie Milch",
+      "category_id": "dairy",
+      "aliases": [
+        "laktosefrei",
+        "laktosefreie milch"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.49,
+      "brands": [
+        "Müller",
+        "Minus L",
+        "Milbona"
+      ],
+      "image_hint": "milk_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "milk_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_markenbutter",
+      "name": "Markenbutter",
+      "category_id": "dairy",
+      "aliases": [
+        "butter",
+        "markenbutter",
+        "deutsche markenbutter"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 2.39,
+      "brands": [
+        "Kerrygold",
+        "Meggle",
+        "Landliebe"
+      ],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_krauterbutter",
+      "name": "Kräuterbutter",
+      "category_id": "dairy",
+      "aliases": [
+        "kräuterbutter",
+        "butter mit kräutern"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.49,
+      "brands": [
+        "Meggle",
+        "Kerrygold"
+      ],
+      "image_hint": "butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_gouda",
+      "name": "Gouda",
+      "category_id": "dairy",
+      "aliases": [
+        "gouda",
+        "gouda jung",
+        "gouda mittelalt"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.29,
+      "brands": [
+        "Milram",
+        "Leerdammer",
+        "Bergader"
+      ],
+      "image_hint": "cheese_tasty",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_emmentaler",
+      "name": "Emmentaler",
+      "category_id": "dairy",
+      "aliases": [
+        "emmentaler",
+        "emmental",
+        "schweizer käse"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.49,
+      "brands": [
+        "Milram",
+        "Bergader",
+        "Hochland"
+      ],
+      "image_hint": "cheese_edam",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_camembert",
+      "name": "Camembert",
+      "category_id": "dairy",
+      "aliases": [
+        "camembert",
+        "weichkäse"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.89,
+      "brands": [
+        "Käserei Champignon",
+        "Président",
+        "Rougette"
+      ],
+      "image_hint": "cheese_colby",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_geriebener_kaese",
+      "name": "Geriebener Käse",
+      "category_id": "dairy",
+      "aliases": [
+        "reibekäse",
+        "geriebener käse",
+        "pizzakäse"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.79,
+      "brands": [
+        "Milram",
+        "Hochland",
+        "Milbona"
+      ],
+      "image_hint": "cheese_grated",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "cheese_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_naturjoghurt",
+      "name": "Naturjoghurt",
+      "category_id": "dairy",
+      "aliases": [
+        "joghurt",
+        "naturjoghurt",
+        "joghurt natur"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 0.95,
+      "brands": [
+        "Müller",
+        "Landliebe",
+        "Danone"
+      ],
+      "image_hint": "yogurt_plain",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_griechischer_joghurt",
+      "name": "Griechischer Joghurt",
+      "category_id": "dairy",
+      "aliases": [
+        "griechischer joghurt",
+        "joghurt griechisch"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.69,
+      "brands": [
+        "Fage",
+        "Müller",
+        "Danone"
+      ],
+      "image_hint": "yogurt_greek",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_quark",
+      "name": "Quark",
+      "category_id": "dairy",
+      "aliases": [
+        "quark",
+        "magerquark",
+        "speisequark"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.19,
+      "brands": [
+        "Exquisa",
+        "Müller",
+        "Milram"
+      ],
+      "image_hint": "yogurt_plain",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "yogurt_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_eier_freiland",
+      "name": "Eier Freilandhaltung",
+      "category_id": "dairy",
+      "aliases": [
+        "eier",
+        "freilandeier",
+        "eier freiland"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 3.29,
+      "brands": [
+        "Gut Bartenhof",
+        "Eifrisch",
+        "Rewe Bio"
+      ],
+      "image_hint": "eggs_free_range",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_eier_bodenhaltung",
+      "name": "Eier Bodenhaltung",
+      "category_id": "dairy",
+      "aliases": [
+        "eier",
+        "bodenhaltungseier",
+        "eier bodenhaltung"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 12,
+      "price": 2.49,
+      "brands": [
+        "Lidl",
+        "Aldi",
+        "Edeka"
+      ],
+      "image_hint": "eggs",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_sahne",
+      "name": "Sahne",
+      "category_id": "dairy",
+      "aliases": [
+        "schlagsahne",
+        "sahne",
+        "kochsahne"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 1.19,
+      "brands": [
+        "Weihenstephan",
+        "Landliebe",
+        "Milbona"
+      ],
+      "image_hint": "cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_schmand",
+      "name": "Schmand",
+      "category_id": "dairy",
+      "aliases": [
+        "schmand",
+        "saure sahne",
+        "crème fraîche"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 0.99,
+      "brands": [
+        "Elinas",
+        "Milram",
+        "Landliebe"
+      ],
+      "image_hint": "sour_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_aepfel_gala",
+      "name": "Äpfel Gala",
+      "category_id": "produce",
+      "aliases": [
+        "äpfel",
+        "apfel",
+        "gala",
+        "äpfel gala"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "apples_gala",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_aepfel_granny_smith",
+      "name": "Äpfel Granny Smith",
+      "category_id": "produce",
+      "aliases": [
+        "granny smith",
+        "grüne äpfel",
+        "äpfel granny smith"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "apples_granny_smith",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_bananen",
+      "name": "Bananen",
+      "category_id": "produce",
+      "aliases": [
+        "banane",
+        "bananen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.79,
+      "brands": [],
+      "image_hint": "bananas",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_orangen",
+      "name": "Orangen",
+      "category_id": "produce",
+      "aliases": [
+        "orange",
+        "orangen",
+        "saftorangen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [],
+      "image_hint": "oranges",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_clementinen",
+      "name": "Clementinen",
+      "category_id": "produce",
+      "aliases": [
+        "clementine",
+        "clementinen",
+        "mandarinen",
+        "mandarine"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "mandarins",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_zitronen",
+      "name": "Zitronen",
+      "category_id": "produce",
+      "aliases": [
+        "zitrone",
+        "zitronen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "lemons",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_birnen",
+      "name": "Birnen",
+      "category_id": "produce",
+      "aliases": [
+        "birne",
+        "birnen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "pears",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_erdbeeren",
+      "name": "Erdbeeren",
+      "category_id": "produce",
+      "aliases": [
+        "erdbeere",
+        "erdbeeren"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.49,
+      "brands": [],
+      "image_hint": "strawberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_heidelbeeren",
+      "name": "Heidelbeeren",
+      "category_id": "produce",
+      "aliases": [
+        "heidelbeere",
+        "heidelbeeren",
+        "blaubeeren"
+      ],
+      "default_unit": "g",
+      "default_quantity": 125,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "blueberries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_trauben_hell",
+      "name": "Trauben hell",
+      "category_id": "produce",
+      "aliases": [
+        "weintrauben",
+        "trauben",
+        "weiße trauben",
+        "trauben hell"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.99,
+      "brands": [],
+      "image_hint": "grapes_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_trauben_blau",
+      "name": "Trauben blau",
+      "category_id": "produce",
+      "aliases": [
+        "blaue trauben",
+        "rote trauben",
+        "trauben blau"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.99,
+      "brands": [],
+      "image_hint": "grapes_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_avocados",
+      "name": "Avocados",
+      "category_id": "produce",
+      "aliases": [
+        "avocado",
+        "avocados"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.29,
+      "brands": [],
+      "image_hint": "avocado",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_tomaten",
+      "name": "Tomaten",
+      "category_id": "produce",
+      "aliases": [
+        "tomate",
+        "tomaten"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [],
+      "image_hint": "tomatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_kirschtomaten",
+      "name": "Kirschtomaten",
+      "category_id": "produce",
+      "aliases": [
+        "kirschtomaten",
+        "cherrytomaten",
+        "cocktailtomaten"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.79,
+      "brands": [],
+      "image_hint": "tomatoes_cherry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_salatgurke",
+      "name": "Salatgurke",
+      "category_id": "produce",
+      "aliases": [
+        "gurke",
+        "salatgurke"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 0.89,
+      "brands": [],
+      "image_hint": "cucumber",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_eisbergsalat",
+      "name": "Eisbergsalat",
+      "category_id": "produce",
+      "aliases": [
+        "eisbergsalat",
+        "eisberg",
+        "salat"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.19,
+      "brands": [],
+      "image_hint": "lettuce_iceberg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_romanasalat",
+      "name": "Romanasalat",
+      "category_id": "produce",
+      "aliases": [
+        "romana",
+        "romanasalat",
+        "römersalat"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [],
+      "image_hint": "lettuce_cos",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_paprika_rot",
+      "name": "Paprika rot",
+      "category_id": "produce",
+      "aliases": [
+        "paprika",
+        "rote paprika",
+        "paprika rot"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.29,
+      "brands": [],
+      "image_hint": "capsicum_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_paprika_gruen",
+      "name": "Paprika grün",
+      "category_id": "produce",
+      "aliases": [
+        "grüne paprika",
+        "paprika grün"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.09,
+      "brands": [],
+      "image_hint": "capsicum_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_brokkoli",
+      "name": "Brokkoli",
+      "category_id": "produce",
+      "aliases": [
+        "brokkoli",
+        "broccoli"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.49,
+      "brands": [],
+      "image_hint": "broccoli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_blumenkohl",
+      "name": "Blumenkohl",
+      "category_id": "produce",
+      "aliases": [
+        "blumenkohl"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 1.79,
+      "brands": [],
+      "image_hint": "cauliflower",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_moehren",
+      "name": "Möhren",
+      "category_id": "produce",
+      "aliases": [
+        "möhren",
+        "karotten",
+        "karotte",
+        "mohrrüben"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [],
+      "image_hint": "carrots",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_kartoffeln",
+      "name": "Kartoffeln",
+      "category_id": "produce",
+      "aliases": [
+        "kartoffel",
+        "kartoffeln",
+        "speisekartoffeln"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 1.49,
+      "brands": [],
+      "image_hint": "potatoes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_zwiebeln",
+      "name": "Zwiebeln",
+      "category_id": "produce",
+      "aliases": [
+        "zwiebel",
+        "zwiebeln",
+        "speisezwiebeln"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [],
+      "image_hint": "onions_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_rote_zwiebeln",
+      "name": "Rote Zwiebeln",
+      "category_id": "produce",
+      "aliases": [
+        "rote zwiebel",
+        "rote zwiebeln"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [],
+      "image_hint": "onions_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_knoblauch",
+      "name": "Knoblauch",
+      "category_id": "produce",
+      "aliases": [
+        "knoblauch",
+        "knoblauchzehe",
+        "knoblauchknolle"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 0.69,
+      "brands": [],
+      "image_hint": "garlic",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_champignons",
+      "name": "Champignons",
+      "category_id": "produce",
+      "aliases": [
+        "champignons",
+        "pilze",
+        "braune champignons"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.79,
+      "brands": [],
+      "image_hint": "mushrooms_button",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_zucchini",
+      "name": "Zucchini",
+      "category_id": "produce",
+      "aliases": [
+        "zucchini",
+        "zucchinis"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 0.99,
+      "brands": [],
+      "image_hint": "courgette",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_spinat",
+      "name": "Spinat",
+      "category_id": "produce",
+      "aliases": [
+        "spinat",
+        "blattspinat",
+        "babyspinat"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 1.79,
+      "brands": [],
+      "image_hint": "spinach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_auberginen",
+      "name": "Auberginen",
+      "category_id": "produce",
+      "aliases": [
+        "aubergine",
+        "auberginen"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 1.39,
+      "brands": [],
+      "image_hint": "eggplant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_lauch",
+      "name": "Lauch",
+      "category_id": "produce",
+      "aliases": [
+        "lauch",
+        "porree",
+        "lauchstange"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [],
+      "image_hint": "leeks",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_haehnchenbrustfilet",
+      "name": "Hähnchenbrustfilet",
+      "category_id": "meat",
+      "aliases": [
+        "hähnchenbrust",
+        "hühnerbrust",
+        "hähnchenbrustfilet",
+        "hähnchen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 9.9,
+      "brands": [],
+      "image_hint": "chicken_breast",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_haehnchenschenkel",
+      "name": "Hähnchenschenkel",
+      "category_id": "meat",
+      "aliases": [
+        "hähnchenschenkel",
+        "hähnchenkeule",
+        "hähnchenkeulen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 5.5,
+      "brands": [],
+      "image_hint": "chicken_thigh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_haehnchenunterkeulen",
+      "name": "Hähnchenunterkeulen",
+      "category_id": "meat",
+      "aliases": [
+        "unterkeule",
+        "unterkeulen",
+        "hähnchenunterkeulen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 4.5,
+      "brands": [],
+      "image_hint": "chicken_drumsticks",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_brathaehnchen",
+      "name": "Brathähnchen",
+      "category_id": "meat",
+      "aliases": [
+        "brathähnchen",
+        "hähnchen ganz",
+        "hähnchen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1.5,
+      "price": 5.5,
+      "brands": [],
+      "image_hint": "chicken_whole",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_rinderhack",
+      "name": "Rinderhackfleisch",
+      "category_id": "meat",
+      "aliases": [
+        "rinderhack",
+        "hackfleisch rind",
+        "rinderhackfleisch"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 8.9,
+      "brands": [
+        "Wiesenhof",
+        "Rewe Beste Wahl",
+        "Gut & Günstig"
+      ],
+      "image_hint": "beef_mince",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_rindersteak",
+      "name": "Rindersteak",
+      "category_id": "meat",
+      "aliases": [
+        "rindersteak",
+        "rumpsteak",
+        "steak"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 19.9,
+      "brands": [],
+      "image_hint": "beef_steak",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_schweinekoteletts",
+      "name": "Schweinekoteletts",
+      "category_id": "meat",
+      "aliases": [
+        "kotelett",
+        "schweinekotelett",
+        "schweinekoteletts"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 7.9,
+      "brands": [],
+      "image_hint": "pork_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_lammkoteletts",
+      "name": "Lammkoteletts",
+      "category_id": "meat",
+      "aliases": [
+        "lammkotelett",
+        "lammkoteletts",
+        "lamm"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 21.9,
+      "brands": [],
+      "image_hint": "lamb_chops",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_speckwuerfel",
+      "name": "Speckwürfel",
+      "category_id": "meat",
+      "aliases": [
+        "speck",
+        "speckwürfel",
+        "bacon"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.49,
+      "brands": [
+        "Gutfried",
+        "Herta",
+        "Meica"
+      ],
+      "image_hint": "bacon",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_bratwurst",
+      "name": "Bratwurst",
+      "category_id": "meat",
+      "aliases": [
+        "bratwurst",
+        "würstchen",
+        "rostbratwurst"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 7.9,
+      "brands": [
+        "Zimbo",
+        "Meica",
+        "Wiesenhof"
+      ],
+      "image_hint": "sausages",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "bbq_meat_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_salami",
+      "name": "Salami",
+      "category_id": "meat",
+      "aliases": [
+        "salami",
+        "wurst",
+        "edelsalami"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.79,
+      "brands": [
+        "Dreistern",
+        "Herta",
+        "Houdek"
+      ],
+      "image_hint": "salami",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_kochschinken",
+      "name": "Kochschinken",
+      "category_id": "meat",
+      "aliases": [
+        "schinken",
+        "kochschinken",
+        "lachsschinken"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 1.99,
+      "brands": [
+        "Herta",
+        "Gutfried",
+        "Rügenwalder Mühle"
+      ],
+      "image_hint": "ham",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_lachsfilet",
+      "name": "Lachsfilet",
+      "category_id": "meat",
+      "aliases": [
+        "lachs",
+        "lachsfilet",
+        "frischer lachs"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 21.9,
+      "brands": [],
+      "image_hint": "salmon_fresh",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "fish"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_kabeljaufilet",
+      "name": "Kabeljaufilet",
+      "category_id": "meat",
+      "aliases": [
+        "kabeljau",
+        "kabeljaufilet",
+        "fisch"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 19.9,
+      "brands": [],
+      "image_hint": "fish_hoki",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [
+        "fish"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_garnelen",
+      "name": "Garnelen",
+      "category_id": "meat",
+      "aliases": [
+        "garnelen",
+        "shrimps",
+        "scampi"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 0.5,
+      "price": 19.9,
+      "brands": [],
+      "image_hint": "prawns",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_hackfleisch_gemischt",
+      "name": "Hackfleisch gemischt",
+      "category_id": "meat",
+      "aliases": [
+        "hackfleisch",
+        "gehacktes",
+        "hack halb und halb"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 6.9,
+      "brands": [],
+      "image_hint": "beef_mince",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "fridge"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_vollkornbrot",
+      "name": "Vollkornbrot",
+      "category_id": "bakery",
+      "aliases": [
+        "brot",
+        "vollkornbrot",
+        "graubrot",
+        "mischbrot"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 2.19,
+      "brands": [
+        "Mestemacher",
+        "Harry",
+        "Lieken Urkorn"
+      ],
+      "image_hint": "bread_wholemeal",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_toastbrot",
+      "name": "Toastbrot",
+      "category_id": "bakery",
+      "aliases": [
+        "toast",
+        "toastbrot",
+        "sandwichtoast"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 1.19,
+      "brands": [
+        "Golden Toast",
+        "Harry",
+        "Lieken"
+      ],
+      "image_hint": "bread_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "soy"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_vollkorn_toastbrot",
+      "name": "Vollkorn-Toastbrot",
+      "category_id": "bakery",
+      "aliases": [
+        "vollkorntoast",
+        "vollkorn-toastbrot",
+        "toast vollkorn"
+      ],
+      "default_unit": "loaf",
+      "default_quantity": 1,
+      "price": 1.39,
+      "brands": [
+        "Golden Toast",
+        "Harry",
+        "Lieken"
+      ],
+      "image_hint": "bread_wholemeal",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [
+          "wholegrain"
+        ],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_broetchen",
+      "name": "Brötchen",
+      "category_id": "bakery",
+      "aliases": [
+        "brötchen",
+        "semmeln",
+        "schrippen",
+        "weckle"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.89,
+      "brands": [
+        "Harry",
+        "Lieken"
+      ],
+      "image_hint": "bread_rolls",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_wraps",
+      "name": "Wraps",
+      "category_id": "bakery",
+      "aliases": [
+        "wraps",
+        "tortillas",
+        "tortilla wraps"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Old El Paso",
+        "Mission"
+      ],
+      "image_hint": "wraps",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_fladenbrot",
+      "name": "Fladenbrot",
+      "category_id": "bakery",
+      "aliases": [
+        "fladenbrot",
+        "pita",
+        "pitabrot",
+        "türkisches brot"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.49,
+      "brands": [],
+      "image_hint": "pita_bread",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "bread_group",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_croissants",
+      "name": "Croissants",
+      "category_id": "bakery",
+      "aliases": [
+        "croissant",
+        "croissants",
+        "buttercroissant"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Harry",
+        "Lieken"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_laugenbrezeln",
+      "name": "Laugenbrezeln",
+      "category_id": "bakery",
+      "aliases": [
+        "brezel",
+        "laugenbrezel",
+        "brezeln",
+        "laugenstange"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.29,
+      "brands": [
+        "Harry",
+        "Lieken"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk",
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_hefezopf",
+      "name": "Hefezopf",
+      "category_id": "bakery",
+      "aliases": [
+        "hefezopf",
+        "zopf",
+        "hefekranz"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [
+        "Harry",
+        "Lieken"
+      ],
+      "image_hint": "croissants",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk",
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_tk_erbsen",
+      "name": "TK-Erbsen",
+      "category_id": "frozen",
+      "aliases": [
+        "erbsen",
+        "tk erbsen",
+        "tiefkühlerbsen"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [
+        "Iglo",
+        "Frosta",
+        "Birds Eye"
+      ],
+      "image_hint": "frozen_peas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_tk_gemuesepfanne",
+      "name": "TK-Gemüsepfanne",
+      "category_id": "frozen",
+      "aliases": [
+        "gemüsepfanne",
+        "tk gemüse",
+        "gemüsemischung"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 3.5,
+      "brands": [
+        "Iglo",
+        "Frosta",
+        "Findus"
+      ],
+      "image_hint": "frozen_mixed_veg",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_pommes_frites_tk",
+      "name": "Pommes frites",
+      "category_id": "frozen",
+      "aliases": [
+        "pommes",
+        "pommes frites",
+        "tk pommes"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [
+        "McCain",
+        "Iglo",
+        "Aviko"
+      ],
+      "image_hint": "frozen_chips",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_vanilleeis",
+      "name": "Vanilleeis",
+      "category_id": "frozen",
+      "aliases": [
+        "eis",
+        "vanilleeis",
+        "speiseeis"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [
+        "Langnese",
+        "Ben & Jerry's",
+        "Mövenpick"
+      ],
+      "image_hint": "ice_cream_vanilla",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_tk_pizza",
+      "name": "Tiefkühlpizza",
+      "category_id": "frozen",
+      "aliases": [
+        "pizza",
+        "tk pizza",
+        "steinofenpizza"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [
+        "Dr. Oetker",
+        "Wagner",
+        "Gustavo Gusto"
+      ],
+      "image_hint": "frozen_pizza",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [
+        "milk",
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_fischstaebchen",
+      "name": "Fischstäbchen",
+      "category_id": "frozen",
+      "aliases": [
+        "fischstäbchen",
+        "fischstäbchen tk"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.99,
+      "brands": [
+        "Iglo",
+        "Frosta",
+        "Gut & Günstig"
+      ],
+      "image_hint": "fish_fingers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [
+        "fish",
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_tk_beeren",
+      "name": "TK-Beerenmischung",
+      "category_id": "frozen",
+      "aliases": [
+        "tk beeren",
+        "beerenmischung",
+        "waldbeeren tk"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 3.99,
+      "brands": [
+        "Frosta",
+        "Iglo",
+        "Gut & Günstig"
+      ],
+      "image_hint": "frozen_berries",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "freezer"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_reis",
+      "name": "Reis",
+      "category_id": "pantry",
+      "aliases": [
+        "reis",
+        "langkornreis",
+        "parboiled reis"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [
+        "Uncle Ben's",
+        "Reis-fit",
+        "Oryza"
+      ],
+      "image_hint": "rice_white",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_basmatireis",
+      "name": "Basmatireis",
+      "category_id": "pantry",
+      "aliases": [
+        "basmati",
+        "basmatireis"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.49,
+      "brands": [
+        "Uncle Ben's",
+        "Oryza",
+        "Tilda"
+      ],
+      "image_hint": "rice_basmati",
+      "tags": [
+        "gluten_free",
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [
+          "gluten_free"
+        ],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "rice_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_spaghetti",
+      "name": "Spaghetti",
+      "category_id": "pantry",
+      "aliases": [
+        "spaghetti",
+        "nudeln",
+        "pasta"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.29,
+      "brands": [
+        "Barilla",
+        "Birkel",
+        "Buitoni"
+      ],
+      "image_hint": "pasta_spaghetti",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_penne",
+      "name": "Penne",
+      "category_id": "pantry",
+      "aliases": [
+        "penne",
+        "nudeln",
+        "pasta"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.29,
+      "brands": [
+        "Barilla",
+        "Birkel",
+        "Buitoni"
+      ],
+      "image_hint": "pasta_penne",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_tomatensauce",
+      "name": "Tomatensauce",
+      "category_id": "pantry",
+      "aliases": [
+        "tomatensauce",
+        "pastasauce",
+        "tomatensoße"
+      ],
+      "default_unit": "g",
+      "default_quantity": 400,
+      "price": 1.79,
+      "brands": [
+        "Barilla",
+        "Maggi",
+        "Dr. Oetker"
+      ],
+      "image_hint": "pasta_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "pasta_group",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_weizenmehl",
+      "name": "Weizenmehl",
+      "category_id": "pantry",
+      "aliases": [
+        "mehl",
+        "weizenmehl",
+        "mehl type 405"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.19,
+      "brands": [
+        "Aurora",
+        "Diamant",
+        "Kaufland"
+      ],
+      "image_hint": "flour_plain",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_backpulver",
+      "name": "Backpulver",
+      "category_id": "pantry",
+      "aliases": [
+        "backpulver",
+        "backin",
+        "triebmittel"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 0.49,
+      "brands": [
+        "Dr. Oetker",
+        "Ruf"
+      ],
+      "image_hint": "flour_self_raising",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_zucker",
+      "name": "Zucker",
+      "category_id": "pantry",
+      "aliases": [
+        "zucker",
+        "haushaltszucker",
+        "kristallzucker"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [
+        "Südzucker",
+        "Diamant",
+        "Nordzucker"
+      ],
+      "image_hint": "sugar_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_brauner_zucker",
+      "name": "Brauner Zucker",
+      "category_id": "pantry",
+      "aliases": [
+        "brauner zucker",
+        "rohrzucker",
+        "braunzucker"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Südzucker",
+        "Diamant"
+      ],
+      "image_hint": "sugar_brown",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_olivenoel",
+      "name": "Olivenöl",
+      "category_id": "pantry",
+      "aliases": [
+        "olivenöl",
+        "olivenöl extra vergine"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 7.99,
+      "brands": [
+        "Bertolli",
+        "Monini",
+        "Bio Planète"
+      ],
+      "image_hint": "oil_olive",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_sonnenblumenoel",
+      "name": "Sonnenblumenöl",
+      "category_id": "pantry",
+      "aliases": [
+        "sonnenblumenöl",
+        "öl",
+        "rapsöl"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [
+        "Thomy",
+        "Livio",
+        "Bellasan"
+      ],
+      "image_hint": "oil_vegetable",
+      "tags": [
+        "vegan"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_gehackte_tomaten",
+      "name": "Gehackte Tomaten",
+      "category_id": "pantry",
+      "aliases": [
+        "gehackte tomaten",
+        "dosentomaten",
+        "tomaten stückig"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 0.99,
+      "brands": [
+        "Mutti",
+        "Cirio",
+        "Hengstenberg"
+      ],
+      "image_hint": "tomatoes_canned",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_weisse_bohnen",
+      "name": "Weiße Bohnen",
+      "category_id": "pantry",
+      "aliases": [
+        "weiße bohnen",
+        "bohnen",
+        "dosenbohnen"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 0.99,
+      "brands": [
+        "Bonduelle",
+        "Heinz",
+        "Hengstenberg"
+      ],
+      "image_hint": "baked_beans",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_thunfisch",
+      "name": "Thunfisch",
+      "category_id": "pantry",
+      "aliases": [
+        "thunfisch",
+        "thunfisch in öl",
+        "thunfisch dose"
+      ],
+      "default_unit": "can",
+      "default_quantity": 3,
+      "price": 1.99,
+      "brands": [
+        "Hawesta",
+        "Rio Mare",
+        "Saupiquet"
+      ],
+      "image_hint": "tuna",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "fish"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_kichererbsen",
+      "name": "Kichererbsen",
+      "category_id": "pantry",
+      "aliases": [
+        "kichererbsen",
+        "kichererbsen dose"
+      ],
+      "default_unit": "can",
+      "default_quantity": 1,
+      "price": 0.99,
+      "brands": [
+        "Bonduelle",
+        "Hengstenberg"
+      ],
+      "image_hint": "chickpeas",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_linsen",
+      "name": "Linsen",
+      "category_id": "pantry",
+      "aliases": [
+        "linsen",
+        "rote linsen",
+        "tellerlinsen"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.99,
+      "brands": [
+        "Alnatura",
+        "Lidl",
+        "Edeka"
+      ],
+      "image_hint": "lentils",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_erdnussbutter",
+      "name": "Erdnussbutter",
+      "category_id": "pantry",
+      "aliases": [
+        "erdnussbutter",
+        "erdnussmus",
+        "peanutbutter"
+      ],
+      "default_unit": "g",
+      "default_quantity": 350,
+      "price": 2.99,
+      "brands": [
+        "Skippy",
+        "Peanut Butter Co"
+      ],
+      "image_hint": "peanut_butter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_erdbeerkonfituere",
+      "name": "Erdbeerkonfitüre",
+      "category_id": "pantry",
+      "aliases": [
+        "marmelade",
+        "erdbeermarmelade",
+        "konfitüre",
+        "erdbeerkonfitüre"
+      ],
+      "default_unit": "g",
+      "default_quantity": 370,
+      "price": 2.19,
+      "brands": [
+        "Schwartau",
+        "Zentis",
+        "Hero"
+      ],
+      "image_hint": "jam_strawberry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_honig",
+      "name": "Honig",
+      "category_id": "pantry",
+      "aliases": [
+        "honig",
+        "blütenhonig",
+        "bienenhonig"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 4.49,
+      "brands": [
+        "Langnese",
+        "Breitsamer",
+        "Bihophar"
+      ],
+      "image_hint": "honey",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_nuss_nougat_creme",
+      "name": "Nuss-Nougat-Creme",
+      "category_id": "pantry",
+      "aliases": [
+        "nutella",
+        "nuss-nougat-creme",
+        "schokocreme",
+        "nusspli"
+      ],
+      "default_unit": "g",
+      "default_quantity": 400,
+      "price": 3.29,
+      "brands": [
+        "Nutella",
+        "Nusspli",
+        "Ferrero"
+      ],
+      "image_hint": "chocolate_spread",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk",
+        "nuts"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_sojasauce",
+      "name": "Sojasauce",
+      "category_id": "pantry",
+      "aliases": [
+        "sojasauce",
+        "sojasoße",
+        "soja soße"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 150,
+      "price": 2.29,
+      "brands": [
+        "Kikkoman",
+        "Lee Kum Kee"
+      ],
+      "image_hint": "soy_sauce",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "soy",
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_ketchup",
+      "name": "Ketchup",
+      "category_id": "pantry",
+      "aliases": [
+        "ketchup",
+        "tomatenketchup"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.79,
+      "brands": [
+        "Heinz",
+        "Hela",
+        "Kühne"
+      ],
+      "image_hint": "tomato_sauce",
+      "tags": [],
+      "collections": [
+        "bbq"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_mayonnaise",
+      "name": "Mayonnaise",
+      "category_id": "pantry",
+      "aliases": [
+        "mayo",
+        "mayonnaise"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 1.99,
+      "brands": [
+        "Thomy",
+        "Hellmann's",
+        "Kühne"
+      ],
+      "image_hint": "mayonnaise",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "eggs"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_senf",
+      "name": "Senf",
+      "category_id": "pantry",
+      "aliases": [
+        "senf",
+        "mittelscharfer senf",
+        "süßer senf"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 0.99,
+      "brands": [
+        "Löwensenf",
+        "Händlmaier",
+        "Bautz'ner"
+      ],
+      "image_hint": "mustard",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "mustard"
+      ],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_salz",
+      "name": "Salz",
+      "category_id": "pantry",
+      "aliases": [
+        "salz",
+        "speisesalz",
+        "jodsalz"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 1,
+      "price": 0.69,
+      "brands": [
+        "Bad Reichenhaller",
+        "Südsalz"
+      ],
+      "image_hint": "salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_pfeffer",
+      "name": "Pfeffer",
+      "category_id": "pantry",
+      "aliases": [
+        "pfeffer",
+        "schwarzer pfeffer"
+      ],
+      "default_unit": "g",
+      "default_quantity": 50,
+      "price": 1.99,
+      "brands": [
+        "Fuchs",
+        "Ostmann"
+      ],
+      "image_hint": "pepper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_italienische_kraeuter",
+      "name": "Italienische Kräuter",
+      "category_id": "pantry",
+      "aliases": [
+        "kräuter",
+        "italienische kräuter",
+        "kräutermischung"
+      ],
+      "default_unit": "g",
+      "default_quantity": 20,
+      "price": 1.29,
+      "brands": [
+        "Fuchs",
+        "Ostmann"
+      ],
+      "image_hint": "herbs",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_huehnerbruehe",
+      "name": "Hühnerbrühe",
+      "category_id": "pantry",
+      "aliases": [
+        "hühnerbrühe",
+        "brühe",
+        "gemüsebrühe"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [
+        "Maggi",
+        "Knorr",
+        "Erasco"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_rinderbruehe",
+      "name": "Rinderbrühe",
+      "category_id": "pantry",
+      "aliases": [
+        "rinderbrühe",
+        "fleischbrühe",
+        "brühwürfel"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [
+        "Maggi",
+        "Knorr",
+        "Erasco"
+      ],
+      "image_hint": "stock_cubes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 3
+    },
+    {
+      "id": "prod_de_essig",
+      "name": "Essig",
+      "category_id": "pantry",
+      "aliases": [
+        "essig",
+        "haushaltsessig",
+        "weißweinessig"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.19,
+      "brands": [
+        "Kühne",
+        "Surig",
+        "Hengstenberg"
+      ],
+      "image_hint": "vinegar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_instantkaffee",
+      "name": "Instantkaffee",
+      "category_id": "beverages",
+      "aliases": [
+        "instantkaffee",
+        "löslicher kaffee"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 3.99,
+      "brands": [
+        "Nescafé",
+        "Jacobs",
+        "Tchibo"
+      ],
+      "image_hint": "coffee_instant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_filterkaffee",
+      "name": "Filterkaffee",
+      "category_id": "beverages",
+      "aliases": [
+        "kaffee",
+        "filterkaffee",
+        "gemahlener kaffee"
+      ],
+      "default_unit": "g",
+      "default_quantity": 250,
+      "price": 4.99,
+      "brands": [
+        "Jacobs Krönung",
+        "Dallmayr",
+        "Tchibo"
+      ],
+      "image_hint": "coffee_ground",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_schwarzer_tee",
+      "name": "Schwarzer Tee",
+      "category_id": "beverages",
+      "aliases": [
+        "tee",
+        "schwarztee",
+        "schwarzer tee"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 25,
+      "price": 1.99,
+      "brands": [
+        "Teekanne",
+        "Meßmer",
+        "Lipton"
+      ],
+      "image_hint": "tea_black",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_gruener_tee",
+      "name": "Grüner Tee",
+      "category_id": "beverages",
+      "aliases": [
+        "grüner tee",
+        "grüntee"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 25,
+      "price": 1.99,
+      "brands": [
+        "Teekanne",
+        "Meßmer",
+        "Lipton"
+      ],
+      "image_hint": "tea_green",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_orangensaft",
+      "name": "Orangensaft",
+      "category_id": "beverages",
+      "aliases": [
+        "orangensaft",
+        "saft",
+        "o-saft"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.79,
+      "brands": [
+        "Granini",
+        "Hohes C",
+        "Valensina"
+      ],
+      "image_hint": "juice_orange",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_apfelsaft",
+      "name": "Apfelsaft",
+      "category_id": "beverages",
+      "aliases": [
+        "apfelsaft",
+        "saft"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 1.49,
+      "brands": [
+        "Rauch",
+        "Granini",
+        "Hohes C"
+      ],
+      "image_hint": "juice_apple",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_cola",
+      "name": "Cola",
+      "category_id": "beverages",
+      "aliases": [
+        "cola",
+        "coca-cola",
+        "pepsi"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 1.99,
+      "brands": [
+        "Coca-Cola",
+        "Pepsi",
+        "Afri Cola"
+      ],
+      "image_hint": "coke",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_limonade",
+      "name": "Limonade",
+      "category_id": "beverages",
+      "aliases": [
+        "limo",
+        "limonade",
+        "fanta",
+        "sprite"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 1.29,
+      "brands": [
+        "Fanta",
+        "Sprite",
+        "Schweppes"
+      ],
+      "image_hint": "lemonade",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_mineralwasser_still",
+      "name": "Mineralwasser still",
+      "category_id": "beverages",
+      "aliases": [
+        "wasser",
+        "stilles wasser",
+        "mineralwasser"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1.5,
+      "price": 0.19,
+      "brands": [
+        "Gerolsteiner",
+        "Volvic",
+        "Vittel"
+      ],
+      "image_hint": "water_still",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_mineralwasser_sprudel",
+      "name": "Mineralwasser mit Kohlensäure",
+      "category_id": "beverages",
+      "aliases": [
+        "mineralwasser mit kohlensäure",
+        "wasser mit kohlensäure",
+        "sprudel",
+        "sprudelwasser",
+        "mineralwasser medium"
+      ],
+      "default_unit": "L",
+      "default_quantity": 1,
+      "price": 0.19,
+      "brands": [
+        "Gerolsteiner",
+        "Apollinaris",
+        "Selters",
+        "San Pellegrino"
+      ],
+      "image_hint": "water_sparkling",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_bier",
+      "name": "Bier",
+      "category_id": "beverages",
+      "aliases": [
+        "bier",
+        "pils",
+        "pilsner"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 6,
+      "price": 0.89,
+      "brands": [
+        "Krombacher",
+        "Bitburger",
+        "Warsteiner",
+        "Beck's"
+      ],
+      "image_hint": "beer",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_rotwein",
+      "name": "Rotwein",
+      "category_id": "beverages",
+      "aliases": [
+        "rotwein",
+        "wein rot",
+        "dornfelder"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 4.49,
+      "brands": [
+        "Dornfelder",
+        "Spätburgunder",
+        "Edeka"
+      ],
+      "image_hint": "wine_red",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_weisswein",
+      "name": "Weißwein",
+      "category_id": "beverages",
+      "aliases": [
+        "weißwein",
+        "wein weiß",
+        "riesling"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 4.49,
+      "brands": [
+        "Riesling",
+        "Müller-Thurgau",
+        "Edeka"
+      ],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_sekt",
+      "name": "Sekt",
+      "category_id": "beverages",
+      "aliases": [
+        "sekt",
+        "schaumwein",
+        "prosecco"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 4.99,
+      "brands": [
+        "Rotkäppchen",
+        "Henkell",
+        "Mumm"
+      ],
+      "image_hint": "wine_white",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_radler",
+      "name": "Radler",
+      "category_id": "beverages",
+      "aliases": [
+        "radler",
+        "alsterwasser",
+        "biermischgetränk"
+      ],
+      "default_unit": "bottle",
+      "default_quantity": 1,
+      "price": 0.89,
+      "brands": [
+        "Krombacher",
+        "Veltins",
+        "Paulaner"
+      ],
+      "image_hint": "beer",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_cornflakes",
+      "name": "Cornflakes",
+      "category_id": "snacks",
+      "aliases": [
+        "cornflakes",
+        "frühstücksflocken"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.29,
+      "brands": [
+        "Kellogg's",
+        "Nestlé",
+        "Lidl"
+      ],
+      "image_hint": "cereal_cornflakes",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_muesli",
+      "name": "Müsli",
+      "category_id": "snacks",
+      "aliases": [
+        "müsli",
+        "früchtemüsli",
+        "knuspermüsli"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 2.79,
+      "brands": [
+        "Kölln",
+        "Dr. Oetker",
+        "Seitenbacher"
+      ],
+      "image_hint": "cereal_muesli",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "nuts"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_haferflocken",
+      "name": "Haferflocken",
+      "category_id": "snacks",
+      "aliases": [
+        "haferflocken",
+        "zarte haferflocken",
+        "kernige haferflocken"
+      ],
+      "default_unit": "g",
+      "default_quantity": 500,
+      "price": 1.19,
+      "brands": [
+        "Kölln",
+        "Brüggen",
+        "Alnatura"
+      ],
+      "image_hint": "oats_rolled",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_chips",
+      "name": "Chips",
+      "category_id": "snacks",
+      "aliases": [
+        "chips",
+        "kartoffelchips",
+        "paprikachips"
+      ],
+      "default_unit": "g",
+      "default_quantity": 150,
+      "price": 1.79,
+      "brands": [
+        "Funny-Frisch",
+        "Lay's",
+        "Pringles"
+      ],
+      "image_hint": "chips_salt",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_salzgebaeck",
+      "name": "Salzgebäck",
+      "category_id": "snacks",
+      "aliases": [
+        "salzstangen",
+        "salzgebäck",
+        "knabbergebäck"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [
+        "Lorenz",
+        "Soletti",
+        "Bahlsen"
+      ],
+      "image_hint": "crackers",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_schoko_cookies",
+      "name": "Cookies mit Schokostückchen",
+      "category_id": "snacks",
+      "aliases": [
+        "cookies",
+        "schokokekse",
+        "schoko cookies"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Bahlsen",
+        "Lambertz",
+        "Maryland"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_butterkekse",
+      "name": "Butterkekse",
+      "category_id": "snacks",
+      "aliases": [
+        "butterkekse",
+        "leibniz",
+        "kekse"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.39,
+      "brands": [
+        "Leibniz",
+        "Bahlsen",
+        "Lambertz"
+      ],
+      "image_hint": "cookies_chocolate_chip",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [
+        "gluten",
+        "milk"
+      ],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_zartbitterschokolade",
+      "name": "Zartbitterschokolade",
+      "category_id": "snacks",
+      "aliases": [
+        "schokolade",
+        "zartbitterschokolade",
+        "dunkle schokolade"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 1.19,
+      "brands": [
+        "Ritter Sport",
+        "Lindt",
+        "Milka"
+      ],
+      "image_hint": "chocolate_whittakers",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk",
+        "soy"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_vollmilchschokolade",
+      "name": "Vollmilchschokolade",
+      "category_id": "snacks",
+      "aliases": [
+        "vollmilchschokolade",
+        "schokolade",
+        "milka"
+      ],
+      "default_unit": "g",
+      "default_quantity": 100,
+      "price": 1.09,
+      "brands": [
+        "Milka",
+        "Ritter Sport",
+        "Lindt"
+      ],
+      "image_hint": "chocolate_cadbury",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk",
+        "soy"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_muesliriegel",
+      "name": "Müsliriegel",
+      "category_id": "snacks",
+      "aliases": [
+        "müsliriegel",
+        "riegel",
+        "cerealienriegel"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Corny",
+        "Kellogg's",
+        "Nature Valley"
+      ],
+      "image_hint": "muesli_bars",
+      "tags": [],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "milk",
+        "gluten",
+        "nuts"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_popcorn",
+      "name": "Popcorn",
+      "category_id": "snacks",
+      "aliases": [
+        "popcorn",
+        "mikrowellenpopcorn"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [
+        "Pop Weaver",
+        "Bauer"
+      ],
+      "image_hint": "popcorn",
+      "tags": [
+        "gluten_free"
+      ],
+      "collections": [
+        "school_lunch"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_nussmischung",
+      "name": "Nussmischung",
+      "category_id": "snacks",
+      "aliases": [
+        "studentenfutter",
+        "nüsse",
+        "nussmischung"
+      ],
+      "default_unit": "g",
+      "default_quantity": 200,
+      "price": 2.99,
+      "brands": [
+        "Seeberger",
+        "Ültje",
+        "Alnatura"
+      ],
+      "image_hint": "nuts_mixed",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [
+        "nuts"
+      ],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_toilettenpapier",
+      "name": "Toilettenpapier",
+      "category_id": "household",
+      "aliases": [
+        "klopapier",
+        "toilettenpapier",
+        "wc-papier"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 12,
+      "price": 3.99,
+      "brands": [
+        "Hakle",
+        "Zewa",
+        "Edeka"
+      ],
+      "image_hint": "toilet_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_kuechenrolle",
+      "name": "Küchenrolle",
+      "category_id": "household",
+      "aliases": [
+        "küchenrolle",
+        "küchenpapier",
+        "haushaltstücher"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 4,
+      "price": 2.99,
+      "brands": [
+        "Zewa",
+        "Hakle",
+        "Lotus"
+      ],
+      "image_hint": "paper_towels",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_taschentuecher",
+      "name": "Taschentücher",
+      "category_id": "household",
+      "aliases": [
+        "taschentücher",
+        "tempo",
+        "papiertaschentücher"
+      ],
+      "default_unit": "box",
+      "default_quantity": 1,
+      "price": 1.29,
+      "brands": [
+        "Tempo",
+        "Kleenex",
+        "Zewa"
+      ],
+      "image_hint": "tissues",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_spuelmittel",
+      "name": "Spülmittel",
+      "category_id": "household",
+      "aliases": [
+        "spülmittel",
+        "geschirrspülmittel",
+        "pril"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.29,
+      "brands": [
+        "Pril",
+        "Fairy",
+        "Frosch"
+      ],
+      "image_hint": "dishwashing_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_spuelmaschinentabs",
+      "name": "Spülmaschinentabs",
+      "category_id": "household",
+      "aliases": [
+        "spülmaschinentabs",
+        "geschirrspültabs",
+        "tabs"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 5.99,
+      "brands": [
+        "Finish",
+        "Somat",
+        "Calgonit"
+      ],
+      "image_hint": "dishwasher_tablets",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_waschpulver",
+      "name": "Waschpulver",
+      "category_id": "household",
+      "aliases": [
+        "waschpulver",
+        "vollwaschmittel"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 6.99,
+      "brands": [
+        "Persil",
+        "Ariel",
+        "Spee",
+        "Weißer Riese"
+      ],
+      "image_hint": "laundry_powder",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_fluessigwaschmittel",
+      "name": "Flüssigwaschmittel",
+      "category_id": "household",
+      "aliases": [
+        "flüssigwaschmittel",
+        "waschgel",
+        "waschmittel"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 6.99,
+      "brands": [
+        "Persil",
+        "Ariel",
+        "Vizir"
+      ],
+      "image_hint": "laundry_liquid",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_weichspueler",
+      "name": "Weichspüler",
+      "category_id": "household",
+      "aliases": [
+        "weichspüler",
+        "lenor",
+        "silan"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 2.49,
+      "brands": [
+        "Lenor",
+        "Silan",
+        "Vernel"
+      ],
+      "image_hint": "fabric_softener",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_allzweckreiniger",
+      "name": "Allzweckreiniger",
+      "category_id": "household",
+      "aliases": [
+        "allzweckreiniger",
+        "reiniger",
+        "putzmittel"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 750,
+      "price": 1.99,
+      "brands": [
+        "Meister Proper",
+        "Ajax",
+        "Frosch"
+      ],
+      "image_hint": "spray_cleaner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_wc_reiniger",
+      "name": "WC-Reiniger",
+      "category_id": "household",
+      "aliases": [
+        "wc-reiniger",
+        "wc reiniger",
+        "domestos"
+      ],
+      "default_unit": "L",
+      "default_quantity": 2,
+      "price": 1.79,
+      "brands": [
+        "Domestos",
+        "WC-Ente",
+        "Frosch"
+      ],
+      "image_hint": "bleach",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_muellbeutel",
+      "name": "Müllbeutel",
+      "category_id": "household",
+      "aliases": [
+        "müllbeutel",
+        "müllsäcke",
+        "abfallbeutel"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Swirl",
+        "Vileda",
+        "Hefa"
+      ],
+      "image_hint": "bin_bags",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_frischhaltefolie",
+      "name": "Frischhaltefolie",
+      "category_id": "household",
+      "aliases": [
+        "frischhaltefolie",
+        "klarsichtfolie"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.49,
+      "brands": [
+        "Toppits",
+        "Alupak"
+      ],
+      "image_hint": "cling_film",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_alufolie",
+      "name": "Alufolie",
+      "category_id": "household",
+      "aliases": [
+        "alufolie",
+        "aluminiumfolie"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.79,
+      "brands": [
+        "Toppits",
+        "Alupak"
+      ],
+      "image_hint": "aluminium_foil",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_backpapier",
+      "name": "Backpapier",
+      "category_id": "household",
+      "aliases": [
+        "backpapier",
+        "backtrennpapier"
+      ],
+      "default_unit": "roll",
+      "default_quantity": 1,
+      "price": 1.69,
+      "brands": [
+        "Toppits",
+        "Dr. Oetker"
+      ],
+      "image_hint": "baking_paper",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_shampoo",
+      "name": "Shampoo",
+      "category_id": "health",
+      "aliases": [
+        "shampoo",
+        "haarshampoo"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 400,
+      "price": 2.49,
+      "brands": [
+        "Schauma",
+        "Pantene",
+        "Head & Shoulders",
+        "Nivea"
+      ],
+      "image_hint": "shampoo",
+      "tags": [],
+      "collections": [
+        "christmas"
+      ],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_haarspuelung",
+      "name": "Haarspülung",
+      "category_id": "health",
+      "aliases": [
+        "haarspülung",
+        "spülung",
+        "conditioner"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 300,
+      "price": 2.49,
+      "brands": [
+        "Pantene",
+        "Gliss Kur",
+        "Schauma"
+      ],
+      "image_hint": "conditioner",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_duschgel",
+      "name": "Duschgel",
+      "category_id": "health",
+      "aliases": [
+        "duschgel",
+        "duschbad",
+        "shower gel"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 500,
+      "price": 1.99,
+      "brands": [
+        "Nivea",
+        "Dove",
+        "Fa",
+        "Duschdas"
+      ],
+      "image_hint": "body_wash",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_seife",
+      "name": "Seife",
+      "category_id": "health",
+      "aliases": [
+        "seife",
+        "stückseife",
+        "handseife"
+      ],
+      "default_unit": "bar",
+      "default_quantity": 4,
+      "price": 1.49,
+      "brands": [
+        "Dove",
+        "Palmolive",
+        "Nivea"
+      ],
+      "image_hint": "soap_bar",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_zahnpasta",
+      "name": "Zahnpasta",
+      "category_id": "health",
+      "aliases": [
+        "zahnpasta",
+        "zahncreme"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 75,
+      "price": 1.69,
+      "brands": [
+        "Colgate",
+        "Elmex",
+        "Blend-a-med",
+        "Signal"
+      ],
+      "image_hint": "toothpaste",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_zahnbuerste",
+      "name": "Zahnbürste",
+      "category_id": "health",
+      "aliases": [
+        "zahnbürste"
+      ],
+      "default_unit": "ea",
+      "default_quantity": 2,
+      "price": 2.49,
+      "brands": [
+        "Oral-B",
+        "Elmex",
+        "Meridol"
+      ],
+      "image_hint": "toothbrush",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_deo",
+      "name": "Deo",
+      "category_id": "health",
+      "aliases": [
+        "deo",
+        "deodorant",
+        "deospray"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 150,
+      "price": 2.29,
+      "brands": [
+        "Nivea",
+        "Dove",
+        "Fa",
+        "Rexona"
+      ],
+      "image_hint": "deodorant",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_rasierklingen",
+      "name": "Rasierklingen",
+      "category_id": "health",
+      "aliases": [
+        "rasierklingen",
+        "klingen",
+        "rasierer"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 9.99,
+      "brands": [
+        "Gillette",
+        "Wilkinson"
+      ],
+      "image_hint": "razor_blades",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_rasierschaum",
+      "name": "Rasierschaum",
+      "category_id": "health",
+      "aliases": [
+        "rasierschaum",
+        "rasiergel"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 2.49,
+      "brands": [
+        "Gillette",
+        "Nivea"
+      ],
+      "image_hint": "shaving_cream",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_sonnencreme_lsf50",
+      "name": "Sonnencreme LSF 50",
+      "category_id": "health",
+      "aliases": [
+        "sonnencreme",
+        "sonnenschutz",
+        "lsf 50"
+      ],
+      "default_unit": "mL",
+      "default_quantity": 200,
+      "price": 8.99,
+      "brands": [
+        "Nivea Sun",
+        "Garnier",
+        "Ladival"
+      ],
+      "image_hint": "sunscreen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_paracetamol",
+      "name": "Paracetamol",
+      "category_id": "health",
+      "aliases": [
+        "paracetamol",
+        "schmerztabletten",
+        "fiebertabletten"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.19,
+      "brands": [
+        "Ratiopharm",
+        "Ben-u-ron",
+        "Hexal"
+      ],
+      "image_hint": "paracetamol",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_ibuprofen",
+      "name": "Ibuprofen",
+      "category_id": "health",
+      "aliases": [
+        "ibuprofen",
+        "schmerztabletten"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 3.49,
+      "brands": [
+        "Ratiopharm",
+        "Dolormin",
+        "Hexal"
+      ],
+      "image_hint": "ibuprofen",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_pflaster",
+      "name": "Pflaster",
+      "category_id": "health",
+      "aliases": [
+        "pflaster",
+        "wundpflaster",
+        "heftpflaster"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 2.49,
+      "brands": [
+        "Hansaplast",
+        "Elastoplast"
+      ],
+      "image_hint": "bandaids",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_vitamin_c",
+      "name": "Vitamin C",
+      "category_id": "health",
+      "aliases": [
+        "vitamin c",
+        "brausetabletten",
+        "vitamine"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 4.99,
+      "brands": [
+        "Doppelherz",
+        "Abtei",
+        "Altapharma"
+      ],
+      "image_hint": "vitamins_c",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_damenbinden",
+      "name": "Damenbinden",
+      "category_id": "health",
+      "aliases": [
+        "damenbinden",
+        "binden",
+        "tampons"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Always",
+        "Tampax",
+        "o.b."
+      ],
+      "image_hint": "sanitary_pads",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 4
+    },
+    {
+      "id": "prod_de_windeln",
+      "name": "Windeln",
+      "category_id": "baby",
+      "aliases": [
+        "windeln",
+        "babywindeln"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 9.99,
+      "brands": [
+        "Pampers",
+        "Huggies",
+        "babylove"
+      ],
+      "image_hint": "nappies",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_feuchttuecher",
+      "name": "Feuchttücher",
+      "category_id": "baby",
+      "aliases": [
+        "feuchttücher",
+        "babytücher",
+        "popotücher"
+      ],
+      "default_unit": "pack",
+      "default_quantity": 1,
+      "price": 1.99,
+      "brands": [
+        "Pampers",
+        "Huggies",
+        "babylove"
+      ],
+      "image_hint": "baby_wipes",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_saeuglingsmilch",
+      "name": "Säuglingsmilch",
+      "category_id": "baby",
+      "aliases": [
+        "säuglingsmilch",
+        "babymilch",
+        "pre nahrung",
+        "milchpulver"
+      ],
+      "default_unit": "g",
+      "default_quantity": 800,
+      "price": 14.99,
+      "brands": [
+        "Hipp",
+        "Aptamil",
+        "Humana",
+        "Milumil"
+      ],
+      "image_hint": "baby_formula",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_hundefutter_trocken",
+      "name": "Hundefutter trocken",
+      "category_id": "pet",
+      "aliases": [
+        "hundefutter",
+        "trockenfutter hund",
+        "hundetrockenfutter"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 3,
+      "price": 7.99,
+      "brands": [
+        "Pedigree",
+        "Royal Canin",
+        "Purina",
+        "Chappi"
+      ],
+      "image_hint": "dog_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_hundefutter_nass",
+      "name": "Hundefutter nass",
+      "category_id": "pet",
+      "aliases": [
+        "hundefutter nass",
+        "nassfutter hund",
+        "hundefutter dose",
+        "hundenassfutter"
+      ],
+      "default_unit": "can",
+      "default_quantity": 6,
+      "price": 1.19,
+      "brands": [
+        "Cesar",
+        "Pedigree",
+        "Animonda"
+      ],
+      "image_hint": "dog_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_katzenfutter_trocken",
+      "name": "Katzenfutter trocken",
+      "category_id": "pet",
+      "aliases": [
+        "katzenfutter",
+        "trockenfutter katze",
+        "katzentrockenfutter"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 2,
+      "price": 5.99,
+      "brands": [
+        "Whiskas",
+        "Purina",
+        "Royal Canin",
+        "Felix"
+      ],
+      "image_hint": "cat_food_dry",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_katzenfutter_nass",
+      "name": "Katzenfutter nass",
+      "category_id": "pet",
+      "aliases": [
+        "katzenfutter nass",
+        "nassfutter katze",
+        "katzenfutter dose",
+        "katzennassfutter"
+      ],
+      "default_unit": "can",
+      "default_quantity": 12,
+      "price": 0.69,
+      "brands": [
+        "Whiskas",
+        "Felix",
+        "Sheba",
+        "Kitekat"
+      ],
+      "image_hint": "cat_food_wet",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    },
+    {
+      "id": "prod_de_katzenstreu",
+      "name": "Katzenstreu",
+      "category_id": "pet",
+      "aliases": [
+        "katzenstreu",
+        "katzenklo",
+        "streu"
+      ],
+      "default_unit": "kg",
+      "default_quantity": 5,
+      "price": 4.49,
+      "brands": [
+        "Catsan",
+        "Cat's Best"
+      ],
+      "image_hint": "cat_litter",
+      "tags": [],
+      "collections": [],
+      "taxonomy": {
+        "dietary": [],
+        "nutrition": [],
+        "lifestyle": [],
+        "storage": "pantry"
+      },
+      "allergens": [],
+      "substitution_group": "",
+      "priority_level": 1
+    }
+  ]
+}
