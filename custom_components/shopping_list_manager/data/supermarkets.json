@@ -28,5 +28,9 @@
   "FR": [
     "Carrefour", "E.Leclerc", "Intermarché", "Auchan", "Lidl", "Système U", "Monoprix", "Casino",
     "Aldi", "Picard", "Franprix", "Cora"
+  ],
+  "DE": [
+    "Edeka", "Rewe", "ALDI Süd", "ALDI Nord", "Lidl", "Kaufland", "Netto Marken-Discount", "Penny",
+    "Norma", "Globus", "Tegut", "Marktkauf", "dm-drogerie markt", "Rossmann", "Alnatura"
   ]
 }

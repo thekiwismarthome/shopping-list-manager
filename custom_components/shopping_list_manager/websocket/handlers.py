@@ -1756,7 +1756,7 @@ async def websocket_search_supermarkets(
         connection.send_error(msg["id"], "invalid_format", "Type a shop or suburb to look for, or pick a chain")
         return
     # Built-in regions limit the search to that country; a custom region searches everywhere.
-    codes = {"NZ", "AU", "US", "GB", "CA", "BE", "ES", "FR"}
+    codes = {"NZ", "AU", "US", "GB", "CA", "BE", "ES", "FR", "DE"}
     try:
         results, _centre = await search_places(
             async_get_clientsession(hass), chain_name, place, country if country in codes else None,
