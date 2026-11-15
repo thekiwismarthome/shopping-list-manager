@@ -75,6 +75,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                     "CA": "Canada",
                     "BE": "Belgium (Dutch)",
                     "ES": "Spain (Español)",
+                    "DE": "Germany (Deutsch)",
                     "FR": "France (Français)",
                 }),
                 vol.Optional(

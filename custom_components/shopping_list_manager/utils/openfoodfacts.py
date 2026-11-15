@@ -32,6 +32,7 @@ OFF_COUNTRY_TAGS: Dict[str, str] = {
     "BE": "en:belgium",
     "ES": "en:spain",
     "FR": "en:france",
+    "DE": "en:germany",
 }
 
 # Catalog country -> language used to analyse the query (default: English).
@@ -39,6 +40,7 @@ OFF_SEARCH_LANGS: Dict[str, str] = {
     "BE": "nl",
     "ES": "es",
     "FR": "fr",
+    "DE": "de",
 }
 
 # Characters with meaning in the Search-a-licious query syntax. Left in, an
